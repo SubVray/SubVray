@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header-users.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <button type="button">
+        <i class="fa-solid fa-user"></i>Nombre del Usuario
+        </button>
+        <div class="logo-container">
+          <img src="imgs/logo-moka.png" alt="logo moka" />
+        </div>
+        <div class="menu-icons">
+          <a href="#"><i class="fa-solid fa-house"></i>Inicio</a>
+          <a href="#"><i class="fa-solid fa-wheelchair"></i>Accesibilidad</a>
+        </div>
+      </header>
+      <nav class="menu">
+        <a href="">Expedientes</a>
+        <a href="">Reservaciones</a>
+        <a href="">Citas</a>
+        <a href="">Mascotas</a>
+        <a href="">Metodos de pago</a>
+      </nav>
+      <section class="container">
+      <div class="tbl-container">
+        <a href="register.html" class="btn-salir"
+          ><i class="fa-solid fa-reply"></i>Volver</a
+        >
+        <h1>Listado de clientes</h1>
+        <table id="tbl-users" class="tbl-info">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre completo</th>
+              <th>Usuario</th>
+              <th>Numero</th>
+              <th>Correo electrónico</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+      <!-- js -->
+      <script
+      src="https://kit.fontawesome.com/c02f88807d.js"
+      crossorigin="anonymous"
+      ></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="js/clientesInfo.js"></script>
+      <script src="js/listadoClientes.js"></script>
+  </body>
+</html>
