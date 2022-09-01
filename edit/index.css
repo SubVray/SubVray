@@ -27,7 +27,7 @@ img {
   width: 100%;
 }
 .diente {
-  background-color: rgba(255, 255, 255, 0.835) !important;
+  background-color: rgba(255, 255, 255, 0.938) !important;
   border: 1px solid transparent !important;
   border-radius: 30px 30px 5px 5px !important ;
   -webkit-border-radius: 30px 30px 5px 5px !important ;
@@ -44,11 +44,11 @@ img {
   box-shadow: 0 0 2px blue;
 }
 .diente1 {
-  border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -webkit-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -moz-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -ms-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -o-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
+  border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
+  -webkit-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
+  -moz-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
+  -ms-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
+  -o-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
   height: 175px;
   left: 344px;
   top: 455px;
@@ -90,18 +90,35 @@ img {
   -o-transform: rotate(-1deg);
 }
 .diente4 {
-  border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -webkit-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -moz-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -ms-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
-  -o-border-radius: 40% 40% 30% 50% / 40% 40% 10% 10% !important;
+  border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
+  -webkit-border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
+  -moz-border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
+  -ms-border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
+  -o-border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
   height: 175px;
   left: 725px;
   top: 455px;
-  width: 125px;
+  width: 123px;
   transform: rotate3d(4, -9, 1, -33deg);
   -webkit-transform: rotate3d(4, -9, 1, -33deg);
   -moz-transform: rotate3d(4, -9, 1, -33deg);
   -ms-transform: rotate3d(4, -9, 1, -33deg);
   -o-transform: rotate3d(4, -9, 1, -33deg);
+  z-index: 10;
+}
+.diente5 {
+  border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
+  -webkit-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
+  -moz-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
+  -ms-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
+  -o-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
+  height: 177px;
+  left: 820px;
+  top: 430px;
+  width: 120px;
+  transform: rotate3d(4, -9, -1, -40deg);
+  -webkit-transform: rotate3d(4, -9, -1, -40deg);
+  -moz-transform: rotate3d(4, -9, -1, -40deg);
+  -ms-transform: rotate3d(4, -9, -1, -40deg);
+  -o-transform: rotate3d(4, -9, -1, -40deg);
 }
