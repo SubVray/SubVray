@@ -1,33 +1,35 @@
 * {
   box-sizing: border-box;
 }
-
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 85px);
+}
 .img-container-boca {
   border: 1px solid red;
-  max-width: 1200px;
+  max-width: 1000px;
   position: relative;
+  margin: auto;
 }
 .boca {
-  margin: auto;
   max-width: 1200px;
+  margin: auto;
 }
 .dientes {
-  align-items: center;
-  bottom: 0;
-  display: flex;
   gap: 5px;
-  justify-content: center;
-  left: 0;
+  left: -99px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -130px;
 }
 img {
   width: 100%;
 }
 .diente {
-  background-color: rgba(255, 255, 255, 0.959) !important;
-  border: 1px solid transparent !important;
+  background-color: rgba(255, 255, 255, 0.948) !important;
+  border: 1px solid rgba(0, 0, 0, 0.077) !important;
   border-radius: 30px 30px 5px 5px !important ;
   -webkit-border-radius: 30px 30px 5px 5px !important ;
   -moz-border-radius: 30px 30px 5px 5px !important ;
@@ -38,20 +40,23 @@ img {
   margin-top: -165px;
   position: absolute;
   width: 140px;
-  border: 1px solid rgba(0, 0, 0, 0.251) !important;
 }
 .diente:hover {
   box-shadow: 0px 0px 2px 2px rgb(0, 26, 255);
 }
+.dientes-buttom{
+  position: relative;
+  top: 130px;
+}
 
 .diente1 {
-  border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
-  -webkit-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
-  -moz-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
-  -ms-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
-  -o-border-radius: 40% 70% 30% 50% / 40% 60% 10% 10% !important;
+  border-radius: 40% 70% 30% 100% / 40% 60% 10% 10% !important;
+  -webkit-border-radius: 40% 70% 30% 10% / 40% 60% 10% 10% !important;
+  -moz-border-radius: 40% 70% 30% 10% / 40% 60% 10% 10% !important;
+  -ms-border-radius: 40% 70% 30% 10% / 40% 60% 10% 10% !important;
+  -o-border-radius: 40% 70% 30% 10% / 40% 60% 10% 10% !important;
   height: 170px;
-  left: 344px;
+  left: 347px;
   top: 455px;
   width: 117px;
   transform: rotate3d(4, 9, 1, 25deg);
@@ -93,8 +98,8 @@ img {
   -o-transform: rotate(-1deg);
   z-index: 100;
 }
-.diente2:hover{
-  
+.diente:hover{
+  z-index: 200;
 }
 .diente4 {
   border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
@@ -103,7 +108,7 @@ img {
   -ms-border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
   -o-border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
   height: 170px;
-  left: 725px;
+  left: 723px;
   top: 455px;
   width: 123px;
   transform: rotate3d(4, -9, 1, -33deg);
@@ -113,22 +118,7 @@ img {
   -o-transform: rotate3d(4, -9, 1, -33deg);
   z-index: 10;
 }
-/* .diente5 {
-  border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
-  -webkit-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
-  -moz-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
-  -ms-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
-  -o-border-radius: 40% 35% 30% 40% / 40% 40% 50% 10% !important;
-  height: 177px;
-  left: 820px;
-  top: 430px;
-  width: 120px;
-  transform: rotate3d(4, -9, -1, -40deg);
-  -webkit-transform: rotate3d(4, -9, -1, -40deg);
-  -moz-transform: rotate3d(4, -9, -1, -40deg);
-  -ms-transform: rotate3d(4, -9, -1, -40deg);
-  -o-transform: rotate3d(4, -9, -1, -40deg);
-} */
+
 .diente5 {
   border-radius: 50% 65% 30% 100% / 40% 80% 50% 100% !important;
   -webkit-border-radius: 50% 65% 30% 100% / 40% 80% 50% 100% !important;
@@ -136,7 +126,7 @@ img {
   -ms-border-radius: 50% 65% 30% 100% / 40% 80% 50% 100% !important;
   -o-border-radius: 50% 65% 30% 100% / 40% 80% 50% 100% !important;
   height: 177px;
-  left: 817px;
+  left: 814px;
   top: 431px;
   width: 120px;
   transform: rotate3d(4, -9, -1, -40deg);
@@ -152,13 +142,80 @@ img {
   -ms-border-radius: 60% 50% 100% 30% / 70% 40% 100% 50% !important;
   -o-border-radius: 60% 50% 100% 30% / 70% 40% 100% 50% !important;
   height: 177px;
-  left: 250px;
-  top: 430px;
+  left: 252px;
+  top: 431px;
   width: 120px;
   transform: rotate3d(-4, -9, -1, 40deg);
   -webkit-transform: rotate3d(-4, -9, -1, 40deg);
   -moz-transform: rotate3d(-4, -9, -1, 40deg);
   -ms-transform: rotate3d(-4, -9, -1, 40deg);
   -o-transform: rotate3d(-4, -9, -1, 40deg);
+}
+.diente7 {
+  border-radius: 20% 20% 8% 30% / 10% 20% 20% 100% !important;
+  -webkit-border-radius: 20% 20% 8% 30% / 10% 20% 20% 100% !important;
+  -moz-border-radius: 20% 20% 8% 30% / 10% 20% 20% 100% !important;
+  -ms-border-radius: 20% 20% 8% 30% / 10% 20% 20% 100% !important;
+  -o-border-radius: 20% 20% 8% 30% / 10% 20% 20% 100% !important;
+  height: 108px;
+  left: 394px;
+  top: 688px;
+  width:99px;
+  transform: rotate3d(4, 2, 2, 19deg);
+  -webkit-transform: rotate3d(4, 2, 2, 19deg);
+  -moz-transform: rotate3d(4, 2, 2, 19deg);
+  -ms-transform: rotate3d(4, 2, 2, 19deg);
+  -o-transform: rotate3d(4, 2, 2, 19deg);
+  z-index: 100;
+}
+.diente8 {
+  border-radius: 20% 20% 3% 12% / 20% 30% 30% 85% !important;
+  -webkit-border-radius: 20% 20% 3% 12% / 20% 30% 30% 85% !important;
+  -moz-border-radius: 20% 20% 3% 12% / 20% 30% 30% 85% !important;
+  -ms-border-radius: 20% 20% 3% 12% / 20% 30% 30% 85% !important;
+  -o-border-radius: 20% 20% 3% 12% / 20% 30% 30% 85% !important;
+  height: 114px;
+  left: 492px;
+  top: 693px;
+  width:103px;
+  transform: rotate3d(4, 2, 2, 4deg);
+  -webkit-transform: rotate3d(4, 2, 2, 4deg);
+  -moz-transform: rotate3d(4, 2, 2, 4deg);
+  -ms-transform: rotate3d(4, 2, 2, 4deg);
+  -o-transform: rotate3d(4, 2, 2, 4deg);
+  z-index: 100;
+}
+.diente9 {
+  border-radius: 25% 20% 12% 5% / 20% 25% 80% 20% !important;
+  -webkit-border-radius: 25% 20% 12% 5% / 20% 25% 80% 20% !important;
+  -moz-border-radius: 25% 20% 12% 5% / 20% 25% 80% 20% !important;
+  -ms-border-radius: 25% 20% 12% 5% / 20% 25% 80% 20% !important;
+  -o-border-radius: 25% 20% 12% 5% / 20% 25% 80% 20% !important;
+  height: 113px;
+  left:595px;
+  top: 695px;
+  width:103px;
+  transform: rotate3d(4,2, 2, -3deg);
+  -webkit-transform: rotate3d(4,2, 2, -3deg);
+  -moz-transform: rotate3d(4,2, 2, -3deg);
+  -ms-transform: rotate3d(4,2, 2, -3deg);
+  -o-transform: rotate3d(4,2, 2, -3deg);
+}
+.diente10 {
+  border-radius: 20% 20% 20% 10% / 20% 10% 100% 00% !important;
+  -webkit-border-radius: 20% 20% 20% 10% / 20% 10% 100% 00% !important;
+  -moz-border-radius: 20% 20% 20% 10% / 20% 10% 100% 00% !important;
+  -ms-border-radius: 20% 20% 20% 10% / 20% 10% 100% 00% !important;
+  -o-border-radius: 20% 20% 20% 10% / 20% 10% 100% 00% !important;
+  height: 108px;
+  left: 698px;
+  top: 690px;
+  width:99px;
+  transform: rotate3d(-4, -2, -2, 20deg);
+  -webkit-transform: rotate3d(-4, -2, -2, 20deg);
+  -moz-transform: rotate3d(-4, -2, -2, 20deg);
+  -ms-transform: rotate3d(-4, -2, -2, 20deg);
+  -o-transform: rotate3d(-4, -2, -2, 20deg);
+  z-index: 100;
 }
 
