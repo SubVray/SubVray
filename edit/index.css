@@ -1,8 +1,7 @@
 * {
   box-sizing: border-box;
 }
-.container {
-}
+
 .img-container-boca {
   border: 1px solid red;
   max-width: 1200px;
@@ -75,6 +74,8 @@ img {
   -moz-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   -o-transform: rotate(1deg);
+  z-index: 100;
+
 }
 .diente3 {
   border-radius: 40% 40% 30% 20% / 40% 60% 10% 10% !important;
@@ -90,6 +91,10 @@ img {
   -moz-transform: rotate(-1deg);
   -ms-transform: rotate(-1deg);
   -o-transform: rotate(-1deg);
+  z-index: 100;
+}
+.diente2:hover{
+  
 }
 .diente4 {
   border-radius: 50% 40% 30% 50% / 40% 40% 10% 10% !important;
