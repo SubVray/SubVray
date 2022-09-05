@@ -2,19 +2,19 @@
   box-sizing: border-box;
 }
 .container{
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: calc(100vh - 85px);
+  justify-content: center;
 }
 .img-container-boca {
+  margin: auto;
   max-width: 1000px;
   position: relative;
-  margin: auto;
 }
 .boca {
-  max-width: 1200px;
   margin: auto;
+  max-width: 1200px;
 }
 .dientes {
   gap: 5px;
@@ -28,8 +28,8 @@ img {
   width: 100%;
 }
 .txct{
-  verflow-wrap: break-word;
   display: block;
+  verflow-wrap: break-word;
 }
 .diente {
   background-color: rgba(240, 240, 240, 0.968) !important;
@@ -40,13 +40,13 @@ img {
   -ms-border-radius: 30px 30px 5px 5px !important ;
   -o-border-radius: 30px 30px 5px 5px !important ;
   color: black !important;
+  font-size: 18px;
+  font-weight: bold;
   height: 110px;
   margin-top: -165px;
+  padding: 9px;
   position: absolute;
   verflow-wrap: break-word !important;
-  font-size: 18px;
-  padding: 9px;
-  font-weight: bold;
 
 }
 .diente:hover {
@@ -66,12 +66,12 @@ img {
   height: 170px;
   left: 347px;
   top: 455px;
-  width: 117px;
   transform: rotate3d(4, 9, 1, 25deg);
   -webkit-transform: rotate3d(4, 9, 1, 25deg);
   -moz-transform: rotate3d(4, 9, 1, 25deg);
   -ms-transform: rotate3d(4, 9, 1, 25deg);
   -o-transform: rotate3d(4, 9, 1, 25deg);
+  width: 117px;
 }
 .diente2 {
   border-radius: 40% 40% 30% 50% / 50% 50% 10% 10% !important;
@@ -87,8 +87,8 @@ img {
   -moz-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   -o-transform: rotate(1deg);
-  z-index: 100;
   width: 140px;
+  z-index: 100;
 
 }
 .diente3 {
@@ -105,8 +105,8 @@ img {
   -moz-transform: rotate(-1deg);
   -ms-transform: rotate(-1deg);
   -o-transform: rotate(-1deg);
-  z-index: 100;
   width: 137px;
+  z-index: 100;
 }
 .diente:hover{
   z-index: 200;
@@ -120,12 +120,12 @@ img {
   height: 170px;
   left: 723px;
   top: 455px;
-  width: 123px;
   transform: rotate3d(4, -9, 1, -33deg);
   -webkit-transform: rotate3d(4, -9, 1, -33deg);
   -moz-transform: rotate3d(4, -9, 1, -33deg);
   -ms-transform: rotate3d(4, -9, 1, -33deg);
   -o-transform: rotate3d(4, -9, 1, -33deg);
+  width: 123px;
   z-index: 10;
 }
 
@@ -138,12 +138,12 @@ img {
   height: 177px;
   left: 814px;
   top: 431px;
-  width: 120px;
   transform: rotate3d(4, -9, -1, -40deg);
   -webkit-transform: rotate3d(4, -9, -1, -40deg);
   -moz-transform: rotate3d(4, -9, -1, -40deg);
   -ms-transform: rotate3d(4, -9, -1, -40deg);
   -o-transform: rotate3d(4, -9, -1, -40deg);
+  width: 120px;
 }
 .diente6 {
   border-radius: 60% 50% 100% 30% / 70% 40% 100% 50% !important;
@@ -154,12 +154,12 @@ img {
   height: 177px;
   left: 252px;
   top: 431px;
-  width: 120px;
   transform: rotate3d(-4, -9, -1, 40deg);
   -webkit-transform: rotate3d(-4, -9, -1, 40deg);
   -moz-transform: rotate3d(-4, -9, -1, 40deg);
   -ms-transform: rotate3d(-4, -9, -1, 40deg);
   -o-transform: rotate3d(-4, -9, -1, 40deg);
+  width: 120px;
 }
 .diente7 {
   border-radius: 20% 20% 2% 20% / 10% 20% 20% 100% !important;
@@ -170,12 +170,12 @@ img {
   height: 108px;
   left: 394px;
   top: 688px;
-  width:99px;
   transform: rotate3d(4, 2, 2, 19deg);
   -webkit-transform: rotate3d(4, 2, 2, 19deg);
   -moz-transform: rotate3d(4, 2, 2, 19deg);
   -ms-transform: rotate3d(4, 2, 2, 19deg);
   -o-transform: rotate3d(4, 2, 2, 19deg);
+  width:99px;
   z-index: 100;
 }
 .diente8 {
@@ -187,12 +187,12 @@ img {
   height: 114px;
   left: 492px;
   top: 693px;
-  width:103px;
   transform: rotate3d(4, 2, 2, 4deg);
   -webkit-transform: rotate3d(4, 2, 2, 4deg);
   -moz-transform: rotate3d(4, 2, 2, 4deg);
   -ms-transform: rotate3d(4, 2, 2, 4deg);
   -o-transform: rotate3d(4, 2, 2, 4deg);
+  width:103px;
   z-index: 100;
 }
 .diente9 {
@@ -204,12 +204,12 @@ img {
   height: 113px;
   left:595px;
   top: 695px;
-  width:103px;
   transform: rotate3d(4,2, 2, -3deg);
   -webkit-transform: rotate3d(4,2, 2, -3deg);
   -moz-transform: rotate3d(4,2, 2, -3deg);
   -ms-transform: rotate3d(4,2, 2, -3deg);
   -o-transform: rotate3d(4,2, 2, -3deg);
+  width:103px;
 }
 .diente10 {
   border-radius: 20% 20% 20% 10% / 20% 10% 100% 00% !important;
@@ -220,12 +220,60 @@ img {
   height: 108px;
   left: 698px;
   top: 690px;
-  width:99px;
   transform: rotate3d(-4, -2, -2, 20deg);
   -webkit-transform: rotate3d(-4, -2, -2, 20deg);
   -moz-transform: rotate3d(-4, -2, -2, 20deg);
   -ms-transform: rotate3d(-4, -2, -2, 20deg);
   -o-transform: rotate3d(-4, -2, -2, 20deg);
+  width:99px;
   z-index: 100;
 }
 
+
+/* content info services */
+.close{
+  font-size: 25px;
+  padding: 5px !important;
+  position: absolute ;
+  right: 20px;
+  top: 15px;
+}
+.close :hover{
+  color: red;
+}
+.close:focus{
+  border: none;
+  outline: none;
+}
+.container-img-service{
+  margin: auto;
+  width: 400px;
+  
+}
+.container-img-service img{
+  width: 100% !important;
+  
+}
+.modal-title{
+  color: #16bab5;
+  font-size: 30px !important;
+  text-align: center !important;
+  width: 100%;
+  
+}
+.content-info-services{
+  font-size: 18px;
+  line-height: 1.6rem;
+  margin: 20px auto 0;
+  padding: 20px;
+  width: 85%;
+  background-color: #16bab4;
+  text-align: start;
+  box-shadow: 0 0 3px  #000;
+  border-radius:5px ;
+  -webkit-border-radius:5px ;
+  -moz-border-radius:5px ;
+  -ms-border-radius:5px ;
+  -o-border-radius:5px ;
+  color: #fff;
+}
