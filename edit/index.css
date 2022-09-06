@@ -247,11 +247,12 @@ img {
 }
 .container-img-service{
   margin: auto;
-  width: 400px;
+  width: 350px;
   
 }
 .container-img-service img{
   width: 100% !important;
+  height: auto;
   
 }
 .modal-title{
