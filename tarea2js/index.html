@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <!-- TODO: Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous" />
+    <script
+      src="https://kit.fontawesome.com/7bc87e2382.js"
+      crossorigin="anonymous"></script>
+    <!-- TODO: CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/practica1.css" />
+    <title>Tarea #2</title>
+  </head>
+  <body class="container p-0">
+    <header class="w-100 p-0">
+      <h1 class="text-center text-white m-0 bg-p">Tarea #2</h1>
+      <h2 class="text-center text-white m-0 bg-p">Retos</h2>
+      <nav
+        class="container-fluid d-flex flex-wrap navbar justify-content-center">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto1-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto1-tab-pane"
+              aria-selected="true">
+              Reto 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto2-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto2-tab-pane"
+              aria-selected="true">
+              Reto 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto3-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto3-tab-pane"
+              aria-selected="true">
+              Reto 3
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto4-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto4-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto4-tab-pane"
+              aria-selected="true">
+              Reto 4
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto5-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto5-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto5-tab-pane"
+              aria-selected="true">
+              Reto 5
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto6-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto6-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto6-tab-pane"
+              aria-selected="true">
+              Reto 6
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto7-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto7-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto7-tab-pane"
+              aria-selected="true">
+              Reto 7
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto8-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto8-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto8-tab-pane"
+              aria-selected="true">
+              Reto 8
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto9-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto9-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto9-tab-pane"
+              aria-selected="true">
+              Reto 9
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link color-btn-reto"
+              id="reto10-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reto10-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="reto10-tab-pane"
+              aria-selected="true">
+              Reto 10
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="tab-content" id="myTabContent">
+      <!-- tab1 -->
+      <div
+        class="tab-pane fade"
+        id="reto1-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto1-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 1</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Mostrar la conversión de dólares a colones. Se debe capturar el tipo
+            de cambio actual. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto1.html" class="btn-reto btn btn-color">Ir a reto 1</a>
+          </div>
+        </div>
+      </div>
+      <!-- tab2 -->
+      <div
+        class="tab-pane fade"
+        id="reto2-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto2-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 2</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Mostrar la conversión de dólares a colones. Se debe capturar el tipo
+            de cambio actual. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto2.html" class="btn-reto btn btn-color">Ir a reto 2</a>
+          </div>
+        </div>
+      </div>
+      <!-- tab3 -->
+      <div
+        class="tab-pane fade"
+        id="reto3-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto3-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 3</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Si los empleados tienen el cargo 1D van a re Curso Libre en caso
+            contrario recibirán el precio de un debe salir un mensaje que diga
+            NO premio. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto3.html" class="btn-reto btn btn-primary"
+              >Ir a reto 3</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab4 -->
+      <div
+        class="tab-pane fade"
+        id="reto4-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto4-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 4</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Si los empleados tienen el cargo 1D van a re Curso Libre en caso
+            contrario recibirán el precio de un debe salir un mensaje que diga
+            NO premio. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto4.html" class="btn-reto btn btn-primary"
+              >Ir a reto 4</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab5 -->
+      <div
+        class="tab-pane fade"
+        id="reto5-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto5-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 5</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold">
+            Se deben brindar los resultados de acuerdo a una nota aplicada. Si
+            la nota es mayor o igual a 70, debe aparecer un mensaje que diga
+            “Gano el curso”, si es mayor o igual a 60 y menor o igual a 69 el
+            mensaje debe ser el mensaje “Perdió el curso”, en caso contrario
+            debe aparecer el mensaje “Tiene derecho a un examen extraordinario”.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto5.html" class="btn-reto btn btn-primary"
+              >Ir a reto 5</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab6 -->
+      <div
+        class="tab-pane fade"
+        id="reto6-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto6-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 6</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            En una empresa clasifican a los empleados de acuerdo a un código: Si
+            el código del empleado esta entre 1 y 100 pertenece al "Departamento
+            de Informática". Si el código del empleado esta entre 101 y 200
+            pertenece al "Departamento Web". Si el código del empleado esta
+            entre 201 y 300 pertenece al "Departamento UX-UI". Si es un código
+            diferente a los rangos anteriores debe aparecer el mensaje NO hay
+            clasificación
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto6.html" class="btn-reto btn btn-primary"
+              >Ir a reto 6</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab7 -->
+      <div
+        class="tab-pane fade"
+        id="reto7-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto7-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 7</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Si los empleados tienen el cargo 1D van a re Curso Libre en caso
+            contrario recibirán el precio de un debe salir un mensaje que diga
+            NO premio. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto7.html" class="btn-reto btn btn-primary"
+              >Ir a reto 7</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab8 -->
+      <div
+        class="tab-pane fade"
+        id="reto8-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto8-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 8</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Si los empleados tienen el cargo 1D van a re Curso Libre en caso
+            contrario recibirán el precio de un debe salir un mensaje que diga
+            NO premio. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto8.html" class="btn-reto btn btn-primary"
+              >Ir a reto 8</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab9 -->
+      <div
+        class="tab-pane fade"
+        id="reto9-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto9-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 9</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Si los empleados tienen el cargo 1D van a re Curso Libre en caso
+            contrario recibirán el precio de un debe salir un mensaje que diga
+            NO premio. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto9.html" class="btn-reto btn btn-primary"
+              >Ir a reto 9</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- tab10 -->
+      <div
+        class="tab-pane fade"
+        id="reto10-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reto10-tab"
+        tabindex="0">
+        <h2 class="text-center display-5 fw-bolder num-reto">Reto 10</h2>
+        <div class="container">
+          <p class="txt-info-reto fw-bold text-center">
+            Si los empleados tienen el cargo 1D van a re Curso Libre en caso
+            contrario recibirán el precio de un debe salir un mensaje que diga
+            NO premio. Usar tabla de datos.
+          </p>
+          <div class="btn-container d-flex">
+            <a href="reto10.html" class="btn-reto btn btn-primary"
+              >Ir a reto 10</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- fin -->
+    </div>
+    <footer
+      class="container text-center footer d-flex flex-column align-items-center">
+      <span>Created By</span>
+      <span>Jim Bolaños Zuñiga</span>
+      <img
+        src="images/icons8-stormtrooper-100.png"
+        class="img-fluid img"
+        alt="" />
+    </footer>
+
+    <!-- TODO: JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
