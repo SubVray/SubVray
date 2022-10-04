@@ -27,85 +27,286 @@
 
     <!-- TODO: CSS -->
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/reto7.css" />
     <title>Reto #7</title>
   </head>
-  <body class="container p-0">
+  <body class="container-fluid p-0">
     <header class="w-100 p-0 bg-p">
       <a href="index.html" class="text-center d-flex justify-content-cente"
         ><i class="fa-regular fa-circle-left"></i>Inicio</a
       >
       <h1 class="text-center text-white m-0 p-4">Reto #7</h1>
     </header>
-    <section class="container sct-principal">
-      <div class="pt-4">
+    <section class="container-fluid sct-principal">
+      <div class="container pt-4">
         <p class="inst">
-          <strong class="stg">Instrucciones: </strong> En una empresa clasifican
-          a los empleados de acuerdo a un código: Si el código del empleado esta
-          entre 1 y 100 pertenece al "Departamento de Informática". Si el código
-          del empleado esta entre 101 y 200 pertenece al "Departamento Web". Si
-          el código del empleado esta entre 201 y 300 pertenece al "Departamento
-          UX-UI". Si es un código diferente a los rangos anteriores debe
-          aparecer el mensaje NO hay clasificación
+          <strong class="stg">Instrucciones: </strong>Crear una demostración
+          real para mostrar y ocultar información en Java Script. Usar botones e
+          imágenes respectivamente para lograr el objetivo planteado.
         </p>
       </div>
-      <form class="m-auto">
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-nombre" class="fw-bold txt-input"
-            >Nombre del empleado:</label
-          >
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-nombre"
-            type="text"
-            autocomplete="off"
-            placeholder="Nombre completo" />
-        </div>
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-salario" class="fw-bold txt-input"
-            >Código del empleado:</label
-          >
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-codigo"
-            type="text"
-            autocomplete="off"
-            placeholder="Código" />
-        </div>
-      </form>
-      <div class="pt-2 d-flex justify-content-center gap-5">
+      <h2 class="text-center pb-4 pt-4">Populares del 2022</h2>
+      <div
+        class="container d-flex gap-5 justify-content-center text-center pb-5">
         <button
           type="button"
-          class="btn btn-retos fw-bold"
-          id="btn-agregar"
-          onclick="agregar()">
-          Agregar
+          id="btn-mostrar-games"
+          class="btn-style"
+          onclick="mostrarGames()">
+          Juegos pupulares del 2022
         </button>
         <button
           type="button"
-          class="btn btn-retos fw-bold"
-          id="btn-borrar"
-          onclick="limpiar()">
-          Borrar
+          class="d-none btn-ocultar"
+          id="btn-ocultar-games"
+          onclick="ocultarGames()">
+          Ocultar juegos
+        </button>
+        <!-- TODO: botones musica -->
+        <button
+          type="button"
+          class="btn-style"
+          id="btn-mostrar-musica"
+          onclick="mostrarMusica()">
+          Musica popular del 2022
+        </button>
+        <button
+          type="button"
+          class="d-none btn-ocultar"
+          id="btn-ocultar-musica"
+          onclick="ocultarMusica()">
+          Ocultar musica
+        </button>
+        <!-- TODO: botones peliculas -->
+        <button
+          type="button"
+          class="btn-style"
+          id="btn-mostrar-peliculas"
+          onclick="mostrarPeliculas()">
+          Peliculas populares del 2022
+        </button>
+        <button
+          type="button"
+          class="d-none btn-ocultar"
+          id="btn-ocultar-peliculas"
+          onclick="ocultarPeliculas()">
+          Ocultar peliculas
         </button>
       </div>
-      <div class="container tbl-container text-center mt-4">
-        <table class="table table-hover">
-          <thead class="thead-retos">
-            <tr>
-              <th>#</th>
-              <th>Nombre completo</th>
-              <th>COdigo</th>
-              <th>Departamento</th>
-            </tr>
-          </thead>
-          <tbody id="tabla"></tbody>
-        </table>
+      <div class="container d-none" id="games">
+        <h2 class="text-center pt-5 pb-5 bg">Juegos Populares del 2022</h2>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <h3 class="text-center">Destiny 2</h3>
+            <div class="img-container">
+              <img src="images/destiny.jfif" alt="" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    Videojuego de disparos en primera persona el jugador
+                    presenta un entorno multijugador de "mundo compartido" con
+                    elementos de juegos de rol
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollado por Bungie</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- game2 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <h3 class="text-center">Horizon ll</h3>
+            <div class="img-container">
+              <img src="images/horizon.jpeg" alt="" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    El juego se desarrolla en una versión post apocalíptica que
+                    se recupera de las secuelas de un evento de extinción
+                    causado por un enjambre de robots rebeldes.
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollado por Guerrilla Games</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- game3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <h3 class="text-center">God of War Ragnarök</h3>
+            <div class="img-container">
+              <img src="images/godofwar.jfif" alt="" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    El juego esta basado libremente en la mitología nórdica , el
+                    juego estará ambientado en la antigua Escandinavia y contará
+                    con el protagonista de la serie Kratos.y su hijo adolescente
+                    Atreus.
+                  </p>
+                </li>
+                <li><p>Desarrollado por Santa Monica Studio</p></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- finish -->
+        </div>
       </div>
+
+      <!-- musica -->
+
+      <div class="container d-none" id="musica">
+        <h2 class="text-center pt-5 pb-5 bg">Musica Popular del 2022</h2>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <h3 class="text-center">Destiny 2</h3>
+            <div class="img-container">
+              <img src="images/destiny.jfif" alt="" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    Videojuego de disparos en primera persona multijugador en
+                    línea gratuito
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollado por Bungie</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- game2 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <h3 class="text-center">Horizon ll</h3>
+            <div class="img-container">
+              <img src="images/horizon.jpeg" alt="" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    El juego se desarrolla en una versión postapocalíptica que
+                    se recupera de las secuelas de un evento de extinción
+                    causado por un enjambre de robots rebeldes.
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollado por Guerrilla Games</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- game3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 card">
+            <h3 class="text-center">God of War Ragnarok</h3>
+            <div class="img-container">
+              <img src="images/godofwar.jfif" alt="" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    Videojuego de disparos en primera persona multijugador en
+                    línea gratuito
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- finish -->
+        </div>
+      </div>
+      <!-- peliculas -->
+      <div class="d-none" id="peliculas">
+        <h2 class="text-center pt-5 pb-5 bg">Peliculas Populares del 2022</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 card">
+            <h3 class="text-center">Thirteen lives</h3>
+            <div class="img-container">
+              <img
+                src="images/thirteenlivesmovie.jfif"
+                alt=""
+                class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    Videojuego de disparos en primera persona multijugador en
+                    línea gratuito
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollado por Bungie</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- pelicula2 -->
+          <div class="col-sm-12 col-md-4 col-lg-4 card">
+            <h3 class="text-center">Lou</h3>
+            <div class="img-container">
+              <img src="images/loumovie.jfif" class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    El juego se desarrolla en una versión postapocalíptica que
+                    se recupera de las secuelas de un evento de extinción
+                    causado por un enjambre de robots rebeldes.
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollado por Guerrilla Games</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- pelicula3 -->
+          <div class="col-sm-12 col-md-4 col-lg-4 card">
+            <h3 class="text-center">The Infernal Machine</h3>
+            <div class="img-container">
+              <img
+                src="images/theinfernalmovie.jfif"
+                alt=""
+                class="img-fluid" />
+            </div>
+            <div class="info">
+              <ul>
+                <li>
+                  <p>
+                    Videojuego de disparos en primera persona multijugador en
+                    línea gratuito
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- finish -->
+        </div>
+      </div>
+      <div class="container" id="resultado-juegos"></div>
+      <div class="container" id="resultado-musica"></div>
+      <div class="container" id="resultado-peliculas"></div>
     </section>
     <footer
-      class="container text-center footer d-flex justify-content-between align-items-center">
+      class="container-fluid text-center footer d-flex justify-content-between align-items-center">
       <a href="reto6.html" class="text-center d-flex justify-content-center">
         <i class="fa-regular fa-circle-left"></i>Reto 6</a
       >
@@ -121,7 +322,6 @@
         Reto 8<i class="fa-regular fa-circle-left fa-flip-horizontal"></i
       ></a>
     </footer>
-
     <!-- TODO: JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -129,6 +329,6 @@
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="js/reto6.js"></script>
+    <script src="js/reto7.js"></script>
   </body>
 </html>
