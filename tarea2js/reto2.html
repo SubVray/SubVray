@@ -36,6 +36,25 @@
         ><i class="fa-regular fa-circle-left"></i>Inicio</a
       >
       <h1 class="text-center text-white m-0 p-4">Reto #2</h1>
+      <div class="text-center">
+        <label for="retos-select" class="p-2 bg-p w-100"
+          >Selector de retos</label
+        >
+        <select id="retos-select" class="form-select" onchange="irRetos()">
+          <option selected value="" class="text-center">
+            ----- Selector de retos -----
+          </option>
+          <option value="1">Reto #1</option>
+          <option value="3">Reto #3</option>
+          <option value="4">Reto #4</option>
+          <option value="5">Reto #5</option>
+          <option value="6">Reto #6</option>
+          <option value="7">Reto #7</option>
+          <option value="8">Reto #8</option>
+          <option value="9">Reto #9</option>
+          <option value="10">Reto #10</option>
+        </select>
+      </div>
     </header>
     <section class="container sct-principal">
       <div class="pt-4">
@@ -87,7 +106,7 @@
           <thead class="thead-retos">
             <tr>
               <th>#</th>
-              <th>Dolares</th>
+              <th>Colones</th>
               <th>Tipo de Cambio</th>
               <th>Colones</th>
             </tr>
@@ -120,6 +139,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/retos.js"></script>
 
     <script src="js/reto2.js"></script>
   </body>

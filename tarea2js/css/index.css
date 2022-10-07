@@ -43,8 +43,8 @@ nav {
   color: var(--color-verde1);
   font-size: 1.5rem;
 }
-.sct-principal-index{
-  height: calc(100vh - 286px);
+.sct-principal-index {
+  height: calc(100vh - 382px);
   padding-top: 35px;
 }
 .sct-principal .inst {
@@ -164,6 +164,14 @@ form {
 #btn-agregar {
   background-color: var(--color-verde4);
 }
+.btn-retos:focus {
+  box-shadow: 0 6px rgb(94, 94, 94);
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+}
 #btn-borrar {
   background-color: var(--color-orange);
 }
@@ -237,4 +245,32 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .img {
   width: 30px;
+}
+header label {
+  color: #568d79;
+  display: none;
+}
+select {
+  outline: none;
+  border: 2px solid #2f588b !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  font-size: 1.2rem !important;
+  transition-duration: 0.5s;
+  color: var(--color-verde4) !important;
+  text-align: center;
+}
+option {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
+select:focus {
+  box-shadow: none !important;
 }
