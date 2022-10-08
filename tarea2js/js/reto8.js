@@ -14,6 +14,8 @@ let agregar = () => {
         icon: "warning",
         title: "Oops...",
         text: "Por favor complete los campos resaltados en rojo",
+        confirmButtonColor: "#568d79",
+        confirmButtonText: "Entendido",
       });
       if (input.value != "") {
         input.classList.remove("input-invalid");
@@ -32,6 +34,8 @@ let agregar = () => {
         icon: "warning",
         title: "Oops...",
         text: "Por favor complete los campos resaltados en rojo, el código debe ser mayor a 0",
+        confirmButtonColor: "#568d79",
+        confirmButtonText: "Entendido",
       });
     } else if (txtCodigo <= 100) {
       departamento = "Departamento de Informática";
@@ -53,6 +57,8 @@ let agregar = () => {
         icon: "warning",
         title: "Oops...",
         text: "NO existe la clasificación",
+        confirmButtonColor: "#568d79",
+        confirmButtonText: "Entendido",
       });
     }
   }

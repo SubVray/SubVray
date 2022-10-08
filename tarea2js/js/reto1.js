@@ -14,6 +14,7 @@ let calcular = () => {
         icon: "warning",
         title: "Oops...",
         text: "Por favor complete los campos resaltados en rojo",
+        confirmButtonText: "Entendido",
       });
       if (input.value != "") {
         input.classList.remove("input-invalid");

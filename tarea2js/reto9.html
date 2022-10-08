@@ -59,69 +59,56 @@
     <section class="container sct-principal">
       <div class="pt-4">
         <p class="inst">
-          <strong class="stg">Instrucciones: </strong> En una empresa clasifican
-          a los empleados de acuerdo a un código: Si el código del empleado esta
-          entre 1 y 100 pertenece al "Departamento de Informática". Si el código
-          del empleado esta entre 101 y 200 pertenece al "Departamento Web". Si
-          el código del empleado esta entre 201 y 300 pertenece al "Departamento
-          UX-UI". Si es un código diferente a los rangos anteriores debe
-          aparecer el mensaje NO hay clasificación
+          <strong class="stg">Instrucciones: </strong> Se requiere crear una
+          demostración digital de acuerdo a los siguientes aspectos: Si se
+          escribe el color rojo debe aparecer una imagen alusiva. Si se escribe
+          el color azul debe aparecer una imagen alusiva. Si se escribe el color
+          verde debe aparecer una imagen alusiva. En caso contrario debe salir
+          el mensaje “NO hay clasificación”.
         </p>
       </div>
-      <form class="m-auto">
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-nombre" class="fw-bold txt-input"
-            >Nombre del empleado:</label
-          >
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-nombre"
-            type="text"
-            autocomplete="off"
-            placeholder="Nombre completo" />
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+          <form class="m-auto">
+            <div
+              class="input-group mb-3 d-flex justify-content-between flex-column">
+              <label for="txt-color" class="fw-bold txt-input"
+                >Color:</label
+              >
+              <input
+                class="style-input rounded rounded-3"
+                id="txt-color"
+                type="text"
+                autocomplete="off"
+                placeholder="Color" />
+            </div>
+    
+          </form>
         </div>
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-salario" class="fw-bold txt-input"
-            >Código del empleado:</label
-          >
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-codigo"
-            type="text"
-            autocomplete="off"
-            placeholder="Código" />
+        <div class="col-md-6">
+          <form class="m-auto">
+            <div class=" img-fluid img-reto9 m-auto" id="img">
+              <img src="images/colors.jpg" class="img-fluid"></img>
+            </div>
+    
+          </form>
         </div>
-      </form>
+      </div>
       <div class="pt-2 d-flex justify-content-center gap-5">
         <button
           type="button"
           class="btn btn-retos fw-bold"
           id="btn-agregar"
           onclick="agregar()">
-          Agregar
+          Buscar
         </button>
         <button
           type="button"
           class="btn btn-retos fw-bold"
           id="btn-borrar"
           onclick="limpiar()">
-          Borrar
+          Limpiar
         </button>
-      </div>
-      <div class="container tbl-container text-center mt-4">
-        <table class="table table-hover">
-          <thead class="thead-retos">
-            <tr>
-              <th>#</th>
-              <th>Nombre completo</th>
-              <th>COdigo</th>
-              <th>Departamento</th>
-            </tr>
-          </thead>
-          <tbody id="tabla"></tbody>
-        </table>
       </div>
     </section>
     <footer
@@ -150,6 +137,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/retos.js"></script>
 
-    <script src="js/reto6.js"></script>
+    <script src="js/reto9.js"></script>
   </body>
 </html>

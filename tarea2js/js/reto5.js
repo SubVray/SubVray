@@ -14,6 +14,8 @@ let agregar = () => {
         icon: "warning",
         title: "Oops...",
         text: "Por favor complete los campos resaltados en rojo",
+        confirmButtonColor: "#568d79",
+        confirmButtonText: "Entendido",
       });
       if (input.value != "") {
         input.classList.remove("input-invalid");
