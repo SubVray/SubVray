@@ -67,7 +67,7 @@
         <div
           class="input-group mb-3 d-flex justify-content-between flex-column">
           <label for="txt-nombre" class="fw-bold txt-input"
-            >Nombre del empleado:</label
+            >Nombre:</label
           >
           <input
             class="style-input rounded rounded-3"
@@ -78,15 +78,45 @@
         </div>
         <div
           class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-salario" class="fw-bold txt-input"
-            >Código del empleado:</label
+          <label for="txt-servicio" class="fw-bold txt-input"
+            >Servicio:</label
           >
           <input
             class="style-input rounded rounded-3"
-            id="txt-codigo"
+            id="txt-servicio"
             type="text"
             autocomplete="off"
-            placeholder="Código" />
+            placeholder="Servicio elegido" />
+        </div>
+        <div
+          class="input-group mb-3 d-flex justify-content-between flex-column">
+          <label for="txt-hora" class="fw-bold txt-input">Hora:</label>
+          <input
+            class="style-input rounded rounded-3"
+            id="txt-hora"
+            type="time"
+            autocomplete="off"
+            placeholder="Hora" />
+        </div>
+        <div
+          class="input-group mb-3 d-flex justify-content-between flex-column">
+          <label for="txt-dia" class="fw-bold txt-input">Dia:</label>
+          <input
+            class="style-input rounded rounded-3"
+            id="txt-dia"
+            type="date"
+            autocomplete="off"
+            placeholder="Dia" />
+        </div>
+        <div
+          class="input-group mb-3 d-flex justify-content-between flex-column">
+          <label for="txt-monto" class="fw-bold txt-input">Monto:</label>
+          <input
+            class="style-input rounded rounded-3"
+            id="txt-monto"
+            type="number"
+            autocomplete="off"
+            placeholder="Monto" />
         </div>
       </form>
       <div class="pt-2 d-flex justify-content-center gap-5">
@@ -111,8 +141,10 @@
             <tr>
               <th>#</th>
               <th>Nombre completo</th>
-              <th>COdigo</th>
-              <th>Departamento</th>
+              <th>Servicio</th>
+              <th>Hora</th>
+              <th>Dia</th>
+              <th>Monto</th>
             </tr>
           </thead>
           <tbody id="tabla"></tbody>
@@ -145,6 +177,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/retos.js"></script>
 
-    <script src="js/reto6.js"></script>
+    <script src="js/reto10.js"></script>
   </body>
 </html>

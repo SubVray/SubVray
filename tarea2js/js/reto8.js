@@ -1,13 +1,21 @@
 let num = 1;
 let valid = false;
 let agregar = () => {
-  let departamento = "";
   let txtNombre = document.querySelector("#txt-nombre").value;
-  let txtCodigo = document.querySelector("#txt-codigo").value;
+  let txtCedula = document.querySelector("#txt-cedula").value;
+  let txtCorreo = document.querySelector("#txt-correo").value;
+  let txtDepartamento = document.querySelector("#txt-departamento").value;
+  let img = document.getElementById("img");
+  let provincia = document.getElementById("provincia");
   let inputs = document.querySelectorAll("form input");
 
   inputs.forEach((input) => {
-    if (txtNombre == "" || txtCodigo == "") {
+    if (
+      txtNombre == "" ||
+      txtCedula == "" ||
+      txtCorreo == "" ||
+      txtDepartamento == ""
+    ) {
       valid = false;
       input.classList.add("input-invalid");
       Swal.fire({
@@ -28,35 +36,38 @@ let agregar = () => {
   });
 
   if (valid == true) {
-    if (txtCodigo == 0) {
-      document.querySelector("#txt-codigo").classList.add("input-invalid");
-      Swal.fire({
-        icon: "warning",
-        title: "Oops...",
-        text: "Por favor complete los campos resaltados en rojo, el código debe ser mayor a 0",
-        confirmButtonColor: "#568d79",
-        confirmButtonText: "Entendido",
-      });
-    } else if (txtCodigo <= 100) {
-      departamento = "Departamento de Informática";
-      createTable(txtNombre, txtCodigo, departamento);
-      departamento = "";
-      document.querySelector("#txt-codigo").classList.remove("input-invalid");
-    } else if (txtCodigo <= 200) {
-      departamento = "Departamento Web";
-      document.querySelector("#txt-codigo").classList.remove("input-invalid");
-      createTable(txtNombre, txtCodigo, departamento);
-      departamento = "";
-    } else if (txtCodigo <= 300) {
-      departamento = "Departamento UX-UI";
-      document.querySelector("#txt-codigo").classList.remove("input-invalid");
-      createTable(txtNombre, txtCodigo, departamento);
-      departamento = "";
+    provincia.classList.remove("d-none");
+    if (txtCedula[0] == 1) {
+      img.innerHTML =
+        '<img src="images/provincias/sanjose.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 2) {
+      img.innerHTML =
+        '<img src="images/provincias/alajuela.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 3) {
+      img.innerHTML =
+        '<img src="images/provincias/cartago.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 4) {
+      img.innerHTML =
+        '<img src="images/provincias/heredia.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 5) {
+      img.innerHTML =
+        '<img src="images/provincias/guanacaste.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 6) {
+      img.innerHTML =
+        '<img src="images/provincias/puntarenas.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 7) {
+      img.innerHTML =
+        '<img src="images/provincias/limon.png" class="img-fluid"></img>';
+    } else if (txtCedula[0] == 8) {
+      img.innerHTML =
+        '<img src="images/provincias/extranjero.png" class="img-fluid"></img>';
     } else {
+      provincia.classList.add("d-none");
+      document.querySelector("#txt-cedula").classList.add("input-invalid");
       Swal.fire({
-        icon: "warning",
+        icon: "error",
         title: "Oops...",
-        text: "NO existe la clasificación",
+        text: "Compruebe el numero inicial de su cédula.",
         confirmButtonColor: "#568d79",
         confirmButtonText: "Entendido",
       });
@@ -64,26 +75,13 @@ let agregar = () => {
   }
 };
 
-let createTable = (txtNombre, txtCodigo, departamento) => {
-  let datosTabla = `<td>${num}</td> <td>${txtNombre}</td> <td>${txtCodigo}</td> <td>${departamento}</td>`;
-  //crea la fila de la tabla
-  let agregar = document.createElement("tr");
-  //apunta los datos de la tabla
-  agregar.innerHTML = datosTabla;
-  //agregar los datos a la tabla usando appendChild
-  document.getElementById("tabla").appendChild(agregar);
-  num++;
-  //limpiar los campos del input una vez calcule el valor de colones
-  document.querySelector("#txt-nombre").value = "";
-  document.querySelector("#txt-codigo").value = "";
-};
-
 let limpiar = () => {
   num = 1;
   //   Limpia los campos de texto a darle click a borrar
   document.querySelector("#txt-nombre").value = "";
-  document.querySelector("#txt-codigo").value = "";
-
+  document.querySelector("#txt-cedula").value = "";
+  document.querySelector("#txt-correo").value = "";
+  document.querySelector("#txt-departamento").value = "";
   //Limpia todo el contenido de la tabla
-  document.getElementById("tabla").innerHTML = "";
+  document.getElementById("provincia").innerHTML = "";
 };

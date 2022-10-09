@@ -1,13 +1,21 @@
 let num = 1;
 let valid = false;
 let agregar = () => {
-  let departamento = "";
   let txtNombre = document.querySelector("#txt-nombre").value;
-  let txtCodigo = document.querySelector("#txt-codigo").value;
+  let txtServicio = document.querySelector("#txt-servicio").value;
+  let txtHora = document.querySelector("#txt-hora").value;
+  let txtDia = document.querySelector("#txt-dia").value;
+  let txtMonto = document.querySelector("#txt-monto").value;
   let inputs = document.querySelectorAll("form input");
 
   inputs.forEach((input) => {
-    if (txtNombre == "" || txtCodigo == "") {
+    if (
+      txtNombre == "" ||
+      txtServicio == "" ||
+      txtHora == "" ||
+      txtDia == "" ||
+      txtMonto == ""
+    ) {
       valid = false;
       input.classList.add("input-invalid");
       Swal.fire({
@@ -26,40 +34,14 @@ let agregar = () => {
   });
 
   if (valid == true) {
-    if (txtCodigo == 0) {
-      document.querySelector("#txt-codigo").classList.add("input-invalid");
-      Swal.fire({
-        icon: "warning",
-        title: "Oops...",
-        text: "Por favor complete los campos resaltados en rojo, el código debe ser mayor a 0",
-      });
-    } else if (txtCodigo <= 100) {
-      departamento = "Departamento de Informática";
-      createTable(txtNombre, txtCodigo, departamento);
-      departamento = "";
-      document.querySelector("#txt-codigo").classList.remove("input-invalid");
-    } else if (txtCodigo <= 200) {
-      departamento = "Departamento Web";
-      document.querySelector("#txt-codigo").classList.remove("input-invalid");
-      createTable(txtNombre, txtCodigo, departamento);
-      departamento = "";
-    } else if (txtCodigo <= 300) {
-      departamento = "Departamento UX-UI";
-      document.querySelector("#txt-codigo").classList.remove("input-invalid");
-      createTable(txtNombre, txtCodigo, departamento);
-      departamento = "";
-    } else {
-      Swal.fire({
-        icon: "warning",
-        title: "Oops...",
-        text: "NO existe la clasificación",
-      });
-    }
+    createTable(txtNombre, txtServicio, txtHora, txtDia, txtMonto);
   }
 };
 
-let createTable = (txtNombre, txtCodigo, departamento) => {
-  let datosTabla = `<td>${num}</td> <td>${txtNombre}</td> <td>${txtCodigo}</td> <td>${departamento}</td>`;
+let createTable = (txtNombre, txtServicio, txtHora, txtDia, txtMonto) => {
+  let datosTabla = `<td>${num}</td> <td>${txtNombre}</td> <td>${txtServicio}</td> <td>${txtHora}</td> <td>${txtDia}</td>  <td>${new Intl.NumberFormat(
+    "de-DE"
+  ).format(txtMonto)}</td>`;
   //crea la fila de la tabla
   let agregar = document.createElement("tr");
   //apunta los datos de la tabla
@@ -69,15 +51,20 @@ let createTable = (txtNombre, txtCodigo, departamento) => {
   num++;
   //limpiar los campos del input una vez calcule el valor de colones
   document.querySelector("#txt-nombre").value = "";
-  document.querySelector("#txt-codigo").value = "";
+  document.querySelector("#txt-servicio").value = "";
+  document.querySelector("#txt-hora").value = "";
+  document.querySelector("#txt-dia").value = "";
+  document.querySelector("#txt-monto").value = "";
 };
 
 let limpiar = () => {
   num = 1;
   //   Limpia los campos de texto a darle click a borrar
   document.querySelector("#txt-nombre").value = "";
-  document.querySelector("#txt-codigo").value = "";
-
+  document.querySelector("#txt-servicio").value = "";
+  document.querySelector("#txt-hora").value = "";
+  document.querySelector("#txt-dia").value = "";
+  document.querySelector("#txt-monto").value = "";
   //Limpia todo el contenido de la tabla
   document.getElementById("tabla").innerHTML = "";
 };

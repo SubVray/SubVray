@@ -59,10 +59,7 @@
     <section class="container sct-principal">
       <div class="pt-4">
         <p class="inst">
-          <strong class="stg">Instrucciones: </strong> Crear una demostración
-          real capturando entre 3 a 5 datos, usando campos input formulario y
-          que brinde como resultado una imagen relacionada de acuerdo a un caso
-          condicional inventado.
+          <strong class="stg">Instrucciones: </strong> Respecto al numero inicial que se escriba en el campo cédula el programa muestra como resultado una foto de la provincia donde nació el empleado. Por ejemplo si el numero inicial es 1 el programa dirá que el empleado es de San José.
         </p>
       </div>
       <form class="m-auto">
@@ -80,15 +77,35 @@
         </div>
         <div
           class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-salario" class="fw-bold txt-input"
-            >Código del empleado:</label
+          <label for="txt-cedula" class="fw-bold txt-input">Cédula:</label>
+          <input
+            class="style-input rounded rounded-3"
+            id="txt-cedula"
+            type="number"
+            autocomplete="off"
+            placeholder="Cédula" />
+        </div>
+        <div
+          class="input-group mb-3 d-flex justify-content-between flex-column">
+          <label for="txt-correo" class="fw-bold txt-input">Correo:</label>
+          <input
+            class="style-input rounded rounded-3"
+            id="txt-correo"
+            type="email"
+            autocomplete="off"
+            placeholder="Correo" />
+        </div>
+        <div
+          class="input-group mb-3 d-flex justify-content-between flex-column">
+          <label for="txt-departamento" class="fw-bold txt-input"
+            >Departamento:</label
           >
           <input
             class="style-input rounded rounded-3"
-            id="txt-codigo"
+            id="txt-departamento"
             type="text"
             autocomplete="off"
-            placeholder="Código" />
+            placeholder="Departamento" />
         </div>
       </form>
       <div class="pt-2 d-flex justify-content-center gap-5">
@@ -106,6 +123,10 @@
           onclick="limpiar()">
           Borrar
         </button>
+      </div>
+      <div class="container mt-4 text-center d-none" id="provincia">
+         <h2>Provincia</h2>
+        <div class="img-fluid img-reto9 m-auto" id="img"></div>
       </div>
     </section>
     <footer
@@ -133,7 +154,6 @@
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/retos.js"></script>
-
     <script src="js/reto8.js"></script>
   </body>
 </html>
