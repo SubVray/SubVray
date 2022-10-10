@@ -4,11 +4,11 @@ let txtCargoUpper = "";
 curso = "";
 let agregar = () => {
   let txtNombre = document.querySelector("#txt-nombre").value;
-  let txtApellidos = document.querySelector("#txt-apellidos").value;
+  let txtApellido = document.querySelector("#txt-apellido").value;
   let txtCargo = document.querySelector("#txt-cargo");
   let inputs = document.querySelectorAll("form input");
   inputs.forEach((input) => {
-    if (txtNombre == "" || txtApellidos == "" || txtCargo == "") {
+    if (txtNombre == "" || txtApellido == "" || txtCargo == "") {
       valid = false;
       input.classList.add("input-invalid");
       Swal.fire({
@@ -35,7 +35,7 @@ let agregar = () => {
       curso = "Curso libre";
       //variable que almacena la estructura de la tabla
       //td define la celda de la tabla que contiene los datos
-      let datosTabla = `<td> ${num} </td> <td> ${txtNombre} </td> <td>${txtApellidos} </td> <td>${txtCargoUpper} </td> <td>${curso} </td> `;
+      let datosTabla = `<td> ${num} </td> <td> ${txtNombre} </td> <td>${txtApellido} </td> <td>${txtCargoUpper} </td> <td>${curso} </td> `;
 
       //crea la fila de la tabla
       let agregar = document.createElement("tr");
@@ -47,7 +47,7 @@ let agregar = () => {
 
       //limpiar los campos del input una vez calcule el valor de colones
       document.querySelector("#txt-nombre").value = "";
-      document.querySelector("#txt-apellidos").value = "";
+      document.querySelector("#txt-apellido").value = "";
       document.querySelector("#txt-cargo").value = "";
     } else {
       txtCargo = txtCargo.value;
@@ -60,7 +60,7 @@ let agregar = () => {
       curso = "No hay premio";
       //variable que almacena la estructura de la tabla
       //td define la celda de la tabla que contiene los datos
-      let datosTabla = `<td> ${num} </td> <td> ${txtNombre.value} </td> <td>${txtApellidos.value} </td> <td>${txtCargoUpper} </td> <td>${curso} </td> `;
+      let datosTabla = `<td> ${num} </td> <td> ${txtNombre} </td> <td>${txtApellido} </td> <td>${txtCargoUpper} </td> <td>${curso} </td> `;
 
       //crea la fila de la tabla
       let agregar = document.createElement("tr");
@@ -72,7 +72,7 @@ let agregar = () => {
 
       //limpiar los campos del input una vez calcule el valor de colones
       document.querySelector("#txt-nombre").value = "";
-      document.querySelector("#txt-apellidos").value = "";
+      document.querySelector("#txt-apellido").value = "";
       document.querySelector("#txt-cargo").value = "";
     }
   }
@@ -82,7 +82,7 @@ let limpiar = () => {
   num = 1;
   //   Limpia los campos de texto a darle click a borrar
   document.querySelector("#txt-nombre").value = "";
-  document.querySelector("#txt-apellidos").value = "";
+  document.querySelector("#txt-apellido").value = "";
   document.querySelector("#txt-cargo").value = "";
 
   //Limpia todo el contenido de la tabla

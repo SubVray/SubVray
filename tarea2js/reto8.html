@@ -59,76 +59,84 @@
     <section class="container sct-principal">
       <div class="pt-4">
         <p class="inst">
-          <strong class="stg">Instrucciones: </strong> Respecto al numero inicial que se escriba en el campo cédula el programa muestra como resultado una foto de la provincia donde nació el empleado. Por ejemplo si el numero inicial es 1 el programa dirá que el empleado es de San José.
+          <strong class="stg">Instrucciones: </strong> Respecto al numero
+          inicial que se escriba en el campo cédula el programa muestra como
+          resultado una foto de la provincia donde nació el empleado. Por
+          ejemplo si el numero inicial es 1 el programa dirá que el empleado es
+          de San José.
         </p>
       </div>
-      <form class="m-auto">
+      <div class="reto8">
+        <form class="m-auto">
+          <div
+            class="input-group mb-3 d-flex justify-content-between flex-column">
+            <label for="txt-nombre" class="fw-bold txt-input"
+              >Nombre del empleado:</label
+            >
+            <input
+              class="style-input rounded rounded-3"
+              id="txt-nombre"
+              type="text"
+              autocomplete="off"
+              placeholder="Nombre completo" />
+          </div>
+          <div
+            class="input-group mb-3 d-flex justify-content-between flex-column">
+            <label for="txt-cedula" class="fw-bold txt-input">Cédula:</label>
+            <input
+              class="style-input rounded rounded-3"
+              id="txt-cedula"
+              type="number"
+              autocomplete="off"
+              placeholder="Cédula" />
+          </div>
+          <div
+            class="input-group mb-3 d-flex justify-content-between flex-column">
+            <label for="txt-correo" class="fw-bold txt-input">Correo:</label>
+            <input
+              class="style-input rounded rounded-3"
+              id="txt-correo"
+              type="email"
+              autocomplete="off"
+              placeholder="Correo" />
+          </div>
+          <div
+            class="input-group mb-3 d-flex justify-content-between flex-column">
+            <label for="txt-departamento" class="fw-bold txt-input"
+              >Departamento:</label
+            >
+            <input
+              class="style-input rounded rounded-3"
+              id="txt-departamento"
+              type="text"
+              autocomplete="off"
+              placeholder="Departamento" />
+          </div>
+        </form>
         <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-nombre" class="fw-bold txt-input"
-            >Nombre del empleado:</label
-          >
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-nombre"
-            type="text"
-            autocomplete="off"
-            placeholder="Nombre completo" />
-        </div>
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-cedula" class="fw-bold txt-input">Cédula:</label>
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-cedula"
-            type="number"
-            autocomplete="off"
-            placeholder="Cédula" />
-        </div>
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-correo" class="fw-bold txt-input">Correo:</label>
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-correo"
-            type="email"
-            autocomplete="off"
-            placeholder="Correo" />
-        </div>
-        <div
-          class="input-group mb-3 d-flex justify-content-between flex-column">
-          <label for="txt-departamento" class="fw-bold txt-input"
-            >Departamento:</label
-          >
-          <input
-            class="style-input rounded rounded-3"
-            id="txt-departamento"
-            type="text"
-            autocomplete="off"
-            placeholder="Departamento" />
-        </div>
-      </form>
-      <div class="pt-2 d-flex justify-content-center gap-5">
-        <button
-          type="button"
-          class="btn btn-retos fw-bold"
-          id="btn-agregar"
-          onclick="agregar()">
-          Agregar
-        </button>
-        <button
-          type="button"
-          class="btn btn-retos fw-bold"
-          id="btn-borrar"
-          onclick="limpiar()">
-          Borrar
-        </button>
-      </div>
-      <div class="container mt-4 text-center d-none" id="provincia">
-         <h2>Provincia</h2>
+        class="container container-img-8 mt-4 text-center d-none"
+        id="provincia">
+        <h2 class="fw-bold txt-input">Provincia</h2>
         <div class="img-fluid img-reto9 m-auto" id="img"></div>
       </div>
-    </section>
+    </div>
+  </section>
+  <div class="pt-2 d-flex justify-content-center mt-4 gap-5">
+    <button
+      type="button"
+      class="btn btn-retos fw-bold"
+      id="btn-agregar"
+      onclick="agregar()">
+      Agregar
+    </button>
+    <button
+      type="button"
+      class="btn btn-retos fw-bold"
+      id="btn-borrar"
+      onclick="limpiar()">
+      Limpiar
+    </button>
+  </div>
     <footer
       class="container text-center footer d-flex justify-content-between align-items-center">
       <a href="reto7.html" class="text-center d-flex justify-content-center">

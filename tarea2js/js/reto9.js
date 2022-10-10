@@ -10,7 +10,6 @@ let agregar = () => {
       document.getElementById("txt-color").style.textAlign = "center";
       document.getElementById("txt-color").classList.remove("input-invalid");
       document.getElementById("txt-color").classList.add("input-valid");
-      inputcolor.toUpperCase();
 
       break;
 

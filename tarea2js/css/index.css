@@ -282,3 +282,17 @@ input{
 .img-reto9{
 width: 70%;
 }
+.container-img-8{
+  width: 525px;
+}
+.reto8{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reto8 form{
+  width: 500px;
+}

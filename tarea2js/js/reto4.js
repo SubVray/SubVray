@@ -40,7 +40,6 @@ let agregar = () => {
     } else if (txtNota >= 60 && txtNota <= 69) {
       Swal.fire({
         icon: "warning",
-        title: "Suerte",
         text: "Perdió el curso",
       });
       let datosTabla = `<td> ${num} </td> <td> ${txtNombre} </td> <td>${txtMateria}</td> <td>${txtNota}</td> <td></td> <td></td> <td>${comprobacion}</td> `;
@@ -48,7 +47,6 @@ let agregar = () => {
     } else {
       Swal.fire({
         icon: "warning",
-        title: "Lo siento",
         text: "Tiene derecho a realizar el examen extraordinario",
       });
       let datosTabla = `<td> ${num} </td> <td> ${txtNombre} </td> <td>${txtMateria}</td> <td>${txtNota}</td> <td></td> <td>${comprobacion}</td> <td></td> `;
