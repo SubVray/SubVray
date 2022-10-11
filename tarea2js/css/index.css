@@ -89,8 +89,8 @@ header i {
   outline: 2px solid var(--color-verde2);
 }
 form {
-  min-width: 300px !important;
-  max-width: 700px !important;
+  min-width: 300px ;
+  max-width: 700px ;
   font-size: 1.7rem;
 }
 
@@ -200,7 +200,7 @@ footer {
   font-size: 1rem;
   margin-top: 50px;
   padding: 5px 0;
-  z-index: 100 !important;
+  z-index: 100 ;
   position: relative;
 }
 .by {
