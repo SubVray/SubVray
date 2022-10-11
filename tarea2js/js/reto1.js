@@ -2,10 +2,13 @@ let btnCalcular = document.querySelector("#btn-calcular");
 let num = 1;
 let resultado = 0;
 let valid = false;
+// Funcion de hacer la operacion de dolares a colones
 let calcular = () => {
   let txtDolares = document.querySelector("#txt-dolares").value;
   let tipoCambio = document.querySelector("#txt-cambio").value;
   let inputs = document.querySelectorAll("form input");
+
+  // forEach para validar cada input vacio del formulario 
   inputs.forEach((input) => {
     if (txtDolares == "" || tipoCambio == "") {
       valid = false;
@@ -33,7 +36,6 @@ let calcular = () => {
     let datosTabla = `<td> ${num} </td> <td> $${txtDolares} </td> <td>₡${tipoCambio} </td> <td>₡${new Intl.NumberFormat(
       "de-DE"
     ).format(resultado)} </td> `;
-
     //crea la fila de la tabla
     let agregar = document.createElement("tr");
     //apunta los datos de la tabla

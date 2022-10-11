@@ -6,6 +6,7 @@ let calcular = () => {
   let txtColones = document.querySelector("#txt-colones").value;
   let tipoCambio = document.querySelector("#txt-cambio").value;
   let inputs = document.querySelectorAll("form input");
+  // forEach para validar cada input vacio del formulario
   inputs.forEach((input) => {
     if (txtColones == "" || tipoCambio == "") {
       valid = false;
@@ -30,9 +31,9 @@ let calcular = () => {
     resultado = txtColones * tipoCambio;
     //variable que almacena la estructura de la tabla
     //td define la celda de la tabla que contiene los datos
-    let datosTabla = `<td> ${num} </td> <td> ₡${txtColones} </td> <td>$${
-      tipoCambio
-    } </td> <td>₡${new Intl.NumberFormat("de-DE").format(resultado)} </td> `;
+    let datosTabla = `<td> ${num} </td> <td> ₡${txtColones} </td> <td>$${tipoCambio} </td> <td>₡${new Intl.NumberFormat(
+      "de-DE"
+    ).format(resultado)} </td> `;
 
     //crea la fila de la tabla
     let agregar = document.createElement("tr");

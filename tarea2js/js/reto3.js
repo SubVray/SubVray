@@ -7,6 +7,8 @@ let agregar = () => {
   let txtApellido = document.querySelector("#txt-apellido").value;
   let txtCargo = document.querySelector("#txt-cargo");
   let inputs = document.querySelectorAll("form input");
+  
+  // forEach para validar cada input vacio del formulario
   inputs.forEach((input) => {
     if (txtNombre == "" || txtApellido == "" || txtCargo == "") {
       valid = false;
