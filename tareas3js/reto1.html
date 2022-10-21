@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/reto1.css" />
+    <title>Reto1</title>
+  </head>
+  <body>
+    <header class="">
+      <nav
+        class="navbar navbar-expand-xlg navbar-light d-flex justify-content-between align-items-center h-100">
+        <div class="container-fluid">
+          <h1 class="">Reto #1</h1>
+          <button
+            class="navbar-toggler second-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="animated-icon2">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+              <li class="nav-item">
+                <form class="selector-retos">
+                  <select
+                    id="retos-select"
+                    class="form-select"
+                    onchange="irRetos()">
+                    <option selected value="" disabled class="text-center">
+                      ----- Selector de retos -----
+                    </option>
+                    <option value="0">Inicio</option>
+                    <option value="1" selected disabled>Reto #1</option>
+                    <option value="2">Reto #2</option>
+                    <option value="3">Reto #3</option>
+                    <option value="4">Reto #4</option>
+                    <option value="5">Reto #5</option>
+                    <option value="6">Reto #6</option>
+                    <option value="7">Reto #7</option>
+                    <option value="8">Reto #8</option>
+                    <option value="9">Reto #9</option>
+                    <option value="10">Reto #10</option>
+                  </select>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input id="username" type="text" name="username" required />
+            <label for="username">Username</label>
+          </div>
+          <div class="user-box">
+            <input id="password" type="password" name="password" required />
+            <label for="password">Password</label>
+          </div>
+          <div class="btns-container d-flex w-100 justify-content-around">
+            <button class="btn1" type="button" onclick="login()">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              entrar
+            </button>
+            <button class="btn2" type="button" onclick="login()">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Borrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/retos.js"></script>
+    <script src="js/reto1.js"></script>
+  </body>
+</html>
