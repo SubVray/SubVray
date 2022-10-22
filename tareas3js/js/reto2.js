@@ -1,6 +1,3 @@
-let iva = 0.13;
-let servicio = 0.5;
-
 const facturar = () => {
   let nombre = document.getElementById("nombre").value;
   let cliente = document.getElementById("cliente");
@@ -10,19 +7,25 @@ const facturar = () => {
   let articuloR = document.getElementById("articuloR");
   let precioR = document.getElementById("precioR");
   let cantidadR = document.getElementById("cantidadR");
-  let subtotal = document.getElementById("subtotal");
+  let subtotalR = document.getElementById("subtotal");
   let ivaR = document.getElementById("iva");
   let servicioR = document.getElementById("servicio");
-  let total = document.getElementById("total");
+  let totalR = document.getElementById("total");
+  let total = 0;
+  let subtotal = 0;
+  let iva = 0;
+  let servicio = 0;
 
+  subtotal = precio * cantidad;
+  iva = subtotal * 0.13;
+  servicio = 0.05 * subtotal;
+
+  console.log(servicio);
   cliente.value = nombre;
   articuloR.value = articulo;
   precioR.value = `₡${precio}`;
   cantidadR.value = cantidad;
-  subtotal.value = precio * cantidad;
-  ivaR.value = iva * subtotal.value;
-  servicioR.value = servicio * subtotal.value;
-  total.value = parseFloat(
-    `${subtotal.value} + ${ivaR.value} + ${servicioR.value}`
-  );
+  subtotalR.value = `₡${subtotal}`;
+  ivaR.value = `₡${iva}`;
+  servicioR.value = `₡${servicio}`;
 };

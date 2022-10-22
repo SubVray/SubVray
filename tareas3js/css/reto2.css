@@ -19,6 +19,7 @@ label {
   font-size: 1.2rem;
   font-weight: bold;
   padding: 8px 0;
+  text-align: start !important;
 }
 
 .group {
@@ -27,7 +28,7 @@ label {
 }
 
 #resultado input {
-  background-color: #f2f2f2;
+  background-color: #b0b4ca;
   border: none;
 }
 
@@ -52,4 +53,17 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.form-container {
+  width: 100%;
+  max-width: 800px;
+}
+#nombre,#cliente{
+  width: 400px;
+}
+
+
+
+.start{
+  text-align: start !important;
 }

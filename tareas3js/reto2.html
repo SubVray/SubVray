@@ -46,13 +46,13 @@
                     <option
                       selected
                       value=""
-                      readonly="readonly"
+                      readonly class=" form-control"="readonly class=" form-control""
                       class="text-center">
                       ----- Selector de retos -----
                     </option>
                     <option value="0">Inicio</option>
                     <option value="1">Reto #1</option>
-                    <option value="2" selected readonly="readonly">
+                    <option value="2" selected readonly class=" form-control"="readonly class=" form-control"">
                       Reto #2
                     </option>
                     <option value="3">Reto #3</option>
@@ -75,26 +75,26 @@
       <div class="factura-container">
         <h2 class="text-center">Factura Digital</h2>
         <div class="form-container container border border-danger">
-          <form action="" class="px-3 py-3" id="into">
+          <form action="" class="px-3 py-3 text-center" id="into">
             <div class="py-3">
               <label for="nombre">Nombre: </label>
-              <input type="text" id="nombre" autocomplete="off" />
+              <input type="text" id="nombre" autocomplete="off"  />
             </div>
             <div class="row">
               <div class="col-sm-12 col-md-4 col-lg-4">
-                <div>
-                  <label for="articulo">Articulo: </label>
-                  <input type="text" id="articulo" />
+                <div class="d-flex group">
+                  <label for="articulo" class=" ">Articulo: </label>
+                  <input type="text" id="articulo"  />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
-                <div>
+                <div class="d-flex group">
                   <label for="precio">Precio: </label>
                   <input type="number" id="precio" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
-                <div>
+                <div class="d-flex group">
                   <label for="cantidad">Cantidad: </label>
                   <input type="number" id="cantidad" />
                 </div>
@@ -108,48 +108,48 @@
             </div>
           </form>
           <hr />
-          <form action="" class="px-3 py-3" id="resultado">
+          <form action="" class="px-3 py-3 text-center" id="resultado">
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12">
-                <div>
+                <div class="">
                   <label for="cliente">Nombre Cliente: </label>
-                  <input type="text" id="cliente" readonly />
+                  <input type="text" id="cliente" readonly class="" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="articuloR">Articulo: </label>
-                  <input type="text" id="articuloR" readonly />
+                  <input type="text" id="articuloR" readonly class=" form-control" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="precioR">Precio: </label>
-                  <input type="text" id="precioR" readonly />
+                  <input type="text" id="precioR" readonly class=" form-control" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="cantidadR">Cantidad: </label>
-                  <input type="number" id="cantidadR" readonly />
+                  <input type="number" id="cantidadR" readonly class=" form-control" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="subtotal">SubTotal: </label>
-                  <input type="text" id="subtotal" readonly />
+                  <input type="text" id="subtotal" readonly class=" form-control" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="iva">IVA 13%: </label>
-                  <input type="text" id="iva" readonly />
+                  <input type="text" id="iva" readonly class=" form-control" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="servicio">Servicio 5%: </label>
-                  <input type="text" id="servicio" readonly />
+                  <input type="text" id="servicio" readonly class=" form-control" />
                 </div>
               </div>
               <div class="col-sm-12 col-md-4 col-lg-4"></div>
@@ -157,7 +157,7 @@
               <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="d-flex group">
                   <label for="total">Total a pagar: </label>
-                  <input type="text" id="total" readonly />
+                  <input type="text" id="total" readonly class=" form-control"  />
                 </div>
               </div>
             </div>
