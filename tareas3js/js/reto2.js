@@ -1,4 +1,5 @@
 const facturar = () => {
+  let inputs = document.querySelectorAll("form input");
   let nombre = document.getElementById("nombre").value;
   let cliente = document.getElementById("cliente");
   let articulo = document.getElementById("articulo").value;
@@ -19,6 +20,7 @@ const facturar = () => {
   subtotal = precio * cantidad;
   iva = subtotal * 0.13;
   servicio = 0.05 * subtotal;
+  total = subtotal + iva + servicio;
 
   console.log(servicio);
   cliente.value = nombre;
@@ -28,4 +30,24 @@ const facturar = () => {
   subtotalR.value = `₡${subtotal}`;
   ivaR.value = `₡${iva}`;
   servicioR.value = `₡${servicio}`;
+  totalR.value = `₡${total}`;
+
+  inputs.forEach((input) => {
+    if (input.value == "") {
+      input.style.border = "1px solid red";
+      Swal.fire({
+        icon: "warning",
+        title: "Oops...",
+        text: "Revise los campos en blanco!",
+      });
+    }
+  });
+};
+
+const limpiar = () => {
+  let inputs = document.querySelectorAll("form input");
+  inputs.forEach((input) => {
+    input.value = "";
+    input.style.border = "1px solid black";
+  });
 };
