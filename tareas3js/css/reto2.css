@@ -1,3 +1,9 @@
+h2 {
+  font-size: 3rem;
+}
+.form-container {
+  background-color: #f2f2f2;
+}
 input {
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -7,6 +13,7 @@ input {
   font-size: 1.2rem;
   padding: 2px 3px;
   width: 200px;
+  border: 1px solid #0000004f !important;
 }
 
 input:is(:focus) {
@@ -58,12 +65,15 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
   max-width: 800px;
 }
-#nombre,#cliente{
+#nombre,
+#cliente {
   width: 400px;
 }
 
-
-
-.start{
+.start {
   text-align: start !important;
+}
+
+.invalid {
+  border: 1px solid red !important;
 }
