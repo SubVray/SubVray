@@ -1,0 +1,23 @@
+label {
+  font-size: 2rem;
+}
+.btn-calcular {
+  background-color: red;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.img1 {
+  width: 350px;
+}
+h2 {
+  font-size: 3rem;
+}

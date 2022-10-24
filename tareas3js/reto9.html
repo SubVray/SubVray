@@ -14,15 +14,15 @@
     <link rel="stylesheet" href="css/font.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/reto6.css" />
-    <title>Reto 6</title>
+    <link rel="stylesheet" href="css/reto9.css" />
+    <title>Reto 8</title>
   </head>
   <body>
     <header class="">
       <nav
         class="navbar navbar-expand-xlg navbar-light d-flex justify-content-between align-items-center h-100">
         <div class="container-fluid">
-          <h1 class="">Reto #6</h1>
+          <h1 class="">Reto #8</h1>
           <button
             class="navbar-toggler second-button"
             type="button"
@@ -52,9 +52,9 @@
                     <option value="3">Reto #3</option>
                     <option value="4" disabled>Reto #4</option>
                     <option value="5" disabled>Reto #5</option>
-                    <option value="6" disabled selected>Reto #6</option>
+                    <option value="6">Reto #6</option>
                     <option value="7">Reto #7</option>
-                    <option value="8">Reto #8</option>
+                    <option value="8" disabled selected>Reto #8</option>
                     <option value="9">Reto #9</option>
                     <option value="10">Reto #10</option>
                   </select>
@@ -65,51 +65,39 @@
         </div>
       </nav>
     </header>
-    <section class="container">
-      <h2 class="text-center">Juegos</h2>
-      <div class="row pb-5">
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game1"
-          onclick="xGame1()">
-          <h3>Plaguetale Requiem</h3>
-          <img src="images/requiem.jpg" alt="" class="img-fluid pb-3" />
+    <div class="container-fluid banner"></div>
+    <section class="container-fluid">
+      <h2 class="titulos1 text-dark text-center py-5">
+        MODELO DE CARRO PREFERIDO
+      </h2>
+      <!-- CONTENEDORES -->
+      <div class="container cajacarro">
+        <img src="images/mus4.png" alt="carro" class="img-fluid" />
+        <div class="colores">
+          <!-- la clase active es opcional -->
+          <span class="one active" onclick="changeColor(event);"></span>
+          <!-- circulo1 interactivo -->
+          <i class="one"></i>
+          <span class="two" onclick="changeColor(event);"></span>
+          <!-- circulo2 interactivo -->
+          <i class="two"></i>
+          <span class="three" onclick="changeColor(event);"></span>
+          <!-- circulo3 interactivo -->
+          <i class="three"></i>
+          <span class="four" onclick="changeColor(event);"></span>
+          <!-- circulo4 interactivo -->
+          <i class="four"></i>
+          <span class="five" onclick="changeColor(event);"></span>
+          <!-- circulo5 interactivo -->
+          <i class="five"></i>
+          <span class="six" onclick="changeColor(event);"></span>
+          <!-- circulo5 interactivo -->
+          <i class="six"></i>
+          <span class="seven" onclick="changeColor(event);"></span>
+          <!-- circulo5 interactivo -->
+          <i class="seven"></i>
         </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game2"
-          onclick="xGame2()">
-          <h3>As Dusk Falls</h3>
-          <img src="images/asduckfall.jpg" alt="" class="img-fluid pb-3" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game3"
-          onclick="xGame3()">
-          <h3>Watch dogs 2</h3>
-          <img src="images/watchdogs2.png" alt="" class="img-fluid pb-3" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game4"
-          onclick="xGame4()">
-          <h3>Bayoneta 3</h3>
-          <img src="images/bonyonetta3.png" alt="" class="img-fluid" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game5"
-          onclick="xGame5()">
-          <h3>Diablo inmortal lll</h3>
-          <img src="images/Diablo-Immortal-1.webp" alt="" class="img-fluid" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game6"
-          onclick="xGame6()">
-          <h3>Moderm Warfare ll</h3>
-          <img src="images/m11w.jpg" alt="" class="img-fluid" />
-        </div>
+        <!-- imagen del carro inicial en transparente-->
       </div>
     </section>
     <!-- JS -->
@@ -121,6 +109,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/menu.js"></script>
     <script src="js/retos.js"></script>
-    <script src="js/reto6.js"></script>
+    <script src="js/reto9.js"></script>
   </body>
 </html>

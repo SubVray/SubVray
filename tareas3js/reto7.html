@@ -14,15 +14,15 @@
     <link rel="stylesheet" href="css/font.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/reto6.css" />
-    <title>Reto 6</title>
+    <link rel="stylesheet" href="css/reto7.css" />
+    <title>Reto 7</title>
   </head>
   <body>
     <header class="">
       <nav
         class="navbar navbar-expand-xlg navbar-light d-flex justify-content-between align-items-center h-100">
         <div class="container-fluid">
-          <h1 class="">Reto #6</h1>
+          <h1 class="">Reto #7</h1>
           <button
             class="navbar-toggler second-button"
             type="button"
@@ -52,8 +52,8 @@
                     <option value="3">Reto #3</option>
                     <option value="4" disabled>Reto #4</option>
                     <option value="5" disabled>Reto #5</option>
-                    <option value="6" disabled selected>Reto #6</option>
-                    <option value="7">Reto #7</option>
+                    <option value="6">Reto #6</option>
+                    <option value="7" disabled selected>Reto #7</option>
                     <option value="8">Reto #8</option>
                     <option value="9">Reto #9</option>
                     <option value="10">Reto #10</option>
@@ -66,49 +66,54 @@
       </nav>
     </header>
     <section class="container">
-      <h2 class="text-center">Juegos</h2>
-      <div class="row pb-5">
+      <div class="row py-5">
         <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game1"
-          onclick="xGame1()">
-          <h3>Plaguetale Requiem</h3>
-          <img src="images/requiem.jpg" alt="" class="img-fluid pb-3" />
+          class="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center py-3">
+          <img src="images/logo.png" alt="" class="img-fluid img1" />
         </div>
         <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game2"
-          onclick="xGame2()">
-          <h3>As Dusk Falls</h3>
-          <img src="images/asduckfall.jpg" alt="" class="img-fluid pb-3" />
+          class="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center py-3">
+          <h2>Pizza la favorita</h2>
+        </div>
+        <hr />
+        <h2 class="text-center py-2">
+          Seleccione el sabor y tamaño de su pizza
+        </h2>
+        <div
+          class="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+          <form action="" class="d-flex flex-column container">
+            <label for="sabor">Sabor</label>
+            <select name="sabor" id="sabor" class="form-select">
+              <option value="Seleccione un sabor:" disabled selected>
+                Seleccione un sabor:
+              </option>
+              <option value="1">Suprema</option>
+              <option value="2">Jamón y Queso</option>
+              <option value="3">Peperoni</option>
+              <option value="4">Margarita</option>
+            </select>
+            <label for="slice">Tamaño</label>
+            <select name="slice" id="slice" class="form-select">
+              <option value="Seleccione el tamaño:" disabled selected>
+                Seleccione el tamaño:
+              </option>
+              <option value="8">Pizza 8 slice</option>
+              <option value="12">Pizza 12 slice</option>
+              <option value="16">Pizza 16 slice</option>
+              <option value="24">Pizza 24 slice</option>
+            </select>
+            <button type="button" class="btn-calcular" onclick="calcular()">
+              Calcular
+            </button>
+          </form>
         </div>
         <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game3"
-          onclick="xGame3()">
-          <h3>Watch dogs 2</h3>
-          <img src="images/watchdogs2.png" alt="" class="img-fluid pb-3" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game4"
-          onclick="xGame4()">
-          <h3>Bayoneta 3</h3>
-          <img src="images/bonyonetta3.png" alt="" class="img-fluid" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game5"
-          onclick="xGame5()">
-          <h3>Diablo inmortal lll</h3>
-          <img src="images/Diablo-Immortal-1.webp" alt="" class="img-fluid" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game6"
-          onclick="xGame6()">
-          <h3>Moderm Warfare ll</h3>
-          <img src="images/m11w.jpg" alt="" class="img-fluid" />
+          class="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+          <img
+            src="images/pizza.png"
+            alt=""
+            class="img-fluid"
+            id="img-change" />
         </div>
       </div>
     </section>
@@ -121,6 +126,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/menu.js"></script>
     <script src="js/retos.js"></script>
-    <script src="js/reto6.js"></script>
+    <script src="js/reto7.js"></script>
   </body>
 </html>

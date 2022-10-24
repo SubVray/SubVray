@@ -1,0 +1,12 @@
+
+h2{
+	font-size: 4rem;
+}
+select {
+  font-size: 1.25rem !important;
+  width: 350px !important;
+  margin: auto;
+}
+p{
+	font-size: 1.25rem;
+}

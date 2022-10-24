@@ -14,15 +14,15 @@
     <link rel="stylesheet" href="css/font.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/reto6.css" />
-    <title>Reto 6</title>
+    <link rel="stylesheet" href="css/reto8.css" />
+    <title>Reto 8</title>
   </head>
   <body>
     <header class="">
       <nav
         class="navbar navbar-expand-xlg navbar-light d-flex justify-content-between align-items-center h-100">
         <div class="container-fluid">
-          <h1 class="">Reto #6</h1>
+          <h1 class="">Reto #8</h1>
           <button
             class="navbar-toggler second-button"
             type="button"
@@ -52,9 +52,9 @@
                     <option value="3">Reto #3</option>
                     <option value="4" disabled>Reto #4</option>
                     <option value="5" disabled>Reto #5</option>
-                    <option value="6" disabled selected>Reto #6</option>
+                    <option value="6">Reto #6</option>
                     <option value="7">Reto #7</option>
-                    <option value="8">Reto #8</option>
+                    <option value="8" disabled selected>Reto #8</option>
                     <option value="9">Reto #9</option>
                     <option value="10">Reto #10</option>
                   </select>
@@ -65,50 +65,43 @@
         </div>
       </nav>
     </header>
-    <section class="container">
-      <h2 class="text-center">Juegos</h2>
-      <div class="row pb-5">
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game1"
-          onclick="xGame1()">
-          <h3>Plaguetale Requiem</h3>
-          <img src="images/requiem.jpg" alt="" class="img-fluid pb-3" />
+    <section class="container py-3 py-md-4">
+      <h2 class="text-center">Volcanes de Costa Rica</h2>
+      <div class="row pt-3">
+        <div class="col-sm-12 col-md-6 col-lg-6 py-1 py-md-4">
+          <img src="images/cr.jpg" alt="" class="img-fluid" />
         </div>
         <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game2"
-          onclick="xGame2()">
-          <h3>As Dusk Falls</h3>
-          <img src="images/asduckfall.jpg" alt="" class="img-fluid pb-3" />
+          class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center py-3 py-md-4">
+          <p class="">
+            Costa Rica es un país centroamericano accidentado y selvático con
+            costas en el Caribe y el Pacífico. Aunque su capital, San José,
+            alberga instituciones culturales como el Museo del Oro Precolombino,
+            Costa Rica es conocida por sus playas, volcanes y biodiversidad.
+            Aproximadamente una cuarta parte de su área está compuesta por selva
+            protegida, repleta de vida silvestre, incluidos monos araña y
+            pájaros quetzales.
+          </p>
+        </div>
+        <hr />
+        <div class="text-center container py-3 py-md-4">
+          <select name="lugares" id="lugares" class="form-select">
+            <option value="0" selected disabled>Seleccione un volcán</option>
+            <option value="1">Volcán Poás</option>
+            <option value="2">Volcán Arenal</option>
+            <option value="3">Volcán Irazú</option>
+            <option value="4">Volcán Turrialba</option>
+          </select>
         </div>
         <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game3"
-          onclick="xGame3()">
-          <h3>Watch dogs 2</h3>
-          <img src="images/watchdogs2.png" alt="" class="img-fluid pb-3" />
+          class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center py-3 py-md-4">
+          <p id="descripcion"></p>
         </div>
         <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game4"
-          onclick="xGame4()">
-          <h3>Bayoneta 3</h3>
-          <img src="images/bonyonetta3.png" alt="" class="img-fluid" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game5"
-          onclick="xGame5()">
-          <h3>Diablo inmortal lll</h3>
-          <img src="images/Diablo-Immortal-1.webp" alt="" class="img-fluid" />
-        </div>
-        <div
-          class="col-sm-12 col-md-6 col-lg-4 game"
-          id="game6"
-          onclick="xGame6()">
-          <h3>Moderm Warfare ll</h3>
-          <img src="images/m11w.jpg" alt="" class="img-fluid" />
+          class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center py-3 py-md-4">
+          <div>
+            <img src="" alt="" id="img" class="img-fluid" />
+          </div>
         </div>
       </div>
     </section>
@@ -121,6 +114,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/menu.js"></script>
     <script src="js/retos.js"></script>
-    <script src="js/reto6.js"></script>
+    <script src="js/reto8.js"></script>
   </body>
 </html>

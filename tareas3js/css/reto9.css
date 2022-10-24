@@ -1,0 +1,126 @@
+.banner {
+  padding: 250px 0;
+  background-image: url(../images//bannerCar.jpg);
+  background-position: 0 -275px;
+  background-size: cover;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+section {
+  padding: 50px 0;
+}
+.cajacarro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+.cajacarro img {
+  width: 800px;
+  transition: all 5s ease-in;
+}
+
+.cajacarro .colores {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.cajacarro .colores span {
+  border-radius: 50%;
+  cursor: pointer;
+  height: 45px;
+  position: relative;
+  width: 45px;
+  z-index: 2;
+  margin: 0 5px;
+  transition-duration: 0.5s;
+}
+.cajacarro .colores span:is(:hover) {
+  scale: 1.1;
+  box-shadow: 0 0 0 2px #000;
+}
+
+/*conversiones colores*/
+
+.cajacarro span.one,
+.cajacarro .colores i.one {
+  background: #838383;
+  transition-duration: 0.5s;
+}
+
+.cajacarro span.two,
+.cajacarro .colores i.two {
+  background-color: #33a8ff;
+  transition-duration: 0.5s;
+}
+
+.cajacarro span.three,
+.cajacarro .colores i.three {
+  background: #29cf84;
+  transition-duration: 0.5s;
+}
+
+.cajacarro span.four,
+.cajacarro .colores i.four {
+  background: #fe5c16;
+  transition-duration: 0.5s;
+}
+.cajacarro span.five,
+.cajacarro .colores i.five {
+  background: #6200ff;
+  transition-duration: 0.5s;
+}
+.cajacarro span.six,
+.cajacarro .colores i.six {
+  background: rgb(0, 255, 242);
+  transition-duration: 0.5s;
+}
+.cajacarro span.seven,
+.cajacarro .colores i.seven {
+  background: rgb(255, 196, 0);
+  transition-duration: 0.5s;
+}
+
+.cajacarro .colores span.active + i {
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: hue;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  border: 1px solid red;
+}
+
+@media (max-width: 576px) {
+  .banner {
+    padding: 250px 0;
+    background-image: url(../images//bannerCar.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width: 576px) {
+  .banner {
+    padding: 250px 0;
+    background-image: url(../images//bannerCar.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (min-width: 1400px) {
+  .banner {
+    padding: 250px 0;
+    background-image: url(../images//bannerCar.jpg);
+    background-position: 0 -275px;
+    background-size: cover;
+  }
+}
