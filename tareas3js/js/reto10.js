@@ -1,66 +1,94 @@
 function mostrar() {
   let puntaje = 0;
-  let radios = document.querySelectorAll("input");
   let radios1 = document.querySelectorAll("#fieldset1 input");
-  let radiosA1 = document.querySelectorAll("#fieldset1 .answincorrect");
   let radios2 = document.querySelectorAll("#fieldset2 input");
-  let radiosA2 = document.querySelectorAll("#fieldset2 .answincorrect");
   let radios3 = document.querySelectorAll("#fieldset3 input");
-  let radiosA3 = document.querySelectorAll("#fieldset3 .answincorrect");
   let radios4 = document.querySelectorAll("#fieldset4 input");
-  let radiosA4 = document.querySelectorAll("#fieldset4 .answincorrect");
-  console.log(radiosA1);
+  let radios5 = document.querySelectorAll("#fieldset5 input");
+
   radios1.forEach((radio) => {
-    if (radio.value == 1 && radio.checked) {
+    if (radio.value == 5 && radio.checked) {
       puntaje += parseInt(radio.value);
-      document.getElementById("correct1").classList.remove("d-none");
-      document.querySelector(".answcorrect1").classList.add("aswcorrect");
-    } else {
-      document.querySelector(".answcorrect1").classList.add("aswcorrect");
-      document.getElementById("correct1").classList.remove("d-none");
-      radiosA1.forEach((radioA) => {
-        radioA.classList.add("aswincorrect");
-      });
+    } else if (radio.value == 4 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 3 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 2 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 1 && radio.checked) {
+      puntaje += parseInt(radio.value);
     }
   });
   radios2.forEach((radio) => {
-    if (radio.value == 1 && radio.checked) {
+    if (radio.value == 5 && radio.checked) {
       puntaje += parseInt(radio.value);
-      document.getElementById("correct2").classList.remove("d-none");
-      document.querySelector(".answcorrect2").classList.add("aswcorrect");
-    } else {
-      document.querySelector(".answcorrect2").classList.add("aswcorrect");
-      document.getElementById("correct2").classList.remove("d-none");
-      radiosA2.forEach((radioA) => {
-        radioA.classList.add("aswincorrect");
-      });
+    } else if (radio.value == 4 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 3 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 2 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 1 && radio.checked) {
+      puntaje += parseInt(radio.value);
     }
   });
   radios3.forEach((radio) => {
-    if (radio.value == 1 && radio.checked) {
+    if (radio.value == 5 && radio.checked) {
       puntaje += parseInt(radio.value);
-      document.getElementById("correct3").classList.remove("d-none");
-      document.querySelector(".answcorrect3").classList.add("aswcorrect");
-    } else {
-      document.querySelector(".answcorrect3").classList.add("aswcorrect");
-      document.getElementById("correct3").classList.remove("d-none");
-      radiosA3.forEach((radioA) => {
-        radioA.classList.add("aswincorrect");
-      });
+    } else if (radio.value == 4 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 3 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 2 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 1 && radio.checked) {
+      puntaje += parseInt(radio.value);
     }
   });
   radios4.forEach((radio) => {
-    if (radio.value == 1 && radio.checked) {
+    if (radio.value == 5 && radio.checked) {
       puntaje += parseInt(radio.value);
-      document.getElementById("correct4").classList.remove("d-none");
-      document.querySelector(".answcorrect4").classList.add("aswcorrect");
-    } else {
-      document.querySelector(".answcorrect4").classList.add("aswcorrect");
-      document.getElementById("correct4").classList.remove("d-none");
-      radiosA4.forEach((radioA) => {
-        radioA.classList.add("aswincorrect");
-      });
+    } else if (radio.value == 4 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 3 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 2 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 1 && radio.checked) {
+      puntaje += parseInt(radio.value);
     }
   });
-  alert(puntaje);
+  radios5.forEach((radio) => {
+    if (radio.value == 5 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 4 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 3 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 2 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    } else if (radio.value == 1 && radio.checked) {
+      puntaje += parseInt(radio.value);
+    }
+  });
+  total.innerHTML = `Puntaje total: ${puntaje}`;
+  swal.fire({
+    icon: "success",
+    title: "El resultado a sido enviado con exito",
+  });
+  radios1.forEach((radio) => {
+    radio.checked = false;
+  });
+  radios2.forEach((radio) => {
+    radio.checked = false;
+  });
+  radios3.forEach((radio) => {
+    radio.checked = false;
+  });
+  radios4.forEach((radio) => {
+    radio.checked = false;
+  });
+  radios5.forEach((radio) => {
+    radio.checked = false;
+  });
 }
