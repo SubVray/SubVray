@@ -1,8 +1,8 @@
 .banner {
-  padding: 250px 0;
   background-image: url(../images//bannerCar.jpg);
   background-position: 0 -275px;
   background-size: cover;
+  padding: 250px 0;
 }
 
 .cursor {
@@ -13,17 +13,17 @@ section {
   padding: 50px 0;
 }
 .cajacarro {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   transition-duration: 0.5s;
 }
 
 .cajacarro img {
-  width: 800px;
   transition: all 5s ease-in;
+  width: 800px;
 }
 
 .cajacarro .colores {
@@ -37,15 +37,15 @@ section {
   border-radius: 50%;
   cursor: pointer;
   height: 45px;
+  margin: 0 5px;
   position: relative;
+  transition-duration: 0.5s;
   width: 45px;
   z-index: 2;
-  margin: 0 5px;
-  transition-duration: 0.5s;
 }
 .cajacarro .colores span:is(:hover) {
-  scale: 1.1;
   box-shadow: 0 0 0 2px #000;
+  scale: 1.1;
 }
 
 /*conversiones colores*/
@@ -90,37 +90,37 @@ section {
 }
 
 .cajacarro .colores span.active + i {
+  border: 1px solid red;
   height: 100%;
-  top: 0;
   left: 0;
   mix-blend-mode: hue;
   position: absolute;
+  top: 0;
   width: 100%;
   z-index: 1;
-  border: 1px solid red;
 }
 
 @media (max-width: 576px) {
   .banner {
-    padding: 250px 0;
     background-image: url(../images//bannerCar.jpg);
     background-position: center;
     background-size: cover;
+    padding: 250px 0;
   }
 }
 @media (min-width: 576px) {
   .banner {
-    padding: 250px 0;
     background-image: url(../images//bannerCar.jpg);
     background-position: center;
     background-size: cover;
+    padding: 250px 0;
   }
 }
 @media (min-width: 1400px) {
   .banner {
-    padding: 250px 0;
     background-image: url(../images//bannerCar.jpg);
     background-position: 0 -275px;
     background-size: cover;
+    padding: 250px 0;
   }
 }

@@ -66,11 +66,11 @@ body {
 .btn2 {
   background-color: transparent;
   border: none;
-  border-radius: 5px;
+  -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 5px;
   font-weight: bold;
   outline: none;
 }
@@ -111,8 +111,8 @@ body {
 }
 
 .login-box .btn1 span:nth-child(1) {
-  animation: btn1-anim1 1s linear infinite;
   -webkit-animation: btn1-anim1 1s linear infinite;
+  animation: btn1-anim1 1s linear infinite;
   background: linear-gradient(90deg, transparent, #17f40383);
   height: 2px;
   left: -100%;
@@ -131,8 +131,8 @@ body {
 }
 
 .login-box .btn1 span:nth-child(2) {
-  animation: btn1-anim2 1s linear infinite;
   -webkit-animation: btn1-anim2 1s linear infinite;
+  animation: btn1-anim2 1s linear infinite;
   animation-delay: 0.25s;
   background: linear-gradient(180deg, transparent, #17f403);
   height: 100%;
@@ -152,8 +152,8 @@ body {
 }
 
 .login-box .btn1 span:nth-child(3) {
-  animation: btn1-anim3 1s linear infinite;
   -webkit-animation: btn1-anim3 1s linear infinite;
+  animation: btn1-anim3 1s linear infinite;
   animation-delay: 0.5s;
   background: linear-gradient(270deg, transparent, #17f40383);
   bottom: 0;
@@ -173,8 +173,8 @@ body {
 }
 
 .login-box .btn1 span:nth-child(4) {
-  animation: btn1-anim4 1s linear infinite;
   -webkit-animation: btn1-anim4 1s linear infinite;
+  animation: btn1-anim4 1s linear infinite;
   animation-delay: 0.75s;
   background: linear-gradient(360deg, transparent, #17f403);
   bottom: -100%;
@@ -196,8 +196,8 @@ body {
 /* btn2 */
 
 .login-box .btn2 span:nth-child(1) {
-  animation: btn2-anim1 1s linear infinite;
   -webkit-animation: btn2-anim1 1s linear infinite;
+  animation: btn2-anim1 1s linear infinite;
   background: linear-gradient(90deg, transparent, #f4030383);
   height: 2px;
   left: -100%;
@@ -216,8 +216,8 @@ body {
 }
 
 .login-box .btn2 span:nth-child(2) {
-  animation: btn2-anim2 1s linear infinite;
   -webkit-animation: btn2-anim2 1s linear infinite;
+  animation: btn2-anim2 1s linear infinite;
   animation-delay: 0.25s;
   background: linear-gradient(180deg, transparent, #f4030383);
   height: 100%;
@@ -237,8 +237,8 @@ body {
 }
 
 .login-box .btn2 span:nth-child(3) {
-  animation: btn2-anim3 1s linear infinite;
   -webkit-animation: btn2-anim3 1s linear infinite;
+  animation: btn2-anim3 1s linear infinite;
   animation-delay: 0.5s;
   background: linear-gradient(270deg, transparent, #f4030383);
   bottom: 0;
@@ -258,8 +258,8 @@ body {
 }
 
 .login-box .btn2 span:nth-child(4) {
-  animation: btn2-anim4 1s linear infinite;
   -webkit-animation: btn2-anim4 1s linear infinite;
+  animation: btn2-anim4 1s linear infinite;
   animation-delay: 0.75s;
   background: linear-gradient(360deg, transparent, #f4030383);
   bottom: -100%;

@@ -11,8 +11,8 @@ header,
 footer {
   background-color: var(--color-verde4);
   color: var(--color-blanco);
-  width: 100%;
   padding: 15px 0;
+  width: 100%;
 }
 button {
   border: none !important;
@@ -30,8 +30,8 @@ h1 {
 }
 
 .selector-retos {
-  width: 300px;
   margin: auto;
+  width: 300px;
 }
 
 /* btn hamburger menu */
@@ -53,11 +53,11 @@ h1 {
 }
 
 .animated-icon2 span {
-  border-radius: 5px;
+  -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 5px;
   display: block;
   height: 4px;
   left: 0;
