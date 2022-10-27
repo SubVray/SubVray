@@ -32,10 +32,10 @@ body {
 img {
   width: 300px;
 }
-label {
+section label {
   font-size: 1.5rem;
 }
-select {
+section select {
   border: transparent !important;
   border-bottom: 1px solid rgb(165, 174, 255) !important;
   box-shadow: none !important;

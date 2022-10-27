@@ -3,7 +3,6 @@ let password = document.getElementById("password");
 let inputs = document.querySelectorAll("form input");
 
 const login = () => {
-  let valid = false;
   inputs.forEach((input) => {
     if (input.value === "") {
       input.style.borderBottomColor = "red";
@@ -23,4 +22,9 @@ const validar = () => {
   if (username.value == "cenfo" && password.value == 123) {
     window.location.href = "bienvenidaReto1.html";
   }
+};
+
+const limpiar = () => {
+  username.value = "";
+  password.value = "";
 };

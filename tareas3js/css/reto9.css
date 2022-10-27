@@ -1,8 +1,10 @@
 .banner {
   background-image: url(../images//bannerCar.jpg);
-  background-position: 0 -275px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 250px 0;
+  box-shadow: inset 0 1000px rgba(0, 0, 0, 0.486);
 }
 
 .cursor {
@@ -99,6 +101,9 @@ section {
   width: 100%;
   z-index: 1;
 }
+.lok{
+  font-size: 3rem;
+}
 
 @media (max-width: 576px) {
   .banner {
@@ -119,8 +124,8 @@ section {
 @media (min-width: 1400px) {
   .banner {
     background-image: url(../images//bannerCar.jpg);
-    background-position: 0 -275px;
+    background-position: 0 -230px;
     background-size: cover;
-    padding: 250px 0;
+    padding: 200px 0;
   }
 }
