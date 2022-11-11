@@ -1,6 +1,5 @@
-* {
+html {
   scroll-behavior: smooth;
-  scroll-margin-top: 75.8px;
 }
 :root {
   --color-primary: #ffae00;
@@ -13,42 +12,54 @@
 
 /* TODO: header / nav */
 nav {
-  font-size: 1.2rem;
-  height: 100%;
   font-family: "comic";
+  font-size: 1.3rem;
+  height: 100%;
 }
 nav a {
   text-decoration: none;
+  color: var(--color-dark-light);
 }
 
-nav ul a:hover {
+nav a:hover {
   color: var(--color-primary) !important;
+  scale: 1.1;
   text-shadow: 2px 2px 1px var(--color-primary-shadow);
 }
 
 .navbar-home ul a:is(:hover, :active, :focus) {
-  text-decoration: underline wavy var(--color-dark-light);
+  text-decoration: underline wavy var(--color-secondary);
   text-underline-offset: 8px;
+  scroll-margin-top: 75.797px;
 }
 .dropdown-menu a:is(:hover, :active, :focus) {
-  text-decoration: none !important;
   background-color: transparent !important;
+  text-decoration: none !important;
 }
+/* TODO: cicle counter */
+.cart-login-container {
+  border: 1px solid red;
+  position: relative;
+  width: 150px;
+}
+.cart-shopping i {
+  position: relative;
+  z-index: -1;
+}
+
 .count-cart-shopping {
-  background-color: rgba(0, 0, 0, 0.336);
+  background-color: var(--color-primary);
   border-radius: 100%;
+  box-shadow: 1px 1px 1px var(--color-primary-shadow);
   color: rgb(0, 0, 0);
-  display: inline-block;
+  color: var(--color-secondary);
   font-size: 1rem;
-  font-weight: bold;
-  margin-left: 5px;
-  padding: 1px;
-  width: 24px;
-}
-.container-languages {
   position: absolute;
-  right: 10px;
-  top: 5px;
+  right: 5px;
+  text-align: center;
+  top: -10px;
+  width: 16px;
+  z-index: 1000;
 }
 
 /* TODO: logo */
@@ -90,10 +101,10 @@ nav ul a:hover {
 
 /* TODO: style bar search */
 .form-search {
-  width: 100%;
   max-width: 700px;
   min-width: 300px;
   position: relative;
+  width: 100%;
 }
 .form-search input {
   border-radius: 8px;
@@ -103,8 +114,8 @@ nav ul a:hover {
 }
 .form-search button {
   position: absolute;
-  top: 0;
   right: 12px;
+  top: 0;
 }
 .btn-search-bar {
   border-radius: 0 3px 3px 0px;
@@ -116,7 +127,7 @@ nav ul a:hover {
   background-position: center;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.459);
-  height: calc(100vh - 75.8px);
+  height: calc(100vh - 75.797px);
 }
 
 /* TODO: languages */
@@ -141,15 +152,23 @@ nav ul a:hover {
   background-position: center;
   background-size: cover;
 }
+.container-languages {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
 
 /* TODO: styles generales */
 a {
   color: var(--color-dark-light) !important;
 }
-main {
-  position: relative;
-  top: 75.8px;
+body {
+  padding-top: 70px;
+  margin: 0;
 }
-section {
-  height: calc(100vh - 75.8px) !important;
+section[id] {
+  height: calc(100vh - 75.797px) !important;
+  scroll-padding-top: 75.797px;
+  scroll-margin-top: 75.797px;
+  padding-top: 30px;
 }
