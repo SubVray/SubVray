@@ -1,0 +1,195 @@
+@media (max-width: 575.98px) {
+  .bg-header {
+    padding: 50px 0 0 0;
+  }
+  h1,
+  h2 {
+    font-family: "comic";
+    font-size: 4.25rem;
+    text-align: center;
+  }
+  h1 {
+    padding: 0;
+  }
+  h2 {
+    padding: 0;
+    position: relative;
+    z-index: 1000;
+  }
+  .txt-1 {
+    color: #ffae00;
+    text-shadow: 4px 3px 1px #a04001;
+  }
+  .txt-2 {
+    color: #fff;
+    font-weight: bold;
+    margin-top: -25px;
+    text-shadow: 4px 5px 1px #7a7a7a;
+    transform: rotate(-15deg);
+  }
+  .txt-3 {
+    color: #5992fe;
+    margin-top: -25px;
+    text-shadow: 4px 3px 1px #003fae;
+  }
+
+  img {
+    width: 100%;
+  }
+  .conjunto-1 {
+    background-image: url("../images/conjunto2.png");
+    background-position: center;
+    background-size: cover;
+    height: 155px;
+    left: 59%;
+    margin: auto;
+    max-width: 500px;
+    min-width: 100px;
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    width: 230px;
+    z-index: 1;
+  }
+  .btns-container {
+    gap: 50px;
+    margin-top: 20px;
+  }
+  .btns-container a {
+    background-color: transparent;
+    background-image: url("../images//table.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid transparent;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.233);
+    color: #fff !important;
+    font-family: "comic" !important;
+    font-size: 2rem !important;
+    height: 80px;
+    width: 180px;
+  }
+  .btns-container a:hover {
+    color: #a04001;
+  }
+  .redes {
+    bottom: 10px;
+    gap: 50px;
+    left: 0;
+    margin-top: 30px;
+    position: absolute;
+  }
+  .redes a {
+    color: #fff;
+    font-size: 4rem;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .bg-header {
+    padding: 50px 0 0 0;
+  }
+  .btns-container {
+    gap: 50px;
+    margin-top: 20px;
+  }
+  .conjunto-1 {
+    height: 200px;
+    left: 56%;
+    top: 59%;
+    width: 300px;
+  }
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .btns-container {
+    gap: 50px;
+    margin-top: 50px;
+  }
+  .redes {
+    bottom: 10px;
+    gap: 100px;
+    left: 0;
+    position: absolute;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  h1,
+  h2 {
+    font-family: "comic";
+    font-size: 6rem;
+    text-align: center;
+  }
+  .conjunto-1 {
+    height: 230px;
+    left: 55%;
+    top: 59%;
+    width: 330px;
+  }
+  .btns-container {
+    gap: 50px;
+    margin-top: 50px;
+  }
+}
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .conjunto-1 {
+    height: 230px;
+    left: 54%;
+    top: 59%;
+    width: 330px;
+  }
+  .btns-container {
+    gap: 50px;
+    margin-top: 50px;
+  }
+}
+
+/* TODO: menor a 375px */
+@media (max-width: 374px) {
+  .bg-header {
+    padding: 50px 0 0 0;
+  }
+  h1,
+  h2 {
+    font-size: 3.5rem;
+  }
+  .txt-1 {
+    color: #ffae00;
+    text-shadow: 4px 3px 1px #a04001;
+  }
+  .txt-2 {
+    color: #fff;
+    font-weight: bold;
+    margin-top: -15px;
+    text-shadow: 4px 3px 1px #7a7a7a;
+    transform: rotate(-15deg);
+  }
+  .txt-3 {
+    color: #5992fe;
+    margin-top: -15px;
+    text-shadow: 4px 3px 1px #003fae;
+  }
+  .conjunto-1 {
+    height: 145px;
+    left: 59%;
+    top: 60%;
+    width: 200px;
+  }
+  .btns-container a {
+    font-size: 2rem !important;
+    height: 80px;
+    margin: 10px 0;
+    width: 180px;
+  }
+  .redes a {
+    color: #fff;
+    font-size: 3.5rem;
+  }
+  .redes a:is(:hover, :active) {
+    scale: 1;
+  }
+}
