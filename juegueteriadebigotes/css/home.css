@@ -2,16 +2,37 @@
   scroll-behavior: smooth;
   scroll-margin-top: 75.8px;
 }
+:root {
+  --color-primary: #ffae00;
+  --color-primary-shadow: #a04001;
+  --color-secondary: #5992fe;
+  --color-secondary-shadow: #003fae;
+  --color-dark-light: #252525;
+  --color-light: #ffffff;
+}
 
+/* TODO: header / nav */
 nav {
   font-size: 1.2rem;
   height: 100%;
   font-family: "comic";
 }
+nav a {
+  text-decoration: none;
+}
 
-.navbar-home a:is(:hover, :active, :focus) {
-  text-decoration: underline wavy #000;
+nav ul a:hover {
+  color: var(--color-primary) !important;
+  text-shadow: 2px 2px 1px var(--color-primary-shadow);
+}
+
+.navbar-home ul a:is(:hover, :active, :focus) {
+  text-decoration: underline wavy var(--color-dark-light);
   text-underline-offset: 8px;
+}
+.dropdown-menu a:is(:hover, :active, :focus) {
+  text-decoration: none !important;
+  background-color: transparent !important;
 }
 .count-cart-shopping {
   background-color: rgba(0, 0, 0, 0.336);
@@ -30,6 +51,7 @@ nav {
   top: 5px;
 }
 
+/* TODO: logo */
 .txt-logo {
   font-family: "comic";
   font-size: 1.5rem;
@@ -41,9 +63,9 @@ nav {
   text-decoration: none !important;
 }
 .txt-logo span:nth-child(1) {
-  color: #ffae00;
+  color: var(--color-primary);
   position: relative;
-  text-shadow: 2px 2px 1px #a04001;
+  text-shadow: 2px 2px 1px var(--color-primary-shadow);
   z-index: 1;
 }
 .txt-logo span:nth-child(3) {
@@ -57,16 +79,16 @@ nav {
   z-index: 1000;
 }
 .txt-logo span:nth-child(5) {
-  color: #5992fe;
+  color: var(--color-secondary);
   display: block;
   margin-left: 18px;
   margin-top: -57px;
   position: relative;
-  text-shadow: 2px 2px 1px #003fae;
+  text-shadow: 2px 2px 1px var(--color-secondary-shadow);
   z-index: 1;
 }
 
-/* style bar search */
+/* TODO: style bar search */
 .form-search {
   width: 100%;
   max-width: 700px;
@@ -88,6 +110,7 @@ nav {
   border-radius: 0 3px 3px 0px;
 }
 
+/* TODO: main / section */
 .banner {
   background-image: url("../images/banner1.jpeg");
   background-position: center;
@@ -96,20 +119,7 @@ nav {
   height: calc(100vh - 75.8px);
 }
 
-/* styles generales */
-a {
-  color: #000 !important;
-}
-main {
-  position: relative;
-  top: 75.8px;
-}
-section {
-  height: calc(100vh - 75.8px) !important;
-}
-banner a {
-  text-decoration: none;
-}
+/* TODO: languages */
 .container-languages button {
   background-color: transparent;
   border: transparent;
@@ -130,4 +140,16 @@ banner a {
   background-image: url("../images/banderas-languages/bandera-usa.png");
   background-position: center;
   background-size: cover;
+}
+
+/* TODO: styles generales */
+a {
+  color: var(--color-dark-light) !important;
+}
+main {
+  position: relative;
+  top: 75.8px;
+}
+section {
+  height: calc(100vh - 75.8px) !important;
 }
