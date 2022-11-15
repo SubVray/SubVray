@@ -127,109 +127,13 @@
             class="form-control me-2"
             type="search"
             placeholder="Search"
-            aria-label="Search"
-            id="myInput"  onkeyup="myFunction()"/>
-          <button class="btn btn-secondary btn-search-bar" type="button" onclick="myFunction()">
+            aria-label="Search" />
+          <button class="btn btn-secondary btn-search-bar" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
       </div>
     </header>
-
-    <section class="banner container-fluid"><h1></h1></section>
-    <section id="destacados" class="container-fluid">
-      <h2 class="text-center">Destacados</h2>
-      <div class="owl-carousel owl-theme container">
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/pistola-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              X-Shot Lanzadardos Chaos 12 Dardos-Bola 8a+
-            </h3>
-            <p class="text-center">SKU: ZU36499</p>
-            <span class="price-item d-block text-center">₡ 20,795.00</span>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/perrito-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              Perrito de Peluche con Aerógrafo Style 4 Ever 6a+
-            </h3>
-            <p class="text-center">SKU: CTOFG249</p>
-            <span class="price-item d-block text-center">₡ 24,995.00</span>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/t-rex-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
-              Plantillas 6a+
-            </h3>
-            <p class="text-center">SKU: CTOFG243</p>
-            <span class="price-item d-block text-center">₡ 24,995.00</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- promociones  -->
-    <section class="container-fluid" id="ofertas">
-      <h2 class="text-center">Promociones</h2>
-        <div class="container  m-auto " id="mostrador">
-            <div class="row m-auto">
-              <div class="product col-sm-6 col-md-4 col-lg-4">
-                <div class="item-product" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="images/tienda/perrito-1.jpg" alt="producto">
-                    </div>
-                    <p class="descripcion">Perrito de Peluche con Aerógrafo Style 4 Ever 6a+</p>
-                    <span class="precio">$ 1.300</span>
-                </div>
-              </div> 
-              <div class="product col-sm-6 col-md-4 col-lg-4">
-                <div class="item-product" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="images/tienda/pistola-1.jpg" alt="producto">
-                    </div>
-                    <p class="descripcion">X-Shot Lanzadardos Chaos 12 Dardos-Bola 8a+</p>
-                    <span class="precio">$ 1.300</span>
-                </div>
-              </div> 
-              <div class="product col-sm-6 col-md-4 col-lg-4">
-                <div class="item-product" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="images/tienda/t-rex-1.jpg" alt="producto">
-                    </div>
-                    <p class="descripcion">Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100 Plantillas 6a+</p>
-                    <span class="precio">$ 1.300</span>
-                </div>
-              </div> 
-            </div>
-        </div>
-        <div class="seleccion" id="seleccion">
-            <div class="cerrar" onclick="cerrar()">
-                &#x2715
-            </div>
-            <div class="info">
-                <img src="..." alt="producto" id="img" class="img-fluid">
-                <h2 id="modelo"></h2>
-                <p id="descripcion"></p>
-                <span class="precio" id="precio"></span>
-                <div class="fila">
-                    <button>AGREGAR AL CARRITO</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- js -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
