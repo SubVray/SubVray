@@ -108,7 +108,6 @@ nav a:hover {
 }
 .form-search input {
   border-radius: 8px;
-  padding-right: 100px;
 }
 .form-search input:is(:hover, :focus, :active) {
   box-shadow: none;
