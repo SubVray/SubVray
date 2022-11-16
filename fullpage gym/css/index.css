@@ -71,32 +71,38 @@ section[id] {
   padding: 0 3%;
 }
 
-/* styles generales */
+/* TODO: styles generales */
 section h2 {
   margin: 0;
   padding: 22px 0;
 }
 
-/* titles */
 .bg-bk {
   background-color: var(--color-black);
 }
 .bg-orange {
   background-color: var(--color-orange);
 }
-
-.title-plan {
+/* titles */
+.title-plan,
+.title-carousel {
   color: var(--color-bons);
   font-size: 2.5rem;
   font-weight: 800;
 }
+.title-carousel {
+  color: var(--color-black-light);
+}
 
 /* carousel */
+.salas-equipos {
+  color: var(--color-bons);
+}
 .carousel {
   width: 100%;
 }
 .carousel img {
-  height: 700px;
+  height: 750px;
 }
 
 /* tabla de precios  */
