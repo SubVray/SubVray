@@ -1,7 +1,18 @@
 @media (max-width: 575.98px) {
+  nav {
+    background-color: #252525f6;
+  }
+  .navbar-toggler {
+    margin-right: 3% !important;
+    right: 4% !important;
+  }
+  #menu-header {
+    background-color: #252525f6;
+  }
   .header {
     height: auto !important;
     padding: 20px 0;
+    padding-top: 90px;
   }
   .header h1 {
     font-size: 2rem;
@@ -117,7 +128,8 @@
   .sct-1 h2,
   .sct-2 h2,
   .sct-3 h2,
-  .sct-4 h2 {
+  .sct-4 h2,
+  .sct-color h2 {
     padding: 20px 0;
   }
   .sct-4 {
@@ -137,7 +149,8 @@
   .sct-2,
   .sct-3,
   .sct-4,
-  .sct-5 {
+  .sct-5,
+  .sct-color {
     height: auto;
     margin: 0;
     padding: 30px;
@@ -151,7 +164,8 @@
   .sct-1 h2,
   .sct-2 h2,
   .sct-3 h2,
-  .sct-4 h2 {
+  .sct-4 h2,
+  .sct-color h2 {
     font-size: 3rem;
     padding: 20px 0;
   }
@@ -224,6 +238,9 @@
     height: calc(100vh) !important;
     padding: 50px 0;
   }
+  .sct-color {
+    height: 100vh;
+  }
   .sct-1 {
     height: calc(100vh);
     padding: 0;
@@ -282,6 +299,9 @@
 }
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .header {
+    padding-top: 165px !important;
+  }
   .iphone {
     margin-left: 150px;
     max-width: 400px;
@@ -360,6 +380,9 @@
 
 /* TODO: menor a 375px */
 @media (max-width: 374px) {
+  .header {
+    padding-top: 90px;
+  }
   .row,
   .row2 {
     text-align: center;

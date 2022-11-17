@@ -9,6 +9,32 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+/* color de barra */
+.fbarra {
+  backdrop-filter: blur(10px);
+  background-color: #252525f6 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #252525f6;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+nav {
+  height: 80px;
+}
+nav a {
+  color: #fff;
+}
+.navbar-brand {
+  padding-left: 3%;
+}
+.nav-link {
+  color: #fff;
+}
 .header {
   align-items: center;
   animation: banner 5s ease-in-out infinite alternate;
@@ -71,19 +97,27 @@ h1 {
 }
 .sct-3 {
   background-image: linear-gradient(
-    3.2deg,
+    183.2deg,
     rgb(74, 12, 167) 10.8%,
     rgba(99, 88, 238, 1) 94.3%
   );
 }
 .sct-4 {
   background-image: linear-gradient(
-    183.2deg,
+    3.2deg,
     rgb(74, 12, 167) 10.8%,
     rgba(99, 88, 238, 1) 94.3%
   );
 }
 .sct-5 {
+  background-image: linear-gradient(
+    183.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  padding-bottom: 100px;
+}
+.sct-color {
   background-image: linear-gradient(
     3.2deg,
     rgb(74, 12, 167) 10.8%,
@@ -91,6 +125,15 @@ h1 {
   );
   padding-bottom: 100px;
 }
+.text-colors {
+  font-size: 1.25rem;
+  margin: auto;
+  text-align: center;
+  width: min(100%, 1000px);
+  color: rgb(223, 223, 223);
+  padding: 10px 0;
+}
+
 footer {
   background-image: linear-gradient(
     133.2deg,
@@ -223,8 +266,8 @@ section {
 }
 input:is(:focus, :active)::placeholder {
   color: #fff;
-  opacity: 1;
   font-size: 1.2rem;
+  opacity: 1;
 }
 
 .form2 input:is(:hover, :focus, :active) {

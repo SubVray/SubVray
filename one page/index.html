@@ -24,11 +24,81 @@
     <!-- TODO: CSS -->
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/reglas.css" />
-    <link rel="stylesheet" href="css/index.scss" />
+    <link rel="stylesheet" href="css/menu-hamburguer.css" />
     <title>Iphone 14 Pro</title>
   </head>
   <body>
     <header class="header container-fluid">
+      <nav class="navbar navbar-expand-lg fixed-top" id="menu">
+        <div
+          class="container-fluid d-flex justify-content-between"
+          id="menu-header">
+          <a class="navbar-brand" href="#"
+            ><i class="fa-solid fa-compact-disc"></i> TODEVICE
+            <i class="fa-solid fa-compact-disc"></i
+          ></a>
+          <button
+            class="navbar-toggler second-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hamburger-menu"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="animated-icon2">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </button>
+          <div class="collapse navbar-collapse" id="hamburger-menu">
+            <ul
+              class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center gap-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><i class="fa-solid fa-house"></i> Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sct1">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa-regular fa-newspaper"></i> Novedades
+                </a>
+                <ul
+                  class="dropdown-menu bg-transparent  border-0"
+                  id="sub-menu">
+                  <li>
+                    <a class="dropdown-item text-white text-center" href="#sct2"
+                      >Pantalla</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white text-center" href="#sct-colors"
+                      >Colores</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white text-center" href="#sct3">Galería</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sct4">
+                  <i class="fa-solid fa-location-dot"></i> Tienda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sct5">Registro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="container text-center text-lg-start">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-sm-12 col-md-12 col-lg-6 text-center text-lg-start">
@@ -69,11 +139,8 @@
           </form>
         </div>
       </div>
-      <a class="row-down" href="#sct1">
-        <i class="fa-solid fa-angles-down down"></i>
-      </a>
     </header>
-    <section class="sct sct-1 overflow-hidden" id="sct1">
+    <section class="sct sct-1" id="sct1">
       <div class="container-fluid">
         <h2 class="text1 text-1 text-center text-white">
           Lo mejor en tecnología del 2022
@@ -106,9 +173,6 @@
           </div>
         </div>
       </div>
-      <a href="#sct2">
-        <i class="fa-solid fa-angles-down down"></i>
-      </a>
     </section>
     <section class="sct-2" id="sct2">
       <div class="container-fluid container-fluid2">
@@ -151,9 +215,46 @@
         </div>
       </div>
     </section>
-    <section class="sct-3 overflow-hidden" id="sct3">
+    <section class="sct-color" id="sct-colors">
+      <h2 class="text2 text-center text-white">Colores</h2>
       <div class="container">
-        <h2 class="text2 text-center text-white novedades">Novedades</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="img/iphonepurple.png" alt="" class="img-fluid" />
+
+            <h3 class="text-center text-white">
+              <i class="fa-solid fa-chevron-up"></i> <br />
+              Purple
+            </h3>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="img/iphonegold.png" alt="" class="img-fluid" />
+            <h3 class="text-center text-white">
+              <i class="fa-solid fa-chevron-up"></i> <br />
+              Gold
+            </h3>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="img/iphonewhite.png" alt="" class="img-fluid" />
+            <h3 class="text-center text-white">
+              <i class="fa-solid fa-chevron-up"></i> <br />
+              Silver
+            </h3>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <p class="text-colors">
+              Designed for durability. With Ceramic Shield, tougher than any
+              smartphone glass. Water resistance.<br />1. Surgical-grade
+              stainless steel. 6.1″ and 6.7″ display sizes.<br />2. All in three
+              Pro colors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sct-3" id="sct3">
+      <div class="container">
+        <h2 class="text2 text-center text-white novedades">Galería</h2>
         <div class="row wow animate__animated animate__zoomIn animate__slow">
           <div
             class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center align-items-center pt-lg-5">
@@ -273,12 +374,30 @@
 
     <!-- TODO: JS -->
     <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"></script>
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/menu.js"></script>
     <script>
       new WOW().init();
+    </script>
+    <script>
+      $(window).scroll(function () {
+        if ($("#menu").offset().top > 100) {
+          $("#menu").addClass("fbarra");
+          $("#menu-header").addClass("fbarra");
+          $("#sub-menu").addClass("fbarra");
+        } else {
+          $("#menu").removeClass("fbarra");
+          $("#menu-header").removeClass("fbarra");
+          $("#sub-menu").removeClass("fbarra");
+        }
+      });
     </script>
   </body>
 </html>
