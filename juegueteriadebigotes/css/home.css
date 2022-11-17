@@ -209,7 +209,7 @@ section[id] {
   cursor: pointer;
 }
 #img {
-  width: 30%;
+  width: 50%;
   margin: 0 0;
 }
 
@@ -222,9 +222,25 @@ section[id] {
   font-weight: bold;
   font-size: 20px;
 }
+
+/* modal product */
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000034;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  display: none;
+}
 .seleccion {
+  overflow: hidden;
+  display: block;
+}
+
+.active-modal {
   transition: 0.5s ease;
-  opacity: 0;
   width: 1200px;
   border: 1px solid #ccc;
   position: fixed;
@@ -235,7 +251,7 @@ section[id] {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  z-index: 10000;
+  z-index: 1000;
   background-color: #fff;
   box-shadow: 0 0 0 1000px #020202a4;
 }
@@ -245,6 +261,14 @@ section[id] {
   top: 20px;
   right: 20px;
   cursor: pointer;
+  font-weight: bolder;
+}
+.cerrar:hover {
+  color: Red;
+  scale: 1.1;
+}
+#next-prev {
+  display: none;
 }
 
 .info {
@@ -297,4 +321,9 @@ section[id] {
 }
 .card:hover {
   background-color: #020202;
+}
+
+/* borarar */
+.scrollDisabled {
+  overflow: hidden;
 }

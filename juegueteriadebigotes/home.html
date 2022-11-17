@@ -27,6 +27,7 @@
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/tira.css" />
+    <link rel="stylesheet" href="css/galeria.css">
     <title>Bootstrap demo</title>
   </head>
   <body id="home">
@@ -184,49 +185,39 @@
     <section class="container-fluid" id="ofertas">
       <h2 class="text-center">Promociones</h2>
         <div class="container  m-auto " id="mostrador">
-            <div class="row m-auto">
-              <div class="product col-sm-6 col-md-4 col-lg-4">
-                <div class="item-product" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="images/tienda/perrito-1.jpg" alt="producto">
-                    </div>
-                    <p class="descripcion">Perrito de Peluche con Aerógrafo Style 4 Ever 6a+</p>
-                    <span class="precio">$ 1.300</span>
-                </div>
-              </div> 
-              <div class="product col-sm-6 col-md-4 col-lg-4">
-                <div class="item-product" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="images/tienda/pistola-1.jpg" alt="producto">
-                    </div>
-                    <p class="descripcion">X-Shot Lanzadardos Chaos 12 Dardos-Bola 8a+</p>
-                    <span class="precio">$ 1.300</span>
-                </div>
-              </div> 
-              <div class="product col-sm-6 col-md-4 col-lg-4">
-                <div class="item-product" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="images/tienda/t-rex-1.jpg" alt="producto">
-                    </div>
-                    <p class="descripcion">Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100 Plantillas 6a+</p>
-                    <span class="precio">$ 1.300</span>
-                </div>
-              </div> 
+            <div class="row m-auto" id="tienda">
+
             </div>
         </div>
-        <div class="seleccion" id="seleccion">
+        <div class="modal-container">
+          <div class="seleccion active-modal" id="seleccion">
             <div class="cerrar" onclick="cerrar()">
-                &#x2715
-            </div>
-            <div class="info">
-                <img src="..." alt="producto" id="img" class="img-fluid">
+              &#x2715
+            </div>      
+            <div class="info row">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="carousel-container">
+                  <div class="img-carousel-container ">
+                    <a href="#" id="img-product-modal">
+                      <img src="..." alt="producto" id="img" class="img-fluid" name="thumb">
+                    </a>
+                  </div>
+                  <div class="" id="next-prev">
+                    <button type="button" onclick="cambiar(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" onclick="cambiar(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
                 <h2 id="modelo"></h2>
                 <p id="descripcion"></p>
                 <span class="precio" id="precio"></span>
                 <div class="fila">
-                    <button>AGREGAR AL CARRITO</button>
+                  <button>AGREGAR AL CARRITO</button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
     </section>
 
@@ -278,7 +269,18 @@
         },
       });
     </script>
+
+    <!-- my js -->
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
+    <script src="js/carrousel.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js "></script>
+    <script>
+      baguetteBox.run(".tz-gallery", {
+        animation: "fadeIn",
+        noScrollbars: true,
+      });
+    </script>
   </body>
 </html>
