@@ -15,6 +15,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
+main {
+  position: relative;
+}
 section[id] {
   scroll-margin-top: var(--header-size);
 }
@@ -67,6 +70,29 @@ section[id] {
   backdrop-filter: blur(10px) !important;
   background-color: rgba(0, 0, 0, 0.623) !important;
 }
+
+.carousel-control-next {
+  right: 30px;
+}
+.carousel-control-prev {
+  left: 30px;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  height: 70px;
+  width: 70px;
+  top: 50%;
+  bottom: 50%;
+}
+.fa-chevron-left,
+.fa-chevron-right {
+  background-color: #000;
+  border-radius: 50%;
+  color: var(--color-orange);
+  font-size: 1.8rem;
+  padding: 15px;
+}
+
 .pd {
   padding: 0 3%;
 }
@@ -102,7 +128,12 @@ section h2 {
   width: 100%;
 }
 .carousel img {
-  height: 750px;
+  height: 850px;
+}
+
+/* sct valores */
+.valores {
+  height: 100vh;
 }
 
 /* tabla de precios  */
