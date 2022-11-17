@@ -1,0 +1,439 @@
+html,
+body {
+  background-image: linear-gradient(
+    183.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgb(98, 88, 238) 94.3%
+  );
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.header {
+  align-items: center;
+  animation: banner 5s ease-in-out infinite alternate;
+  background-attachment: fixed;
+  background-image: url("../img/bg-form.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(46, 0, 49, 0.5);
+  color: #fff;
+  display: flex;
+  position: relative;
+}
+
+@keyframes banner {
+  0% {
+    background-position: 5px 0;
+  }
+  100% {
+    background-position: -5px 0;
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+.new {
+  animation: pulse 2s infinite;
+  color: #efb810;
+  display: block;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 3px #ffbf00;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.sct-1 {
+  background-image: linear-gradient(
+    3.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgb(98, 88, 238) 94.3%
+  );
+  padding: 35px 0;
+}
+.sct-2 {
+  background-image: linear-gradient(
+    183.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+}
+.sct-3 {
+  background-image: linear-gradient(
+    3.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+}
+.sct-4 {
+  background-image: linear-gradient(
+    183.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+}
+.sct-5 {
+  background-image: linear-gradient(
+    3.2deg,
+    rgb(74, 12, 167) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  padding-bottom: 100px;
+}
+footer {
+  background-image: linear-gradient(
+    133.2deg,
+    rgb(74, 12, 167) 100%,
+    rgba(99, 88, 238, 1) 100%
+  );
+  border-top: 2px solid rgba(255, 255, 255, 0.233);
+  color: #fff;
+  padding: 20px 0;
+}
+.container-fluid2 {
+  height: 1000px;
+  padding: 50px;
+}
+
+.iphone {
+  margin-left: 130px;
+  max-width: 400px;
+  min-width: 200px;
+  width: 100%;
+}
+.iphone-caratula {
+  background-clip: content-box;
+  background-image: url("../img/fonfo-iphone.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 80px;
+  height: 860px;
+  overflow: hidden;
+}
+h1 i {
+  font-size: 2.5rem;
+  margin-right: 5px;
+  position: relative;
+  top: -5px;
+}
+
+.row {
+  height: calc(100vh);
+}
+.row2 {
+  height: calc(100vh - 161px);
+}
+section {
+  position: relative;
+}
+
+.down {
+  color: #fff;
+  font-size: 4rem;
+  left: 48%;
+  position: absolute;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+.video-container {
+  height: 100%;
+  width: 100%;
+}
+
+.container1 {
+  padding-left: 35px;
+}
+.text1 {
+  font-size: 3rem;
+}
+.text2 {
+  font-size: 3rem;
+}
+.text3 {
+  font-size: 3rem;
+  margin: auto;
+  max-width: 700px;
+  min-width: 300px;
+  width: 100%;
+}
+
+.txt3 {
+  color: #ffbf00;
+}
+.txt4 {
+  color: #ddab14;
+}
+.txt5 {
+  font-size: 1.4rem;
+  width: 300px;
+}
+.paragra1 {
+  font-size: 1.5rem;
+}
+.paragra2 {
+  font-size: 2rem;
+  margin-left: -100px;
+  width: 500px;
+}
+.row1 {
+  height: auto;
+}
+.txt {
+  margin: 25px 0;
+}
+.txt1,
+.txt2,
+.txt3,
+.txt4,
+.txt5 {
+  display: block;
+}
+
+.form1 {
+  max-width: 500px;
+  min-width: 285px;
+  padding: 25px 0;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0;
+}
+.form1 label {
+  font-size: 1.25rem;
+}
+.form1 input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgb(154, 131, 255) !important;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  padding: 0 20px;
+  width: 100%;
+}
+input:is(:focus, :active)::placeholder {
+  color: #fff;
+  opacity: 1;
+  font-size: 1.2rem;
+}
+
+.form2 input:is(:hover, :focus, :active) {
+  border: none;
+  box-shadow: none !important;
+  color: #fff !important;
+  outline: none;
+}
+.form1 .user-box {
+  position: relative;
+}
+
+.form1 .user-box input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1.25rem;
+  outline: none;
+  padding: 0 15px;
+  width: 100%;
+}
+.form1 .user-box label {
+  color: #fff;
+  font-size: 1.25rem;
+  left: 10px;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -5px;
+  transition: 0.5s;
+}
+
+.form1 .user-box input:focus ~ label,
+.form1 .user-box input:valid ~ label {
+  color: #f2f2f2;
+  font-size: 1rem;
+  left: 15px;
+  top: -20px;
+}
+.form2 {
+  background-color: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  color: #fff;
+  margin: 0 10px;
+  max-width: 800px;
+  min-width: 285px;
+  padding: 20px;
+  width: 100%;
+}
+.form2 label {
+  font-size: 1.25rem;
+}
+.form2 input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgb(154, 131, 255) !important;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0 10px;
+}
+
+.form2 input:is(:hover, :focus, :active) {
+  border: none;
+  box-shadow: none !important;
+  color: #fff !important;
+  outline: none;
+}
+
+.form3 {
+  display: none;
+  max-width: 500px;
+  min-width: 285px;
+  padding: 25px 0;
+}
+::placeholder {
+  color: #fff;
+}
+.form3 ::placeholder {
+  padding-left: 10px;
+}
+.form3 label {
+  font-size: 1.25rem;
+}
+.form3 input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgb(154, 131, 255) !important;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  padding: 0 20px;
+  width: 100%;
+}
+.form3 .user-box {
+  position: relative;
+}
+
+.form3 .user-box input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  padding: 0 15px;
+  width: 100%;
+}
+.form3 .user-box label {
+  color: #fff;
+  font-size: 1.25rem;
+  left: 18px;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -5px;
+  transition: 0.5s;
+}
+
+.form3 .user-box input:focus ~ label,
+.form3 .user-box input:valid ~ label {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  left: 23px;
+  top: -25px;
+}
+
+/* Quitar flechas de input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.btn {
+  margin: 20px auto 0;
+  width: 300px;
+}
+.kl-container {
+  width: 100%;
+}
+.kl {
+  border-radius: 20px;
+  margin: auto;
+  width: 100%;
+}
+
+.ima1 {
+  border-radius: 25px;
+}
+.row3 {
+  height: auto;
+}
+
+.imh {
+  margin-top: -40px;
+}
+.jg {
+  margin-top: -45px;
+}
+.jk {
+  margin-top: -45px;
+}
+.ol {
+  margin-top: 15px;
+}
+
+.di {
+  margin-top: -105px;
+}
+
+img {
+  filter: drop-shadow(0 0 10px #000);
+  transition-duration: 0.5s;
+}
+
+.row img:hover {
+  scale: 1.05;
+}
+
+body::-webkit-scrollbar {
+  display: block; /* Ocultar scroll */
+  height: 10px; /* Tamaño del scroll en horizontal */
+  width: 10px; /* Tamaño del scroll en vertical */
+}
+body::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #2b2b2b;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+  background-color: #252525;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: transparent;
+}
