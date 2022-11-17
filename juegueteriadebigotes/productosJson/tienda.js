@@ -14,14 +14,14 @@ carousel = {};
 total = 0;
 
 // search fuction
-function myFunction() {
+function search() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   ul = document.getElementById("mostrador");
   li = ul.getElementsByClassName("product");
   for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("p")[0];
+    a = li[i].getElementsByTagName("h3")[0];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       li[i].style.display = "";
@@ -98,7 +98,9 @@ const createStore = () => {
           ima: product.imgUrl3,
         },
       ];
-      imgProductModal.setAttribute("href", carousel[0].ima);
+      imgProductModal.href = carousel[0].ima;
+      document.thumb.src = carousel[0].ima;
+
       if (
         carousel[0].ima != undefined &&
         carousel[1].ima != undefined &&
@@ -123,7 +125,7 @@ let cambiar = function (mas) {
     foto = total;
   }
   document.thumb.src = carousel[foto - 1].ima;
-  imgProductModal.setAttribute("href", carousel[foto - 1].ima);
+  imgProductModal.href = carousel[foto - 1].ima;
 };
 
 // cerrar modal

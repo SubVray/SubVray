@@ -12,7 +12,7 @@ const products = [
     sale: 0,
     price: 24995.0,
     imgUrl: "images/tienda/perrito-1.jpg",
-    imgUrl2: "images/tienda/t-rex-1.jpg",
+    imgUrl2: "images/tienda/perrito-2.jpg",
     imgUrl3: "images/tienda/minisprincesas.webp",
   },
   {

@@ -25,9 +25,16 @@
       integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
+      integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/tira.css" />
-    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/galeria.css" />
+    <link rel="stylesheet" href="css/ligthbox.css" />
     <title>Bootstrap demo</title>
   </head>
   <body id="home">
@@ -129,8 +136,12 @@
             type="search"
             placeholder="Search"
             aria-label="Search"
-            id="myInput"  onkeyup="myFunction()"/>
-          <button class="btn btn-secondary btn-search-bar" type="button" onclick="myFunction()">
+            id="myInput"
+            onkeyup="search()" />
+          <button
+            class="btn btn-secondary btn-search-bar"
+            type="button"
+            onclick="search()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
@@ -184,41 +195,47 @@
     <!-- promociones  -->
     <section class="container-fluid" id="ofertas">
       <h2 class="text-center">Promociones</h2>
-        <div class="container  m-auto " id="mostrador">
-            <div class="row m-auto" id="tienda">
-
-            </div>
-        </div>
-        <div class="modal-container">
-          <div class="seleccion active-modal" id="seleccion">
-            <div class="cerrar" onclick="cerrar()">
-              &#x2715
-            </div>      
-            <div class="info row">
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="carousel-container">
-                  <div class="img-carousel-container ">
-                    <a href="#" id="img-product-modal">
-                      <img src="..." alt="producto" id="img" class="img-fluid" name="thumb">
-                    </a>
-                  </div>
-                  <div class="" id="next-prev">
-                    <button type="button" onclick="cambiar(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button type="button" onclick="cambiar(1)"><i class="fa-solid fa-chevron-right"></i></button>
-                  </div>
+      <div class="container m-auto" id="mostrador">
+        <div class="row m-auto" id="tienda"></div>
+      </div>
+      <div class="modal-container">
+        <div class="seleccion" id="seleccion">
+          <a class="cerrar" onclick="cerrar()"
+            ><i class="fa-solid fa-xmark"></i
+          ></a>
+          <div class="info row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="carousel-container">
+                <div class="img-carousel-container">
+                  <a id="img-product-modal" data-lightbox="roadtrip">
+                    <img
+                      alt="producto"
+                      id="img"
+                      class="img-fluid"
+                      name="thumb" />
+                  </a>
+                </div>
+                <div class="" id="next-prev">
+                  <button type="button" onclick="cambiar(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button type="button" onclick="cambiar(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <h2 id="modelo"></h2>
-                <p id="descripcion"></p>
-                <span class="precio" id="precio"></span>
-                <div class="fila">
-                  <button>AGREGAR AL CARRITO</button>
-                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d">
+              <h2 id="modelo"></h2>
+              <p id="descripcion"></p>
+              <span class="precio" id="precio"></span>
+              <div class="fila">
+                <button>AGREGAR AL CARRITO</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- js -->
@@ -271,16 +288,10 @@
     </script>
 
     <!-- my js -->
+    <!--  -->
+    <script src="js/lightbox.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
     <script src="js/carrousel.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js "></script>
-    <script>
-      baguetteBox.run(".tz-gallery", {
-        animation: "fadeIn",
-        noScrollbars: true,
-      });
-    </script>
   </body>
 </html>
