@@ -13,7 +13,6 @@ const products = [
     price: 24995.0,
     imgUrl: "images/tienda/perrito-1.jpg",
     imgUrl2: "images/tienda/perrito-2.jpg",
-    imgUrl3: "images/tienda/minisprincesas.webp",
   },
   {
     name: "Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100 Plantillas 6a+",
@@ -27,7 +26,8 @@ const products = [
     SKU: "HBE6279",
     sale: 4795,
     price: 6395,
-    imgUrl: "images/tienda/minisprincesas.webp",
+    imgUrl: "images/tienda/minisprincesas.jpg",
+    imgUrl2: "images/tienda/minisprincesas2.jpg",
   },
   {
     name: "X-Shot Lanzadardos Chaos 12 Dardos-Bola 8a+",

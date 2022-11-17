@@ -94,18 +94,13 @@ const createStore = () => {
         {
           ima: product.imgUrl2,
         },
-        {
-          ima: product.imgUrl3,
-        },
       ];
       imgProductModal.href = carousel[0].ima;
       document.thumb.src = carousel[0].ima;
 
-      if (
-        carousel[0].ima != undefined &&
-        carousel[1].ima != undefined &&
-        carousel[2].ima != undefined
-      ) {
+      if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
+        nextPrev.style.display = "block";
+      } else if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
         nextPrev.style.display = "block";
       } else {
         nextPrev.style.display = "none";

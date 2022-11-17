@@ -204,8 +204,9 @@
             ><i class="fa-solid fa-xmark"></i
           ></a>
           <div class="info row">
-            <div class="col-sm-12 col-md-6 col-lg-6">
-              <div class="carousel-container">
+            <div
+              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+              <div class="carousel-container text-center">
                 <div class="img-carousel-container">
                   <a id="img-product-modal" data-lightbox="roadtrip">
                     <img
@@ -215,17 +216,26 @@
                       name="thumb" />
                   </a>
                 </div>
-                <div class="" id="next-prev">
-                  <button type="button" onclick="cambiar(-1)">
+                <div
+                  class="text-center d-flex justify-content-between"
+                  id="next-prev">
+                  <button
+                    class="btn-mini-carousel prev"
+                    type="button"
+                    onclick="cambiar(-1)">
                     <i class="fa-solid fa-chevron-left"></i>
                   </button>
-                  <button type="button" onclick="cambiar(1)">
+                  <button
+                    class="btn-mini-carousel next"
+                    type="button"
+                    onclick="cambiar(1)">
                     <i class="fa-solid fa-chevron-right"></i>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 d">
+            <div
+              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
               <h2 id="modelo"></h2>
               <p id="descripcion"></p>
               <span class="precio" id="precio"></span>
