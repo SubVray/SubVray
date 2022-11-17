@@ -40,15 +40,11 @@ const createStore = () => {
     let price = document.createElement("p");
     let salePrice = document.createElement("p");
     let imgProduct = document.createElement("img");
-    let imgProduct2 = document.createElement("img");
-    let imgProduct3 = document.createElement("img");
     let item = document.createElement("div");
     let imgcontainer = document.createElement("div");
 
     // agregar info a elementos
     imgProduct.src = product.imgUrl;
-    imgProduct2.src = product.imgUrl2;
-    imgProduct3.src = product.imgUrl3;
     name.innerText = product.name;
     sku.innerText = `SKU: ${product.SKU}`;
     price.innerText = `₡ ${product.price.toLocaleString("en-US")}`;
@@ -62,6 +58,7 @@ const createStore = () => {
     name.classList.add("descripcion");
     price.classList.add("precio");
     salePrice.classList.add("precio");
+    sku.classList.add("sku");
 
     // mostrar info en pantalla
     tienda.appendChild(cols);
@@ -84,7 +81,9 @@ const createStore = () => {
       // info a mostrar en el modal
       imgSeleccionada.src = product.imgUrl;
       descripSeleccionada.innerText = product.name;
-      precioSeleccionado.innerHTML = product.price;
+      precioSeleccionado.innerHTML = `₡ ${product.price.toLocaleString(
+        "en-US"
+      )}`;
 
       // carousel pequeño de cada producto
       carousel = [
@@ -99,8 +98,6 @@ const createStore = () => {
       document.thumb.src = carousel[0].ima;
 
       if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
-        nextPrev.style.display = "block";
-      } else if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
         nextPrev.style.display = "block";
       } else {
         nextPrev.style.display = "none";
