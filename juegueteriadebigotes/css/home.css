@@ -382,3 +382,15 @@ button.btn-mini-carousel:hover {
   color: var(--color-secondary);
   scale: 1.1;
 }
+
+/* modal carrito  */
+
+.name-cart-product {
+  font-size: 1rem;
+  text-align: center;
+}
+.btn-delete {
+  background-color: #a04001;
+  color: #fff;
+  padding: 3px 15px;
+}

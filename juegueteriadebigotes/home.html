@@ -110,7 +110,7 @@
                 onclick="showCarrito()">
                 <i class="fa-solid fa-cart-shopping"></i>
               </a>
-              <span class="count-cart-shopping">0</span>
+              <span class="count-cart-shopping" id="product-counter">0</span>
             </div>
           </div>
         </div>
@@ -153,6 +153,7 @@
         </form>
       </div>
     </header>
+
     <!-- modal carrito  -->
     <div
       class="offcanvas offcanvas-end"
@@ -167,7 +168,38 @@
           data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body" id="offcanvas-body"></div>
+      <div class="offcanvas-body" id="offcanvas-body">
+        <div class="card">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="name-cart-product">
+                Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
+                Plantillas
+              </h5>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img
+                src="images/tienda/minisprincesas.jpg"
+                alt=""
+                class="img-fluid" />
+            </div>
+            <div
+              class="col-5 d-flex flex-column justify-content-center align-items-start">
+              <span>SKU: 345345</span>
+              <span>Cantidad:3</span>
+              <span>Precio: 60.000</span>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+              <button type="button" class="btn-delete">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <section class="banner container-fluid"><h1></h1></section>
@@ -180,7 +212,7 @@
           </div>
           <div class="info-carousel">
             <h3 class="title-carousel-item">
-              X-Shot Lanza dardos Chaos 12 Dardos-Bola 8a+
+              X-Shot Lanza dardos Chaos 12 Dardos-Bola
             </h3>
             <p class="text-center">SKU: ZU36499</p>
             <span class="price-item d-block text-center">₡ 20,795.00</span>
@@ -192,7 +224,7 @@
           </div>
           <div class="info-carousel">
             <h3 class="title-carousel-item">
-              Perrito de Peluche con Aerógrafo Style 4 Ever 6a+
+              Perrito de Peluche con Aerógrafo
             </h3>
             <p class="text-center">SKU: CTOFG249</p>
             <span class="price-item d-block text-center">₡ 24,995.00</span>
@@ -205,7 +237,7 @@
           <div class="info-carousel">
             <h3 class="title-carousel-item">
               Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
-              Plantillas 6a+
+              Plantillas
             </h3>
             <p class="text-center">SKU: CTOFG243</p>
             <span class="price-item d-block text-center">₡ 24,995.00</span>
@@ -262,11 +294,7 @@
               <p id="descripcion"></p>
               <span class="precio" id="precio"></span>
               <div class="cantidad-container border border-2 border-danger m-3">
-                <button
-                  type="button"
-                  class="btn-cantidad minus"
-                  id="minus"
-                  onclick="fMinus()">
+                <button type="button" class="btn-cantidad minus" id="minus">
                   <i class="fa-solid fa-minus"></i>
                 </button>
                 <input
@@ -277,11 +305,7 @@
                   readonly
                   value="1"
                   id="txt-cantidad" />
-                <button
-                  type="button"
-                  class="btn-cantidad plus"
-                  id="plus"
-                  onclick="fPlus()">
+                <button type="button" class="btn-cantidad plus" id="plus">
                   <i class="fa-solid fa-plus"></i>
                 </button>
               </div>
@@ -295,8 +319,64 @@
         </div>
       </div>
     </section>
+    <section class="categorias" id="categorias">
+      <h2>Categorias</h2>
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+            <a href="">
+              <img
+                src="images/categorias/bebe.jpg"
+                alt="Categoria bebes"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+            <a href="">
+              <img
+                src="images/categorias/bebe.jpg"
+                alt="Categoria bebes"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+            <a href="">
+              <img
+                src="images/categorias/bebe.jpg"
+                alt="Categoria bebes"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+            <a href="">
+              <img
+                src="images/categorias/bebe.jpg"
+                alt="Categoria bebes"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
+            <a href="">
+              <img
+                src="images/categorias/bebe.jpg"
+                alt="Categoria bebes"
+                class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+            <a href="">
+              <img
+                src="images/categorias/bebe.jpg"
+                alt="Categoria bebes"
+                class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- js -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

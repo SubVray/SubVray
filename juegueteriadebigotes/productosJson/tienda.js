@@ -12,13 +12,15 @@ let imgProductModal = document.querySelector("#img-product-modal");
 let textCantidad = document.getElementById("txt-cantidad");
 let btnMinus = document.getElementById("minus");
 let btnPlus = document.getElementById("plus");
-let nCantidad = 0;
+let nCantidad = 1;
 
 // carrito
 let carrito = [];
 let newProduct = {};
 let addCarito = document.getElementById("add-carrito");
-let showCarritoP = document.getElementById("offcanvas-body");
+let showCarritoC = document.getElementById("offcanvas-body");
+let productCounter = document.getElementById("product-counter");
+let montoTotal = 0;
 
 // carousel mini modal product
 let foto, carousel, total;
@@ -42,6 +44,16 @@ function search() {
       li[i].style.display = "none";
     }
   }
+}
+
+eventListeners();
+
+function eventListeners() {
+  document.addEventListener("DOMContentLoaded", () => {
+    //localStorage.getItem devuelve el valor clave llamado tweets
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    crearHTML();
+  });
 }
 
 const createStore = () => {
@@ -116,10 +128,39 @@ const createStore = () => {
         nextPrev.style.display = "none";
       }
 
+      btnMinus.addEventListener("click", fMinus);
+      btnPlus.addEventListener("click", fPlus);
+
       // agregar al carrito
+      newProduct = {
+        id: product.SKU,
+        name: product.name,
+        imgProduct: product.imgUrl,
+        price: product.price,
+        cantidad: nCantidad,
+      };
     });
   });
 };
+
+addCarito.addEventListener("click", () => {
+  carrito = [...carrito, newProduct];
+  nCantidad = 1;
+  textCantidad.value = 1;
+  crearHTML();
+  Swal.fire({
+    position: "center-center",
+    icon: "success",
+    title: "El juguete se ha agregado correctamente al carrito ",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+});
+
+function sincronizarStorage() {
+  //usando JSON agrega el elemento en la caja de comentarios
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
 
 // controles para cambiar la imagen de cda producto
 let cambiar = function (mas) {
@@ -149,15 +190,115 @@ function cerrar() {
 const fPlus = () => {
   nCantidad += 1;
   textCantidad.value = nCantidad;
+  console.log(nCantidad);
 };
 
 const fMinus = () => {
   if (textCantidad.value > 1) {
     nCantidad -= 1;
     textCantidad.value = nCantidad;
+    console.log(nCantidad);
   }
 };
 
-window.addEventListener("load", () => {
-  createStore();
-});
+const showCarrito = () => {
+  sincronizarStorage();
+  console.log(montoTotal);
+};
+
+const crearHTML = () => {
+  limpiarHTML();
+  productCounter.innerHTML = carrito.length;
+  carrito.forEach((product) => {
+    let btnBorrar = document.createElement("button");
+    let cardsProduct = document.createElement("div");
+    // row 1
+    let row1 = document.createElement("div");
+    let col12 = document.createElement("div");
+    let titleCard = document.createElement("h5");
+    let hr = document.createElement("hr");
+    // row2
+    let row2 = document.createElement("div");
+    let col4 = document.createElement("div");
+    let col5 = document.createElement("div");
+    let col3 = document.createElement("div");
+    let imgP = document.createElement("img");
+    let skuP = document.createElement("span");
+    let cantidadP = document.createElement("span");
+    let priceP = document.createElement("span");
+    let titleSKu = "SKU:";
+    let titleCantidad = "Cantidad: ";
+    let titlePrice = "Price: ";
+
+    // add classes
+    cardsProduct.classList.add("card", "my-3");
+    // row1
+    row1.classList.add("row");
+    col12.classList.add("col-12");
+    titleCard.classList.add("name-cart-product");
+    //  row2
+    row2.classList.add("row");
+    col4.classList.add(
+      "col-4",
+      "d-flex",
+      "justify-content-center",
+      "align-items-center"
+    );
+    imgP.classList.add("img-fluid");
+    col5.classList.add(
+      "col-5",
+      "d-flex",
+      "flex-column",
+      "justify-content-center",
+      "align-items-start"
+    );
+    col3.classList.add(
+      "col-3",
+      "d-flex",
+      "justify-content-center",
+      "align-items-center"
+    );
+    btnBorrar.classList.add("btn-delete");
+
+    // content
+    titleCard.innerText = product.name;
+    imgP.src = product.imgProduct;
+    imgP.alt = product.name;
+    skuP.innerText = `${titleSKu} ${product.id}`;
+    cantidadP.innerText = `${titleCantidad} ${product.cantidad}`;
+    priceP.innerText = `${titlePrice} ${product.price}`;
+    btnBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+
+    showCarritoC.appendChild(cardsProduct);
+    cardsProduct.appendChild(row1);
+    cardsProduct.dataset.productId = product.id;
+    row1.appendChild(col12);
+    col12.appendChild(titleCard);
+    cardsProduct.appendChild(hr);
+    cardsProduct.appendChild(row2);
+    row2.appendChild(col4);
+    col4.appendChild(imgP);
+    row2.appendChild(col5);
+    col5.appendChild(skuP);
+    col5.appendChild(cantidadP);
+    col5.appendChild(priceP);
+    row2.appendChild(col3);
+    col3.appendChild(btnBorrar);
+    btnBorrar.addEventListener("click", () => {
+      const id = product.id;
+      carrito = carrito.filter((product) => product.id != id);
+      console.log(id);
+      crearHTML();
+      sincronizarStorage();
+    });
+  });
+};
+
+function limpiarHTML() {
+  while (showCarritoC.firstChild) {
+    showCarritoC.removeChild(showCarritoC.firstChild);
+  }
+}
+
+createStore();
