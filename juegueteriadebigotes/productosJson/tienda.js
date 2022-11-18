@@ -8,6 +8,19 @@ let modal = document.querySelector(".modal-container");
 let nextPrev = document.querySelector("#next-prev");
 let imgProductModal = document.querySelector("#img-product-modal");
 
+// variables input cantidad
+let textCantidad = document.getElementById("txt-cantidad");
+let btnMinus = document.getElementById("minus");
+let btnPlus = document.getElementById("plus");
+let nCantidad = 0;
+
+// carrito
+let carrito = [];
+let newProduct = {};
+let addCarito = document.getElementById("add-carrito");
+let showCarritoP = document.getElementById("offcanvas-body");
+
+// carousel mini modal product
 let foto, carousel, total;
 foto = 0;
 carousel = {};
@@ -102,6 +115,8 @@ const createStore = () => {
       } else {
         nextPrev.style.display = "none";
       }
+
+      // agregar al carrito
     });
   });
 };
@@ -129,4 +144,20 @@ function cerrar() {
   modal.style.display = "none";
 }
 
-createStore();
+// funcion aumentar y bajar cantidadd
+
+const fPlus = () => {
+  nCantidad += 1;
+  textCantidad.value = nCantidad;
+};
+
+const fMinus = () => {
+  if (textCantidad.value > 1) {
+    nCantidad -= 1;
+    textCantidad.value = nCantidad;
+  }
+};
+
+window.addEventListener("load", () => {
+  createStore();
+});

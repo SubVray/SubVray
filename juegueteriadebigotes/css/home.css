@@ -320,6 +320,37 @@ section[id] {
   height: 40px;
   padding: 0 10px;
 }
+.cantidad-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-cantidad {
+  transition-duration: 0.5s;
+}
+.btn-cantidad:hover i {
+  scale: 1.2;
+  color: var(--color-secondary);
+}
+
+.cantidad-input {
+  position: absolute;
+  font-size: 1.4rem;
+  padding-left: 14px;
+  z-index: -1;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+.cantidad-input:is(:hover, :focus, :active) {
+  border: none !important;
+  outline: none !important;
+}
 
 /* borarar */
 .scrollDisabled {

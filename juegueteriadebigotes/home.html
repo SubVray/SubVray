@@ -101,9 +101,16 @@
             <div class="text-center cart-login-container">
               <a href="#" class="login">Login</a>
               <span> / </span>
-              <a href="#" class="cart-shopping"
-                ><i class="fa-solid fa-cart-shopping"></i></a
-              ><span class="count-cart-shopping">0</span>
+              <a
+                class="cart-shopping"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                onclick="showCarrito()">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+              <span class="count-cart-shopping">0</span>
             </div>
           </div>
         </div>
@@ -146,6 +153,22 @@
         </form>
       </div>
     </header>
+    <!-- modal carrito  -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" id="offcanvas-body"></div>
+    </div>
 
     <section class="banner container-fluid"><h1></h1></section>
     <section id="destacados" class="container-fluid">
@@ -238,8 +261,34 @@
               <h2 id="modelo"></h2>
               <p id="descripcion"></p>
               <span class="precio" id="precio"></span>
+              <div class="cantidad-container border border-2 border-danger m-3">
+                <button
+                  type="button"
+                  class="btn-cantidad minus"
+                  id="minus"
+                  onclick="fMinus()">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input
+                  type="number"
+                  class="cantidad-input"
+                  min="1"
+                  max="99"
+                  readonly
+                  value="1"
+                  id="txt-cantidad" />
+                <button
+                  type="button"
+                  class="btn-cantidad plus"
+                  id="plus"
+                  onclick="fPlus()">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
               <div class="fila">
-                <button>AGREGAR AL CARRITO</button>
+                <button type="button" id="add-carrito">
+                  AGREGAR AL CARRITO
+                </button>
               </div>
             </div>
           </div>
@@ -266,8 +315,7 @@
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
     </script>
-    <script src="js/home.js"></script>
-    <script src="js/scroll-smooth.js"></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
@@ -297,7 +345,9 @@
     </script>
 
     <!-- my js -->
-    <!--  -->
+    <script src="js/scroll-smooth.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/searchbar.js"></script>
     <script src="js/lightbox.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
