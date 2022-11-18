@@ -2,5 +2,6 @@
   "html-css-class-completion.enableEmmetSupport": true,
   "html-css-class-completion.enabledCSSLanguages": ["css", "sass", "scss"],
   "styleguide-intellisense.enableEmmetSupport": true,
-  "vsintellicode.features.python.deepLearning": "enabled"
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "liveServer.settings.port": 5501
 }

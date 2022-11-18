@@ -38,7 +38,6 @@ nav a:hover {
 }
 /* TODO: cicle counter */
 .cart-login-container {
-  border: 1px solid red;
   position: relative;
   width: 150px;
 }
@@ -126,7 +125,7 @@ nav a:hover {
   background-image: url("../images/banner1.jpeg");
   background-position: center;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.459);
+  box-shadow: inset 0 0 0 1000px rgb(0, 0, 0);
   height: calc(100vh - 75.797px);
 }
 
