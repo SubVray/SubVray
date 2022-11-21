@@ -8,6 +8,8 @@ let modal = document.querySelector(".modal-container");
 let nextPrev = document.querySelector("#next-prev");
 let imgProductModal = document.querySelector("#img-product-modal");
 
+let allTienda = [{}];
+
 // variables input cantidad
 let textCantidad = document.getElementById("txt-cantidad");
 let btnMinus = document.getElementById("minus");
@@ -58,7 +60,16 @@ function eventListeners() {
 
 const createStore = () => {
   let tienda = document.querySelector("#tienda");
-  products.forEach((product) => {
+  if (
+    window.location == "http://127.0.0.1:5501/juegueteriadebigotes/home.html"
+  ) {
+    allTienda = productsHome;
+  } else if (
+    window.location == "http://127.0.0.1:5501/juegueteriadebigotes/bebes.html"
+  ) {
+    allTienda = tiendaBebes;
+  }
+  allTienda.forEach((product) => {
     let cols = document.createElement("div");
     let name = document.createElement("h3");
     let sku = document.createElement("p");
@@ -133,7 +144,7 @@ const createStore = () => {
 
       // agregar al carrito
       newProduct = {
-        id: product.SKU,
+        id: Date.now(),
         name: product.name,
         imgProduct: product.imgUrl,
         price: product.price,
@@ -234,7 +245,14 @@ const crearHTML = () => {
     cardsProduct.classList.add("card", "my-3");
     // row1
     row1.classList.add("row");
-    col12.classList.add("col-12");
+    col12.classList.add(
+      "col-12",
+      "d-flex",
+      "justify-content-center",
+      "align-items-center",
+      "pt-4",
+      "pb-0"
+    );
     titleCard.classList.add("name-cart-product");
     //  row2
     row2.classList.add("row");
@@ -264,11 +282,10 @@ const crearHTML = () => {
     titleCard.innerText = product.name;
     imgP.src = product.imgProduct;
     imgP.alt = product.name;
-    skuP.innerText = `${titleSKu} ${product.id}`;
+    skuP.innerText = `${titleSKu} ${product.id % 1000000}`;
     cantidadP.innerText = `${titleCantidad} ${product.cantidad}`;
     priceP.innerText = `${titlePrice} ${product.price}`;
     btnBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-
 
     showCarritoC.appendChild(cardsProduct);
     cardsProduct.appendChild(row1);

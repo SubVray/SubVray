@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/tira.css" />
     <link rel="stylesheet" href="css/ligthbox.css" />
+    <link rel="stylesheet" href="css/bebes.css" />
     <title>Jugueteria de Bigotes</title>
   </head>
   <body id="home">
@@ -168,179 +169,136 @@
           data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body" id="offcanvas-body"></div>
+      <div class="offcanvas-body" id="offcanvas-body">
+        <div class="card">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="name-cart-product py-2">
+                Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
+                Plantillas
+              </h5>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img
+                src="images/tienda/minisprincesas.jpg"
+                alt=""
+                class="img-fluid" />
+            </div>
+            <div
+              class="col-5 d-flex flex-column justify-content-center align-items-start">
+              <span>SKU: 345345</span>
+              <span>Cantidad:3</span>
+              <span>Precio: 60.000</span>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+              <button type="button" class="btn-delete">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <section class="banner container-fluid"><h1></h1></section>
-    <!-- <section id="destacados" class="container-fluid">
-      <h2 class="text-center titles">Destacados</h2>
-      <div class="owl-carousel owl-theme container">
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/pistola-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              X-Shot Lanza dardos Chaos 12 Dardos-Bola
-            </h3>
-            <p class="text-center">SKU: ZU36499</p>
-            <span class="price-item d-block text-center">₡ 20,795.00</span>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/perrito-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              Perrito de Peluche con Aerógrafo
-            </h3>
-            <p class="text-center">SKU: CTOFG249</p>
-            <span class="price-item d-block text-center">₡ 24,995.00</span>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/t-rex-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
-              Plantillas
-            </h3>
-            <p class="text-center">SKU: CTOFG243</p>
-            <span class="price-item d-block text-center">₡ 24,995.00</span>
-          </div>
-        </div>
+    <!-- banner bebes -->
+    <section class="bebes">
+      <div class="container">
+        <img
+          src="images/categorias/banner bebe.png"
+          alt=""
+          class="mt-5 img-fluid rounded shadow" />
       </div>
-    </section> -->
-
-    <!-- promociones  -->
-    <section class="container-fluid" id="ofertas">
-      <h2 class="text-center titles">Promociones</h2>
-      <div class="container m-auto" id="mostrador">
-        <div class="row m-auto" id="tienda"></div>
-      </div>
-      <div class="modal-container">
-        <div class="seleccion" id="seleccion">
-          <a class="cerrar" onclick="cerrar()"
-            ><i class="fa-solid fa-xmark"></i
-          ></a>
-          <div class="info row">
-            <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
-              <div class="carousel-container text-center">
-                <div class="img-carousel-container">
-                  <a id="img-product-modal" data-lightbox="roadtrip">
-                    <img
-                      alt="producto"
-                      id="img"
-                      class="img-fluid"
-                      name="thumb" />
-                  </a>
-                </div>
-                <div
-                  class="text-center d-flex justify-content-between"
-                  id="next-prev">
-                  <button
-                    class="btn-mini-carousel prev"
-                    type="button"
-                    onclick="cambiar(-1)">
-                    <i class="fa-solid fa-chevron-left"></i>
-                  </button>
-                  <button
-                    class="btn-mini-carousel next"
-                    type="button"
-                    onclick="cambiar(1)">
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </button>
+      <div class="barra my-5"></div>
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-12">
+            <form action="">
+              <select name="" id="">
+                <option value="">Subcategorias</option>
+                <option value="">
+                  Accesorios (Beberitos, Pañales, Mordedores, Frazadas)
+                </option>
+                <option value="">Coches, Encierros, Gimnasios, Sillas</option>
+              </select>
+            </form>
+          </div>
+          <div class="col-12">
+            <div class="container m-auto" id="mostrador">
+              <div class="row m-auto" id="tienda"></div>
+            </div>
+            <div class="modal-container">
+              <div class="seleccion" id="seleccion">
+                <a class="cerrar" onclick="cerrar()"
+                  ><i class="fa-solid fa-xmark"></i
+                ></a>
+                <div class="info row">
+                  <div
+                    class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+                    <div class="carousel-container text-center">
+                      <div class="img-carousel-container">
+                        <a id="img-product-modal" data-lightbox="roadtrip">
+                          <img
+                            alt="producto"
+                            id="img"
+                            class="img-fluid"
+                            name="thumb" />
+                        </a>
+                      </div>
+                      <div
+                        class="text-center d-flex justify-content-between"
+                        id="next-prev">
+                        <button
+                          class="btn-mini-carousel prev"
+                          type="button"
+                          onclick="cambiar(-1)">
+                          <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button
+                          class="btn-mini-carousel next"
+                          type="button"
+                          onclick="cambiar(1)">
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
+                    <h2 id="modelo"></h2>
+                    <p id="descripcion"></p>
+                    <span class="precio" id="precio"></span>
+                    <div
+                      class="cantidad-container border border-2 border-danger m-3">
+                      <button
+                        type="button"
+                        class="btn-cantidad minus"
+                        id="minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <input
+                        type="number"
+                        class="cantidad-input"
+                        min="1"
+                        max="99"
+                        readonly
+                        value="1"
+                        id="txt-cantidad" />
+                      <button type="button" class="btn-cantidad plus" id="plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                    <div class="fila">
+                      <button type="button" id="add-carrito">
+                        AGREGAR AL CARRITO
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
-              <h2 id="modelo"></h2>
-              <p id="descripcion"></p>
-              <span class="precio" id="precio"></span>
-              <div class="cantidad-container border border-2 border-danger m-3">
-                <button type="button" class="btn-cantidad minus" id="minus">
-                  <i class="fa-solid fa-minus"></i>
-                </button>
-                <input
-                  type="number"
-                  class="cantidad-input"
-                  min="1"
-                  max="99"
-                  readonly
-                  value="1"
-                  id="txt-cantidad" />
-                <button type="button" class="btn-cantidad plus" id="plus">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <div class="fila">
-                <button type="button" id="add-carrito">
-                  AGREGAR AL CARRITO
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- categories -->
-    <section class="categorias" id="categorias">
-      <h2 class="text-center titles">Categorías</h2>
-      <div class="container d-flex justify-content-center align-items-centerr">
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="bebes.html">
-              <img
-                src="images/categorias/bebes.png"
-                alt="Categoria bebes"
-                class="img-fluid w-100" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="">
-              <img
-                src="images/categorias/juegosmesa.gif"
-                alt="Categoria juegos de mesa"
-                class="img-fluid w-100" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="">
-              <img
-                src="images/categorias/deportes.png"
-                alt="Categoria deportes"
-                class="img-fluid w-100" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="">
-              <img
-                src="images/categorias/armas-nerf.png"
-                alt="Categoria armas nerf"
-                class="img-fluid w-100" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="">
-              <img
-                src="images/categorias/motorafina.png"
-                alt="Categoria motorafina"
-                class="img-fluid w-100" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-3">
-            <a href="">
-              <img
-                src="images/categorias/verano.png"
-                alt="Categoria verano "
-                class="img-fluid w-100" />
-            </a>
           </div>
         </div>
       </div>
