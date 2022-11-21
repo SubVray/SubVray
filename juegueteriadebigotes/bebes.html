@@ -82,13 +82,22 @@
                     Categorías
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#action">Action</a></li>
+                    <li><a class="dropdown-item" href="#action">bebes</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">juegos de mesa</a>
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Deportes</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Armas nerf</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Motorafina</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">verano</a>
                     </li>
                   </ul>
                 </li>
@@ -169,38 +178,7 @@
           data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body" id="offcanvas-body">
-        <div class="card">
-          <div class="row">
-            <div class="col-12">
-              <h5 class="name-cart-product py-2">
-                Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
-                Plantillas
-              </h5>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-4 d-flex justify-content-center align-items-center">
-              <img
-                src="images/tienda/minisprincesas.jpg"
-                alt=""
-                class="img-fluid" />
-            </div>
-            <div
-              class="col-5 d-flex flex-column justify-content-center align-items-start">
-              <span>SKU: 345345</span>
-              <span>Cantidad:3</span>
-              <span>Precio: 60.000</span>
-            </div>
-            <div class="col-3 d-flex justify-content-center align-items-center">
-              <button type="button" class="btn-delete">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="offcanvas-body" id="offcanvas-body"></div>
     </div>
 
     <!-- banner bebes -->
@@ -211,18 +189,29 @@
           alt=""
           class="mt-5 img-fluid rounded shadow" />
       </div>
-      <div class="barra my-5"></div>
+      <div class="container">
+        <nav aria-label="breadcrumb" class="list-menu">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+            <li class="breadcrumb-item active">
+              <a href="bebes.html">Bebes</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
       <div class="container">
         <div class="row w-100">
           <div class="col-12">
             <form action="">
-              <select name="" id="">
-                <option value="">Subcategorias</option>
-                <option value="">
+              <select name="" id="sub-bebes">
+                <option value="" selected disabled>Subcategorias</option>
+                <option value="Accesorios">
                   Accesorios (Beberitos, Pañales, Mordedores, Frazadas)
                 </option>
                 <option value="">Coches, Encierros, Gimnasios, Sillas</option>
               </select>
+              <button type="button" onclick="changeFilter()">Filtrar</button>
             </form>
           </div>
           <div class="col-12">

@@ -79,5 +79,15 @@ const tiendaBebes = [
     imgUrl: "images/tienda/pistola-1.jpg",
   },
 ];
+const subBebesItems = [
+  {
+    name: "Ríe Y Aprende Mi Primer Mascota Digital ",
+    SKU: "MTHHC51",
+    sale: 0,
+    price: 9795.0,
+    imgUrl: "images/categorias/bebes/mascotaDigital-1.jpg",
+    imgUrl2: "images/categorias/bebes/mascotaDigital-2.jpg",
+  },
+];
 
 const productosDestacados = [{}];

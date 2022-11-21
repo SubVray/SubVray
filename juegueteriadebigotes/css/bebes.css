@@ -1,7 +1,46 @@
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-primary: #ffae00;
+  --color-primary-shadow: #a04001;
+  --color-secondary: #5992fe;
+  --color-secondary-shadow: #003fae;
+  --color-dark-light: #252525;
+  --color-light: #ffffff;
+}
 .barra {
   background-color: #e9e9e9;
   display: block;
   height: 5px;
   position: relative;
   width: 100%;
+}
+.bebes {
+  background-image: url("../images/bg.webp");
+}
+
+.list-menu {
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  height: 40px;
+  margin: 20px 0;
+  padding: 50px 3% 0;
+  position: relative;
+}
+.list-menu .breadcrumb {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 100% !important;
+  justify-content: start;
+  position: absolute;
+  top: 2px;
+}
+.list-menu .breadcrumb li a {
+  color: var(--color-light) !important;
+}
+.list-menu .breadcrumb li a:hover {
+  color: var(--color-primary) !important;
+  text-shadow: 3px 3px 1px #252525;
 }

@@ -8,6 +8,8 @@ let modal = document.querySelector(".modal-container");
 let nextPrev = document.querySelector("#next-prev");
 let imgProductModal = document.querySelector("#img-product-modal");
 
+let subBebes = document.querySelector("#sub-bebes");
+
 let allTienda = [{}];
 
 // variables input cantidad
@@ -88,7 +90,7 @@ const createStore = () => {
 
     // agregar clases a elementos
     cols.classList.add("product", "col-sm-6", "col-md-4", "col-lg-4");
-    item.classList.add("item-product");
+    item.classList.add("item-product", "bg-white");
     imgcontainer.classList.add("contenedor-foto");
     imgProduct.classList.add("img-fluid");
     name.classList.add("descripcion");
@@ -317,5 +319,11 @@ function limpiarHTML() {
     showCarritoC.removeChild(showCarritoC.firstChild);
   }
 }
+
+const changeFilter = () => {
+  if (subBebes.value == "Accesorios") {
+    allTienda = subBebesItems;
+  }
+};
 
 createStore();

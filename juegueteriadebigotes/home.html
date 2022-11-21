@@ -81,13 +81,22 @@
                     Categorías
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#action">Action</a></li>
+                    <li><a class="dropdown-item" href="#action">bebes</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">juegos de mesa</a>
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Deportes</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Armas nerf</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Motorafina</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">verano</a>
                     </li>
                   </ul>
                 </li>
@@ -346,6 +355,32 @@
       </div>
     </section>
 
+    <!-- tira  -->
+    <section id="s1" class="container-fluid fondotira text-center">
+      <h2 class="titulos2 text-white">Perfiles profesionales</h2>
+      <div class="container pt-5">
+        <div id="owl-demo" class="owl-carousel text-center">
+          <div class="owl-item">
+            <div class="item">
+              <!-- lazyOwl es una instruccion de JS para agilizar la carga de las fotos -->
+              <img
+                class="lazyOwl"
+                data-src="images/tira/hasbro.webp"
+                alt="Cliente1" />
+            </div>
+          </div>
+          <div class="owl-item">
+            <div class="item">
+              <img
+                class="lazyOwl img-fluid"
+                data-src="images/tira/megablocks.webp"
+                alt="Cliente2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- js -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
@@ -367,31 +402,20 @@
       );
     </script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
+    <script src="js/tira.js"></script>
     <script>
-      $(".owl-carousel").owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 30,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 3,
-          },
-          1200: {
-            items: 3,
-          },
-        },
+      $(document).ready(function () {
+        $("#owl-demo").owlCarousel({
+          items: 3,
+          lazyLoad: true,
+          autoPlay: true,
+          navigation: true,
+          navigationText: ["", ""],
+          rewindNav: true,
+          scrollPerPage: false,
+          pagination: false,
+          paginationNumbers: false,
+        });
       });
     </script>
 
@@ -402,6 +426,5 @@
     <script src="js/lightbox.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
-    <script src="js/carrousel.js"></script>
   </body>
 </html>
