@@ -394,3 +394,8 @@ button.btn-mini-carousel:hover {
   color: #fff;
   padding: 3px 15px;
 }
+.owl-container .item{
+  background-color: red;
+}
+
+

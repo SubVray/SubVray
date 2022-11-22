@@ -1,7 +1,3 @@
-.owl-carousel {
-  width: 1200px;
-}
-
 .item img {
   width: 150px;
 }
@@ -157,4 +153,10 @@
 .item .owl-img {
   width: 100px;
   height: 100px;
+}
+
+@media all and (orientation: portrait) {
+  .owl-carousel .owl-stage-outer {
+    flex-direction: column !important;
+  }
 }
