@@ -187,6 +187,7 @@ function leerDatosProducto(product) {
   } else {
     carrito = [...carrito, newProduct];
   }
+  sincronizarStorage();
   crearHTML();
   Swal.fire({
     position: "center-center",
@@ -337,12 +338,11 @@ let tiendaAccesorios = document.querySelector("#tienda-Accesorios");
 const changeFilterBebes = () => {
   if (subBebes.value == "Juguetes") {
     tiendaAccesorios.style.display = "none";
-
     tiendaContainer.style.display = "flex";
+    window.location.reload();
   } else if (subBebes.value == "Accesorios") {
     tiendaContainer.style.display = "none";
-    tiendaAccesorios.style.display = "flrx";
-
+    tiendaAccesorios.style.display = "flex";
     let tienda = document.querySelector("#tienda-Accesorios");
     subBebesItems.forEach((product) => {
       let cols = document.createElement("div");
