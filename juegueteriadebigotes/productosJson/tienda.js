@@ -163,39 +163,33 @@ function leerDatosProduct(newProduct) {
     };
     console.log(CreateNewProduct);
     if (carrito.some((prod) => prod.id === CreateNewProduct.id)) {
-      const lk = carrito.map((pro) => {
+      const lk = carrito.map((prod) => {
         //si es exactamente igual curso.id e infoCurso.id
         //incrementa la cantidad del curso seleccionado del usuario
-        if (pro.id === CreateNewProduct.id) {
-          let cantidad = parseInt(CreateNewProduct.cantidad);
+        if (prod.id === CreateNewProduct.id) {
+          let cantidad = parseInt(prod.cantidad);
           cantidad++;
-          CreateNewProduct.cantidad = cantidad;
-          return curso;
+          prod.cantidad = cantidad;
+          return prod;
         } else {
-          return curso;
+          return prod;
         }
       });
-        carrito = [...carrito];
+      carrito = [...lk];
+    } else {
+      carrito = [...carrito, CreateNewProduct];
+      crearHTML();
+      Swal.fire({
+        position: "center-center",
+        icon: "success",
+        title: "El juguete se ha agregado correctamente al carrito ",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   }
 
   console.log(newProduct);
-
-  // if (newProduct.id == productSelected.SKU) {
-  //   let cantidad = newProduct.cantidad;
-  //   cantidad++;
-
-  //   carrito = [...carrito];
-  // } else {
-  //   // crearHTML();
-  //   Swal.fire({
-  //     position: "center-center",
-  //     icon: "success",
-  //     title: "El juguete se ha agregado correctamente al carrito ",
-  //     showConfirmButton: false,
-  //     timer: 1500,
-  //   });
-  // }
 }
 
 addCarito.addEventListener("click", leerDatosProduct());
