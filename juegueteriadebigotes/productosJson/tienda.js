@@ -71,6 +71,7 @@ const createStore = () => {
   ) {
     allTienda = tiendaBebes;
   }
+
   allTienda.forEach((product) => {
     let cols = document.createElement("div");
     let name = document.createElement("h3");
@@ -145,30 +146,59 @@ const createStore = () => {
       btnPlus.addEventListener("click", fPlus);
 
       // agregar al carrito
-      newProduct = {
-        id: Date.now(),
-        name: product.name,
-        imgProduct: product.imgUrl,
-        price: product.price,
-        cantidad: nCantidad,
-      };
+
+      leerDatosProduct(product);
     });
   });
 };
 
-addCarito.addEventListener("click", () => {
-  carrito = [...carrito, newProduct];
-  nCantidad = 1;
-  textCantidad.value = 1;
-  crearHTML();
-  Swal.fire({
-    position: "center-center",
-    icon: "success",
-    title: "El juguete se ha agregado correctamente al carrito ",
-    showConfirmButton: false,
-    timer: 1500,
-  });
-});
+function leerDatosProduct(newProduct) {
+  if (newProduct != undefined) {
+    CreateNewProduct = {
+      id: newProduct.SKU,
+      name: newProduct.name,
+      imgProduct: newProduct.imgUrl,
+      price: newProduct.price,
+      cantidad: 1,
+    };
+    console.log(CreateNewProduct);
+    if (carrito.some((prod) => prod.id === CreateNewProduct.id)) {
+      const lk = carrito.map((pro) => {
+        //si es exactamente igual curso.id e infoCurso.id
+        //incrementa la cantidad del curso seleccionado del usuario
+        if (pro.id === CreateNewProduct.id) {
+          let cantidad = parseInt(CreateNewProduct.cantidad);
+          cantidad++;
+          CreateNewProduct.cantidad = cantidad;
+          return curso;
+        } else {
+          return curso;
+        }
+      });
+        carrito = [...carrito];
+    }
+  }
+
+  console.log(newProduct);
+
+  // if (newProduct.id == productSelected.SKU) {
+  //   let cantidad = newProduct.cantidad;
+  //   cantidad++;
+
+  //   carrito = [...carrito];
+  // } else {
+  //   // crearHTML();
+  //   Swal.fire({
+  //     position: "center-center",
+  //     icon: "success",
+  //     title: "El juguete se ha agregado correctamente al carrito ",
+  //     showConfirmButton: false,
+  //     timer: 1500,
+  //   });
+  // }
+}
+
+addCarito.addEventListener("click", leerDatosProduct());
 
 function sincronizarStorage() {
   //usando JSON agrega el elemento en la caja de comentarios
@@ -284,7 +314,8 @@ const crearHTML = () => {
     titleCard.innerText = product.name;
     imgP.src = product.imgProduct;
     imgP.alt = product.name;
-    skuP.innerText = `${titleSKu} ${product.id % 1000000}`;
+    // skuP.innerText = `${titleSKu} ${product.id % 1000000}`;
+    skuP.innerText = `${titleSKu} ${product.id}`;
     cantidadP.innerText = `${titleCantidad} ${product.cantidad}`;
     priceP.innerText = `${titlePrice} ${product.price}`;
     btnBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
@@ -326,4 +357,5 @@ const changeFilter = () => {
   }
 };
 
+// const leerCantidad = () => {};
 createStore();
