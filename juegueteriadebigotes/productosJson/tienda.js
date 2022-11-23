@@ -332,5 +332,17 @@ function limpiarHTML() {
     showCarritoC.removeChild(showCarritoC.firstChild);
   }
 }
+let tiendaContainer = document.querySelector("#tienda");
+let tiendaAccesorios = document.querySelector("#tienda-Accesorios");
+const changeFilterBebes = () => {
+  if (subBebes.value == "Juguetes") {
+    tiendaAccesorios.classList.add("d-none");
+
+    tiendaContainer.style.display = "flex";
+  } else if (subBebes.value == "Accesorios") {
+    tiendaContainer.style.display = "none";
+    tiendaAccesorios.classList.remove("d-none");
+  }
+};
 
 createStore();

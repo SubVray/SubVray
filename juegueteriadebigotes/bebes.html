@@ -187,7 +187,7 @@
         <img
           src="images/categorias/banner bebe.png"
           alt=""
-          class="mt-5 img-fluid rounded shadow" />
+          class="mt-2 img-fluid rounded shadow" />
       </div>
       <div class="container">
         <nav aria-label="breadcrumb" class="list-menu">
@@ -204,20 +204,35 @@
         <div class="row w-100">
           <div class="col-12">
             <form action="">
-              <select name="" id="sub-bebes">
-                <option value="" selected disabled>Subcategorias</option>
+              <select name="" id="sub-bebes" onchange="changeFilterBebes()">
+                <option value="" disabled>Subcategorias</option>
+                <option value="Juguetes" selected>Juguetes</option>
                 <option value="Accesorios">
                   Accesorios (Beberitos, Pañales, Mordedores, Frazadas)
                 </option>
                 <option value="">Coches, Encierros, Gimnasios, Sillas</option>
               </select>
-              <button type="button" onclick="changeFilter()">Filtrar</button>
             </form>
           </div>
           <div class="col-12">
             <!-- card tienda producto  -->
             <div class="container m-auto" id="mostrador">
               <div class="row m-auto" id="tienda"></div>
+              <div class="row m-auto d-none" id="tienda-Accesorios">
+                <div class="product col-sm-6 col-md-4 col-lg-4">
+                  <div class="item-product bg-white">
+                    <div class="contenedor-foto">
+                      <img src="images/tienda/t-rex-1.jpg" class="img-fluid" />
+                    </div>
+                    <h3 class="descripcion">
+                      Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con
+                      100 Plantillas
+                    </h3>
+                    <p class="sku">SKU: CTOFG243</p>
+                    <p class="precio">₡ 24,995</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="modal-container">
