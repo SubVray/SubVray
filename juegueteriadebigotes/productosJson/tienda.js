@@ -336,12 +336,87 @@ let tiendaContainer = document.querySelector("#tienda");
 let tiendaAccesorios = document.querySelector("#tienda-Accesorios");
 const changeFilterBebes = () => {
   if (subBebes.value == "Juguetes") {
-    tiendaAccesorios.classList.add("d-none");
+    tiendaAccesorios.style.display = "none";
 
     tiendaContainer.style.display = "flex";
   } else if (subBebes.value == "Accesorios") {
     tiendaContainer.style.display = "none";
-    tiendaAccesorios.classList.remove("d-none");
+    tiendaAccesorios.style.display = "flrx";
+
+    let tienda = document.querySelector("#tienda-Accesorios");
+    subBebesItems.forEach((product) => {
+      let cols = document.createElement("div");
+      let name = document.createElement("h3");
+      let sku = document.createElement("p");
+      let price = document.createElement("p");
+      let salePrice = document.createElement("p");
+      let imgProduct = document.createElement("img");
+      let item = document.createElement("div");
+      let imgcontainer = document.createElement("div");
+
+      // agregar info a elementos
+      imgProduct.src = product.imgUrl;
+      name.innerText = product.name;
+      sku.innerText = `SKU: ${product.SKU}`;
+      price.innerText = `₡ ${product.price.toLocaleString("en-US")}`;
+      salePrice.innerText = `₡ ${product.sale.toLocaleString("en-US")}`;
+
+      // agregar clases a elementos
+      cols.classList.add("product", "col-sm-6", "col-md-4", "col-lg-4");
+      item.classList.add("item-product", "bg-white");
+      imgcontainer.classList.add("contenedor-foto");
+      imgProduct.classList.add("img-fluid");
+      name.classList.add("descripcion");
+      price.classList.add("precio");
+      salePrice.classList.add("precio");
+      sku.classList.add("sku");
+
+      // mostrar info en pantalla
+      tienda.appendChild(cols);
+      cols.appendChild(item);
+      imgcontainer.appendChild(imgProduct);
+      item.appendChild(imgcontainer);
+      item.appendChild(name);
+      item.appendChild(sku);
+      item.appendChild(price);
+
+      // abrir modal para cada producto
+      item.addEventListener("click", () => {
+        // estilos para el modal
+        mostrador.style.width = "100%";
+        seleccion.style.width = "70%";
+        modal.style.display = "block";
+        seleccion.classList.add("active-modal");
+        body.classList.add("scrollDisabled");
+
+        // info a mostrar en el modal
+        imgSeleccionada.src = product.imgUrl;
+        descripSeleccionada.innerText = product.name;
+        precioSeleccionado.innerText = Number(product.price);
+        imgCarrito.src = product.imgUrl;
+        imgCarrito.style.display = "none";
+        HtmlSku.innerText = product.SKU;
+        HtmlSku.style.display = "none";
+
+        // carousel pequeño de cada producto
+        carousel = [
+          {
+            ima: product.imgUrl,
+          },
+          {
+            ima: product.imgUrl2,
+          },
+        ];
+        imgProductModal.href = carousel[0].ima;
+        document.thumb.src = carousel[0].ima;
+
+        if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
+          nextPrev.style.display = "block";
+        } else {
+          nextPrev.style.display = "none";
+        }
+      });
+    });
   }
 };
 
