@@ -215,9 +215,11 @@
             </form>
           </div>
           <div class="col-12">
+            <!-- card tienda producto  -->
             <div class="container m-auto" id="mostrador">
               <div class="row m-auto" id="tienda"></div>
             </div>
+
             <div class="modal-container">
               <div class="seleccion" id="seleccion">
                 <a class="cerrar" onclick="cerrar()"
@@ -256,31 +258,19 @@
                   </div>
                   <div
                     class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
-                    <h2 id="modelo"></h2>
+                    <img id="img-carrito" alt="hola" />
                     <p id="descripcion"></p>
-                    <span class="precio" id="precio"></span>
-                    <div
-                      class="cantidad-container border border-2 border-danger m-3">
+                    <div class="d-flex">
+                      <span class="precio" id="icon-Moneda">₡</span>
+                      <span class="precio" id="precio"></span>
+                    </div>
+                    <span class="sku" id="SKU"></span>
+
+                    <div class="fila" id="fila">
                       <button
                         type="button"
-                        class="btn-cantidad minus"
-                        id="minus">
-                        <i class="fa-solid fa-minus"></i>
-                      </button>
-                      <input
-                        type="number"
-                        class="cantidad-input"
-                        min="1"
-                        max="99"
-                        readonly
-                        value="1"
-                        id="txt-cantidad" />
-                      <button type="button" class="btn-cantidad plus" id="plus">
-                        <i class="fa-solid fa-plus"></i>
-                      </button>
-                    </div>
-                    <div class="fila">
-                      <button type="button" id="add-carrito">
+                        class="agregar-carrito"
+                        id="add-carrito">
                         AGREGAR AL CARRITO
                       </button>
                     </div>

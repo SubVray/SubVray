@@ -7,6 +7,8 @@ let body = document.querySelector("body");
 let modal = document.querySelector(".modal-container");
 let nextPrev = document.querySelector("#next-prev");
 let imgProductModal = document.querySelector("#img-product-modal");
+let HtmlSku = document.querySelector("#SKU");
+let imgCarrito = document.querySelector("#img-carrito");
 
 let subBebes = document.querySelector("#sub-bebes");
 
@@ -53,6 +55,7 @@ function search() {
 eventListeners();
 
 function eventListeners() {
+  addCarito.addEventListener("click", agregarproducto);
   document.addEventListener("DOMContentLoaded", () => {
     //localStorage.getItem devuelve el valor clave llamado tweets
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -120,9 +123,11 @@ const createStore = () => {
       // info a mostrar en el modal
       imgSeleccionada.src = product.imgUrl;
       descripSeleccionada.innerText = product.name;
-      precioSeleccionado.innerHTML = `₡ ${product.price.toLocaleString(
-        "en-US"
-      )}`;
+      precioSeleccionado.innerText = Number(product.price);
+      imgCarrito.src = product.imgUrl;
+      imgCarrito.style.display = "none";
+      HtmlSku.innerText = product.SKU;
+      HtmlSku.style.display = "none";
 
       // carousel pequeño de cada producto
       carousel = [
@@ -141,58 +146,56 @@ const createStore = () => {
       } else {
         nextPrev.style.display = "none";
       }
-
-      btnMinus.addEventListener("click", fMinus);
-      btnPlus.addEventListener("click", fPlus);
-
-      // agregar al carrito
-
-      leerDatosProduct(product);
     });
   });
 };
 
-function leerDatosProduct(newProduct) {
-  if (newProduct != undefined) {
-    CreateNewProduct = {
-      id: newProduct.SKU,
-      name: newProduct.name,
-      imgProduct: newProduct.imgUrl,
-      price: newProduct.price,
-      cantidad: 1,
-    };
-    console.log(CreateNewProduct);
-    if (carrito.some((prod) => prod.id === CreateNewProduct.id)) {
-      const lk = carrito.map((prod) => {
-        //si es exactamente igual curso.id e infoCurso.id
-        //incrementa la cantidad del curso seleccionado del usuario
-        if (prod.id === CreateNewProduct.id) {
-          let cantidad = parseInt(prod.cantidad);
-          cantidad++;
-          prod.cantidad = cantidad;
-          return prod;
-        } else {
-          return prod;
-        }
-      });
-      carrito = [...lk];
-    } else {
-      carrito = [...carrito, CreateNewProduct];
-      crearHTML();
-      Swal.fire({
-        position: "center-center",
-        icon: "success",
-        title: "El juguete se ha agregado correctamente al carrito ",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    }
-  }
+function agregarproducto(e) {
+  e.preventDefault();
 
-  console.log(newProduct);
+  if (e.target.classList.contains("agregar-carrito")) {
+    const curso = e.target.parentElement.parentElement;
+    leerDatosProducto(curso);
+  }
 }
 
-addCarito.addEventListener("click", leerDatosProduct());
+// leer los datos de los cursos
+function leerDatosProducto(product) {
+  console.log(product);
+  newProduct = {
+    id: product.querySelector("#SKU").textContent,
+    name: product.querySelector("#descripcion").textContent,
+    imgProduct: product.querySelector("#img-carrito").src,
+    price: product.querySelector("#precio").textContent,
+    cantidad: 1,
+  };
+  console.log(newProduct);
+
+  //condicionales del arreglo carritos (cuando el usuario selecciono varios)
+  if (carrito.some((prod) => prod.id === newProduct.id)) {
+    const cursos = carrito.map((prod) => {
+      if (prod.id === newProduct.id) {
+        let cantidad = parseInt(prod.cantidad);
+        cantidad++;
+        prod.cantidad = cantidad;
+        return prod;
+      } else {
+        return prod;
+      }
+    });
+    carrito = [...cursos];
+  } else {
+    carrito = [...carrito, newProduct];
+  }
+  crearHTML();
+  Swal.fire({
+    position: "center-center",
+    icon: "success",
+    title: "El juguete se ha agregado correctamente al carrito ",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+}
 
 function sincronizarStorage() {
   //usando JSON agrega el elemento en la caja de comentarios
@@ -222,25 +225,8 @@ function cerrar() {
   modal.style.display = "none";
 }
 
-// funcion aumentar y bajar cantidadd
-
-const fPlus = () => {
-  nCantidad += 1;
-  textCantidad.value = nCantidad;
-  console.log(nCantidad);
-};
-
-const fMinus = () => {
-  if (textCantidad.value > 1) {
-    nCantidad -= 1;
-    textCantidad.value = nCantidad;
-    console.log(nCantidad);
-  }
-};
-
 const showCarrito = () => {
   sincronizarStorage();
-  console.log(montoTotal);
 };
 
 const crearHTML = () => {
@@ -265,7 +251,7 @@ const crearHTML = () => {
     let priceP = document.createElement("span");
     let titleSKu = "SKU:";
     let titleCantidad = "Cantidad: ";
-    let titlePrice = "Price: ";
+    let titlePrice = "Precio: ₡";
 
     // add classes
     cardsProduct.classList.add("card", "my-3");
@@ -308,10 +294,12 @@ const crearHTML = () => {
     titleCard.innerText = product.name;
     imgP.src = product.imgProduct;
     imgP.alt = product.name;
-    // skuP.innerText = `${titleSKu} ${product.id % 1000000}`;
     skuP.innerText = `${titleSKu} ${product.id}`;
-    cantidadP.innerText = `${titleCantidad} ${product.cantidad}`;
-    priceP.innerText = `${titlePrice} ${product.price}`;
+    cantidadP.innerText = `${titleCantidad} ${Number(product.cantidad)}`;
+    priceP.innerText = `${titlePrice}${
+      Number(product.price) * Number(product.cantidad)
+    }
+    `;
     btnBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
     showCarritoC.appendChild(cardsProduct);
@@ -345,11 +333,4 @@ function limpiarHTML() {
   }
 }
 
-const changeFilter = () => {
-  if (subBebes.value == "Accesorios") {
-    allTienda = subBebesItems;
-  }
-};
-
-// const leerCantidad = () => {};
 createStore();
