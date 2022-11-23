@@ -394,8 +394,19 @@ button.btn-mini-carousel:hover {
   color: #fff;
   padding: 3px 15px;
 }
-.owl-container .item{
-  background-color: red;
+@media all and (orientation: portrait) {
+  .owl-carousel .owl-stage-outer {
+    flex-direction: column !important;
+  }
 }
 
-
+.tira-comp {
+  background-image: url("../images/bg.webp");
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.295);
+  margin: 30px 0;
+}
+.tira-comp .item img {
+  width: 169.167px;
+  margin-right: 25px;
+  height: auto;
+}

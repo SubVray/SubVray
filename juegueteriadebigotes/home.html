@@ -344,81 +344,81 @@
     </section>
 
     <!-- tira  -->
-    <section class="container-fluid w-100">
-      <div class="owl-container">
+    <section class="tira-comp container-fluid w-100">
+      <div class="owl-container container">
         <div id="owl-demo" class="owl-carousel owl-theme">
-          <!-- lazyOwl es una instruccion de JS para agilizar la carga de las fotos -->
+          <!-- owl-lazy es una instruccion de JS para agilizar la carga de las fotos -->
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/babyAlive.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/babyAlive.webp"
               alt="Cliente1" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/babybasics.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/babybasics.webp"
               alt="Cliente2" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/dcsuperhero.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/dcsuperhero.webp"
               alt="Cliente3" />
           </div>
 
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/hasbro.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/hasbro.webp"
               alt="Cliente5" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/megablocks.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/megablocks.webp"
               alt="Cliente6" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/melissa&doug.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/melissa&doug.webp"
               alt="Cliente7" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/playdoh.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/playdoh.webp"
               alt="Cliente8" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/pollypocket.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/pollypocket.webp"
               alt="Cliente9" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/step2.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/step2.webp"
               alt="Cliente10" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/uno.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/uno.webp"
               alt="Cliente11" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/monopoly.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/monopoly.webp"
               alt="Cliente11" />
           </div>
           <div class="item">
             <img
-              class="lazyOwl img-fluid"
-              src="images/tira/barbie.webp"
+              class="owl-lazy img-fluid"
+              data-src="images/tira/barbie.webp"
               alt="Cliente11" />
           </div>
         </div>
@@ -442,12 +442,32 @@
       );
     </script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/tira.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script>
       $("#owl-demo").owlCarousel({
+        items: 6,
         loop: true,
+        lazyLoad: true,
+        nargin: 10,
         autoplay: true,
-        margin: 10,
+        dots: false,
+        autoplayTimeout: 1500,
+        nav: false,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+            loops: true,
+          },
+          600: {
+            items: 4,
+            loops: true,
+          },
+          1000: {
+            items: 6,
+            loops: true,
+          },
+        },
       });
     </script>
 
