@@ -12,7 +12,6 @@
       src="https://kit.fontawesome.com/7bc87e2382.js"
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/menu-hamburguer.css" />
-    <link rel="stylesheet" href="css/home.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
@@ -35,6 +34,7 @@
     <link rel="stylesheet" href="css/tira.css" />
     <link rel="stylesheet" href="css/ligthbox.css" />
     <link rel="stylesheet" href="css/bebes.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <title>Jugueteria de Bigotes</title>
   </head>
   <body id="home">
@@ -64,7 +64,9 @@
               <ul
                 class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-around align-items-center w-50">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#home">Home</a>
+                  <a class="nav-link" aria-current="page" href="#home"
+                    >Inicio</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#ofertas">Promociones</a>
@@ -171,12 +173,16 @@
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">
+          Carrito
+        </h5>
         <button
           type="button"
-          class="btn-close"
+          class="btn cerrar border-0 shadow-none"
           data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
+          aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
       <div class="offcanvas-body" id="offcanvas-body"></div>
     </div>
@@ -205,12 +211,11 @@
           <div class="col-12">
             <form action="">
               <select name="" id="sub-bebes" onchange="changeFilterBebes()">
-                <option value="" disabled>Subcategorias</option>
-                <option value="Juguetes" selected>Juguetes</option>
+                <option value="" disabled selected>Subcategorias</option>
+                <option value="Juguetes">Juguetes</option>
                 <option value="Accesorios">
                   Accesorios (Beberitos, Pañales, Mordedores, Frazadas)
                 </option>
-                <option value="">Coches, Encierros, Gimnasios, Sillas</option>
               </select>
             </form>
           </div>
@@ -223,15 +228,15 @@
 
             <div class="modal-container">
               <div class="seleccion" id="seleccion">
-                <a class="cerrar" onclick="cerrar()"
-                  ><i class="fa-solid fa-xmark"></i
+                <a class="btn border-0 shadow-none" onclick="cerrar()"
+                  ><i class="fa-solid fa-xmark cerrar"></i
                 ></a>
                 <div class="info row">
                   <div
                     class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
                     <div class="carousel-container text-center">
                       <div class="img-carousel-container">
-                        <a id="img-product-modal" data-lightbox="roadtrip">
+                        <a id="img-product-modal" data-lightbox="roadtrip ">
                           <img
                             alt="producto"
                             id="img"
@@ -258,7 +263,7 @@
                     </div>
                   </div>
                   <div
-                    class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
+                    class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
                     <img id="img-carrito" alt="hola" />
                     <p id="descripcion"></p>
                     <div class="d-flex">
@@ -270,7 +275,7 @@
                     <div class="fila" id="fila">
                       <button
                         type="button"
-                        class="agregar-carrito"
+                        class="agregar-carrito rounded"
                         id="add-carrito">
                         AGREGAR AL CARRITO
                       </button>

@@ -93,11 +93,11 @@ const createStore = () => {
     salePrice.innerText = `₡ ${product.sale.toLocaleString("en-US")}`;
 
     // agregar clases a elementos
-    cols.classList.add("product", "col-sm-6", "col-md-4", "col-lg-4");
+    cols.classList.add("product", "col-sm-6", "col-md-6", "col-lg-4");
     item.classList.add("item-product", "bg-white");
     imgcontainer.classList.add("contenedor-foto");
     imgProduct.classList.add("img-fluid");
-    name.classList.add("descripcion");
+    name.classList.add("descripcion", "pt-3");
     price.classList.add("precio");
     salePrice.classList.add("precio");
     sku.classList.add("sku");
@@ -141,10 +141,10 @@ const createStore = () => {
       imgProductModal.href = carousel[0].ima;
       document.thumb.src = carousel[0].ima;
 
-      if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
-        nextPrev.style.display = "block";
+      if (carousel[1].ima == undefined) {
+        nextPrev.classList.add("d-none");
       } else {
-        nextPrev.style.display = "none";
+        nextPrev.classList.remove("d-none");
       }
     });
   });
@@ -169,7 +169,6 @@ function leerDatosProducto(product) {
     price: product.querySelector("#precio").textContent,
     cantidad: 1,
   };
-  console.log(newProduct);
 
   //condicionales del arreglo carritos (cuando el usuario selecciono varios)
   if (carrito.some((prod) => prod.id === newProduct.id)) {
@@ -230,6 +229,8 @@ const showCarrito = () => {
   sincronizarStorage();
 };
 
+
+// modal carrito
 const crearHTML = () => {
   limpiarHTML();
   productCounter.innerHTML = carrito.length;
@@ -255,7 +256,7 @@ const crearHTML = () => {
     let titlePrice = "Precio: ₡";
 
     // add classes
-    cardsProduct.classList.add("card", "my-3");
+    cardsProduct.classList.add("card", "my-3", "card-product");
     // row1
     row1.classList.add("row");
     col12.classList.add(
@@ -266,9 +267,9 @@ const crearHTML = () => {
       "pt-4",
       "pb-0"
     );
-    titleCard.classList.add("name-cart-product");
+    titleCard.classList.add("name-cart-product", "fw-bold");
     //  row2
-    row2.classList.add("row");
+    row2.classList.add("row","px-2");
     col4.classList.add(
       "col-4",
       "d-flex",
@@ -289,7 +290,10 @@ const crearHTML = () => {
       "justify-content-center",
       "align-items-center"
     );
-    btnBorrar.classList.add("btn-delete");
+    skuP.classList.add("fw-semibold");
+    cantidadP.classList.add("fw-semibold");
+    priceP.classList.add("fw-semibold");
+    btnBorrar.classList.add("btn", "btn-delete");
 
     // content
     titleCard.innerText = product.name;
@@ -344,7 +348,7 @@ const changeFilterBebes = () => {
     tiendaContainer.style.display = "none";
     tiendaAccesorios.style.display = "flex";
     let tienda = document.querySelector("#tienda-Accesorios");
-    subBebesItems.forEach((product) => {
+    accesoriosBebe.forEach((product) => {
       let cols = document.createElement("div");
       let name = document.createElement("h3");
       let sku = document.createElement("p");
@@ -366,7 +370,7 @@ const changeFilterBebes = () => {
       item.classList.add("item-product", "bg-white");
       imgcontainer.classList.add("contenedor-foto");
       imgProduct.classList.add("img-fluid");
-      name.classList.add("descripcion");
+      name.classList.add("descripcion", "pt-3");
       price.classList.add("precio");
       salePrice.classList.add("precio");
       sku.classList.add("sku");
@@ -409,11 +413,8 @@ const changeFilterBebes = () => {
         ];
         imgProductModal.href = carousel[0].ima;
         document.thumb.src = carousel[0].ima;
-
-        if (carousel[0].ima != undefined && carousel[1].ima != undefined) {
-          nextPrev.style.display = "block";
-        } else {
-          nextPrev.style.display = "none";
+        if (carousel[1].ima == undefined) {
+          nextPrev.classList.add("d-none");
         }
       });
     });

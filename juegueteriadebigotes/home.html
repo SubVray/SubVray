@@ -53,17 +53,23 @@
               <ul
                 class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-around align-items-center w-50">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#home">Home</a>
+                  <a class="nav-link inicio" aria-current="page" href="#home"
+                    >Inicio</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#ofertas">Promociones</a>
+                  <a class="nav-link promociones" href="#ofertas"
+                    >Promociones</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#destacados">Destacados</a>
+                  <a class="nav-link destacados" href="#destacados"
+                    >Destacados</a
+                  >
                 </li>
                 <li class="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle categorias"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -71,22 +77,28 @@
                     Categorías
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#action">bebes</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">juegos de mesa</a>
+                      <a class="dropdown-item bebes" href="bebes.html">bebes</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item juegos-mesa" href="#"
+                        >juegos de mesa</a
+                      >
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <a class="dropdown-item" href="#">Deportes</a>
+                      <a class="dropdown-item deportes" href="#">Deportes</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Armas nerf</a>
+                      <a class="dropdown-item nerf" href="#">Armas nerf</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Motorafina</a>
+                      <a class="dropdown-item motorafina" href="#"
+                        >Motorafina</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">verano</a>
+                      <a class="dropdown-item verano" href="#">verano</a>
                     </li>
                   </ul>
                 </li>
@@ -114,19 +126,21 @@
           </div>
         </div>
       </nav>
-      <div class="text-center container-languages">
+      <div class="langWrap text-center container-languages">
         <button
           type="button"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          data-bs-title="Español">
+          data-bs-title="Español"
+          language="spanish">
           ESP
         </button>
         <button
           type="button"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          data-bs-title="English">
+          data-bs-title="English"
+          language="english">
           USA
         </button>
       </div>
@@ -161,56 +175,22 @@
         <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
         <button
           type="button"
-          class="btn-close"
+          class="btn shadow-none border-0"
           data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
+          aria-label="Close">
+          <i class="fa-solid fa-xmark cerrar"></i>
+        </button>
       </div>
       <div class="offcanvas-body" id="offcanvas-body"></div>
     </div>
 
-    <section class="banner container-fluid"><h1></h1></section>
-    <!-- <section id="destacados" class="container-fluid">
-      <h2 class="text-center titles">Destacados</h2>
-      <div class="owl-carousel owl-theme container">
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/pistola-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              X-Shot Lanza dardos Chaos 12 Dardos-Bola
-            </h3>
-            <p class="text-center">SKU: ZU36499</p>
-            <span class="price-item d-block text-center">₡ 20,795.00</span>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/perrito-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              Perrito de Peluche con Aerógrafo
-            </h3>
-            <p class="text-center">SKU: CTOFG249</p>
-            <span class="price-item d-block text-center">₡ 24,995.00</span>
-          </div>
-        </div>
-        <div class="item">
-          <div class="img-container">
-            <img src="images/tienda/t-rex-1.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="info-carousel">
-            <h3 class="title-carousel-item">
-              Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100
-              Plantillas
-            </h3>
-            <p class="text-center">SKU: CTOFG243</p>
-            <span class="price-item d-block text-center">₡ 24,995.00</span>
-          </div>
-        </div>
+    <!-- banner -->
+    <section
+      class="banner container-fluid d-flex justify-content-center align-items-center">
+      <div class="container m-auto border text-center">
+        <h1>Encuentra los mejores juguetes aqui</h1>
       </div>
-    </section> -->
+    </section>
 
     <!-- promociones  -->
     <section class="container-fluid" id="ofertas">
@@ -220,8 +200,8 @@
       </div>
       <div class="modal-container">
         <div class="seleccion" id="seleccion">
-          <a class="cerrar" onclick="cerrar()"
-            ><i class="fa-solid fa-xmark"></i
+          <a class="btn border-0 shadow-none" onclick="cerrar()"
+            ><i class="fa-solid fa-xmark cerrar"></i
           ></a>
           <div class="info row">
             <div
@@ -255,8 +235,8 @@
               </div>
             </div>
             <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column">
-              <img id="img-carrito" alt="hola" />
+              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
+              <img id="img-carrito" alt="imagen producto " />
               <p id="descripcion"></p>
               <div class="d-flex">
                 <span class="precio" id="icon-Moneda">₡</span>
@@ -265,7 +245,10 @@
               <span class="sku" id="SKU"></span>
 
               <div class="fila" id="fila">
-                <button type="button" class="agregar-carrito" id="add-carrito">
+                <button
+                  type="button"
+                  class="rounded agregar-carrito"
+                  id="add-carrito">
                   AGREGAR AL CARRITO
                 </button>
               </div>
@@ -281,11 +264,11 @@
       <div class="container d-flex justify-content-center align-items-centerr">
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="bebes.html">
+            <a href="bebes.html" class="">
               <img
                 src="images/categorias/bebes.png"
                 alt="Categoria bebes"
-                class="img-fluid w-100" />
+                class="img-fluid w-100 img-bebes" />
             </a>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 my-2">
@@ -293,7 +276,7 @@
               <img
                 src="images/categorias/juegosmesa.gif"
                 alt="Categoria juegos de mesa"
-                class="img-fluid w-100" />
+                class="img-fluid w-100 img-juegos-mesa" />
             </a>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 my-2">
@@ -301,7 +284,7 @@
               <img
                 src="images/categorias/deportes.png"
                 alt="Categoria deportes"
-                class="img-fluid w-100" />
+                class="img-fluid w-100 img-deportes" />
             </a>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 my-2">
@@ -309,7 +292,7 @@
               <img
                 src="images/categorias/armas-nerf.png"
                 alt="Categoria armas nerf"
-                class="img-fluid w-100" />
+                class="img-fluid w-100 img-nerf" />
             </a>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 my-2">
@@ -317,15 +300,15 @@
               <img
                 src="images/categorias/motorafina.png"
                 alt="Categoria motorafina"
-                class="img-fluid w-100" />
+                class="img-fluid w-100 img-motorafina" />
             </a>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-3">
+          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
             <a href="">
               <img
                 src="images/categorias/verano.png"
                 alt="Categoria verano "
-                class="img-fluid w-100" />
+                class="img-fluid w-100 img-verano" />
             </a>
           </div>
         </div>
@@ -468,5 +451,6 @@
     <script src="js/lightbox.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
+    <script src="js/idioma.js"></script>
   </body>
 </html>

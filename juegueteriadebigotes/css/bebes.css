@@ -44,3 +44,8 @@ html {
   color: var(--color-primary) !important;
   text-shadow: 3px 3px 1px #252525;
 }
+
+.modal-info-product {
+  height: 400px;
+  gap: 30px;
+}
