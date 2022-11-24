@@ -485,3 +485,15 @@ button.btn-mini-carousel:hover {
   color: var(--color-primary);
   text-shadow: 3px 2px 1px var(--color-primary-shadow);
 }
+
+/* sucursales */
+.detalles-tienda .card {
+  width: 400px;
+  height: 370px;
+  padding: 20px;
+}
+
+/* calses personalizadas  */
+.ft-comic {
+  font-family: "comic";
+}

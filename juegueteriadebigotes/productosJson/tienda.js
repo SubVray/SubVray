@@ -37,37 +37,38 @@ foto = 0;
 carousel = {};
 total = 0;
 
-if (window.location != "http://127.0.0.1:5500/juegueteriadebigotes/home.html"){
-
-}
-  // search fuction
-  function search() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("mostrador");
-    li = ul.getElementsByClassName("product");
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("h3")[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
+// search fuction
+function search() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("mostrador");
+  li = ul.getElementsByClassName("product");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("h3")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
     }
   }
-
-eventListeners();
-
-function eventListeners() {
-  addCarito.addEventListener("click", agregarproducto);
-  document.addEventListener("DOMContentLoaded", () => {
-    //localStorage.getItem devuelve el valor clave llamado tweets
-    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    crearHTML();
-  });
 }
+if (
+  window.location !=
+  "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html"
+) {
+  eventListeners();
+
+  function eventListeners() {
+    addCarito.addEventListener("click", agregarproducto);
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  //localStorage.getItem devuelve el valor clave llamado tweets
+  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  crearHTML();
+});
 
 const createStore = () => {
   if (
@@ -435,4 +436,9 @@ const createItemsProducts = (allTienda) => {
   });
 };
 
-createStore();
+if (
+  window.location !=
+  "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html"
+) {
+  createStore();
+}
