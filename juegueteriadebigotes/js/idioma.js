@@ -1,5 +1,5 @@
 const langEl = document.querySelector(".langWrap");
-const links = document.querySelectorAll("button");
+const links = document.querySelectorAll("header button");
 const inicio = document.querySelector(".inicio");
 const promociones = document.querySelector(".promociones");
 const destacados = document.querySelector(".destacados");
@@ -79,7 +79,7 @@ let changeLanguage = {
     // agregar titulos
 
     // images categories
-    imgBebes: "images/categorias/babys.png",
+    imgBebes: "images/categorias/babies.png",
     imgJuegosMesa: "images/categorias/tablegames.gif",
     imgDeportes: "images/categorias/sports.png",
     imgNerf: "images/categorias/nerfguns.png",

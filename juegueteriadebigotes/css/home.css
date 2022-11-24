@@ -62,6 +62,40 @@ nav a:hover {
 }
 
 /* TODO: logo */
+.logoT {
+  font-family: "comic";
+  font-size: 2.5rem;
+  margin-right: 100px;
+  padding: 0;
+  user-select: none;
+}
+.logoT span:nth-child(1) {
+  color: var(--color-primary);
+  position: relative;
+  text-shadow: 2px 2px 1px var(--color-primary-shadow);
+  z-index: 1;
+}
+.logoT span:nth-child(3) {
+  color: #fff;
+  display: block;
+  font-size: 2.5rem;
+  margin-left: -5px;
+  margin-top: -25px;
+  position: relative;
+  text-shadow: 2px 2px 1px #020202;
+  z-index: 1000;
+}
+.logoT span:nth-child(5) {
+  color: var(--color-secondary);
+  display: block;
+  margin-left: 0px;
+  margin-top: -70px;
+  position: relative;
+  text-shadow: 2px 2px 1px var(--color-secondary-shadow);
+  z-index: 1;
+}
+
+/* txt- logo header */
 .txt-logo {
   font-family: "comic";
   font-size: 1.5rem;
@@ -122,12 +156,12 @@ nav a:hover {
 
 /* TODO: main / section */
 .banner {
+  background-attachment: fixed;
   background-image: url("../images/banner.jpg");
   background-position: center;
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.459);
   height: calc(100vh - 70px);
-  background-attachment: fixed;
 }
 
 /* TODO: languages */
@@ -170,6 +204,11 @@ section[id] {
   padding-top: 30px;
   scroll-margin-top: 75.797px;
 }
+h2 {
+  font-family: "comic";
+  font-size: 2.5rem;
+  padding: 40px 0 20px;
+}
 
 /* borrar  */
 .contenido {
@@ -197,10 +236,10 @@ section[id] {
   height: 470px;
   margin: 10px 0;
   padding: 10px;
+  position: relative;
   text-align: center;
   transition: 0.3s;
   z-index: 100;
-  position: relative;
 }
 .item-product:hover {
   border: 2px solid #000000;
@@ -224,12 +263,12 @@ section[id] {
   font-weight: 400;
 }
 .item-product .precio {
+  bottom: 0px;
   color: #f85151;
   font-size: 1.5rem;
   font-weight: bolder;
-  position: absolute;
-  bottom: 0px;
   left: 50%;
+  position: absolute;
   transform: translate(-50%, -5%);
 }
 
@@ -322,24 +361,24 @@ section[id] {
   padding: 0 10px;
 }
 .cantidad-container {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   position: relative;
   width: 150px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .cantidad-input {
-  position: absolute;
+  bottom: 0;
   font-size: 1.4rem;
+  left: 50%;
   padding-left: 14px;
-  z-index: -1;
+  position: absolute;
   text-align: center;
   top: 0;
-  bottom: 0;
-  left: 50%;
   transform: translate(-50%);
+  z-index: -1;
 }
 .cantidad-input:is(:hover, :focus, :active) {
   border: none !important;
@@ -400,14 +439,14 @@ button.btn-mini-carousel:hover {
   margin: 30px 0;
 }
 .tira-comp .item img {
-  width: 169.167px;
-  margin-right: 25px;
   height: auto;
+  margin-right: 25px;
+  width: 169.167px;
 }
 
 .modal-info-product {
-  height: 400px;
   gap: 30px;
+  height: 400px;
 }
 
 .offcanvas {
@@ -426,4 +465,23 @@ button.btn-mini-carousel:hover {
 .categorias img {
   border-radius: 10px;
   width: 100%;
+}
+
+/* categorias */
+.text-categorias {
+  font-size: 1.25rem;
+}
+
+/* contador  */
+.text-black h5 {
+  font-size: 1.5rem;
+  font-family: "comic";
+  color: var(--color-secondary);
+  text-shadow: 3px 2px 1px var(--color-secondary-shadow);
+}
+.number {
+  font-size: 1.5rem;
+  font-family: "comic";
+  color: var(--color-primary);
+  text-shadow: 3px 2px 1px var(--color-primary-shadow);
 }
