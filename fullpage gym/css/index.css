@@ -79,10 +79,10 @@ section[id] {
 }
 .carousel-control-next,
 .carousel-control-prev {
-  height: 70px;
-  width: 70px;
-  top: 50%;
   bottom: 50%;
+  height: 70px;
+  top: 50%;
+  width: 70px;
 }
 .fa-chevron-left,
 .fa-chevron-right {
@@ -133,7 +133,6 @@ section h2 {
 
 /* sct valores */
 .valores {
-  height: 100vh;
 }
 
 /* tabla de precios  */
@@ -263,4 +262,108 @@ section h2 {
   background-color: var(--color-orange);
   border: 1px solid var(--color-orange);
   box-shadow: 0 0 4px 1px var(--color-black-light);
+}
+
+.cicle-number {
+  align-items: center;
+  border: 2px solid #252525;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 35px;
+  justify-content: center;
+  margin: 0 5px;
+  width: 35px;
+}
+.text-acordeon {
+  font-size: 1.1rem;
+  padding-top: 5px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #000;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--bs-accordion-border-color);
+  color: var(--color-orange);
+  font-weight: bold;
+}
+.accordion-button:not(.collapsed) .cicle-number {
+  background-color: var(--color-orange);
+  color: #000;
+}
+
+.accordion-button:is(:hover, :focus) {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.accordion-button {
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.accordion-header {
+  padding: 0;
+}
+.accordion-body {
+  margin-left: 60px;
+  max-width: 565px;
+  padding: 0;
+}
+
+/* cards  */
+.clases .card-header p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.clases .card i {
+  color: var(--color-orange);
+  font-size: 45px;
+  height: 45px;
+  width: 45px;
+}
+.clases .card img.icon {
+  height: 45px;
+  width: 45px;
+}
+
+.clases .card-body img {
+  height: 224px;
+  width: 382px;
+}
+
+.clases .bg-icon {
+  background-color: #000;
+  border-radius: 50%;
+  height: 70px;
+  margin: auto;
+  width: 70px;
+}
+
+.clases .card-footer .read-more-cards {
+  background-color: #000;
+  border-radius: 8px;
+  color: var(--color-orange);
+  display: block;
+  font-weight: 500;
+  margin: 5px auto;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  width: 150px;
+}
+.clases .card-footer .read-more-cards:hover {
+  background-color: #ffbb00;
+  color: #000;
+  font-weight: 600;
+  scale: 1.05;
+}
+
+.nav-link.active {
+  color: #000 !important;
+  background-color: var(--color-orange) !important;
+  font-weight: 500;
 }
