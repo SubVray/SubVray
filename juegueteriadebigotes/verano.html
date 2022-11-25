@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="css/ligthbox.css" />
     <link rel="stylesheet" href="css/bebes.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <title>Jugueteria de Bigotes / Bebes</title>
+    <title>Jugueteria de Bigotes / Verano</title>
   </head>
   <body id="home">
     <header class="fixed-top bg-light container-fluid">
@@ -84,24 +84,37 @@
                     Categorías
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#action">bebes</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">juegos de mesa</a>
+                      <a class="dropdown-item" href="bebes.html">bebes</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="juegosmesa.html"
+                        >juegos de mesa</a
+                      >
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <a class="dropdown-item" href="#">Deportes</a>
+                      <a class="dropdown-item" href="deportes.html">Deportes</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Armas nerf</a>
+                      <a class="dropdown-item" href="armasnerf.html"
+                        >Armas nerf</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Motorafina</a>
+                      <a class="dropdown-item" href="motorafina.html"
+                        >Motorafina</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">verano</a>
+                      <a class="dropdown-item" href="verano.html">verano</a>
                     </li>
                   </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link destacados" href="sucursales.html"
+                    >Sucursales</a
+                  >
                 </li>
                 <li class="nav-item">
                   <button type="button" onclick="closeSearchbar()">
@@ -188,22 +201,22 @@
     </div>
 
     <!-- banner bebes -->
-    <section class="banner-categories ">
+    <section class="banner-categories">
       <div class="container">
         <img
-          src="images/categorias/banner bebe.png"
+          src="images/categorias/bg-verano.png"
           alt=""
-          class="mt-2 img-fluid rounded shadow" />
+          class="mt-3 img-fluid rounded shadow" />
       </div>
       <div class="container">
         <nav aria-label="breadcrumb" class="list-menu">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
             <li class="breadcrumb-item active">
-              <a href="bebes.html">Bebes</a>
+              <a href="verano.html">Verano</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="bebes.html" id="urlnav">General</a>
+              <a href="verano.html" id="urlnav">General</a>
             </li>
           </ol>
         </nav>
@@ -219,10 +232,8 @@
                 id="sub-bebes"
                 onchange="changeFilter()">
                 <option value="General" selected>General</option>
-                <option value="Juguetes">Juguetes</option>
-                <option value="Accesorios">
-                  Accesorios (Beberitos, Pañales, Mordedores, Frazadas)
-                </option>
+                <option value="Piscinas">Piscinas,inflables</option>
+                <option value="Tiendas">Tiendas de Campañas</option>
               </select>
             </form>
           </div>

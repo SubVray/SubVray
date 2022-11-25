@@ -19,6 +19,8 @@ let nCantidad = 1;
 
 // carrito
 let allTienda = [{}];
+let subTienda1 = [{}];
+let subTienda2 = [{}];
 let carrito = [];
 let newProduct = {};
 let addCarito = document.getElementById("add-carrito");
@@ -27,8 +29,9 @@ let productCounter = document.getElementById("product-counter");
 let montoTotal = 0;
 
 // bebes
-let tiendaContainer = document.querySelector("#tienda");
-let tiendaAccesorios = document.querySelector("#tienda-Accesorios");
+let tienda1 = document.querySelector("#tienda-1");
+let tienda2 = document.querySelector("#tienda-2");
+let tienda3 = document.querySelector("#tienda-3");
 let navUrl = document.querySelector("#urlnav");
 
 // carousel mini modal product
@@ -82,9 +85,62 @@ const createStore = () => {
     window.location == "http://127.0.0.1:5501/juegueteriadebigotes/bebes.html"
   ) {
     allTienda = tiendaBebes;
+    subTienda1 = juguetesBebes;
+    subTienda2 = accesoriosBebes;
+    changeFilter();
+  } else if (
+    window.location ==
+      "http://127.0.0.1:5500/juegueteriadebigotes/juegosmesa.html" ||
+    window.location ==
+      "http://127.0.0.1:5501/juegueteriadebigotes/juegosmesa.html"
+  ) {
+    allTienda = tiendaBebes;
+    subTienda1 = juguetesBebes;
+    subTienda2 = accesoriosBebes;
+    changeFilter();
+  } else if (
+    window.location ==
+      "http://127.0.0.1:5500/juegueteriadebigotes/deportes.html" ||
+    window.location ==
+      "http://127.0.0.1:5501/juegueteriadebigotes/deportes.html"
+  ) {
+    allTienda = tiendaBebes;
+    subTienda1 = juguetesBebes;
+    subTienda2 = accesoriosBebes;
+    changeFilter();
+  } else if (
+    window.location ==
+      "http://127.0.0.1:5500/juegueteriadebigotes/armasnerf.html" ||
+    window.location ==
+      "http://127.0.0.1:5501/juegueteriadebigotes/armasnerf.html"
+  ) {
+    allTienda = tiendaLanzadores;
+    subTienda1 = tiendaLanzadoresNerf;
+    subTienda2 = tiendaLanzadoresXShot;
+    changeFilter();
+  } else if (
+    window.location ==
+      "http://127.0.0.1:5500/juegueteriadebigotes/motorafina.html" ||
+    window.location ==
+      "http://127.0.0.1:5501/juegueteriadebigotes/motorafina.html"
+  ) {
+    allTienda = tiendaMotorafina;
+    subTienda1 = tiendaBloquesArmar;
+    subTienda2 = tiendaCogo;
+    changeFilter();
+  } else if (
+    window.location ==
+      "http://127.0.0.1:5500/juegueteriadebigotes/verano.html" ||
+    window.location == "http://127.0.0.1:5501/juegueteriadebigotes/verano.html"
+  ) {
+    allTienda = tiendaVerano;
+    subTienda1 = juguetesBebes;
+    subTienda2 = tiendasAcampar;
+    changeFilter();
   }
-
   createItemsProducts(allTienda);
+  createItemsSubCategories(subTienda1);
+  createItemsSubCategories2(subTienda2);
 };
 
 function agregarproducto(e) {
@@ -271,23 +327,147 @@ function limpiarHTML() {
   }
 }
 
-const changeFilterBebes = () => {
-  if (subBebes.value == "Juguetes") {
-    navUrl.innerHTML = "Jueguetes";
-    tiendaAccesorios.style.display = "none";
-    tiendaContainer.style.display = "flex";
-    window.location.reload();
-  } else if (subBebes.value == "Accesorios") {
-    navUrl.innerHTML = "Accesorios";
-    tiendaContainer.style.display = "none";
-    tiendaAccesorios.style.display = "flex";
-    createItemsSubCategories(accesoriosBebe);
+// changeBebes select
+const changeFilter = () => {
+  // tienda principa;
+  if (subBebes.value == "General") {
+    tienda1.style.display = "flex";
+    tienda2.style.display = "none";
+    tienda3.style.display = "none";
+    navUrl.innerHTML = "General";
+  }
+  // tienda 2
+  else if (
+    subBebes.value == "Juguetes" ||
+    subBebes.value == "Juegosmesa" ||
+    subBebes.value == "Deportes" ||
+    subBebes.value == "Nerf" ||
+    subBebes.value == "Bloques" ||
+    subBebes.value == "Piscinas"
+  ) {
+    tienda1.style.display = "none";
+    tienda2.style.display = "flex";
+    tienda3.style.display = "none";
+
+    if (subBebes.value == "Juguetes") {
+      navUrl.innerHTML = "Juguetes";
+    } else if (subBebes.value == "Juegosmesa") {
+      navUrl.innerHTML = "Juegos de Mesa";
+    } else if (subBebes.value == "Deportes") {
+      navUrl.innerHTML = "Deportes";
+    } else if (subBebes.value == "Nerf") {
+      navUrl.innerHTML = "Armas Nerf ";
+    } else if (subBebes.value == "Bloques") {
+      navUrl.innerHTML = "Bloques de Armar ";
+    } else if (subBebes.value == "Piscinas") {
+      navUrl.innerHTML = "Piscinas,Inflables ";
+    }
+  }
+  // tienda3
+  else if (
+    subBebes.value == "Accesorios" ||
+    subBebes.value == "Monopoly" ||
+    subBebes.value == "Bicicletas" ||
+    subBebes.value == "X-Shot" ||
+    subBebes.value == "Cogo" ||
+    subBebes.value == "Tiendas"
+  ) {
+    tienda1.style.display = "none";
+    tienda2.style.display = "none";
+    tienda3.style.display = "flex";
+    if (subBebes.value == "Accesorios") {
+      navUrl.innerHTML = "Accesorios";
+    } else if (subBebes.value == "Monopoly") {
+      navUrl.innerHTML = "Monopoly";
+    } else if (subBebes.value == "Bicicletas") {
+      navUrl.innerHTML = "Bicicletas";
+    } else if (subBebes.value == "X-Shot") {
+      navUrl.innerHTML = "Armas X-Shot";
+    } else if (subBebes.value == "Cogo") {
+      navUrl.innerHTML = "Cogo";
+    } else if (subBebes.value == "Tiendas") {
+      navUrl.innerHTML = "Tiendas de Campaña";
+    }
   }
 };
 
 // creacion de productos
+const createItemsProducts = (allTienda) => {
+  allTienda.forEach((product) => {
+    let cols = document.createElement("div");
+    let name = document.createElement("h3");
+    let sku = document.createElement("p");
+    let price = document.createElement("p");
+    let salePrice = document.createElement("p");
+    let imgProduct = document.createElement("img");
+    let item = document.createElement("div");
+    let imgcontainer = document.createElement("div");
+
+    // agregar info a elementos
+    imgProduct.src = product.imgUrl;
+    name.innerText = product.name;
+    sku.innerText = `SKU: ${product.SKU}`;
+    price.innerText = `₡ ${product.price.toLocaleString("en-US")}`;
+    salePrice.innerText = `₡ ${product.sale.toLocaleString("en-US")}`;
+
+    // agregar clases a elementos
+    cols.classList.add("product", "col-sm-6", "col-md-6", "col-lg-4");
+    item.classList.add("item-product", "bg-white");
+    imgcontainer.classList.add("contenedor-foto");
+    imgProduct.classList.add("img-fluid");
+    name.classList.add("descripcion", "pt-3");
+    price.classList.add("precio");
+    salePrice.classList.add("precio");
+    sku.classList.add("sku");
+
+    // mostrar info en pantalla
+    tienda1.appendChild(cols);
+    cols.appendChild(item);
+    imgcontainer.appendChild(imgProduct);
+    item.appendChild(imgcontainer);
+    item.appendChild(name);
+    item.appendChild(sku);
+    item.appendChild(price);
+
+    // abrir modal para cada producto
+    item.addEventListener("click", () => {
+      // estilos para el modal
+      mostrador.style.width = "100%";
+      seleccion.style.width = "70%";
+      modal.style.display = "block";
+      seleccion.classList.add("active-modal");
+      body.classList.add("scrollDisabled");
+
+      // info a mostrar en el modal
+      imgSeleccionada.src = product.imgUrl;
+      descripSeleccionada.innerText = product.name;
+      precioSeleccionado.innerText = Number(product.price);
+      imgCarrito.src = product.imgUrl;
+      imgCarrito.style.display = "none";
+      HtmlSku.innerText = product.SKU;
+      HtmlSku.style.display = "none";
+
+      // carousel pequeño de cada producto
+      carousel = [
+        {
+          ima: product.imgUrl,
+        },
+        {
+          ima: product.imgUrl2,
+        },
+      ];
+      imgProductModal.href = carousel[0].ima;
+      document.thumb.src = carousel[0].ima;
+
+      if (carousel[1].ima == undefined) {
+        nextPrev.classList.add("d-none");
+      } else {
+        nextPrev.classList.remove("d-none");
+      }
+    });
+  });
+};
 const createItemsSubCategories = (allItemsCategories) => {
-  let tienda = document.querySelector("#tienda-Accesorios");
   allItemsCategories.forEach((product) => {
     let cols = document.createElement("div");
     let name = document.createElement("h3");
@@ -316,7 +496,7 @@ const createItemsSubCategories = (allItemsCategories) => {
     sku.classList.add("sku");
 
     // mostrar info en pantalla
-    tienda.appendChild(cols);
+    tienda2.appendChild(cols);
     cols.appendChild(item);
     imgcontainer.appendChild(imgProduct);
     item.appendChild(imgcontainer);
@@ -359,9 +539,8 @@ const createItemsSubCategories = (allItemsCategories) => {
     });
   });
 };
-
-const createItemsProducts = (allTienda) => {
-  allTienda.forEach((product) => {
+const createItemsSubCategories2 = (allItemsCategories) => {
+  allItemsCategories.forEach((product) => {
     let cols = document.createElement("div");
     let name = document.createElement("h3");
     let sku = document.createElement("p");
@@ -379,7 +558,7 @@ const createItemsProducts = (allTienda) => {
     salePrice.innerText = `₡ ${product.sale.toLocaleString("en-US")}`;
 
     // agregar clases a elementos
-    cols.classList.add("product", "col-sm-6", "col-md-6", "col-lg-4");
+    cols.classList.add("product", "col-sm-6", "col-md-4", "col-lg-4");
     item.classList.add("item-product", "bg-white");
     imgcontainer.classList.add("contenedor-foto");
     imgProduct.classList.add("img-fluid");
@@ -389,7 +568,7 @@ const createItemsProducts = (allTienda) => {
     sku.classList.add("sku");
 
     // mostrar info en pantalla
-    tienda.appendChild(cols);
+    tienda3.appendChild(cols);
     cols.appendChild(item);
     imgcontainer.appendChild(imgProduct);
     item.appendChild(imgcontainer);
@@ -426,11 +605,8 @@ const createItemsProducts = (allTienda) => {
       ];
       imgProductModal.href = carousel[0].ima;
       document.thumb.src = carousel[0].ima;
-
       if (carousel[1].ima == undefined) {
         nextPrev.classList.add("d-none");
-      } else {
-        nextPrev.classList.remove("d-none");
       }
     });
   });
