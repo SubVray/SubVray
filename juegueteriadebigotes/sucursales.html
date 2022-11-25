@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/sucursales.css" />
 
     <title>Jugueteria de Bigotes</title>
   </head>
@@ -110,11 +111,6 @@
                     >Sucursales</a
                   >
                 </li>
-                <li class="nav-item">
-                  <button type="button" onclick="closeSearchbar()">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </li>
               </ul>
             </div>
             <div class="text-center cart-login-container">
@@ -191,70 +187,473 @@
       </div>
       <div class="offcanvas-body" id="offcanvas-body"></div>
     </div>
+    <!-- mapa -->
     <section class="map container-fluid p-0 m-0">
-      <h2 class="text-center">Sucursales</h2>
+      <h2 class="text-center ft-comic-shadow-primary">Sucursales</h2>
       <iframe
         src="https://www.google.com/maps/d/u/0/embed?mid=1s6cn9mSDgaSvYzYhYICm7iNwG8spcHQ&ehbc=2E312F"
         width="100%"
         height="550"></iframe>
-      <div class="container detalles-tienda">
-        <h3 class="text-center ft-comic">Detalles de las tiendas</h3>
-        <div class="form-control">
-          <div
-            class="row gap-4 d-flex justify-content-center align-items-center">
-            <div class="card col-sm-12 col-md-6 col-lg-4">
-              <h4>juguetería Don Gato Guapiles</h4>
-              <ul>
-                <li>Teléfono: 2710-3713</li>
-                <li>Whatsapp: 6039-5989</li>
-                <li>jugueteriadongato@crdongato.com</li>
-              </ul>
-              <p class="text-direction w-75">
-                Dirección:<br />
-                Calle 5, Guapiles, Pococí. Limón. Del Registro Civil 450 metros
-                norte. Frente al BCR.
-              </p>
-              <p>
-                Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m <br />Domingos
-                9:30 a.m a 5:00 p.m
-              </p>
+    </section>
+    <!-- detalles tiendas -->
+    <section class="container-fluid detalles-tienda">
+      <h2 class="text-center ft-comic-shadow-primary">
+        Detalles de las tiendas
+      </h2>
+      <div class="container">
+        <div class="form-control tab-content">
+          <!-- funcion que recibe un controlador de eventos (event) y un ID -->
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'sanjose')">
+            San José
+          </button>
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'heredia')">
+            Heredia
+          </button>
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'cartago')">
+            Cartago
+          </button>
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'alajuela')">
+            Alajuela
+          </button>
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'limon')">
+            Limón
+          </button>
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'guanacaste')">
+            Guanacaste
+          </button>
+          <button
+            class="tablinks ft-comic btn btn-tab"
+            onclick="opciones(event,'puntarenas')">
+            Puntarenas
+          </button>
+        </div>
+
+        <div class="container form-control">
+          <!-- contenido de las pestañas -->
+          <!-- TODO:san jose -->
+          <div id="sanjose" class="tabcontent active-tab">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - San José</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Avenida
+                </h4>
+                <ul>
+                  <li>Teléfono: 2221-2989</li>
+                  <li>Whatsapp: 6391-2227</li>
+                  <li>avenida@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  San Jose, Avenida Segunda, calle 4, al frente del BCR.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes<br />
+                  - Escazu Ruta 27
+                </h4>
+                <ul>
+                  <li>Teléfono: 2228-7070</li>
+                  <li>Whatsapp: 6085-8871</li>
+                  <li>escazupista@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  San Rafael, Escazú, San José. Plaza juguetería De Bigotes.
+                  Calle Lateral Próspero Fernández, frente al Hospital Cima. A
+                  lado de la Farmacia La Bomba.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Plaza Lincoln
+                </h4>
+                <ul>
+                  <li>Teléfono: 2519-9191</li>
+                  <li>Whatsapp: 6157-4403</li>
+                  <li>lincoln@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Centro Comercial Plaza Lincoln. Moravia. San José
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 10:00 a.m a 9:00 p.m
+                  <br />Domingos 10:30 a.m a 8:00 p.m
+                </p>
+              </div>
             </div>
-            <div class="card col-sm-12 col-md-6 col-lg-4">
-              <h4>juguetería Don Gato Liberia</h4>
-              <ul>
-                <li>Teléfono: 2665-2600</li>
-                <li>Whatsapp: 6063-6366</li>
-                <li>jugueteriadongato@crdongato.com</li>
-              </ul>
-              <p class="text-direction w-75">
-                Dirección:<br />
-                Avenida 7, calle 8. Liberia. Guanacaste.
-              </p>
-              <p>
-                Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m <br />Domingos
-                9:30 a.m a 5:00 p.m
-              </p>
+          </div>
+
+          <!-- TODO: heredia -->
+          <div id="heredia" class="tabcontent">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - Heredia</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Heredia
+                </h4>
+                <ul>
+                  <li>Teléfono: 2260-2540</li>
+                  <li>Whatsapp: 6124-2466</li>
+                  <li>heredia@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Heredia Centro. Avenida 6. Diagonal Pizza Hut. De la Iglesia
+                  del Carmen 25 metros este
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Paseo de las Flores
+                </h4>
+                <ul>
+                  <li>Teléfono: 2238-4547</li>
+                  <li>Whatsapp: 6476-7748</li>
+                  <li>paseodelasflores@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Centro Comercial Paseo de las Flores. Heredia.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 11:30 a.m a 8:30 p.m
+                  <br />Domingos 11:30 a.m a 8:30 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Paseo de las Flores
+                </h4>
+                <ul>
+                  <li>Teléfono: 2238-4547</li>
+                  <li>Whatsapp: 6476-7748</li>
+                  <li>paseodelasflores@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Centro Comercial Paseo de las Flores. Heredia.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 11:30 a.m a 8:30 p.m
+                  <br />Domingos 11:30 a.m a 8:30 p.m
+                </p>
+              </div>
             </div>
-            <div class="card col-sm-12 col-md-6 col-lg-4">
-              <h4>juguetería Don Gato Avenida</h4>
-              <ul>
-                <li>Teléfono: 2221-2989</li>
-                <li>Whatsapp: 6391-2227</li>
-                <li>jugueteriadongato@crdongato.com</li>
-              </ul>
-              <p class="text-direction w-75">
-                Dirección:<br />
-                San Jose, Avenida Segunda, calle 4, al frente del BCR.
-              </p>
-              <p>
-                Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m <br />Domingos
-                9:30 a.m a 5:00 p.m
-              </p>
+          </div>
+
+          <!-- TODO: cartago -->
+          <div id="cartago" class="tabcontent">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - Cartago</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Cartago
+                </h4>
+                <ul>
+                  <li>Teléfono: 2553-1232</li>
+                  <li>Whatsapp: 6342-9733</li>
+                  <li>cartago@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Cartago Centro. Calle 8, Avenida 3. De la Estación de Bomberos
+                  100 metros Norte.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Paseo Metrópoli
+                </h4>
+                <ul>
+                  <li>Teléfono: 2573-4792</li>
+                  <li>Whatsapp: 6083-9802</li>
+                  <li>metropoli@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Centro Comerical Paseo Metrópoli, Cartago.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 10:30 a.m a 9:30 p.m
+                  <br />Domingos 11:30 a.m a 8:30 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Terramall
+                </h4>
+                <ul>
+                  <li>Teléfono: 2278-6902</li>
+                  <li>Whatsapp: 6216-2721</li>
+                  <li>terra@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Centro Comercial Terramall, La Unión. Cartago
+                </p>
+                <p>
+                  Horario: <br />Lunes a Jueves 11:30 a.m a 8:30 p.m
+                  <br />Viernes y Sabados 10:00 a.m a 9:00 p.m <br />
+                  Domingos 11:30 a.m a 8:30 p.m
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- TODO: Alajuela -->
+          <div id="alajuela" class="tabcontent">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - Alajuela</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Alajuela Centro
+                </h4>
+                <ul>
+                  <li>Teléfono: 2430-5247</li>
+                  <li>Whatsapp: 6194-6137</li>
+                  <li>alajuelacentro@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Alajuela, Centro. Avenida 2. Calle 4. A lado de Banco
+                  Promerica. Frente a Barberia Los Cubanos.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - San Ramón
+                </h4>
+                <ul>
+                  <li>Teléfono: 2447-0559</li>
+                  <li>Whatsapp: 6026-0535</li>
+                  <li>sanramon@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Frente al Banco Nacional de San Ramón centro. Calle 0 Entre
+                  Avenida 2. San Ramon. Alajuela.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 10:30 a.m a 9:30 p.m
+                  <br />Domingos 11:30 a.m a 8:30 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Orotina
+                </h4>
+                <ul>
+                  <li>Teléfono: 2427-8716</li>
+                  <li>Whatsapp: 6316-2943</li>
+                  <li>orotina@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Terminal de Buses Orotina San José, Av 2, Provincia de
+                  Alajuela, Orotina
+                </p>
+                <p>
+                  Horario: <br />Lunes a Jueves 11:30 a.m a 8:30 p.m
+                  <br />Viernes y Sabados 10:00 a.m a 9:00 p.m <br />
+                  Domingos 11:30 a.m a 8:30 p.m
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- TODO: Limon -->
+          <div id="limon" class="tabcontent">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - Limón</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Guápiles
+                </h4>
+                <ul>
+                  <li>Teléfono: 2710-3713</li>
+                  <li>Whatsapp: 6039-5989</li>
+                  <li>guapiles@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Calle 5, Guapiles, Pococí. Limón. Del Registro Civil 450
+                  metros norte. Frente al BCR.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div
+                class="card col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+                <p>Nuevas tiendas en limon muy pronto</p>
+              </div>
+              <div
+                class="card col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+                <p>Nuevas tiendas en limon muy pronto</p>
+              </div>
+            </div>
+          </div>
+          <!-- TODO: Guanacaste -->
+          <div id="guanacaste" class="tabcontent">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - Guanacaste</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Liberia
+                </h4>
+                <ul>
+                  <li>Teléfono: 2665-2600</li>
+                  <li>Whatsapp: 6063-6366</li>
+                  <li>liberia@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Avenida 7, calle 8. Liberia. Guanacaste.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Santa Cruz
+                </h4>
+                <ul>
+                  <li>Teléfono: 2680-0509</li>
+                  <li>Whatsapp: 6057-6316</li>
+                  <li>santacruz@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Plaza Santa Cruz - Guanacaste
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div
+                class="card col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+                <p>Nuevas tiendas en Guanacaste muy pronto</p>
+              </div>
+            </div>
+          </div>
+          <!-- TODO: Puntarenas -->
+          <div id="puntarenas" class="tabcontent">
+            <div
+              class="row gap-2 d-flex justify-content-center align-items-center">
+              <h3 class="ft-comic-shadow-secondary">Tiendas - Puntarenas</h3>
+              <hr />
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  juguetería De Bigotes <br />
+                  - Puntarenas Centro
+                </h4>
+                <ul>
+                  <li>Teléfono: 2229-2585</li>
+                  <li>Whatsapp: 6445-3529</li>
+                  <li>puntarenascentro@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  Puntarenas Centro Del Registro Civil 450 metros norte. Frente
+                  al BCR.
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div class="card col-sm-12 col-md-6 col-lg-4">
+                <h4>
+                  Juguetería De Bigotes <br />
+                  - Puntarenas - El Roble
+                </h4>
+                <ul>
+                  <li>Teléfono: 2221-3731</li>
+                  <li>Whatsapp: 6465-0654</li>
+                  <li>puntarenas@crbigotes.com</li>
+                </ul>
+                <p class="text-direction">
+                  Dirección:<br />
+                  El Roble de Puntarenas
+                </p>
+                <p>
+                  Horario: <br />Lunes a Sábado 9:30 a.m a 6:30 p.m
+                  <br />Domingos 9:30 a.m a 5:00 p.m
+                </p>
+              </div>
+              <div
+                class="card col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+                <p>Nuevas tiendas en limon muy pronto</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- contador numerico  -->
     <section class="ftco-counter" id="section-counter">
       <div class="container">
@@ -271,7 +670,7 @@
             class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="30">0</strong>
+                <strong class="number" data-number="25">0</strong>
               </div>
               <div class="text-black">
                 <h5>Años en Costa Rica</h5>
@@ -304,7 +703,7 @@
             class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="37">0</strong>
+                <strong class="number" data-number="14">0</strong>
               </div>
               <div class="text-black">
                 <h5>Tiendas en todo el País</h5>
@@ -372,11 +771,9 @@
     <!-- my js -->
     <script src="js/menu.js"></script>
     <script src="js/scroll-smooth.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/searchbar.js"></script>
-    <script src="js/lightbox.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
     <script src="js/idioma.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>

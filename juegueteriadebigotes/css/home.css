@@ -486,14 +486,32 @@ button.btn-mini-carousel:hover {
   text-shadow: 3px 2px 1px var(--color-primary-shadow);
 }
 
-/* sucursales */
-.detalles-tienda .card {
-  width: 400px;
-  height: 370px;
-  padding: 20px;
-}
-
 /* calses personalizadas  */
 .ft-comic {
   font-family: "comic";
+}
+.ft-comic-shadow-primary {
+  font-family: "comic";
+  color: var(--color-primary);
+  text-shadow: 3px 2px 1px var(--color-primary-shadow);
+}
+.ft-comic-shadow-secondary {
+  font-family: "comic";
+  color: var(--color-secondary);
+  text-shadow: 3px 2px 1px var(--color-secondary-shadow);
+}
+
+.goto-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  font-size: 2.8rem;
+  color: var(--color-primary);
+}
+.goto-top i {
+  color: var(--color-secondary);
+}
+.goto-top:hover i {
+  color: var(--color-primary);
+  scale: 1.1;
 }
