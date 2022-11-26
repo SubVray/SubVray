@@ -19,6 +19,7 @@ let btnPlus = document.getElementById("plus");
 let nCantidad = 1;
 
 // carrito
+let buyUser = [];
 let allTienda = [{}];
 let subTienda1 = [{}];
 let subTienda2 = [{}];
@@ -62,7 +63,8 @@ function search() {
 }
 if (
   window.location !=
-  "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html"
+    "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html" &&
+  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html"
 ) {
   eventListeners();
 
@@ -168,7 +170,7 @@ function leerDatosProducto(product) {
   };
 
   if (carrito.some((prod) => prod.id === newProduct.id)) {
-    const cursos = carrito.map((prod) => {
+    const productos = carrito.map((prod) => {
       if (prod.id === newProduct.id) {
         let cantidad = parseInt(prod.cantidad);
         cantidad++;
@@ -178,7 +180,7 @@ function leerDatosProducto(product) {
         return prod;
       }
     });
-    carrito = [...cursos];
+    carrito = [...productos];
   } else {
     carrito = [...carrito, newProduct];
   }
@@ -640,7 +642,18 @@ const getValorTotalCarrito = () => {
 
 if (
   window.location !=
-  "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html"
+    "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html" &&
+  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html"
 ) {
   createStore();
 }
+
+const pay = () => {
+  carrito = JSON.parse(localStorage.getItem("carrito"));
+  buyUser = localStorage.setItem("buyUser", JSON.stringify(carrito));
+
+  localStorage.removeItem("carrito");
+  window.location.reload();
+};
+let comprasUser = JSON.parse(localStorage.getItem("buyUser"));
+console.log(comprasUser);

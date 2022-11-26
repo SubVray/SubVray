@@ -214,232 +214,12 @@
           </div>
           <div class="line-compra"></div>
           <div class="col-12 d-flex justify-content-end">
-            <button type="button" class="btn btn-success" onclick="pay()">
-              Pagar
-            </button>
+            <button type="button" class="btn btn-success">Pagar</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- banner -->
-    <section
-      class="banner container-fluid d-flex justify-content-center align-items-center">
-      <div class="container m-auto border text-center">
-        <h1>Encuentra los mejores juguetes aqui</h1>
-      </div>
-    </section>
-
-    <!-- promociones  -->
-    <section class="container-fluid" id="ofertas">
-      <h2 class="text-center titles">Promociones</h2>
-      <div class="container m-auto" id="mostrador">
-        <div class="row m-auto" id="tienda-1"></div>
-      </div>
-      <div class="modal-container">
-        <div class="seleccion" id="seleccion">
-          <a class="btn border-0 shadow-none" onclick="cerrar()"
-            ><i class="fa-solid fa-xmark cerrar"></i
-          ></a>
-          <div class="info row">
-            <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
-              <div class="carousel-container text-center">
-                <div class="img-carousel-container">
-                  <a id="img-product-modal" data-lightbox="roadtrip">
-                    <img
-                      alt="producto"
-                      id="img"
-                      class="img-fluid"
-                      name="thumb" />
-                  </a>
-                </div>
-                <div
-                  class="text-center d-flex justify-content-between"
-                  id="next-prev">
-                  <button
-                    class="btn-mini-carousel prev"
-                    type="button"
-                    onclick="cambiar(-1)">
-                    <i class="fa-solid fa-chevron-left"></i>
-                  </button>
-                  <button
-                    class="btn-mini-carousel next"
-                    type="button"
-                    onclick="cambiar(1)">
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
-              <img id="img-carrito" alt="imagen producto " />
-              <p id="descripcion"></p>
-              <div class="d-flex">
-                <span class="precio" id="icon-Moneda">₡</span>
-                <span class="precio" id="precioMostrar"></span>
-                <span
-                  class="precio opacity-0 position-absolute"
-                  id="precio"></span>
-              </div>
-              <span class="sku" id="SKU"></span>
-
-              <div class="fila" id="fila">
-                <button
-                  type="button"
-                  class="rounded agregar-carrito"
-                  id="add-carrito">
-                  AGREGAR AL CARRITO
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- categories -->
-    <section class="categorias" id="categorias">
-      <h2 class="text-center titles">Categorías</h2>
-      <p class="text-center text-categorias">
-        Contamos con una gran cantidad de juguetes
-      </p>
-      <div class="container d-flex justify-content-center align-items-centerr">
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="bebes.html" class="">
-              <img
-                src="images/categorias/bebes.png"
-                alt="Categoria bebes"
-                class="img-fluid w-100 img-bebes" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="juegosmesa.html">
-              <img
-                src="images/categorias/juegosmesa.gif"
-                alt="Categoria juegos de mesa"
-                class="img-fluid w-100 img-juegos-mesa" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="deportes.html">
-              <img
-                src="images/categorias/deportes.png"
-                alt="Categoria deportes"
-                class="img-fluid w-100 img-deportes" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="armasnerf.html">
-              <img
-                src="images/categorias/armas-nerf.png"
-                alt="Categoria armas nerf"
-                class="img-fluid w-100 img-nerf" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="motorafina.html">
-              <img
-                src="images/categorias/motorafina.png"
-                alt="Categoria motorafina"
-                class="img-fluid w-100 img-motorafina" />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 my-2">
-            <a href="verano.html">
-              <img
-                src="images/categorias/verano.png"
-                alt="Categoria verano "
-                class="img-fluid w-100 img-verano" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- tira  -->
-    <section class="tira-comp container-fluid w-100">
-      <div class="owl-container container">
-        <div id="owl-demo" class="owl-carousel owl-theme text-center">
-          <!-- owl-lazy es una instruccion de JS para agilizar la carga de las fotos -->
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/babyAlive.webp"
-              alt="Cliente1" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/babybasics.webp"
-              alt="Cliente2" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/dcsuperhero.webp"
-              alt="Cliente3" />
-          </div>
-
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/hasbro.webp"
-              alt="Cliente5" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/megablocks.webp"
-              alt="Cliente6" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/melissa&doug.webp"
-              alt="Cliente7" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/playdoh.webp"
-              alt="Cliente8" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/pollypocket.webp"
-              alt="Cliente9" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/step2.webp"
-              alt="Cliente10" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/uno.webp"
-              alt="Cliente11" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/monopoly.webp"
-              alt="Cliente11" />
-          </div>
-          <div class="item">
-            <img
-              class="owl-lazy img-fluid m-auto"
-              data-src="images/tira/barbie.webp"
-              alt="Cliente11" />
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Modal -->
     <div
@@ -497,7 +277,10 @@
       </div>
     </div>
 
+	<button type="button " class="btn btn-danger" onclick="cerrarSesion()">Cerrar sesion</button>
+
     <!-- footer -->
+
     <footer></footer>
 
     <!-- btn top -->
@@ -567,13 +350,13 @@
     <!-- my js -->
     <script src="js/menu.js"></script>
     <script src="js/scroll-smooth.js"></script>
+    <script src="users/users.js"></script>
+    <script src="users/login.js"></script>
     <script src="js/home.js"></script>
     <script src="js/searchbar.js"></script>
     <script src="js/lightbox.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
     <script src="js/idioma.js"></script>
-    <script src="users/users.js"></script>
-    <script src="users/login.js"></script>
   </body>
 </html>
