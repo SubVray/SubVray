@@ -837,11 +837,11 @@ const tiendaCogo = [
 // tienda verano
 const tiendaVerano = [
   {
-    name: "Tienda en Forma de Casa para Niña 95x72x102 cm   ",
-    SKU: "IP8728",
+    name: "Piscina Fast Set 3.66x76xcm  ",
+    SKU: "BW57273",
     sale: 0,
-    price: 15995.0,
-    imgUrl: "images/categorias/verano/IP8728-1.jpg",
+    price: 47995.0,
+    imgUrl: "images/categorias/verano/BW57273-1.jpg",
   },
   {
     name: "Tienda de Campaña de Dinosaurios 105 x 125 cm  ",
@@ -851,18 +851,28 @@ const tiendaVerano = [
     imgUrl: "images/categorias/verano/IP8317-1.jpg",
   },
   {
-    name: "Tienda de Campaña de Princesas 100x100x150 cm ",
-    SKU: "IP8201",
+    name: "Flotador Tipo Andadera P/Bebé 1-2a  ",
+    SKU: "INT59574",
     sale: 0,
-    price: 20995.0,
-    imgUrl: "images/categorias/verano/IP8201-1.jpg",
+    price: 4295.0,
+    imgUrl: "images/categorias/verano/INT59574-1.jpg",
   },
+
   {
     name: "Tienda de Campaña de Dinosaurios 95x72x102 cm ",
     SKU: "IP8163",
     sale: 0,
     price: 13995.0,
     imgUrl: "images/categorias/verano/IP8163-1.jpg",
+  },
+
+  {
+    name: "Isla Inflable con Toldo 199x150cm   ",
+    SKU: "INT58292",
+    sale: 0,
+    price: 49994.0,
+    imgUrl: "images/categorias/verano/INT58292-1.jpg",
+    imgUrl2: "images/categorias/verano/INT58292-2.jpg",
   },
   {
     name: "Casita de Juegos Animales de la Selva ",
@@ -877,6 +887,58 @@ const tiendaVerano = [
     sale: 0,
     price: 11495.0,
     imgUrl: "images/categorias/verano/IP8350-1.jpg",
+  },
+
+  {
+    name: "Tienda de Campaña de Princesas 100x100x150 cm ",
+    SKU: "IP8201",
+    sale: 0,
+    price: 20995.0,
+    imgUrl: "images/categorias/verano/IP8201-1.jpg",
+  },
+  {
+    name: "Piscina Rectangular Marco Metal 450x220x84cm   ",
+    SKU: "INT28273",
+    sale: 0,
+    price: 169995.0,
+    imgUrl: "images/categorias/verano/INT28273-1.jpg",
+    imgUrl2: "images/categorias/verano/INT28273-2.jpg",
+  },
+  {
+    name: "Centro de Juego Dulcería Inflable   ",
+    SKU: "INT28273",
+    sale: 0,
+    price: 64995.0,
+    imgUrl: "images/categorias/verano/INT57149-1.jpg",
+  },
+  {
+    name: "Piscina Rectangular Marco Metal 260x160x65cm   ",
+    SKU: "INT28271",
+    sale: 0,
+    price: 84995.0,
+    imgUrl: "images/categorias/verano/INT28271-1.jpg",
+  },
+  {
+    name: "Colchoneta king kool para Piscina con Respaldo 160x85cm   ",
+    SKU: "INT58802",
+    sale: 0,
+    price: 12495.0,
+    imgUrl: "images/categorias/verano/INT58802-1.jpg",
+  },
+  {
+    name: "Piscina 3 Anillos 152x56cm   ",
+    SKU: "INT58480",
+    sale: 0,
+    price: 30895.0,
+    imgUrl: "images/categorias/verano/INT58480-1.jpg",
+    imgUrl2: "images/categorias/verano/INT58480-2.jpg",
+  },
+  {
+    name: "Isla Grande en Forma de Sandía 1.83x23cm   ",
+    SKU: "INT56283",
+    sale: 0,
+    price: 11995.0,
+    imgUrl: "images/categorias/verano/INT56283-1.jpg",
   },
   {
     name: "Tienda Estampado de Garaje ",
@@ -899,8 +961,15 @@ const tiendaVerano = [
     price: 11995.0,
     imgUrl: "images/categorias/verano/IP8165-1.jpg",
   },
-];
 
+  {
+    name: "Tienda en Forma de Casa para Niña 95x72x102 cm   ",
+    SKU: "IP8728",
+    sale: 0,
+    price: 15995.0,
+    imgUrl: "images/categorias/verano/IP8728-1.jpg",
+  },
+];
 
 // tienda tiendas de acampar
 const tiendasAcampar = [
@@ -966,5 +1035,75 @@ const tiendasAcampar = [
     sale: 0,
     price: 11995.0,
     imgUrl: "images/categorias/verano/IP8165-1.jpg",
+  },
+];
+
+// tienda piscinas inflables
+const tiendaPicinas = [
+  {
+    name: "Isla Inflable con Toldo 199x150cm   ",
+    SKU: "INT58292",
+    sale: 0,
+    price: 49994.0,
+    imgUrl: "images/categorias/verano/INT58292-1.jpg",
+    imgUrl2: "images/categorias/verano/INT58292-2.jpg",
+  },
+  {
+    name: "Piscina Rectangular Marco Metal 450x220x84cm   ",
+    SKU: "INT28273",
+    sale: 0,
+    price: 169995.0,
+    imgUrl: "images/categorias/verano/INT28273-1.jpg",
+    imgUrl2: "images/categorias/verano/INT28273-2.jpg",
+  },
+  {
+    name: "Centro de Juego Dulcería Inflable   ",
+    SKU: "INT28273",
+    sale: 0,
+    price: 64995.0,
+    imgUrl: "images/categorias/verano/INT57149-1.jpg",
+  },
+  {
+    name: "Piscina Rectangular Marco Metal 260x160x65cm   ",
+    SKU: "INT28271",
+    sale: 0,
+    price: 84995.0,
+    imgUrl: "images/categorias/verano/INT28271-1.jpg",
+  },
+  {
+    name: "Colchoneta king kool para Piscina con Respaldo 160x85cm   ",
+    SKU: "INT58802",
+    sale: 0,
+    price: 12495.0,
+    imgUrl: "images/categorias/verano/INT58802-1.jpg",
+  },
+  {
+    name: "Piscina 3 Anillos 152x56cm   ",
+    SKU: "INT58480",
+    sale: 0,
+    price: 30895.0,
+    imgUrl: "images/categorias/verano/INT58480-1.jpg",
+    imgUrl2: "images/categorias/verano/INT58480-2.jpg",
+  },
+  {
+    name: "Isla Grande en Forma de Sandía 1.83x23cm   ",
+    SKU: "INT56283",
+    sale: 0,
+    price: 11995.0,
+    imgUrl: "images/categorias/verano/INT56283-1.jpg",
+  },
+  {
+    name: "Flotador Tipo Andadera P/Bebé 1-2a  ",
+    SKU: "INT59574",
+    sale: 0,
+    price: 4295.0,
+    imgUrl: "images/categorias/verano/INT59574-1.jpg",
+  },
+  {
+    name: "Piscina Fast Set 3.66x76xcm  ",
+    SKU: "BW57273",
+    sale: 0,
+    price: 47995.0,
+    imgUrl: "images/categorias/verano/BW57273-1.jpg",
   },
 ];

@@ -515,3 +515,23 @@ button.btn-mini-carousel:hover {
   color: var(--color-primary);
   scale: 1.1;
 }
+
+.sct-total {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+.offcanvas-body {
+  margin-bottom: 100px;
+}
+
+.line-compra {
+  width: 100%;
+  height: 1px;
+  margin: 5px 0;
+  background-color: #f2f2f2;
+}

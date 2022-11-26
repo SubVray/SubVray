@@ -64,19 +64,21 @@
               <ul
                 class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-around align-items-center w-50">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#home"
+                  <a
+                    class="nav-link inicio"
+                    aria-current="page"
+                    href="home.html"
                     >Inicio</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#ofertas">Promociones</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#destacados">Destacados</a>
+                  <a class="nav-link promociones" href="#ofertas"
+                    >Promociones</a
+                  >
                 </li>
                 <li class="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle categorias"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -85,30 +87,46 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="bebes.html">bebes</a>
+                      <a class="dropdown-item bebes" href="bebes.html">bebes</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="juegosmesa.html"
+                      <a class="dropdown-item juegos-mesa" href="#"
                         >juegos de mesa</a
                       >
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <a class="dropdown-item" href="#">Deportes</a>
+                      <a class="dropdown-item deportes" href="deportes.html"
+                        >Deportes</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Armas nerf</a>
+                      <a class="dropdown-item nerf" href="armasnerf.html"
+                        >Armas nerf</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Motorafina</a>
+                      <a class="dropdown-item motorafina" href="motorafina.html"
+                        >Motorafina</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">verano</a>
+                      <a class="dropdown-item verano" href="verano.html"
+                        >verano</a
+                      >
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <button type="button" onclick="closeSearchbar()">
+                  <a class="nav-link sucursales" href="sucursales.html"
+                    >Sucursales</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="btn shadow-none border-0"
+                    onclick="closeSearchbar()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </li>
@@ -131,21 +149,21 @@
           </div>
         </div>
       </nav>
-      <div class="text-center container-languages">
+      <div class="langWrap text-center container-languages">
         <button
           type="button"
-          class=""
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          data-bs-title="Español">
+          data-bs-title="Español"
+          language="spanish">
           ESP
         </button>
         <button
           type="button"
-          class=""
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          data-bs-title="English">
+          data-bs-title="English"
+          language="english">
           USA
         </button>
       </div>
@@ -189,6 +207,22 @@
         </button>
       </div>
       <div class="offcanvas-body" id="offcanvas-body"></div>
+            <div class="sct-total bg-danger p-2">
+        <div class="row">
+          <div class="col-12" id="total">
+            <span>Productos: </span>
+            <span class="" id="totalItems">0</span>
+
+            <br />
+            <span class="">Precio Total:</span>
+            <span class="" id="total-price"></span>
+          </div>
+          <div class="line-compra"></div>
+          <div class="col-12 d-flex justify-content-end">
+            <button type="button" class="btn btn-success">Pagar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- banner bebes -->
@@ -278,7 +312,8 @@
                     <p id="descripcion"></p>
                     <div class="d-flex">
                       <span class="precio" id="icon-Moneda">₡</span>
-                      <span class="precio" id="precio"></span>
+                      <span class="precio" id="precioMostrar"></span>
+                      <span class="precio opacity-0 position-absolute" id="precio"></span>
                     </div>
                     <span class="sku" id="SKU"></span>
 

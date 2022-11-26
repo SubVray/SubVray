@@ -53,18 +53,16 @@
               <ul
                 class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-around align-items-center w-50">
                 <li class="nav-item">
-                  <a class="nav-link inicio" aria-current="page" href="#home"
+                  <a
+                    class="nav-link inicio"
+                    aria-current="page"
+                    href="home.html"
                     >Inicio</a
                   >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link promociones" href="#ofertas"
                     >Promociones</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link destacados" href="#destacados"
-                    >Destacados</a
                   >
                 </li>
                 <li class="nav-item dropdown">
@@ -87,28 +85,37 @@
                     </li>
                     <li><hr class="dropdown-divider" /></li>
                     <li>
-                      <a class="dropdown-item deportes" href="deportes.html">Deportes</a>
+                      <a class="dropdown-item deportes" href="deportes.html"
+                        >Deportes</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item nerf" href="#">Armas nerf</a>
+                      <a class="dropdown-item nerf" href="armasnerf.html"
+                        >Armas nerf</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item motorafina" href="#"
+                      <a class="dropdown-item motorafina" href="motorafina.html"
                         >Motorafina</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item verano" href="#">verano</a>
+                      <a class="dropdown-item verano" href="verano.html"
+                        >verano</a
+                      >
                     </li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link destacados" href="sucursales.html"
+                  <a class="nav-link sucursales" href="sucursales.html"
                     >Sucursales</a
                   >
                 </li>
                 <li class="nav-item">
-                  <button type="button" onclick="closeSearchbar()">
+                  <button
+                    type="button"
+                    class="btn shadow-none border-0"
+                    onclick="closeSearchbar()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </li>
@@ -187,6 +194,22 @@
         </button>
       </div>
       <div class="offcanvas-body" id="offcanvas-body"></div>
+      <div class="sct-total bg-danger p-2">
+        <div class="row">
+          <div class="col-12" id="total">
+            <span>Productos: </span>
+            <span class="" id="totalItems">0</span>
+
+            <br />
+            <span class="">Precio Total:</span>
+            <span class="" id="total-price"></span>
+          </div>
+          <div class="line-compra"></div>
+          <div class="col-12 d-flex justify-content-end">
+            <button type="button" class="btn btn-success">Pagar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- banner -->
@@ -245,7 +268,10 @@
               <p id="descripcion"></p>
               <div class="d-flex">
                 <span class="precio" id="icon-Moneda">₡</span>
-                <span class="precio" id="precio"></span>
+                <span class="precio" id="precioMostrar"></span>
+                <span
+                  class="precio opacity-0 position-absolute"
+                  id="precio"></span>
               </div>
               <span class="sku" id="SKU"></span>
 

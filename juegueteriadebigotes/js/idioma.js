@@ -2,7 +2,7 @@ const langEl = document.querySelector(".langWrap");
 const links = document.querySelectorAll("header button");
 const inicio = document.querySelector(".inicio");
 const promociones = document.querySelector(".promociones");
-const destacados = document.querySelector(".destacados");
+const sucursales = document.querySelector(".sucursales");
 const categorias = document.querySelector(".categorias");
 const bebes = document.querySelector(".bebes");
 const juegosMesa = document.querySelector(".juegos-mesa");
@@ -24,7 +24,7 @@ links.forEach((r) => {
     const attr = r.getAttribute("language");
     inicio.textContent = changeLanguage[attr].inicio;
     promociones.textContent = changeLanguage[attr].promociones;
-    destacados.textContent = changeLanguage[attr].destacados;
+    sucursales.textContent = changeLanguage[attr].sucursales;
     categorias.textContent = changeLanguage[attr].categorias;
     bebes.textContent = changeLanguage[attr].bebes;
     juegosMesa.textContent = changeLanguage[attr].juegosMesa;
@@ -45,7 +45,7 @@ let changeLanguage = {
   spanish: {
     inicio: "Inicio",
     promociones: "Promociones",
-    destacados: "Destacados",
+    sucursales: "Sucursales",
     categorias: "Categorías ",
     bebes: "Bebes",
     juegosMesa: "Juegos de mesa",
@@ -68,7 +68,7 @@ let changeLanguage = {
   english: {
     inicio: "Home",
     promociones: "promotions",
-    destacados: "Featured",
+    sucursales: "Branches",
     categorias: "categories ",
     bebes: "Babies",
     juegosMesa: "Table games",

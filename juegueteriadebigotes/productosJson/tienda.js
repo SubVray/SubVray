@@ -3,6 +3,7 @@ let seleccion = document.getElementById("seleccion");
 let imgSeleccionada = document.getElementById("img");
 let descripSeleccionada = document.getElementById("descripcion");
 let precioSeleccionado = document.getElementById("precio");
+let precioMostrar = document.getElementById("precioMostrar");
 let body = document.querySelector("body");
 let modal = document.querySelector(".modal-container");
 let nextPrev = document.querySelector("#next-prev");
@@ -27,6 +28,8 @@ let addCarito = document.getElementById("add-carrito");
 let showCarritoC = document.getElementById("offcanvas-body");
 let productCounter = document.getElementById("product-counter");
 let montoTotal = 0;
+let totalItems = document.querySelector("#totalItems");
+let totalPrice = document.querySelector("#total-price");
 
 // bebes
 let tienda1 = document.querySelector("#tienda-1");
@@ -79,6 +82,8 @@ const createStore = () => {
     window.location == "http://127.0.0.1:5501/juegueteriadebigotes/home.html"
   ) {
     allTienda = productsHome;
+    subTienda1 = [];
+    subTienda2 = [];
   } else if (
     window.location ==
       "http://127.0.0.1:5500/juegueteriadebigotes/bebes.html" ||
@@ -134,7 +139,7 @@ const createStore = () => {
     window.location == "http://127.0.0.1:5501/juegueteriadebigotes/verano.html"
   ) {
     allTienda = tiendaVerano;
-    subTienda1 = juguetesBebes;
+    subTienda1 = tiendaPicinas;
     subTienda2 = tiendasAcampar;
     changeFilter();
   }
@@ -213,6 +218,7 @@ function cerrar() {
   seleccion.classList.remove("active-modal");
   body.classList.remove("scrollDisabled");
   modal.style.display = "none";
+  getValorTotalCarrito();
 }
 
 const showCarrito = () => {
@@ -222,6 +228,7 @@ const showCarrito = () => {
 // modal carrito
 const crearHTML = () => {
   limpiarHTML();
+  getValorTotalCarrito();
   productCounter.innerHTML = carrito.length;
   carrito.forEach((product) => {
     let btnBorrar = document.createElement("button");
@@ -290,9 +297,8 @@ const crearHTML = () => {
     imgP.alt = product.name;
     skuP.innerText = `${titleSKu} ${product.id}`;
     cantidadP.innerText = `${titleCantidad} ${Number(product.cantidad)}`;
-    priceP.innerText = `${titlePrice}${
-      Number(product.price) * Number(product.cantidad)
-    }
+    let pricetotal = Number(product.price) * Number(product.cantidad);
+    priceP.innerText = `${titlePrice}${pricetotal.toLocaleString("en-US")}
     `;
     btnBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
@@ -441,7 +447,9 @@ const createItemsProducts = (allTienda) => {
       // info a mostrar en el modal
       imgSeleccionada.src = product.imgUrl;
       descripSeleccionada.innerText = product.name;
-      precioSeleccionado.innerText = Number(product.price);
+      let precioSeleccionadoItem = Number(product.price);
+      precioSeleccionado.innerText = precioSeleccionadoItem;
+      precioMostrar.innerText = precioSeleccionadoItem.toLocaleString("en-US");
       imgCarrito.src = product.imgUrl;
       imgCarrito.style.display = "none";
       HtmlSku.innerText = product.SKU;
@@ -516,7 +524,9 @@ const createItemsSubCategories = (allItemsCategories) => {
       // info a mostrar en el modal
       imgSeleccionada.src = product.imgUrl;
       descripSeleccionada.innerText = product.name;
-      precioSeleccionado.innerText = Number(product.price);
+      let precioSeleccionadoItem = Number(product.price);
+      precioSeleccionado.innerText = precioSeleccionadoItem;
+      precioMostrar.innerText = precioSeleccionadoItem.toLocaleString("en-US");
       imgCarrito.src = product.imgUrl;
       imgCarrito.style.display = "none";
       HtmlSku.innerText = product.SKU;
@@ -588,7 +598,9 @@ const createItemsSubCategories2 = (allItemsCategories) => {
       // info a mostrar en el modal
       imgSeleccionada.src = product.imgUrl;
       descripSeleccionada.innerText = product.name;
-      precioSeleccionado.innerText = Number(product.price);
+      let precioSeleccionadoItem = Number(product.price);
+      precioSeleccionado.innerText = precioSeleccionadoItem;
+      precioMostrar.innerText = precioSeleccionadoItem.toLocaleString("en-US");
       imgCarrito.src = product.imgUrl;
       imgCarrito.style.display = "none";
       HtmlSku.innerText = product.SKU;
@@ -610,6 +622,20 @@ const createItemsSubCategories2 = (allItemsCategories) => {
       }
     });
   });
+};
+
+// valor total carrito
+
+const getValorTotalCarrito = () => {
+  let priceMasCantidad = 0;
+  let cantidadP = 0;
+  carrito.forEach((product) => {
+    priceMasCantidad += product.price * product.cantidad;
+    cantidadP += product.cantidad;
+    console.log(priceMasCantidad);
+  });
+  totalPrice.innerHTML = `₡${priceMasCantidad.toLocaleString("en-US")}`;
+  totalItems.innerHTML = cantidadP;
 };
 
 if (
