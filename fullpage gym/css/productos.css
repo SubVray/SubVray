@@ -11,11 +11,9 @@
   --color-white: #fff;
   --color-gray: #868686;
 }
+
 h1 {
-  padding-top: 90px;
-}
-.listas .card {
-  height: 452px;
+  padding: 20px 0;
 }
 
 .card-body {
@@ -37,4 +35,61 @@ h1 {
 .card-footer button:hover {
   background-color: var(--color-orange);
   color: #252525;
+}
+
+.list-group-item.active {
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  color: #000;
+  font-weight: bold;
+}
+.listas {
+  z-index: 1000 !important;
+  margin-top: -470px;
+  color: #fff;
+}
+
+main {
+  background-image: url("../src/images/gym.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.699);
+  background-attachment: fixed;
+}
+.bannerProd {
+  padding-top: 100px;
+  height: calc(100vh);
+  width: 100%;
+}
+
+.badge {
+  font-size: 1rem;
+  color: #000;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-weight: 700;
+}
+
+.list-group-item.active .badge {
+  background-color: #000;
+  color: #fff;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 4rem !important;
+  background-color: transparent !important;
+}
+footer {
+  background-color: #9c1515;
+  padding: 10px 0;
+}
+
+figure {
+  height: 220px;
 }

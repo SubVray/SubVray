@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="src/favicon.ico" />
     <script
       src="https://kit.fontawesome.com/7bc87e2382.js"
       crossorigin="anonymous"></script>
@@ -57,33 +57,38 @@
               <li class="nav-item">
                 <a class="nav-link" href="#carousel">Salas Y Equipos</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#clases">Clases</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#planes">Planes</a>
-              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="#clases"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  Extras
+                  Clases
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Productos</a></li>
-                  <li><a class="dropdown-item" href="#">Galería</a></li>
                   <li>
-                    <a class="dropdown-item" href="valores.html">Valores</a>
+                    <a class="dropdown-item" href="productos.html"
+                      >Sala de pesas</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Funcionales</a></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="">Cardio Dance</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cardio Combat</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">G.A.P</a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#planes">Planes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productos.html">Productos</a>
               </li>
             </ul>
           </div>
@@ -93,7 +98,8 @@
 
     <main>
       <!-- TODO: banner -->
-      <section class="banner d-flex justify-content-center align-items-center">
+      <section
+        class="banner d-flex justify-content-center align-items-center position-relative">
         <div class="container">
           <div class="row w-100">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -105,13 +111,18 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
               <h1>Juntos</h1>
               <p>En tu salud y tu vida. Unite a la Familia Fitness Club</p>
+              <p>Nuestros <a href="valores.html">valores</a></p>
             </div>
           </div>
         </div>
+        <a href="#carrousel" class="row-down">
+          <i class="fa-solid fa-circle-chevron-down"></i>
+        </a>
       </section>
 
       <!-- TODO: carousel -->
       <section id="carousel">
+        <section id="carrousel"></section>
         <h2 class="text-center bg-orange title-carousel">
           Salas <span class="salas-equipos">Y</span> Equipos
         </h2>
@@ -274,7 +285,7 @@
                       alt=""
                       class="img-fluid icon" />
                   </div>
-                  <p class="text-center">Cardio Dance</p>
+                  <p class="text-center">Cardio Combat</p>
                 </div>
                 <div class="card-body">
                   <img
@@ -533,132 +544,7 @@
         </div>
       </section>
 
-      <!-- TODO: listas -->
-      <section class="listas" id="lista-productos">
-        <h2 class="text-center title-plan bg-bk">
-          <span class="tu-plan">Productos</span>
-        </h2>
-      </section>
 
-      <!-- TODO: acordeon -->
-      <section id="valores" class="valores d-flex flex-column">
-        <h2 class="text-center title-plan bg-bk">
-          <span class="tu-plan">Valores</span>
-        </h2>
-        <div class="row w-100 py-5 m-auto">
-          <div class="col-sm-12 col-md-6 col-lg-6">
-            <img src="src/images/valores.jpg" alt="" class="img-fluid" />
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6 mt-4">
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne">
-                    <span class="cicle-number">1</span> PASIÓN EN TODO MOMENTO
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingOne"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="text-acordeon">
-                      Enfocados en el objetivo de lograr los objetivos de cada
-                      socio a nivel de salud y física en la población donde
-                      estemos.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo">
-                    <span class="cicle-number">2</span> EXCELENCIA EN SERVICIO
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingTwo"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="text-acordeon">
-                      Siempre brindando una excelencia en servicio, con una
-                      mejora continua que se caracteriza en todos los Fitness
-                      Club.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFour"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo">
-                    <span class="cicle-number">3</span> INTEGRIDAD
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseFour"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingTwo"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="text-acordeon">
-                      Siempre llevando la calidad que nos lleva a ser los
-                      mejores profesionales del mercado e la parte de
-                      salud-física e innovando para todos los socios Fitness .
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree">
-                    <span class="cicle-number">4</span> COMPROMISO
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseThree"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingThree"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <p class="text-acordeon">
-                      Siempre comprometidos en los resultados de nuestros
-                      socios, los cuales son nuestra razón de existir y de
-                      seguir mejorando en el mercadeo.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- js content -->

@@ -16,14 +16,10 @@
     <link rel="stylesheet" href="css/menu-hamburguer.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/productos.css" />
+    <link rel="stylesheet" href="css/imagehover.css" />
     <title>Fitness Club</title>
   </head>
-  <body
-    id="home"
-    data-bs-spy="scroll"
-    data-bs-target="#navbar-example"
-    data-bs-smooth-scroll="true"
-    class="scrollspy-example">
+  <body id="home">
     <!-- TODO: header -->
     <header class="header w-100">
       <nav class="navbar navbar-expand-lg text-center fixed-top">
@@ -51,42 +47,44 @@
             <ul
               class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center nav-pills">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html#home"
-                  >Home</a
-                >
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html#carousel"
-                  >Salas Y Equipos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#clases">Clases</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#planes">Planes</a>
+                <a class="nav-link" href="#carousel">Salas Y Equipos</a>
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="#clases"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  Extras
+                  Clases
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Productos</a></li>
-                  <li><a class="dropdown-item" href="#">Galería</a></li>
                   <li>
-                    <a class="dropdown-item" href="valores.html">Valores</a>
+                    <a class="dropdown-item" href="productos.html"
+                      >Sala de pesas</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Funcionales</a></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="">Cardio Dance</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cardio Combat</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">G.A.P</a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="productos.html">Productos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#planes">Planes</a>
               </li>
             </ul>
           </div>
@@ -95,51 +93,53 @@
     </header>
 
     <main>
+      <section class="bannerProd"></section>
       <!-- TODO: listas -->
-      <section class="listas" id="lista-productos">
+      <div class="listas" id="lista-productos">
         <h1 class="text-center title-plan bg-bk">
           <span class="tu-plan">Productos</span>
         </h1>
-        <div class="container-fluid mt-5">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-3">
               <h3>Categorías</h3>
               <div class="list-group" id="list-tab" role="tablist">
                 <a
-                  class="list-group-item list-group-item-action active"
+                  class="list-group-item list-group-item-action active d-flex justify-content-between"
                   id="list-Amino"
                   data-bs-toggle="list"
                   href="#list-Amino-Acidos"
                   role="tab"
                   aria-controls="list-Amino-Acidos"
-                  >Amino Acidos</a
+                  >Amino Acidos <span class="badge">6</span></a
                 >
+
                 <a
-                  class="list-group-item list-group-item-action"
+                  class="list-group-item list-group-item-action d-flex justify-content-between"
                   id="list-Creatinas-list"
                   data-bs-toggle="list"
                   href="#list-Creatinas"
                   role="tab"
                   aria-controls="list-Creatinas"
-                  >Creatinas</a
+                  >Creatinas <span class="badge">6</span></a
                 >
                 <a
-                  class="list-group-item list-group-item-action"
+                  class="list-group-item list-group-item-action d-flex justify-content-between"
                   id="list-Keto-list"
                   data-bs-toggle="list"
                   href="#list-Keto"
                   role="tab"
                   aria-controls="list-Keto"
-                  >Keto</a
+                  >Keto <span class="badge">6</span></a
                 >
                 <a
-                  class="list-group-item list-group-item-action"
+                  class="list-group-item list-group-item-action d-flex justify-content-between"
                   id="list-Termogénicos-list"
                   data-bs-toggle="list"
                   href="#list-Termogenicos"
                   role="tab"
                   aria-controls="list-Termogénicos"
-                  >Termogénicos</a
+                  >Termogénicos <span class="badge">6</span></a
                 >
               </div>
             </div>
@@ -152,21 +152,21 @@
                   role="tabpanel"
                   aria-labelledby="list-Amino">
                   <div class="row">
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/Aminoacidos.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>Aminoácidos fórmula completa 120 capsulas.</p>
-                          <span>₡ 21.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>Aminoácidos fórmula completa 120 capsulas.</p>
+                            <span>₡ 21.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
-                          <br /><br />
                           <button
                             type="button"
                             data-bs-toggle="tooltip"
@@ -176,19 +176,22 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/Liver_360x.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>Limpieza Detox de Hígado Liver Refresh 90 caps.</p>
-                          <span>₡ 26.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>
+                              Limpieza Detox de Hígado Liver Refresh 90 caps.
+                            </p>
+                            <span>₡ 26.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -200,22 +203,102 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/Carnitinaliquida_1024x1024@2x.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Nutrex Carnitina Líquida 3000mg 16 oz. Quema grasa
+                              y aumenta la resistencia.
+                            </p>
+                            <span>₡ 20.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
-                        <div class="card-body">
-                          <p>
-                            Nutrex Carnitina Líquida 3000mg 16 oz. Quema grasa y
-                            aumenta la resistencia.
-                          </p>
-                          <span>₡ 20.000,00</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/Aminoacidos.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>Aminoácidos fórmula completa 120 capsulas.</p>
+                            <span>₡ 21.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/Liver_360x.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Limpieza Detox de Hígado Liver Refresh 90 caps.
+                            </p>
+                            <span>₡ 26.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/Carnitinaliquida_1024x1024@2x.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Nutrex Carnitina Líquida 3000mg 16 oz. Quema grasa
+                              y aumenta la resistencia.
+                            </p>
+                            <span>₡ 20.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -235,23 +318,24 @@
                   role="tabpanel"
                   aria-labelledby="list-Creatinas-list">
                   <div class="row">
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/untamed.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>
-                            Untamed Labs Ape Sh*t preentreno, energía inmediata,
-                            mayor rendimiento y resistencia, producción elevada
-                            de óxido nítrico, 40 servidas
-                          </p>
-                          <span>₡ 30.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>
+                              Untamed Labs Ape Sh*t preentreno, energía
+                              inmediata, mayor rendimiento y resistencia,
+                              producción elevada de óxido nítrico, 40 servidas
+                            </p>
+                            <span>₡ 30.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -263,19 +347,20 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/NutrexCreatina_1024x1024@2x.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>Nutrex Creatina en Polvo 300g - 60 servidas</p>
-                          <span>₡ 26.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>Nutrex Creatina en Polvo 300g - 60 servidas</p>
+                            <span>₡ 26.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -287,23 +372,109 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/C4Sport30_1024x1024@2x.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              C4 Sport Preentreno y Creatina en Polvo +
+                              Suplemento energético sin azúcar para hombres y
+                              mujeres - 135 mg de cafeína + creatina - 30
+                              servidas
+                            </p>
+                            <span>₡ 28.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
-                        <div class="card-body">
-                          <p>
-                            C4 Sport Preentreno y Creatina en Polvo + Suplemento
-                            energético sin azúcar para hombres y mujeres - 135
-                            mg de cafeína + creatina - 30 servidas
-                          </p>
-                          <span>₡ 28.000,00</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/untamed.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Untamed Labs Ape Sh*t preentreno, energía
+                              inmediata, mayor rendimiento y resistencia,
+                              producción elevada de óxido nítrico, 40 servidas
+                            </p>
+                            <span>₡ 30.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/NutrexCreatina_1024x1024@2x.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>Nutrex Creatina en Polvo 300g - 60 servidas</p>
+                            <span>₡ 26.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/C4Sport30_1024x1024@2x.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              C4 Sport Preentreno y Creatina en Polvo +
+                              Suplemento energético sin azúcar para hombres y
+                              mujeres - 135 mg de cafeína + creatina - 30
+                              servidas
+                            </p>
+                            <span>₡ 28.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -323,22 +494,23 @@
                   role="tabpanel"
                   aria-labelledby="list-Keto-list">
                   <div class="row">
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/cuts.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>
-                            Ab Cuts 120 cápsulas. Suplemento para eliminar la
-                            grasa abdominal.
-                          </p>
-                          <span>₡ 30.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>
+                              Ab Cuts 120 cápsulas. Suplemento para eliminar la
+                              grasa abdominal.
+                            </p>
+                            <span>₡ 30.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -350,19 +522,20 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/lopi.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>Lipo 6 Black Keto 60 cápsulas</p>
-                          <span>₡ 26.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>Lipo 6 Black Keto 60 cápsulas</p>
+                            <span>₡ 26.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -374,19 +547,100 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/GuiaKeto_1024x1024@2x.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
+                          <figcaption class="text-center">
+                            <p>Dieta Keto Versión Digital</p>
+                            <span>₡ 10.000,00</span>
+                          </figcaption>
+                        </figure>
+
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
-                        <div class="card-body">
-                          <p>Dieta Keto Versión Digital</p>
-                          <span>₡ 10.000,00</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/cuts.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Ab Cuts 120 cápsulas. Suplemento para eliminar la
+                              grasa abdominal.
+                            </p>
+                            <span>₡ 30.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/lopi.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>Lipo 6 Black Keto 60 cápsulas</p>
+                            <span>₡ 26.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/GuiaKeto_1024x1024@2x.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>Dieta Keto Versión Digital</p>
+                            <span>₡ 10.000,00</span>
+                          </figcaption>
+                        </figure>
+
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -406,22 +660,23 @@
                   role="tabpanel"
                   aria-labelledby="list-Termogénicos-list">
                   <div class="row">
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/cafeina.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>
-                            Cafeína Pura 125 tabletas 220mg. Suplemento
-                            Energizante Natural.
-                          </p>
-                          <span>₡ 25.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>
+                              Cafeína Pura 125 tabletas 220mg. Suplemento
+                              Energizante Natural.
+                            </p>
+                            <span>₡ 25.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -433,23 +688,24 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/lipo-6.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
-                        </div>
-                        <div class="card-body">
-                          <p>
-                            Nutrex Research Lipo-6 Hardcore Suplemento de
-                            pérdida de peso, supresor del apetito, píldoras
-                            dietéticas, cápsulas quemagrasa, 60 unidades
-                          </p>
-                          <span>₡ 30.000,00</span>
-                        </div>
+                          <figcaption class="text-center">
+                            <p>
+                              Nutrex Research Lipo-6 Hardcore Suplemento de
+                              pérdida de peso, supresor del apetito, píldoras
+                              dietéticas, cápsulas quemagrasa, 60 unidades
+                            </p>
+                            <span>₡ 30.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -461,22 +717,108 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="card">
-                        <div class="card-header d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
                           <img
                             src="src/images/productos/hydra.webp"
                             alt="Aminoacidos"
                             class="img-fluid"
                             width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Hydroxycut Hardcore 100 cápsulas. Suplemento para
+                              la pérdida de peso.
+                            </p>
+                            <span>₡ 27.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
-                        <div class="card-body">
-                          <p>
-                            Hydroxycut Hardcore 100 cápsulas. Suplemento para la
-                            pérdida de peso.
-                          </p>
-                          <span>₡ 27.000,00</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/cafeina.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Cafeína Pura 125 tabletas 220mg. Suplemento
+                              Energizante Natural.
+                            </p>
+                            <span>₡ 25.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
                         </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/lipo-6.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Nutrex Research Lipo-6 Hardcore Suplemento de
+                              pérdida de peso, supresor del apetito, píldoras
+                              dietéticas, cápsulas quemagrasa, 60 unidades
+                            </p>
+                            <span>₡ 30.000,00</span>
+                          </figcaption>
+                        </figure>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button
+                            type="button"
+                            data-bs-toggle="tooltip"
+                            data-bs-title="Comprar">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                      <div class="card mb-3">
+                        <figure
+                          class="imghvr-push-up d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/hydra.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                          <figcaption class="text-center">
+                            <p>
+                              Hydroxycut Hardcore 100 cápsulas. Suplemento para
+                              la pérdida de peso.
+                            </p>
+                            <span>₡ 27.000,00</span>
+                          </figcaption>
+                        </figure>
                         <div class="card-footer d-flex justify-content-center">
                           <br /><br />
                           <button
@@ -494,8 +836,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
+    <footer class="display-1 text-white"><h1>hola</h1></footer>
 
     <!-- js content -->
     <script

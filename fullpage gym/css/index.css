@@ -31,9 +31,13 @@ section[id] {
 .row-down {
   position: absolute;
   font-size: 3rem;
-  bottom: -100px;
+  bottom: 30px;
   left: 50%;
   color: var(--color-orange);
+}
+.row-down:hover {
+  scale: 1.1;
+  color: #fff;
 }
 .header nav {
   font-size: 1.2rem;
@@ -271,55 +275,6 @@ section h2 {
   box-shadow: 0 0 4px 1px var(--color-black-light);
 }
 
-.cicle-number {
-  align-items: center;
-  border: 2px solid #252525;
-  border-radius: 50%;
-  display: flex;
-  font-size: 1.2rem;
-  font-weight: 500;
-  height: 35px;
-  justify-content: center;
-  margin: 0 5px;
-  width: 35px;
-}
-.text-acordeon {
-  font-size: 1.1rem;
-  padding-top: 5px;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #000;
-  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
-    var(--bs-accordion-border-color);
-  color: var(--color-orange);
-  font-weight: bold;
-}
-.accordion-button:not(.collapsed) .cicle-number {
-  background-color: var(--color-orange);
-  color: #000;
-}
-
-.accordion-button:is(:hover, :focus) {
-  border: none;
-  box-shadow: none;
-  outline: none;
-}
-.accordion-button {
-  border: none !important;
-  border-radius: 10px !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-.accordion-header {
-  padding: 0;
-}
-.accordion-body {
-  margin-left: 60px;
-  max-width: 565px;
-  padding: 0;
-}
-
 /* cards  */
 .clases .card-header p {
   font-size: 1.25rem;
@@ -375,6 +330,104 @@ section h2 {
   font-weight: 500;
 }
 
-#dsf {
-  scroll-margin-top: 90px !important;
+.valores-text {
+  font-size: 3rem;
+}
+
+.accordion-item {
+  background-color: transparent !important;
+}
+.accordion-item button,
+.accordion-item span {
+  background-color: transparent !important;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/* valores */
+.banner-valores {
+  background-attachment: fixed;
+  background-image: url("../src/images/gym.jpg");
+
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.795);
+  color: #fff;
+  height: calc(100vh);
+  padding-top: var(--header-size);
+  width: 100%;
+}
+
+.cicle-number {
+  align-items: center;
+  border: 2px solid #ffbb00;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 35px;
+  justify-content: center;
+  margin: 0 5px;
+  width: 35px;
+}
+.text-acordeon {
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #000 !important;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--bs-accordion-border-color);
+  color: var(--color-orange);
+  font-weight: bold;
+}
+.accordion-button:not(.collapsed) .cicle-number {
+  background-color: var(--color-orange) !important;
+  color: #000;
+  border: 2px solid #000000;
+
+}
+
+.accordion-button:is(:hover, :focus) {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.accordion-button {
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.accordion-header {
+  padding: 0;
+}
+.accordion-body {
+  margin-left: 60px;
+  max-width: 565px;
+  padding: 0;
+}
+
+.text-acordeon {
+  color: #f2f2f2;
+  font-size: 1.4rem;
+
+}
+.accordion-button::after {
+  background-image: none !important;
+}
+
+.accordion-button:not(.collapsed) .fa-chevron-down {
+  transform: rotate(-180deg);
+  transition-duration: 0.5s;
+}
+.accordion-button.collapsed .fa-chevron-down {
+  transform: rotate(0deg);
+  transition-duration: 0.5s;
+}
+.fa-chevron-down {
+  position: absolute;
+  right: 10px;
+  font-size: 1.5rem;
 }
