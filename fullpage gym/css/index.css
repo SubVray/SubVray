@@ -32,8 +32,9 @@ section[id] {
   position: absolute;
   font-size: 3rem;
   bottom: 30px;
-  left: 50%;
+  left: 49%;
   color: var(--color-orange);
+  transform: translate(-49%);
 }
 .row-down:hover {
   scale: 1.1;
@@ -75,6 +76,14 @@ section[id] {
 }
 .banner p {
   font-size: 1.5rem;
+}
+.btn-valores {
+  text-decoration: none;
+  color: #ffbb00;
+}
+.btn-valores:hover {
+  color: #ffbb00;
+  text-decoration: underline wavy #ffbb00;
 }
 
 .bg-header {
@@ -386,7 +395,6 @@ section h2 {
   background-color: var(--color-orange) !important;
   color: #000;
   border: 2px solid #000000;
-
 }
 
 .accordion-button:is(:hover, :focus) {
@@ -412,7 +420,6 @@ section h2 {
 .text-acordeon {
   color: #f2f2f2;
   font-size: 1.4rem;
-
 }
 .accordion-button::after {
   background-image: none !important;
@@ -430,4 +437,11 @@ section h2 {
   position: absolute;
   right: 10px;
   font-size: 1.5rem;
+}
+.nav-item a {
+  font-weight: bolder;
+}
+.nav-item a:hover {
+  background-color: #ffbb00;
+  color: #252525 !important;
 }
