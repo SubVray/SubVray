@@ -1,0 +1,40 @@
+@import "./font.css";
+
+:root {
+  --header-size: 90px;
+
+  /* colors */
+  --color-black: #000;
+  --color-black-light: #252525;
+  --color-orange: #ffbb00;
+  --color-bons: #f2f2f2;
+  --color-white: #fff;
+  --color-gray: #868686;
+}
+h1 {
+  padding-top: 90px;
+}
+.listas .card {
+  height: 452px;
+}
+
+.card-body {
+  position: relative;
+}
+.card-body span {
+  position: absolute;
+  bottom: 10px;
+}
+
+.card-footer button {
+  background-color: #252525;
+  padding: 10px 40px;
+  border: none;
+  color: var(--color-orange);
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+.card-footer button:hover {
+  background-color: var(--color-orange);
+  color: #252525;
+}
