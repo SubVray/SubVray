@@ -631,3 +631,7 @@ section {
 input {
   font-size: 1.2rem !important;
 }
+
+.offcanvas {
+  z-index: 1000000;
+}
