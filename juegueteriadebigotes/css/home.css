@@ -432,12 +432,10 @@ button.btn-mini-carousel:hover {
     flex-direction: column !important;
   }
 }
-
-.tira-comp {
+body {
   background-image: url("../images/bg.webp");
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.295);
-  margin: 30px 0;
 }
+
 .tira-comp .item img {
   height: auto;
   margin-right: 25px;
@@ -534,4 +532,74 @@ button.btn-mini-carousel:hover {
   height: 1px;
   margin: 5px 0;
   background-color: #f2f2f2;
+}
+
+/* testimonial */
+.cliente {
+  width: 120px !important;
+}
+.nombre-cliente {
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+.cometarios-cliente {
+}
+
+.sct-testimonial .item .card {
+  height: 355px;
+}
+.sct-testimonial .owl-stage-outer {
+  height: 355px;
+}
+.sct-testimonial .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 110%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -1;
+}
+.sct-testimonial .owl-nav button {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sct-testimonial .owl-nav button:hover {
+  background-color: transparent !important;
+  scale: 1.1;
+}
+.sct-testimonial .owl-nav button:hover span {
+  background-color: transparent !important;
+  color: var(--color-primary);
+}
+.sct-testimonial .owl-nav button span {
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  color: var(--color-secondary-shadow);
+}
+
+/* clases personalizadas */
+section {
+  padding: 20px 0;
+}
+.star-container {
+  position: absolute;
+  bottom: 8px;
+}
+.star {
+  font-size: 1.2rem;
+  color: #252525;
+}
+.star-color {
+  color: var(--color-primary);
+}
+.z-indexI {
+  z-index: 100000;
 }

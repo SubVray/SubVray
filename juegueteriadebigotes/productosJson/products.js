@@ -1107,3 +1107,93 @@ const tiendaPicinas = [
     imgUrl: "images/categorias/verano/BW57273-1.jpg",
   },
 ];
+
+// tienda juegos de mesa
+const tiendaJuegosMesa = [
+  {
+    name: "Juego Uno Lightyear",
+    SKU: "MTHJC24",
+    sale: 0,
+    price: 4995.0,
+    imgUrl: "images/categorias/verano/MTHJC24-1.jpg",
+    imgUrl2: "images/categorias/verano/MTHJC24-2.jpg",
+  },
+  {
+    name: "Juego Uno All Wild",
+    SKU: "MTHHL33",
+    sale: 0,
+    price: 4995.0,
+    imgUrl: "images/categorias/verano/MTHHL33-1.jpg",
+    imgUrl2: "images/categorias/verano/MTHHL33-2.jpg",
+  },
+  {
+    name: "Juego Uno Jurassic World ",
+    SKU: "MTGXD72",
+    sale: 0,
+    price: 4995.0,
+    imgUrl: "images/categorias/verano/MTGXD72-1.jpg",
+    imgUrl2: "images/categorias/verano/MTGXD72-2.jpg",
+  },
+  {
+    name: "Rompecabezas Lenticular Paw Patrol Set de 2 - 24pz ",
+    SKU: "BT60331",
+    sale: 0,
+    price: 4990.0,
+    imgUrl: "images/categorias/verano/BT60331-1.jpg",
+  },
+  {
+    name: "Rompecabezas Paw Patro la Película Rompecabezas Surtido de 2 ( Se Venden por Separado ) ",
+    SKU: "BT60574",
+    sale: 0,
+    price: 1990.0,
+    imgUrl: "images/categorias/verano/BT60574-1.jpg",
+    imgUrl2: "images/categorias/verano/BT60574-2.jpg",
+  },
+  {
+    name: "Juego Creaciones de Dominó Lily Hevesh",
+    SKU: "BT60592",
+    sale: 0,
+    price: 19995.0,
+    imgUrl: "images/categorias/verano/BT60592-1.jpg",
+    imgUrl2: "images/categorias/verano/BT60592-2.jpg",
+  },
+  {
+    name: "Juego de Mesa Le Tour ",
+    SKU: "RN12015D",
+    sale: 0,
+    price: 17995.0,
+    imgUrl: "images/categorias/verano/RN12015D-1.jpg",
+  },
+  {
+    name: "Juego de Mesa Battleship (Batalla Naval) ",
+    SKU: "HBF4527",
+    sale: 0,
+    price: 22995.0,
+    imgUrl: "images/categorias/verano/HBF4527-1.jpg",
+  },
+  {
+    name: "Mini Mesa de Futbolín 51x31x10cm  ",
+    SKU: "WWXJ801",
+    sale: 0,
+    price: 19995.0,
+    imgUrl: "images/categorias/verano/WWXJ801-1.jpg",
+  },
+];
+
+// tienda Monopoly
+const tiendaMonopoly = [
+  {
+    name: "Juego de Mesa Monopoly Star Wars Boba Fett",
+    SKU: "HBF5394",
+    sale: 0,
+    price: 21995.0,
+    imgUrl: "images/categorias/verano/HBF5394-1.jpg",
+  },
+  {
+    name: "Juego de Mesa Monopoly Star Wars Boba Fett",
+    SKU: "HBF5394",
+    sale: 0,
+    price: 21995.0,
+    imgUrl: "images/categorias/verano/HBF5394-1.jpg",
+  },
+];

@@ -58,5 +58,5 @@ if (userConected !== null) {
 
 const cerrarSesion = () => {
   window.localStorage.clear();
-  window.location.reload();
+  window.location.href = "home.html";
 };
