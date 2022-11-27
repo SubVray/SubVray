@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/7bc87e2382.js"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/menu-hamburguer.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Fitness Club</title>
+  </head>
+  <body
+    id="home"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-example"
+    data-bs-smooth-scroll="true"
+    class="scrollspy-example">
+    <!-- TODO: header -->
+    <header class="header w-100">
+      <nav class="navbar navbar-expand-lg text-center fixed-top">
+        <div class="container-fluid bg-header pd">
+          <a class="navbar-brand" href="#">
+            <img
+              src="src/images/logo-gym-header.png"
+              alt="Logo"
+              width="85"
+              height="80" />
+          </a>
+          <button
+            class="navbar-toggler second-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hamburger-menu"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <div class="animated-icon2">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </button>
+          <div class="collapse navbar-collapse" id="hamburger-menu">
+            <ul
+              class="navbar-nav m-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#carousel">Salas Y Equipos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#clases">Clases</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#planes">Planes</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Extras
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Productos</a></li>
+                  <li><a class="dropdown-item" href="#">Galería</a></li>
+                  <li>
+                    <a class="dropdown-item" href="valores.html">Valores</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- TODO: listas -->
+      <section class="listas" id="lista-productos">
+        <h2 class="text-center title-plan bg-bk">
+          <span class="tu-plan">Productos</span>
+        </h2>
+        <div class="container-fluid mt-5">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-3">
+              <h3>Categorias</h3>
+              <div class="list-group" id="list-tab" role="tablist">
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="list-home-list"
+                  data-bs-toggle="list"
+                  href="#list-home"
+                  role="tab"
+                  aria-controls="list-home"
+                  >Amino Acidos</a
+                >
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="list-profile-list"
+                  data-bs-toggle="list"
+                  href="#list-profile"
+                  role="tab"
+                  aria-controls="list-profile"
+                  >Profile</a
+                >
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="list-messages-list"
+                  data-bs-toggle="list"
+                  href="#list-messages"
+                  role="tab"
+                  aria-controls="list-messages"
+                  >Messages</a
+                >
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="list-settings-list"
+                  data-bs-toggle="list"
+                  href="#list-settings"
+                  role="tab"
+                  aria-controls="list-settings"
+                  >Settings</a
+                >
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-9">
+              <h3>Productos</h3>
+
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="list-home"
+                  role="tabpanel"
+                  aria-labelledby="list-home-list">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="card">
+                        <div class="card-header d-flex justify-content-center">
+                          <img
+                            src="src/images/productos/Aminoacidos.webp"
+                            alt="Aminoacidos"
+                            class="img-fluid"
+                            width="200px" />
+                        </div>
+                        <div class="card-body">
+                          <p>Aminoácidos fórmula completa 120 capsulas.</p>
+                          <span>₡ 21.000,00</span>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                          <br /><br />
+                          <button type="button" class="">Comprar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="list-profile"
+                  role="tabpanel"
+                  aria-labelledby="list-profile-list">
+                  ...
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="list-messages"
+                  role="tabpanel"
+                  aria-labelledby="list-messages-list">
+                  ...
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="list-settings"
+                  role="tabpanel"
+                  aria-labelledby="list-settings-list">
+                  ...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js content -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"
+      integrity="sha512-oHBLR38hkpOtf4dW75gdfO7VhEKg2fsitvHZYHZjObc4BPKou2PGenyxA5ZJ8CCqWytBx5wpiSqwVEBy84b7tw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll-smooth.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+  </body>
+</html>
