@@ -27,6 +27,7 @@
     <title>Jugueteria de Bigotes</title>
   </head>
   <body id="home">
+    <!-- header -->
     <header class="fixed-top bg-light container-fluid">
       <nav class="navbar navbar-expand-lg navbar-home">
         <div class="container">
@@ -61,13 +62,13 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link promociones" href="#ofertas"
+                  <a class="nav-link promociones-h" href="#ofertas"
                     >Promociones</a
                   >
                 </li>
                 <li class="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle categorias"
+                    class="nav-link dropdown-toggle categorias-h"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -122,26 +123,30 @@
               </ul>
             </div>
             <div class="text-center cart-login-container">
-              <a
-                href="#"
-                class="login"
-                id="login"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >Login</a
-              >
-              <a href="perfil.html" class="login" id="nameUser"></a>
+              <div class="c1">
+                <a
+                  href="#"
+                  class="login"
+                  id="login"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  >Login</a
+                >
+                <a href="perfil.html" class="login" id="nameUser"></a>
+              </div>
               <span> / </span>
-              <a
-                class="cart-shopping"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"
-                onclick="showCarrito()">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </a>
-              <span class="count-cart-shopping" id="product-counter">0</span>
+              <div class="c2">
+                <a
+                  class="cart-shopping"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                  onclick="showCarrito()">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <span class="count-cart-shopping" id="product-counter">0</span>
+              </div>
             </div>
           </div>
         </div>
@@ -226,13 +231,13 @@
     <section
       class="banner container-fluid d-flex justify-content-center align-items-center">
       <div class="container m-auto border text-center">
-        <h1>Encuentra los mejores juguetes aqui</h1>
+        <h1 class="fw-comic-titles">Encuentra los mejores juguetes aqui</h1>
       </div>
     </section>
 
     <!-- promociones  -->
     <section class="container-fluid" id="ofertas">
-      <h2 class="text-center titles">Promociones</h2>
+      <h2 class="text-center fw-comic-titles promociones">Promociones</h2>
       <div class="container m-auto" id="mostrador">
         <div class="row m-auto" id="tienda-1"></div>
       </div>
@@ -301,7 +306,7 @@
 
     <!-- categories -->
     <section class="categorias" id="categorias">
-      <h2 class="text-center titles">Categorías</h2>
+      <h2 class="text-center fw-comic-titles categorias-s">Categorías</h2>
       <p class="text-center text-categorias">
         Contamos con una gran cantidad de juguetes
       </p>
@@ -359,7 +364,7 @@
       </div>
     </section>
 
-    <!-- Modal -->
+    <!-- Modal login-->
     <div
       class="modal fade"
       id="staticBackdrop"
@@ -371,9 +376,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            <h2 class="modal-title fs-5 fw-comic" id="staticBackdropLabel">
               Iniciar Sesión
-            </h1>
+            </h2>
             <button
               type="button"
               class="btn shadow-none border-0"
@@ -383,17 +388,19 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="form-control">
-              <div class="py-1">
-                <label for="text-email">Correo Electrónico:</label>
+            <form class="form-control" id="form-login">
+              <div class="py-2">
+                <label for="text-email" class="fw-comic"
+                  >Correo Electrónico:</label
+                >
                 <input
                   type="email"
                   class="form-control"
                   id="text-email"
                   placeholder="Correo Electrónico:" />
               </div>
-              <div class="py-1">
-                <label for="text-password">Contraseña:</label>
+              <div class="py-2">
+                <label for="text-password" class="fw-comic">Contraseña:</label>
                 <input
                   type="password"
                   class="form-control"
@@ -417,7 +424,7 @@
 
     <!-- testimonials -->
     <section class="sct-testimonial">
-      <h2 class="fw-comic text-center titles">Testimoniales</h2>
+      <h2 class="fw-comic-titles text-center">Testimoniales</h2>
       <p class="text-center">
         Comentarios de clientes satisfechos de sus compras en jugueteria de
         bigotes.
@@ -666,7 +673,7 @@
       <i class="fa-solid fa-circle-up"></i>
     </button>
 
-    <!-- js -->
+    <!-- js librerias -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -714,7 +721,6 @@
         },
       });
     </script>
-
     <!-- my js -->
     <script src="js/menu.js"></script>
     <script src="js/scroll-smooth.js"></script>
@@ -726,6 +732,5 @@
     <script src="js/idioma.js"></script>
     <script src="users/users.js"></script>
     <script src="users/login.js"></script>
-    
   </body>
 </html>

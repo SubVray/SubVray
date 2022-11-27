@@ -1,15 +1,17 @@
 const langEl = document.querySelector(".langWrap");
 const links = document.querySelectorAll("header button");
 const inicio = document.querySelector(".inicio");
-const promociones = document.querySelector(".promociones");
+const promocionesHeader = document.querySelector(".promociones-h");
 const sucursales = document.querySelector(".sucursales");
-const categorias = document.querySelector(".categorias");
+const categoriasHeader = document.querySelector(".categorias-h");
 const bebes = document.querySelector(".bebes");
 const juegosMesa = document.querySelector(".juegos-mesa");
 const deportes = document.querySelector(".deportes");
 const nerf = document.querySelector(".nerf");
 const motorafina = document.querySelector(".motorafina");
 const verano = document.querySelector(".verano");
+const promociones = document.querySelector(".promociones");
+const categorias = document.querySelector(".categorias-s");
 
 // categories images
 const imgBebes = document.querySelector(".img-bebes");
@@ -23,9 +25,9 @@ links.forEach((r) => {
   r.addEventListener("click", () => {
     const attr = r.getAttribute("language");
     inicio.textContent = changeLanguage[attr].inicio;
-    promociones.textContent = changeLanguage[attr].promociones;
+    promocionesHeader.textContent = changeLanguage[attr].promocionesHeader;
     sucursales.textContent = changeLanguage[attr].sucursales;
-    categorias.textContent = changeLanguage[attr].categorias;
+    categoriasHeader.textContent = changeLanguage[attr].categoriasHeader;
     bebes.textContent = changeLanguage[attr].bebes;
     juegosMesa.textContent = changeLanguage[attr].juegosMesa;
     deportes.textContent = changeLanguage[attr].deportes;
@@ -38,15 +40,17 @@ links.forEach((r) => {
     imgNerf.src = changeLanguage[attr].imgNerf;
     imgMotoraFina.src = changeLanguage[attr].imgMotoraFina;
     imgVerano.src = changeLanguage[attr].imgVerano;
+    promociones.textContent = changeLanguage[attr].promociones;
+    categorias.textContent = changeLanguage[attr].categorias;
   });
 });
 
 let changeLanguage = {
   spanish: {
     inicio: "Inicio",
-    promociones: "Promociones",
+    promocionesHeader: "Promociones",
     sucursales: "Sucursales",
-    categorias: "Categorías ",
+    categoriasHeader: "Categorías ",
     bebes: "Bebes",
     juegosMesa: "Juegos de mesa",
     deportes: "Deportes",
@@ -54,6 +58,8 @@ let changeLanguage = {
     motorafina: "Motorafina",
     verano: "Verano",
     // agregar titulos
+    promociones: "Promociones",
+    categorias: "Categorías ",
 
     // images categories
     imgBebes: "images/categorias/bebes.png",
@@ -67,9 +73,9 @@ let changeLanguage = {
   // english
   english: {
     inicio: "Home",
-    promociones: "promotions",
+    promocionesHeader: "Promotions",
     sucursales: "Branches",
-    categorias: "categories ",
+    categoriasHeader: "categories ",
     bebes: "Babies",
     juegosMesa: "Table games",
     deportes: "Sports",
@@ -77,6 +83,8 @@ let changeLanguage = {
     motorafina: "Fine Motor Skills ",
     verano: "Summer",
     // agregar titulos
+    promociones: "Promotions",
+    categorias: "categories ",
 
     // images categories
     imgBebes: "images/categorias/babies.png",

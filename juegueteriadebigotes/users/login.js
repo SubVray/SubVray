@@ -2,7 +2,8 @@ let email = document.getElementById("text-email");
 let password = document.getElementById("text-password");
 let nameUser = document.getElementById("nameUser");
 let loginText = document.getElementById("login");
-const login = (e) => {
+let formLogin = document.querySelectorAll("#form-login input");
+const login = () => {
   users.forEach((user) => {
     if (user.email == email && user.password == password) {
       usuarioValidado = true;
@@ -27,11 +28,22 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
   });
 
   if (usuarioValidado == false) {
+    formLogin.forEach((input) => {
+      if (input.value == "") {
+        input.classList.remove("input-ivalid");
+        input.classList.add("input-invalid");
+      } else {
+        input.classList.remove("input-invalid");
+        input.classList.add("input-valid");
+      }
+    });
     Swal.fire({
       icon: "warning",
       title: "No se ha podido iniciar sesión",
       text: "El correo del usuario o la contraseña son incorrectos",
       confirmButtonText: "Entendido",
+    }).then(() => {
+      loginText.click();
     });
   } else {
     let usuarioConectado = localStorage.getItem("usuarioConectado");

@@ -101,9 +101,9 @@ const createStore = () => {
     window.location ==
       "http://127.0.0.1:5501/juegueteriadebigotes/juegosmesa.html"
   ) {
-    allTienda = tiendaJuegosMesa;
+    allTienda = tiendaJuegosMesaAll;
     subTienda1 = tiendaJuegosMesa;
-    subTienda2 = tiendaJuegosMesa;
+    subTienda2 = tiendaMonopoly;
     changeFilter();
   } else if (
     window.location ==
