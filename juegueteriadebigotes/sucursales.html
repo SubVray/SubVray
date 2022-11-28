@@ -28,7 +28,6 @@
     <title>Jugueteria de Bigotes</title>
   </head>
   <body id="home">
-    
     <header class="fixed-top bg-light container-fluid">
       <nav class="navbar navbar-expand-lg navbar-home">
         <div class="container">
@@ -124,18 +123,30 @@
               </ul>
             </div>
             <div class="text-center cart-login-container">
-              <a href="#" class="login">Login</a>
+              <div class="c1">
+                <a
+                  href="#"
+                  class="login"
+                  id="login"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  >Login</a
+                >
+                <a href="perfil.html" class="login" id="nameUser"></a>
+              </div>
               <span> / </span>
-              <a
-                class="cart-shopping"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"
-                onclick="showCarrito()">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </a>
-              <span class="count-cart-shopping" id="product-counter">0</span>
+              <div class="c2">
+                <a
+                  class="cart-shopping"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                  onclick="showCarrito()">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <span class="count-cart-shopping" id="product-counter">0</span>
+              </div>
             </div>
           </div>
         </div>
@@ -787,5 +798,7 @@
     <script src="productosJson/tienda.js"></script>
     <script src="js/idioma.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="users/users.js"></script>
+    <script src="users/login.js"></script>
   </body>
 </html>

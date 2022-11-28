@@ -19,7 +19,6 @@ let btnPlus = document.getElementById("plus");
 let nCantidad = 1;
 
 // carrito
-let buyUser = [];
 let allTienda = [{}];
 let subTienda1 = [{}];
 let subTienda2 = [{}];
@@ -650,10 +649,14 @@ if (
 
 const pay = () => {
   carrito = JSON.parse(localStorage.getItem("carrito"));
-  buyUser = localStorage.setItem("buyUser", JSON.stringify(carrito));
+  let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
+  buyAllUser = [
+    ...buyAllUser,
+    { productos: carrito, date: new Date().toISOString().split("T")[0] },
+  ];
+  let allProductsBuy = JSON.stringify(buyAllUser);
+  localStorage.setItem("allProductsBuy", allProductsBuy);
 
   localStorage.removeItem("carrito");
   window.location.reload();
 };
-let comprasUser = JSON.parse(localStorage.getItem("buyUser"));
-console.log(comprasUser);
