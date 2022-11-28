@@ -321,7 +321,6 @@ const crearHTML = () => {
     btnBorrar.addEventListener("click", () => {
       const id = product.id;
       carrito = carrito.filter((product) => product.id != id);
-      console.log(id);
       crearHTML();
       sincronizarStorage();
     });

@@ -1,0 +1,36 @@
+#text-fecha {
+  width: 300px;
+}
+#form-compras {
+  max-width: 1299px;
+  padding: 10px 1%;
+}
+
+label {
+  height: 42.781px !important;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.name-cart-product {
+  font-size: 1rem !important;
+}
+
+.skup,
+.cantidadp,
+.pricep {
+  font-size: 1rem !important;
+}
+
+.btn-logout {
+  position: fixed;
+  right: 20px;
+}
+#form-compras {
+  position: fixed !important;
+  top: 80px;
+z-index: 10000;
+  display: block;
+}
