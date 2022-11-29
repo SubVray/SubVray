@@ -1,0 +1,151 @@
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .banner {
+    padding-top: 150px !important;
+    padding-bottom: 50px !important;
+    height: auto !important;
+  }
+  .banner h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .banner p {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  .logo {
+    width: 300px;
+    margin-left: 30px;
+  }
+  .row-down {
+    display: none;
+  }
+  h2 {
+    font-size: 1.8rem !important;
+    padding: 15px !important;
+  }
+  .carousel-control-next {
+    right: 10px;
+  }
+  .carousel-control-prev {
+    left: 10px;
+  }
+  .fa-chevron-left,
+  .fa-chevron-right {
+    margin-top: -50px;
+    background-color: #000;
+    border-radius: 50%;
+    color: var(--color-orange);
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .carousel img {
+    height: 308px;
+  }
+  .clases .container {
+    padding-top: 25px;
+  }
+  .planes .card {
+    height: 890px !important;
+  }
+}
+@media (min-width: 576px) {
+  .banner {
+    padding-top: 200px !important;
+    padding-bottom: 110px !important;
+    height: auto !important;
+  }
+  .banner h1 {
+    font-size: 4rem;
+  }
+  .banner p {
+    font-size: 1.5rem;
+  }
+  .logo {
+    width: 300px;
+  }
+  .row-down {
+    display: none;
+  }
+
+  #carousel img {
+    height: 408px;
+  }
+  .clases .container {
+    padding-top: 40px;
+  }
+  .planes .card {
+    height: 880px !important;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .banner h1 {
+    font-size: 6rem;
+  }
+  .banner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 100vh !important;
+  }
+  .planes p {
+    max-width: 1000px;
+  }
+  .planes .card {
+    height: 900px !important;
+  }
+  .row-down {
+    display: block;
+  }
+
+  #carousel img {
+    height: 75vh;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .banner h1 {
+    font-size: 10rem;
+  }
+  .banner p {
+    font-size: 1.5rem;
+  }
+  .banner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 100vh !important;
+  }
+  .logo {
+    width: 450px;
+  }
+  .planes p {
+    max-width: 1200px;
+  }
+  .planes .card {
+    height: 850px !important;
+  }
+  .row-down {
+    display: block;
+  }
+
+  #carousel img {
+    height: 80vh;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+	  .banner h1 {
+    font-size: 12rem;
+  }
+  .banner p {
+    font-size: 1.5rem;
+  }
+}

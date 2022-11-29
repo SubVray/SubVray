@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/menu-hamburguer.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/reglas.css" />
     <title>Fitness Club</title>
   </head>
   <body
@@ -105,7 +106,8 @@
         class="banner d-flex justify-content-center align-items-center position-relative">
         <div class="container">
           <div class="row w-100">
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div
+              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center justify-content-md-start">
               <img
                 src="src/images/logo-gym2.png"
                 alt=""
@@ -114,7 +116,9 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
               <h1>Juntos</h1>
               <p>En tu salud y tu vida. Unite a la Familia Fitness Club.</p>
-              <p>Nuestros <a href="valores.html" class="btn-valores">valores</a></p>
+              <p>
+                Nuestros <a href="valores.html" class="btn-valores">valores</a>
+              </p>
             </div>
           </div>
         </div>
@@ -203,12 +207,12 @@
       </section>
 
       <!-- TODO:planes -->
-      <section class="clases" id="clases">
+      <section class="clases pb-5" id="clases">
         <h2 class="text-center title-plan bg-bk">
           Nuestras<span class="tu-plan"> Clases</span>
         </h2>
         <div class="container">
-          <div class="row">
+          <div class="row d-flex justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-4 my-2">
               <div class="card">
                 <div class="card-header text-center">
@@ -221,11 +225,11 @@
                   </div>
                   <p class="text-center">Sala de pesas</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body m-auto">
                   <img
                     src="src/images/sala de pesas.jpg"
                     alt=""
-                    class="img-fluid" />
+                    class="img-fluid " />
                 </div>
                 <div class="card-footer text-center">
                   <a href="" class="read-more-cards">Leer más </a>
@@ -244,7 +248,7 @@
                   </div>
                   <p class="text-center">Funcionales</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body  m-auto">
                   <img
                     src="src/images/funcionales.png"
                     alt=""
@@ -267,7 +271,7 @@
                   </div>
                   <p class="text-center">Cardio Dance</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body  m-auto">
                   <img
                     src="src/images/cadiodance.jpeg"
                     alt=""
@@ -290,7 +294,7 @@
                   </div>
                   <p class="text-center">Cardio Combat</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body  m-auto">
                   <img
                     src="src/images/Cardio Combat.jpg"
                     alt=""
@@ -313,7 +317,7 @@
                   </div>
                   <p class="text-center">G.A.P</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body  m-auto">
                   <img src="src/images/gap.jpg" alt="" class="img-fluid" />
                 </div>
                 <div class="card-footer text-center">
@@ -546,9 +550,94 @@
           </div>
         </div>
       </section>
-
-
+      <section class="map container-fluid p-0 my-5">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1CAVwuuFmL3aEaG6sH-ackhS_Ff7Bje4&hl=en&ehbc=2E312F"
+          width="100%"
+          height="500"></iframe>
+      </section>
+      <section class="contacto container w-100">
+        <div class="row contact">
+          <div class="col-12 col-md-6 col-lg-6 d-flex flex-column gap-3">
+            <h3>CONTACTENOS</h3>
+            <p class="contact-text">
+              Llena nuestro formulario para contactarte
+            </p>
+            <div>
+              <p>
+                <i class="fa-solid fa-location-dot"></i> Av. 51, Guaria
+                Oriental, San José, Moravia
+              </p>
+              <a href=""><i class="fa-solid fa-phone"></i> +506 4702-0922</a>
+              <a href=""
+                ><i class="fa-brands fa-whatsapp"></i> +506 7923-8983</a
+              >
+            </div>
+            <div class="">
+              <a href=""
+                ><i class="fa-solid fa-envelope"></i> info@fitnessclubcr.com</a
+              >
+            </div>
+            <div class="hexagons-container">
+              <p>Siguenos en nuestras Redes Sociales</p>
+              <span class="fa-stack">
+                <a href="https://www.facebook.com">
+                  <span class="hexagon"></span>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+              </span>
+              <span class="fa-stack">
+                <a href="https://www.instagram.com">
+                  <span class="hexagon"></span>
+                  <i class="fab fa-instagram fa-stack-1x"></i>
+                </a>
+              </span>
+              <span>Fitness Club</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <form action="" class="form-control shadow p-3 d-flex flex-column">
+              <div class="my-2">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  class="form-control" />
+              </div>
+              <div class="my-2">
+                <label for="nombre" class="form-label">Correo:</label>
+                <input
+                  type="email"
+                  name="nombre"
+                  id="nombre"
+                  class="form-control" />
+              </div>
+              <div class="my-2">
+                <label for="textarea">Mensaje:</label>
+                <textarea
+                  id="textarea"
+                  class="textarea form-control"
+                  rows="3"></textarea>
+              </div>
+              <div class="my-2">
+                <input type="checkbox" id="ap" class="mt-2" />
+                <label for="ap"
+                  >Acepta que su informacion sera de uso confidencial.</label
+                >
+                <div class="w-50 m-auto mt-3">
+                  <button type="button" class="btn btn-send w-100 fw-bold">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer></footer>
 
     <!-- js content -->
     <script
