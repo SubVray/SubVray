@@ -494,7 +494,7 @@ const createItemsSubCategories = (allItemsCategories) => {
     salePrice.innerText = `₡ ${product.sale.toLocaleString("en-US")}`;
 
     // agregar clases a elementos
-    cols.classList.add("product", "col-sm-6", "col-md-4", "col-lg-4");
+    cols.classList.add("product", "col-sm-6", "col-md-6", "col-lg-4");
     item.classList.add("item-product", "bg-white");
     imgcontainer.classList.add("contenedor-foto");
     imgProduct.classList.add("img-fluid");
@@ -568,7 +568,7 @@ const createItemsSubCategories2 = (allItemsCategories) => {
     salePrice.innerText = `₡ ${product.sale.toLocaleString("en-US")}`;
 
     // agregar clases a elementos
-    cols.classList.add("product", "col-sm-6", "col-md-4", "col-lg-4");
+    cols.classList.add("product", "col-sm-6", "col-md-6", "col-lg-4");
     item.classList.add("item-product", "bg-white");
     imgcontainer.classList.add("contenedor-foto");
     imgProduct.classList.add("img-fluid");
@@ -625,7 +625,6 @@ const createItemsSubCategories2 = (allItemsCategories) => {
 };
 
 // valor total carrito
-
 const getValorTotalCarrito = () => {
   let priceMasCantidad = 0;
   let cantidadP = 0;
@@ -651,11 +650,18 @@ const pay = () => {
   let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
   buyAllUser = [
     ...buyAllUser,
-    { productos: carrito, date: new Date().toISOString().split("T")[0] },
+    { productos: carrito, date: new Date().toLocaleDateString().split("T")[0] },
   ];
   let allProductsBuy = JSON.stringify(buyAllUser);
   localStorage.setItem("allProductsBuy", allProductsBuy);
-
-  localStorage.removeItem("carrito");
-  window.location.reload();
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Pago exitoso... ",
+    showConfirmButton: false,
+    timer: 1500,
+  }).then(() => {
+    localStorage.removeItem("carrito");
+    window.location.reload();
+  });
 };

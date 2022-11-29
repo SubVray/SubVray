@@ -1,36 +1,114 @@
+:root {
+  --color-primary: #ffae00;
+  --color-primary-shadow: #a04001;
+  --color-secondary: #5992fe;
+  --color-secondary-shadow: #003fae;
+  --color-dark-light: #252525;
+  --color-light: #ffffff;
+}
 #text-fecha {
   width: 300px;
 }
-#form-compras {
-  max-width: 1299px;
-  padding: 10px 1%;
+
+.sct-form {
+  border-radius: 0px;
+  display: block;
+  left: 50%;
+  max-width: 1100px;
+  position: fixed !important;
+  top: 80px;
+  transform: translate(-50%);
+  z-index: 1000;
+}
+.sct-compras {
+  margin: auto;
+  margin-top: 150px;
+  max-width: 1100px;
 }
 
-label {
-  height: 42.781px !important;
+select {
+  width: 100px !important;
+}
+.sct-compras form input {
+  width: 150px !important;
+}
+.sct-form select {
+  width: 300px !important;
+}
+.sct-form label {
+  align-items: center;
   display: inline-block;
   display: flex;
+  font-size: 1.25rem;
+  height: 42.781px !important;
   justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
 }
 .name-cart-product {
-  font-size: 1rem !important;
+  font-size: 1.5rem !important;
 }
 
 .skup,
 .cantidadp,
 .pricep {
-  font-size: 1rem !important;
+  font-size: 1.5rem !important;
 }
 
 .btn-logout {
   position: fixed;
   right: 20px;
 }
-#form-compras {
-  position: fixed !important;
-  top: 80px;
-z-index: 10000;
-  display: block;
+
+.btn-filter {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  outline: none;
+  padding: 5px 10px;
+  transition-duration: 0.5s;
+}
+.btn-filter:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+.btn-encuesta {
+  left: 20px;
+  position: fixed;
+}
+h3.fw-comic-titles {
+  font-size: 2.25rem;
+}
+
+#btnCalcular {
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-light);
+  outline: none;
+  padding: 5px 10px;
+  transition-duration: 0.5s;
+}
+#btnLimpiar {
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  color: var(--color-light);
+  outline: none;
+  padding: 5px 10px;
+  transition-duration: 0.3s;
+}
+#btnCalcular:hover {
+  background-color: var(--color-secondary-shadow);
+  scale: 1.1;}
+#btnLimpiar:hover {
+  background-color: rgb(122, 0, 0);
+  scale: 1.1;
+}
+
+
+
+
+.priceV{
+  color: #f85151;
 }

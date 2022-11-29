@@ -1,3 +1,7 @@
+const closeSearchbar = () => {
+  document.querySelector("#search-bar").classList.toggle("d-none");
+};
+
 // search fuction
 function search() {
   var input, filter, ul, li, a, i, txtValue;
