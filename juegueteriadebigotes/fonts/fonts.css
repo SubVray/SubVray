@@ -12,5 +12,5 @@
 /* font-family: 'Poppins', sans-serif; */
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }

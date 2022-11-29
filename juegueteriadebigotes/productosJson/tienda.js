@@ -159,7 +159,6 @@ function agregarproducto(e) {
 
 // leer los datos de los cursos
 function leerDatosProducto(product) {
-  console.log(product);
   newProduct = {
     id: product.querySelector("#SKU").textContent,
     name: product.querySelector("#descripcion").textContent,
@@ -631,7 +630,6 @@ const getValorTotalCarrito = () => {
   carrito.forEach((product) => {
     priceMasCantidad += product.price * product.cantidad;
     cantidadP += product.cantidad;
-    console.log(priceMasCantidad);
   });
   totalPrice.innerHTML = `₡${priceMasCantidad.toLocaleString("en-US")}`;
   totalItems.innerHTML = cantidadP;

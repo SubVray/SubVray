@@ -21,6 +21,7 @@ const labelDia = document.querySelector(".label-dia");
 const optionDia = document.querySelector(".option-dia");
 const labelMes = document.querySelector(".label-mes");
 const optionMes = document.querySelector(".option-mes");
+const fecha = document.querySelector(".fecha");
 // encuesta
 const titleEncuesta = document.querySelector(".title-encuesta");
 const titleE1 = document.querySelector(".title-e-1");
@@ -28,6 +29,15 @@ const titleE2 = document.querySelector(".title-e-2");
 const titleE3 = document.querySelector(".title-e-3");
 const titleE4 = document.querySelector(".title-e-4");
 const titleE5 = document.querySelector(".title-e-5");
+// radios encuesta
+const malo = document.querySelectorAll(".malo");
+const regular = document.querySelectorAll(".regular");
+const bueno = document.querySelectorAll(".bueno");
+const muyBueno = document.querySelectorAll(".muybueno");
+const excelente = document.querySelectorAll(".excelente");
+// btns encuesta
+const btnEnviar = document.querySelector(".btn-calcular");
+const btnReset = document.querySelector(".btn-limpiar");
 
 // categories images
 const imgBebes = document.querySelector(".img-bebes");
@@ -51,6 +61,7 @@ links.forEach((r) => {
     motorafina.textContent = changeLanguage[attr].motorafina;
     verano.textContent = changeLanguage[attr].verano;
 
+    // perfil
     if (
       window.location ==
         "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html" ||
@@ -62,6 +73,7 @@ links.forEach((r) => {
       optionMes.textContent = changeLanguage[attr].optionMes;
       labelDia.textContent = changeLanguage[attr].labelDia;
       optionDia.textContent = changeLanguage[attr].optionDia;
+      fecha.textContent = changeLanguage[attr].fecha;
       btnLogout.textContent = changeLanguage[attr].btnLogout;
       btnEncuesta.textContent = changeLanguage[attr].btnEncuesta;
       titleEncuesta.textContent = changeLanguage[attr].titleEncuesta;
@@ -70,7 +82,25 @@ links.forEach((r) => {
       titleE3.textContent = changeLanguage[attr].titleE3;
       titleE4.textContent = changeLanguage[attr].titleE4;
       titleE5.textContent = changeLanguage[attr].titleE5;
+      btnEnviar.textContent = changeLanguage[attr].btnEnviar;
+      btnReset.textContent = changeLanguage[attr].btnReset;
+      malo.forEach((malo) => {
+        malo.textContent = changeLanguage[attr].malo;
+      });
+      regular.forEach((regular) => {
+        regular.textContent = changeLanguage[attr].regular;
+      });
+      bueno.forEach((bueno) => {
+        bueno.textContent = changeLanguage[attr].bueno;
+      });
+      muyBueno.forEach((muyBueno) => {
+        muyBueno.textContent = changeLanguage[attr].muyBueno;
+      });
+      excelente.forEach((excelente) => {
+        excelente.textContent = changeLanguage[attr].excelente;
+      });
     }
+
     if (
       window.location ==
         "http://127.0.0.1:5501/juegueteriadebigotes/home.html" ||
@@ -112,6 +142,7 @@ let changeLanguage = {
     btnEncuesta: "Encuesta",
     labelDia: "Dia",
     optionDia: "Dia",
+    fecha: "Fecha:",
 
     // encuesta
     titleEncuesta: "Encuesta",
@@ -121,6 +152,16 @@ let changeLanguage = {
     titleE4: "Calidad de Producto:",
     titleE5:
       "Servicio posterior a la compra (garantía, atención al cliente, etc.):",
+    // radios
+    malo: "Malo",
+    regular: "Regular",
+    bueno: "Bueno",
+    muyBueno: "Muy Bueno",
+    excelente: "Excelente",
+
+    // btns encuesta
+    btnEnviar: "Enviar",
+    btnReset: "Limpiar",
 
     // images categories
     imgBebes: "images/categorias/bebes.png",
@@ -156,6 +197,7 @@ let changeLanguage = {
     optionMes: "Month",
     labelDia: "Day",
     optionDia: "Day",
+    fecha: "Date:",
     // encuesta
     titleEncuesta: "Survey",
     titleE1: "General quality:",
@@ -163,6 +205,16 @@ let changeLanguage = {
     titleE3: "First use experience:",
     titleE4: "Product Quality:",
     titleE5: "Post-purchase service ( warranty, attention to client, etc. ):",
+    // radios
+    malo: "Bad",
+    regular: "Regular",
+    bueno: "Good",
+    muyBueno: "Very good ",
+    excelente: "Excellent",
+
+    // btns encuesta
+    btnEnviar: "Send",
+    btnReset: "Delete",
 
     // images categories
     imgBebes: "images/categorias/babies.png",

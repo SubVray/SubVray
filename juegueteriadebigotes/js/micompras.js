@@ -4,6 +4,11 @@ let mes = document.getElementById("mes");
 let dia = document.getElementById("dia");
 let UserBuys = document.getElementById("UserBuys");
 let hayText = document.getElementById("hay-text");
+if (allProductsBuy == null) {
+  btnEncuesta.classList.add("d-none");
+} else {
+  btnEncuesta.classList.remove("d-none");
+}
 
 let date = () => {
   fecha = `${mes.value}/${dia.value}/2022`;
@@ -134,7 +139,6 @@ let filtrar = () => {
             divPrice.appendChild(spanTitlePrice);
             divPrice.appendChild(spanValuePrice);
             col5.appendChild(divPrice);
-            // col5.appendChild(priceP);
           });
         });
       }, 2000);
