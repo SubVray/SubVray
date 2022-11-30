@@ -9,8 +9,8 @@ const users = [
   {
     id: 2,
     name: "Jane Doe",
-    email: "jane@doe.com",
-    password: "123123",
+    email: "cenfo@gmail.com",
+    password: "123",
     role: "user",
   },
 ];

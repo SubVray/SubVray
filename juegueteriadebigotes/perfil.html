@@ -225,62 +225,6 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-              Iniciar Sesión
-            </h1>
-            <button
-              type="button"
-              class="btn shadow-none border-0"
-              data-bs-dismiss="modal"
-              aria-label="Close">
-              <i class="fa-solid fa-xmark cerrar"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="form-control">
-              <div class="py-1">
-                <label for="text-email">Correo Electrónico:</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="text-email"
-                  placeholder="Correo Electrónico:" />
-              </div>
-              <div class="py-1">
-                <label for="text-password">Contraseña:</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="text-password"
-                  placeholder="Contraseña:" />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-              onclick="iniciarSesion()">
-              Iniciar Sesion
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <button
       type="button "
       class="btn btn-danger btn-logout"
@@ -375,7 +319,11 @@
           <div
             class="col-12 col-md-12 col-lg-4 d-flex gap-2 justify-content-center mt-2 mt-lg-0">
             <label for="dia" class="fecha">Fecha:</label>
-            <input type="text" id="text-fecha" class="form-control w-50" />
+            <input
+              type="text"
+              value=""
+              id="text-fecha"
+              class="form-control w-50" />
             <button type="button" onclick="filtrar()" class="btn-filter">
               Filtrar
             </button>

@@ -21,7 +21,7 @@ const labelDia = document.querySelector(".label-dia");
 const optionDia = document.querySelector(".option-dia");
 const labelMes = document.querySelector(".label-mes");
 const optionMes = document.querySelector(".option-mes");
-const fecha = document.querySelector(".fecha");
+let fecha = document.querySelector(".fecha");
 // encuesta
 const titleEncuesta = document.querySelector(".title-encuesta");
 const titleE1 = document.querySelector(".title-e-1");
@@ -103,8 +103,13 @@ links.forEach((r) => {
 
     if (
       window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/home.html" ||
+      window.location ==
         "http://127.0.0.1:5501/juegueteriadebigotes/home.html" ||
-      window.location == "http://127.0.0.1:5500/juegueteriadebigotes/home.html"
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/home.html#ofertas" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/home.html#ofertas"
     ) {
       imgBebes.src = changeLanguage[attr].imgBebes;
       imgJuegosMesa.src = changeLanguage[attr].imgJuegosMesa;

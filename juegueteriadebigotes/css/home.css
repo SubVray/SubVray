@@ -26,6 +26,29 @@ nav a:hover {
   scale: 1.1;
   text-shadow: 2px 2px 1px var(--color-primary-shadow);
 }
+h1 {
+  font-size: 4rem;
+}
+.recorrido {
+  background-color: var(--color-secondary);
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px 10px;
+  text-decoration: none;
+  width: 200px !important;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  color: #fff !important; 
+}
+.down {
+  bottom: 50px;
+  color: var(--color-primary) !important;
+  font-size: 3rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+}
 
 .navbar-home ul a:is(:hover, :active, :focus) {
   scroll-margin-top: 75.797px;
@@ -38,11 +61,11 @@ nav a:hover {
 }
 /* TODO: cicle counter */
 .cart-login-container {
-  position: relative;
   display: flex;
-  justify-content: space-evenly;
-  width: auto;
   gap: 5px;
+  justify-content: space-evenly;
+  position: relative;
+  width: auto;
 }
 
 .cart-shopping i {
@@ -164,7 +187,7 @@ nav a:hover {
   background-image: url("../images/banner.jpg");
   background-position: center;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.459);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.753);
   height: calc(100vh - 70px);
 }
 
@@ -474,29 +497,27 @@ body {
   font-size: 1.25rem;
 }
 
-/* contador  */
-
 /* calses personalizadas  */
 .ft-comic {
   font-family: "comic";
 }
 .ft-comic-shadow-primary {
-  font-family: "comic";
   color: var(--color-primary);
+  font-family: "comic";
   text-shadow: 3px 2px 1px var(--color-primary-shadow);
 }
 .ft-comic-shadow-secondary {
-  font-family: "comic";
   color: var(--color-secondary);
+  font-family: "comic";
   text-shadow: 3px 2px 1px var(--color-secondary-shadow);
 }
 
 .goto-top {
-  position: fixed;
   bottom: 30px;
-  right: 20px;
-  font-size: 2.8rem;
   color: var(--color-primary);
+  font-size: 2.8rem;
+  position: fixed;
+  right: 20px;
 }
 .goto-top i {
   color: var(--color-secondary);
@@ -507,23 +528,23 @@ body {
 }
 
 .sct-total {
+  bottom: 0;
+  color: white;
+  font-size: 1.2rem;
   height: auto;
-  width: 100%;
   overflow-x: hidden;
   position: absolute;
-  bottom: 0;
-  font-size: 1.2rem;
-  color: white;
+  width: 100%;
 }
 .offcanvas-body {
   margin-bottom: 100px;
 }
 
 .line-compra {
-  width: 100%;
+  background-color: #f2f2f2;
   height: 1px;
   margin: 5px 0;
-  background-color: #f2f2f2;
+  width: 100%;
 }
 
 /* testimonial */
@@ -544,22 +565,22 @@ body {
   height: 355px;
 }
 .sct-testimonial .owl-nav {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  width: 110%;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  width: 110%;
   z-index: -1;
 }
 .sct-testimonial .owl-nav button {
-  padding: 0;
-  margin: 0;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 .sct-testimonial .owl-nav button:hover {
@@ -571,10 +592,10 @@ body {
   color: var(--color-primary);
 }
 .sct-testimonial .owl-nav button span {
-  font-size: 5rem;
-  padding: 0;
-  margin: 0;
   color: var(--color-secondary-shadow);
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
 }
 
 /* clases personalizadas */
@@ -582,18 +603,18 @@ section {
   padding: 20px 0;
 }
 .star-container {
-  position: absolute;
   bottom: 8px;
+  position: absolute;
 }
 .star {
-  font-size: 1.2rem;
   color: #252525;
+  font-size: 1.2rem;
 }
 .star-color {
   color: var(--color-primary);
 }
 .z-indexI {
-  z-index: 100000;
+  z-index: 100;
 }
 
 .input-invalid {
@@ -605,15 +626,15 @@ section {
 
 .fw-comic {
   font-family: "comic", sans-serif;
-  padding: 0;
-  margin: 0;
   font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
 }
 .fw-comic-titles {
   font-family: "comic", sans-serif;
-  padding: 15px 0;
-  margin: 0;
   font-size: 3rem;
+  margin: 0;
+  padding: 15px 0;
 }
 
 input {
@@ -644,18 +665,18 @@ footer a {
   text-decoration: none;
 }
 footer i {
-  font-size: 1.2rem;
-  border-radius: 50%;
   border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  font-size: 1.2rem;
   padding: 10px;
   transition-duration: 0.5s;
 }
 
 footer i:hover {
-  font-size: 1.2rem;
-  border-radius: 50%;
   border: 1px solid var(--color-secondary);
-  padding: 10px;
+  border-radius: 50%;
   color: var(--color-primary);
+  font-size: 1.2rem;
+  padding: 10px;
   scale: 1.1;
 }

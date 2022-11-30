@@ -38,10 +38,11 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
       }
     });
     Swal.fire({
-      icon: "warning",
+      // icon: "warning",
       title: "No se ha podido iniciar sesión",
       text: "El correo del usuario o la contraseña son incorrectos",
       confirmButtonText: "Entendido",
+      html: '<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_yw3nyrsv.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay class="m-auto"></lottie-player> <br> <p>El correo del usuario o la contraseña son incorrectos</p>',
     }).then(() => {
       loginText.click();
     });
