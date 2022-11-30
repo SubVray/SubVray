@@ -648,22 +648,46 @@ if (
 }
 
 const pay = () => {
-  carrito = JSON.parse(localStorage.getItem("carrito"));
-  let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
-  buyAllUser = [
-    ...buyAllUser,
-    { productos: carrito, date: new Date().toLocaleDateString().split("T")[0] },
-  ];
-  let allProductsBuy = JSON.stringify(buyAllUser);
-  localStorage.setItem("allProductsBuy", allProductsBuy);
-  Swal.fire({
-    position: "center",
-    icon: "success",
-    title: "Pago exitoso... ",
-    showConfirmButton: false,
-    timer: 1500,
-  }).then(() => {
-    localStorage.removeItem("carrito");
-    window.location.reload();
-  });
+  if (carrito.length == 0) {
+    Swal.fire({
+      position: "center",
+      icon: "warning",
+      title: "No hay juguetes en el carrito para proceder hacer el pago.   ",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else if (usuarioConectado == null) {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "No puede realizar el pago  ",
+      text: "primero debe iniciar sesion",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      loginText.click();
+    });
+  } else {
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
+    buyAllUser = [
+      ...buyAllUser,
+      {
+        productos: carrito,
+        date: new Date().toLocaleDateString().split("T")[0],
+      },
+    ];
+    let allProductsBuy = JSON.stringify(buyAllUser);
+    localStorage.setItem("allProductsBuy", allProductsBuy);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Pago exitoso... ",
+      showConfirmButton: false,
+      timer: 1500,
+    }).then(() => {
+      localStorage.removeItem("carrito");
+      window.location.reload();
+    });
+  }
 };
