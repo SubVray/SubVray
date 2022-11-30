@@ -1,0 +1,11 @@
+a img {
+  box-shadow: 0 0 2px #000;
+  width: 250px;
+  border-radius: 5%;
+  aspect-ratio: 2/2;
+  object-fit: cover;
+}
+
+.fslightbox-source {
+  border-radius: 5%;
+}

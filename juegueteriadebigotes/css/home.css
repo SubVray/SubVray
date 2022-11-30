@@ -412,7 +412,7 @@ h2 {
   outline: none !important;
 }
 
-/* borarar */
+/* borrar */
 .scrollDisabled {
   overflow: hidden;
 }
@@ -497,7 +497,7 @@ body {
   font-size: 1.25rem;
 }
 
-/* calses personalizadas  */
+/* clases personalizadas  */
 .ft-comic {
   font-family: "comic";
 }
@@ -555,8 +555,7 @@ body {
   font-size: 1.2rem;
   padding: 10px 0;
 }
-.cometarios-cliente {
-}
+
 
 .sct-testimonial .item .card {
   height: 355px;
