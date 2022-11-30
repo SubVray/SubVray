@@ -17,6 +17,7 @@
       integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/menu-hamburguer.css" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/ligthbox.css" />
@@ -129,9 +130,15 @@
                   id="login"
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
-                  >Login</a
+                  ><span>Login</span></a
                 >
-                <a href="perfil.html" class="login" id="nameUser"></a>
+                <a
+                  href="perfil.html"
+                  class="login"
+                  id="nameUser"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  data-bs-title="Mi Perfil"></a>
               </div>
               <span> / </span>
               <div class="c2">
@@ -189,6 +196,37 @@
       </div>
     </header>
 
+    <!-- alerta perfil -->
+    <div
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast alert-user"
+      data-bs-autohide="false"
+      data-aos="fade-left">
+      <div class="toast-header">
+        <img
+          src="images/logo-tienda.png"
+          class="rounded me-2 img-fluid"
+          width="60px"
+          alt="logo" />
+        <strong class="me-auto title-aviso">AVISO:</strong>
+        <button
+          type="button"
+          class="btn shadow-none border-0"
+          data-bs-dismiss="toast"
+          aria-label="Close">
+          <i class="fa-solid fa-xmark cerrar"></i>
+        </button>
+      </div>
+      <div class="toast-body">
+        <p class="fw-bold">
+          Para poder ver el historial de compras dar click en el nombre de
+          perfil.
+        </p>
+      </div>
+    </div>
+
     <!-- modal carrito  -->
     <div
       class="offcanvas offcanvas-end"
@@ -196,7 +234,9 @@
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <h5 class="offcanvas-title title-carrito" id="offcanvasRightLabel">
+          Carrito
+        </h5>
         <button
           type="button"
           class="btn shadow-none border-0"
@@ -209,16 +249,19 @@
       <div class="sct-total bg-danger p-2">
         <div class="row">
           <div class="col-12" id="total">
-            <span>Productos: </span>
+            <span class="title-productos">Productos: </span>
             <span class="" id="totalItems">0</span>
 
             <br />
-            <span class="">Precio Total:</span>
+            <span class="title-precio">Precio Total:</span>
             <span class="" id="total-price"></span>
           </div>
           <div class="line-compra"></div>
           <div class="col-12 d-flex justify-content-end">
-            <button type="button" class="btn btn-success" onclick="pay()">
+            <button
+              type="button"
+              class="btn btn-success btn-pagar"
+              onclick="pay()">
               Pagar
             </button>
           </div>
@@ -235,7 +278,8 @@
           data-fslightbox="gallery"
           href="https://www.youtube.com/watch?v=SZwKCJRb9R0"
           class="recorrido">
-          <i class="fa-solid fa-circle-play"></i> Ver recorrido
+          <i class="fa-solid fa-circle-play"></i>
+          <span class="recorridot">Ver recorrido</span>
         </a>
         <a href="#ofertas" class="down">
           <i class="fa-solid fa-circle-chevron-down"></i>
@@ -384,7 +428,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-5 fw-comic" id="staticBackdropLabel">
+            <h2
+              class="modal-title fs-5 fw-comic title-login"
+              id="staticBackdropLabel">
               Iniciar Sesión
             </h2>
             <button
@@ -398,20 +444,19 @@
           <div class="modal-body">
             <form class="form-control" id="form-login">
               <div class="py-2">
-                <label for="text-email" class="fw-comic"
+                <label for="text-email" class="fw-comic text-email"
                   >Correo Electrónico:</label
                 >
                 <input
                   type="email"
-                  class="form-control"
-                  id="text-email"
-                  placeholder="Correo Electrónico:" />
+                  class="form-control input-email"
+                  id="text-email" />
               </div>
               <div class="py-2">
-                <label for="text-password" class="fw-comic">Contraseña:</label>
+                <label for="text-password" class="fw-comic text-password">Contraseña:</label>
                 <input
                   type="password"
-                  class="form-control"
+                  class="form-control input-password"
                   id="text-password"
                   placeholder="Contraseña:" />
               </div>
@@ -432,8 +477,10 @@
 
     <!-- testimonials -->
     <section class="sct-testimonial">
-      <h2 class="fw-comic-titles text-center">Testimoniales</h2>
-      <p class="text-center">
+      <h2 class="fw-comic-titles text-center title-testimoniales">
+        Testimoniales
+      </h2>
+      <p class="text-center text-testimoniales">
         Comentarios de clientes satisfechos de sus compras en jugueteria de
         bigotes.
       </p>
@@ -668,7 +715,91 @@
     </section>
 
     <!-- footer -->
-    <footer></footer>
+    <footer class="container-fluid mt-5 py-5 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-3">
+            <h5 class="title-contactenos">Contáctenos</h5>
+            <div class="d-flex flex-column gap-4">
+              <div class="div">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="">sc@crbigotes.com</a>
+              </div>
+              <div class="div">
+                <i class="fa-solid fa-phone"></i> <a href="">800-5878183</a>
+              </div>
+              <div class="div">
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href=""> (506)70556223</a>
+              </div>
+              <div class="d-flex gap-4">
+                <!-- facebook -->
+                <i class="fa-brands fa-facebook-f"></i>
+                <!-- twitter -->
+                <i class="fa-brands fa-twitter"></i>
+                <!-- instagram -->
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="div">
+                <!-- bancoNacional -->
+                <img
+                  src="https://assets.nidux.net/footerLogos/ft_BN.png"
+                  alt="Partner con el Banco Nacional de Costa Rica"
+                  class="img-fluid"
+                  width="86px" />
+                <!-- BCR -->
+                <img
+                  src="https://assets.nidux.net/footerLogos/ft_BCR.png"
+                  alt="Partner con el Banco de Costa Rica"
+                  class="img-fluid"
+                  width="86px" />
+                <!-- BAC -->
+                <img
+                  src="https://assets.nidux.net/footerLogos/ft_BAC.png"
+                  alt="Partner con BAC Credomatic"
+                  class="img-fluid"
+                  width="86px" />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-12 col-md-12 col-lg-6">
+            <h5 class="title-acerca">Acerca de nuestra tienda</h5>
+            <hr />
+            <p class="text-1">
+              Jugueterías de Bigotes, abrió sus puertas por primera vez el 14 de
+              noviembre de 1970, bajo la visión de su fundadora, la señora Reina
+              Madrid. Encargada de distribuir sonrisas a los niños de Costa
+              Rica; de ahí nuestra frase emblemática: "Distribuir Sonrisas es
+              Nuestra Pasión".
+            </p>
+            <p class="text-2">
+              Actualmente Jugueterías de Bigotes cuenta con 14 Tiendas, al
+              servicio de nuestros clientes, ubicadas en todo el país, donde
+              nuestros clientes pueden encontrar las mejores marcas del mercado.
+            </p>
+            <p class="text-3">
+              Jugueterías de Bigotes es hoy en día una empresa con gran
+              crecimiento y proyección a la comunidad con programas de
+              Responsabilidad Social Empresarial, actividades dirigidas a niños
+              de escasos recursos y donaciones puntuales dirigidas a proyectos
+              que le dan la mano a la niñez costarricense.
+            </p>
+          </div>
+          <!--  -->
+          <div class="col-12 col-md-12 col-lg-3">
+            <h5 class="title-secciones">Secciones</h5>
+            <div class="section-content d-flex flex-column gap-3">
+              <a href="" class="sct-1">Inicio</a>
+              <a href="" class="sct-2">Promociones</a>
+              <a href="" class="sct-3">Categorías</a>
+              <a href="" class="sct-4">Nuestras Marcas</a>
+              <a href="" class="sct-5">Reclamos y Quejas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- btn top -->
     <button
@@ -728,6 +859,10 @@
           },
         },
       });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
     <!-- my js -->
     <script src="js/menu.js"></script>

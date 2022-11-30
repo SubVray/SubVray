@@ -39,7 +39,7 @@ h1 {
   width: 200px !important;
   margin: 100px auto 0;
   border-radius: 10px;
-  color: #fff !important; 
+  color: #fff !important;
 }
 .down {
   bottom: 50px;
@@ -679,4 +679,32 @@ footer i:hover {
   font-size: 1.2rem;
   padding: 10px;
   scale: 1.1;
+}
+
+/* alert user  */
+.alert-user {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10000;
+}
+
+.title-aviso {
+  font-size: 1.2rem;
+}
+.toast {
+  transition-duration: .5;
+  animation: right 0.5s ease;
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

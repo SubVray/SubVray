@@ -1,5 +1,7 @@
 const langEl = document.querySelector(".langWrap");
 const links = document.querySelectorAll("header button");
+const h1 = document.querySelector("h1");
+const recorrido = document.querySelector(".recorridot");
 const inicio = document.querySelector(".inicio");
 const promocionesHeader = document.querySelector(".promociones-h");
 const sucursales = document.querySelector(".sucursales");
@@ -10,8 +12,26 @@ const deportes = document.querySelector(".deportes");
 const nerf = document.querySelector(".nerf");
 const motorafina = document.querySelector(".motorafina");
 const verano = document.querySelector(".verano");
+
+// titles
 const promociones = document.querySelector(".promociones");
 const categorias = document.querySelector(".categorias-s");
+const textCategoria = document.querySelector(".text-categorias");
+const titleTestimoniales = document.querySelector(".title-testimoniales");
+const textTestimoniales = document.querySelector(".text-testimoniales");
+
+// login
+const titleLogin = document.querySelector(".title-login");
+const textEmail = document.querySelector(".text-email");
+const inputEmail = document.querySelector(".input-email");
+const textPassword = document.querySelector(".text-password");
+const inputPassword = document.querySelector(".input-password");
+
+// carrito
+const titleCarrito = document.querySelector(".title-carrito");
+const titleProductos = document.querySelector(".title-productos");
+const titlePrecio = document.querySelector(".title-precio");
+const btnPagar = document.querySelector(".btn-pagar");
 
 // perfil.html
 const miCompras = document.querySelector(".mis-compras");
@@ -47,9 +67,23 @@ const imgNerf = document.querySelector(".img-nerf");
 const imgMotoraFina = document.querySelector(".img-motorafina");
 const imgVerano = document.querySelector(".img-verano");
 
+// footer
+const titleContactenos = document.querySelector(".title-contactenos");
+const titleAcerca = document.querySelector(".title-acerca");
+const titleSecciones = document.querySelector(".title-secciones");
+const text1 = document.querySelector(".text-1");
+const text2 = document.querySelector(".text-2");
+const text3 = document.querySelector(".text-3");
+const sct1 = document.querySelector(".sct-1");
+const sct2 = document.querySelector(".sct-2");
+const sct3 = document.querySelector(".sct-3");
+const sct4 = document.querySelector(".sct-4");
+const sct5 = document.querySelector(".sct-5");
+
 links.forEach((r) => {
   r.addEventListener("click", () => {
     const attr = r.getAttribute("language");
+
     inicio.textContent = changeLanguage[attr].inicio;
     promocionesHeader.textContent = changeLanguage[attr].promocionesHeader;
     sucursales.textContent = changeLanguage[attr].sucursales;
@@ -111,20 +145,54 @@ links.forEach((r) => {
       window.location ==
         "http://127.0.0.1:5500/juegueteriadebigotes/home.html#ofertas"
     ) {
+      h1.textContent = changeLanguage[attr].h1;
+      recorrido.textContent = changeLanguage[attr].recorrido;
       imgBebes.src = changeLanguage[attr].imgBebes;
       imgJuegosMesa.src = changeLanguage[attr].imgJuegosMesa;
       imgDeportes.src = changeLanguage[attr].imgDeportes;
       imgNerf.src = changeLanguage[attr].imgNerf;
       imgMotoraFina.src = changeLanguage[attr].imgMotoraFina;
       imgVerano.src = changeLanguage[attr].imgVerano;
+      // titles
       promociones.textContent = changeLanguage[attr].promociones;
       categorias.textContent = changeLanguage[attr].categorias;
+      textCategoria.textContent = changeLanguage[attr].textCategoria;
+      titleTestimoniales.textContent = changeLanguage[attr].titleTestimoniales;
+      textTestimoniales.textContent = changeLanguage[attr].textTestimoniales;
     }
+    // carrito
+    titleLogin.textContent = changeLanguage[attr].titleLogin;
+    titleCarrito.textContent = changeLanguage[attr].titleCarrito;
+    titleProductos.textContent = changeLanguage[attr].titleProductos;
+    titlePrecio.textContent = changeLanguage[attr].titlePrecio;
+    btnPagar.textContent = changeLanguage[attr].btnPagar;
+    textEmail.textContent = changeLanguage[attr].textEmail;
+    $(".input-email").attr("placeholder", changeLanguage[attr].inputEmail);
+    $(".input-password").attr(
+      "placeholder",
+      changeLanguage[attr].inputPassword
+    );
+    textPassword.textContent = changeLanguage[attr].textPassword;
+
+    // footer
+    titleContactenos.textContent = changeLanguage[attr].titleContactenos;
+    titleAcerca.textContent = changeLanguage[attr].titleAcerca;
+    titleSecciones.textContent = changeLanguage[attr].titleSecciones;
+    text1.textContent = changeLanguage[attr].text1;
+    text2.textContent = changeLanguage[attr].text2;
+    text3.textContent = changeLanguage[attr].text3;
+    sct1.textContent = changeLanguage[attr].sct1;
+    sct2.textContent = changeLanguage[attr].sct2;
+    sct3.textContent = changeLanguage[attr].sct3;
+    sct4.textContent = changeLanguage[attr].sct4;
+    sct5.textContent = changeLanguage[attr].sct5;
   });
 });
 
 let changeLanguage = {
   spanish: {
+    h1: "Encuentra los mejores juguetes",
+    recorrido: "Ver recorrido",
     inicio: "Inicio",
     promocionesHeader: "Promociones",
     sucursales: "Sucursales",
@@ -135,9 +203,25 @@ let changeLanguage = {
     nerf: "Armas Nerf",
     motorafina: "Motorafina",
     verano: "Verano",
+
     // agregar titulos
     promociones: "Promociones",
     categorias: "Categorías ",
+    textCategoria: "Contamos con una gran cantidad de juguetes",
+    titleTestimoniales: "Testimoniales",
+    textTestimoniales:
+      "Comentarios de clientes satisfechos de sus compras en jugueteria de bigotes.",
+    titleLogin: "Iniciar Sesión",
+    textEmail: "Correo Electrónico:",
+    inputEmail: "Correo Electrónico:",
+    textPassword: "Contraseña:",
+    inputPassword: "Contraseña:",
+
+    // carrito
+    titleCarrito: "Carrito",
+    titleProductos: "Productos:",
+    titlePrecio: "Precio Total:",
+    btnPagar: "Pagar",
 
     // perfil
     miCompras: "Mis Compras",
@@ -157,6 +241,7 @@ let changeLanguage = {
     titleE4: "Calidad de Producto:",
     titleE5:
       "Servicio posterior a la compra (garantía, atención al cliente, etc.):",
+
     // radios
     malo: "Malo",
     regular: "Regular",
@@ -175,10 +260,28 @@ let changeLanguage = {
     imgNerf: "images/categorias/armas-nerf.png",
     imgMotoraFina: "images/categorias/motorafina.png",
     imgVerano: "images/categorias/verano.png",
+
+    // footer
+    titleContactenos: "Contáctenos",
+    titleAcerca: "Acerca de nuestra tienda",
+    titleSecciones: "Secciones",
+    text1:
+      "Jugueterías de Bigotes, abrió sus puertas por primera vez el 14 de noviembre de 1970, bajo la visión de su fundadora, la señora Reina Madrid. Encargada de distribuir sonrisas a los niños de Costa Rica; de ahí nuestra frase emblemática: 'Distribuir Sonrisas es Nuestra Pasión'.",
+    text2:
+      "Actualmente Jugueterías de Bigotes cuenta con 14 Tiendas, al servicio de nuestros clientes, ubicadas en todo el país, donde nuestros clientes pueden encontrar las mejores marcas del mercado.",
+    text3:
+      "Jugueterías de Bigotes es hoy en día una empresa con gran crecimiento y proyección a la comunidad con programas de Responsabilidad Social Empresarial, actividades dirigidas a niños de escasos recursos y donaciones puntuales dirigidas a proyectos que le dan la mano a la niñez costarricense.",
+    sct1: "Inicio",
+    sct2: "Promociones",
+    sct3: "Categorias",
+    sct4: "Nuestras Marcas",
+    sct5: "Reclamos y Quejas",
   },
 
-  // english
+  // TODO: english
   english: {
+    h1: " Find the best toys",
+    recorrido: "See tour",
     inicio: "Home",
     promocionesHeader: "Promotions",
     sucursales: "Branches",
@@ -193,6 +296,21 @@ let changeLanguage = {
     // agregar titulos
     promociones: "Promotions",
     categorias: "categories ",
+    textCategoria: "We have a wide range of toys",
+    titleTestimoniales: "Testimonials",
+    textTestimoniales:
+      "Comments from satisfied customers about their purchases at Jugueteria de Bigotes.",
+    titleLogin: "Login",
+    textEmail: "Email:",
+    inputEmail: "Email:",
+    textPassword: "Password:",
+    inputPassword: "Password:",
+
+    // carrito
+    titleCarrito: "Shopping Cart",
+    titleProductos: "Products:",
+    titlePrecio: "Total Price:",
+    btnPagar: "Pay",
 
     // perfil
     miCompras: "My purchases",
@@ -203,6 +321,7 @@ let changeLanguage = {
     labelDia: "Day",
     optionDia: "Day",
     fecha: "Date:",
+
     // encuesta
     titleEncuesta: "Survey",
     titleE1: "General quality:",
@@ -210,6 +329,7 @@ let changeLanguage = {
     titleE3: "First use experience:",
     titleE4: "Product Quality:",
     titleE5: "Post-purchase service ( warranty, attention to client, etc. ):",
+
     // radios
     malo: "Bad",
     regular: "Regular",
@@ -228,5 +348,21 @@ let changeLanguage = {
     imgNerf: "images/categorias/nerfguns.png",
     imgMotoraFina: "images/categorias/finemotorskills.png",
     imgVerano: "images/categorias/summer.png",
+
+    // footer
+    titleContactenos: "Contact us",
+    titleAcerca: "About our store",
+    titleSecciones: "Sections",
+    text1:
+      "Jugueterías de Bigotes, first opened its doors on November 14, 1970, under the vision of its founder, Mrs. Reina Madrid. In charge of distributing smiles to the children of Costa Rica; hence our emblematic phrase: 'Distribuir Sonrisas es Nuestra Pasión' (Distributing Smiles is Our Passion).",
+    text2:
+      "Currently Jugueterías de Bigotes has 14 stores, at the service of our customers, located throughout the country, where our customers can find the best brands in the market.",
+    text3:
+      "Jugueterías de Bigotes is today a company with great growth and projection to the community with Corporate Social Responsibility programs, activities aimed at low-income children and specific donations to projects that give a hand to Costa Rican children.",
+    sct1: "Home",
+    sct2: "Promotions",
+    sct3: "Categories",
+    sct4: "Our Brands",
+    sct5: "Claims and complaints",
   },
 };

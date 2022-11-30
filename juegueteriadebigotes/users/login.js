@@ -5,7 +5,7 @@ let loginText = document.getElementById("login");
 let formLogin = document.querySelectorAll("#form-login input");
 const login = () => {
   users.forEach((user) => {
-    if (user.email == email && user.password == password) {
+    if (user.email == email.value && user.password == password.value) {
       usuarioValidado = true;
       localStorage.setItem("usuarioConectado", JSON.stringify(user));
     }
@@ -15,6 +15,7 @@ const login = () => {
 const iniciarSesion = () => {
   let emailLogin = email.value;
   let passwordLogin = password.value;
+
   validarCredenciales(emailLogin, passwordLogin);
 };
 
@@ -39,10 +40,9 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     });
     Swal.fire({
       // icon: "warning",
-      title: "No se ha podido iniciar sesión",
-      text: "El correo del usuario o la contraseña son incorrectos",
       confirmButtonText: "Entendido",
-      html: '<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_yw3nyrsv.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay class="m-auto"></lottie-player> <br> <p>El correo del usuario o la contraseña son incorrectos</p>',
+      html: '<iframe src="https://embed.lottiefiles.com/animation/76705"></iframe> <p class="fw-bold">No se ha podido iniciar sesión</p> <p class="fw-bold">El correo del usuario o la contraseña son incorrectos</p>',
+      confirmButtonColor: "#ffae00",
     }).then(() => {
       loginText.click();
     });
@@ -54,6 +54,9 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
       title: "Inicio de sesión correcto",
       html: `Bienvenido ${userConected.name}`,
       confirmButtonText: "Entendido",
+      confirmButtonColor: "#ffae00",
+    }).then(() => {
+      document.querySelector(".toast").classList.add("show");
     });
     nameUser.innerHTML = userConected.name;
     nameUser.classList.remove("d-none");
