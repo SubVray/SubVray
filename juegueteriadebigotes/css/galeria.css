@@ -15,6 +15,19 @@ a img {
   border-radius: 5%;
   aspect-ratio: 2/2;
   object-fit: cover;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+.text-galeria {
+  font-size: 1.25rem;
+}
+a {
+  transition-duration: 0.5s ease;
+}
+a:hover {
+  scale: 1.05;
+  border: 1px solid #000000;
+  border-radius: 12px;
 }
 
 .fslightbox-source {

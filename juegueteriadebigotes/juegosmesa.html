@@ -19,7 +19,7 @@
       integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-      
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/ligthbox.css" />
@@ -65,14 +65,14 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link promociones-h" href="home.html#ofertas"
+                  <a class="nav-link promociones-h" href="#ofertas"
                     >Promociones</a
                   >
                 </li>
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle categorias-h"
-                    href="juegosmesa.html"
+                    href="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -83,7 +83,9 @@
                       <a class="dropdown-item bebes" href="bebes.html">bebes</a>
                     </li>
                     <li>
-                      <a class="dropdown-item juegos-mesa" href="#"
+                      <a
+                        class="dropdown-item juegos-mesa"
+                        href="juegosmesa.html"
                         >juegos de mesa</a
                       >
                     </li>
@@ -113,6 +115,9 @@
                   <a class="nav-link sucursales" href="sucursales.html"
                     >Sucursales</a
                   >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link sucursales" href="galeria.html">Galería</a>
                 </li>
                 <li class="nav-item">
                   <button
@@ -429,45 +434,45 @@
     </div>
 
     <!-- banner bebes -->
-    <section class="banner-categories" data-aos="zoom-in">
-      <div class="container">
+    <section class="banner-categories">
+      <div class="container" data-aos="zoom-in">
         <img
           src="images/categorias/bg-juegos-de-mesa.png"
           alt=""
           class="mt-3 img-fluid rounded shadow" />
       </div>
-      <div class="container">
-        <nav aria-label="breadcrumb" class="list-menu">
+      <div class="container my-4 list-menu-r">
+        <nav
+          aria-label="breadcrumb"
+          class="d-flex justify-content-between align-items-center w-100">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
             <li class="breadcrumb-item active">
-              <a href="bebes.html">Juegos de Mesa</a>
+              <a href="juegosmesa.html">Juegos de Mesa</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="bebes.html" id="urlnav">General</a>
+              <a href="juegosmesa.html" id="urlnav">General</a>
             </li>
           </ol>
+          <form class="">
+            <select
+              name=""
+              class="form-select w-85"
+              id="sub-bebes"
+              onchange="changeFilter()">
+              <option value="General" selected>General</option>
+              <option value="Juegosmesa">Juegos de Mesa</option>
+              <option value="Monopoly">Monopoly</option>
+            </select>
+          </form>
         </nav>
       </div>
 
       <div class="container">
         <div class="row w-100">
           <div class="col-12">
-            <form action="">
-              <select
-                name=""
-                class="form-select"
-                id="sub-bebes"
-                onchange="changeFilter()">
-                <option value="General" selected>General</option>
-                <option value="Juegosmesa">Juegos de Mesa</option>
-                <option value="Monopoly">Monopoly</option>
-              </select>
-            </form>
-          </div>
-          <div class="col-12">
             <!-- card tienda producto  -->
-            <div class="container m-auto" id="mostrador">
+            <div class="container m-auto" id="mostrador" data-aos="zoom-in">
               <div class="row m-auto" id="tienda-1"></div>
               <div class="row m-auto" id="tienda-2"></div>
               <div class="row m-auto" id="tienda-3"></div>

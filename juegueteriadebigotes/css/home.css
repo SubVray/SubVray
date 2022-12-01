@@ -263,6 +263,19 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 0 5px #020202;
   cursor: pointer;
+  height: 480px;
+  margin: 10px 0;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 100;
+}
+.item-product-sale {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #020202;
+  cursor: pointer;
   height: 530px;
   margin: 10px 0;
   padding: 10px;
@@ -547,6 +560,10 @@ body {
   overflow-x: hidden;
   position: absolute;
   width: 100%;
+  background-color: var(--color-primary);
+}
+.title-carrito{
+  font-weight: bolder;;
 }
 .offcanvas-body {
   margin-bottom: 100px;
@@ -727,4 +744,13 @@ footer i:hover {
 
 .tachado {
   text-decoration: line-through;
+}
+
+.w-85 {
+  width: 300px !important;
+}
+.filter {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  height: 100%;
 }

@@ -439,6 +439,7 @@ const createItemsProducts = (allTienda) => {
     item.appendChild(sku);
     item.appendChild(price);
     if (product.sale > 0) {
+      item.classList.add("item-product-sale", "bg-white");
       salePrice.classList.add("precio", "tachado");
       item.appendChild(salePrice);
     }
