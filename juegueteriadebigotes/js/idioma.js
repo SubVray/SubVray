@@ -67,6 +67,14 @@ const imgNerf = document.querySelector(".img-nerf");
 const imgMotoraFina = document.querySelector(".img-motorafina");
 const imgVerano = document.querySelector(".img-verano");
 
+// tira testimonial
+const comentario1 = document.querySelector(".comentario-cliente-1");
+const comentario2 = document.querySelector(".comentario-cliente-2");
+const comentario3 = document.querySelector(".comentario-cliente-3");
+const comentario4 = document.querySelector(".comentario-cliente-4");
+const comentario5 = document.querySelector(".comentario-cliente-5");
+const comentario6 = document.querySelector(".comentario-cliente-6");
+
 // footer
 const titleContactenos = document.querySelector(".title-contactenos");
 const titleAcerca = document.querySelector(".title-acerca");
@@ -159,6 +167,12 @@ links.forEach((r) => {
       textCategoria.textContent = changeLanguage[attr].textCategoria;
       titleTestimoniales.textContent = changeLanguage[attr].titleTestimoniales;
       textTestimoniales.textContent = changeLanguage[attr].textTestimoniales;
+      comentario1.textContent = changeLanguage[attr].comentario1;
+      comentario2.textContent = changeLanguage[attr].comentario2;
+      comentario3.textContent = changeLanguage[attr].comentario3;
+      comentario4.textContent = changeLanguage[attr].comentario4;
+      comentario5.textContent = changeLanguage[attr].comentario5;
+      comentario6.textContent = changeLanguage[attr].comentario6;
     }
     // carrito
     titleLogin.textContent = changeLanguage[attr].titleLogin;
@@ -261,6 +275,18 @@ let changeLanguage = {
     imgMotoraFina: "images/categorias/motorafina.png",
     imgVerano: "images/categorias/verano.png",
 
+    // testimonial
+    comentario1: "Tienen los mejores juguetes!",
+    comentario2:
+      "Mis juguetes acaban de llegar. Es muuuy hermoso. Gracias por enviarlo tan rápido. ¡Espero con ansias las otras cosas que pedí!",
+    comentario3:
+      "¡Estos juguetes son mis cosas favoritas absolutas para regalar!",
+    comentario4:
+      "La calidad es insuperable. Puedes usar y usar esto y se mantiene como nuevo.",
+    comentario5: "Mis hijos están muy contentos con sus juguetes",
+    comentario6:
+      "¡Siempre hay algo en los juguetes que me llaman mucho la atención y quiero seguir viniendo a comprar mas en esta tienda es super recomendada !",
+
     // footer
     titleContactenos: "Contáctenos",
     titleAcerca: "Acerca de nuestra tienda",
@@ -348,6 +374,17 @@ let changeLanguage = {
     imgNerf: "images/categorias/nerfguns.png",
     imgMotoraFina: "images/categorias/finemotorskills.png",
     imgVerano: "images/categorias/summer.png",
+
+    // testimonials
+    comentario1: "They have the best toys!",
+    comentario2:
+      "My toys just arrived. It is very beautiful. Thank you for sending it so quickly, I look forward to the other things I ordered!",
+    comentario3: "These toys are my absolute favorite things to give as gifts!",
+    comentario4:
+      "The quality is second to none. You can wear and wear this and it stays like new.",
+    comentario5: "My children are very happy with their toys",
+    comentario6:
+      "There is always something in the toys that catch my attention and I want to keep coming back to buy more in this store is super recommended !",
 
     // footer
     titleContactenos: "Contact us",
