@@ -115,9 +115,9 @@ const createStore = () => {
     window.location ==
       "http://127.0.0.1:5501/juegueteriadebigotes/deportes.html"
   ) {
-    allTienda = tiendaBebes;
-    subTienda1 = juguetesBebes;
-    subTienda2 = accesoriosBebes;
+    allTienda = tiendaDeportesAll;
+    subTienda1 = tiendaDeportes;
+    subTienda2 = tiendaBicicletas;
     changeFilter();
   } else if (
     window.location ==
@@ -427,7 +427,7 @@ const createItemsProducts = (allTienda) => {
     imgProduct.classList.add("img-fluid");
     name.classList.add("descripcion", "pt-3");
     price.classList.add("precio");
-    salePrice.classList.add("precio");
+    salePrice.classList.add("precio2");
     sku.classList.add("sku");
 
     // mostrar info en pantalla
@@ -438,6 +438,10 @@ const createItemsProducts = (allTienda) => {
     item.appendChild(name);
     item.appendChild(sku);
     item.appendChild(price);
+    if (product.sale > 0) {
+      salePrice.classList.add("precio", "tachado");
+      item.appendChild(salePrice);
+    }
 
     // abrir modal para cada producto
     item.addEventListener("click", () => {

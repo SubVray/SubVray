@@ -4,14 +4,7 @@ let nameUser = document.getElementById("nameUser");
 let loginText = document.getElementById("login");
 let formLogin = document.querySelectorAll("#form-login input");
 
-const login = () => {
-  users.forEach((user) => {
-    if (user.email == email.value && user.password == password.value) {
-      usuarioValidado = true;
-      localStorage.setItem("usuarioConectado", JSON.stringify(user));
-    }
-  });
-};
+
 
 const iniciarSesion = () => {
   let emailLogin = email.value;

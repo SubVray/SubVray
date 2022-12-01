@@ -202,6 +202,163 @@
       </div>
     </header>
 
+    <!-- Modal login-->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2
+              class="modal-title fs-5 title-login fw-comic m-auto p-0 m-0"
+              id="staticBackdropLabel">
+              Iniciar Sesión
+            </h2>
+            <button
+              type="button"
+              class="btn shadow-none border-0"
+              data-bs-dismiss="modal"
+              aria-label="Close">
+              <i class="fa-solid fa-xmark cerrar"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-control" id="form-login">
+              <div class="py-2">
+                <label for="text-email" class="fw-comic text-email"
+                  >Correo Electrónico:</label
+                >
+                <input
+                  type="email"
+                  class="form-control input-email"
+                  id="text-email"
+                  placeholder="Correo Electrónico:" />
+              </div>
+              <div class="py-2">
+                <label for="text-password" class="fw-comic text-password"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control input-password"
+                  id="text-password"
+                  placeholder="Contraseña:" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+                onclick="iniciarSesion()">
+                Iniciar Sesion
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary w-100"
+              data-bs-target="#modal-register"
+              data-bs-toggle="modal"
+              id="btn-register">
+              Registrarme
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- register -->
+    <div
+      class="modal fade"
+      id="modal-register"
+      aria-hidden="true"
+      aria-labelledby="modalregister"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2
+              class="modal-title fs-5 title-login fw-comic m-auto p-0 m-0"
+              id="modal-register-t">
+              Registrarse
+            </h2>
+            <button
+              type="button"
+              class="btn shadow-none border-0"
+              data-bs-dismiss="modal"
+              aria-label="Close">
+              <i class="fa-solid fa-xmark cerrar"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-control mb-3 pt-2 pb-3" id="form-register">
+              <div class="py-2">
+                <label for="text-name-register" class="fw-comic text-email"
+                  >Nombre Completo:</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-email"
+                  id="text-name-register"
+                  placeholder="Nombre completo:" />
+              </div>
+              <div class="py-2">
+                <label for="text-username-register" class="fw-comic text-email"
+                  >Nombre de Usuario:</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-email"
+                  id="text-username-register"
+                  placeholder="Nombre de Usuario:" />
+              </div>
+              <div class="py-2">
+                <label for="text-email-register" class="fw-comic text-email"
+                  >Correo Electrónico:</label
+                >
+                <input
+                  type="email"
+                  class="form-control input-email"
+                  id="text-email-register"
+                  placeholder="Correo Electrónico:" />
+              </div>
+              <div class="py-2">
+                <label
+                  for="text-password-register"
+                  class="fw-comic text-password"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control input-password"
+                  id="text-password-register"
+                  placeholder="Contraseña:" />
+              </div>
+              <button
+                class="btn btn-success mt-2"
+                type="button"
+                onclick="register()">
+                Registrarme
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary w-100"
+              data-bs-target="#staticBackdrop"
+              data-bs-toggle="modal"
+              id="btn-login">
+              Iniciar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- alerta perfil -->
     <div
       role="alert"
@@ -279,15 +436,18 @@
     <section
       class="banner container-fluid d-flex justify-content-center align-items-center">
       <div class="container m-auto text-center">
-        <h1 class="ft-comic-shadow-primary">Encuentra los mejores juguetes</h1>
+        <h1 class="ft-comic-shadow-primary" data-aos="zoom-in">
+          Encuentra los mejores juguetes
+        </h1>
         <a
+          data-aos="zoom-in"
           data-fslightbox="gallery"
           href="https://www.youtube.com/watch?v=SZwKCJRb9R0"
           class="recorrido">
           <i class="fa-solid fa-circle-play"></i>
           <span class="recorridot">Ver recorrido</span>
         </a>
-        <a href="#ofertas" class="down">
+        <a href="#ofertas" class="down" data-aos="zoom-in">
           <i class="fa-solid fa-circle-chevron-down"></i>
         </a>
       </div>
@@ -295,8 +455,15 @@
 
     <!-- promociones  -->
     <section class="container-fluid" id="ofertas">
-      <h2 class="text-center fw-comic-titles promociones">Promociones</h2>
-      <div class="container m-auto" id="mostrador">
+      <h2
+        class="text-center fw-comic-titles promociones mt-4"
+        data-aos="zoom-in">
+        Promociones
+      </h2>
+      <p class="text-center text-home text-categorias" data-aos="zoom-in">
+        Promociones para este mes de Diciembre
+      </p>
+      <div class="container m-auto" id="mostrador" data-aos="zoom-in">
         <div class="row m-auto" id="tienda-1"></div>
       </div>
       <div class="modal-container">
@@ -363,7 +530,7 @@
     </section>
 
     <!-- categories -->
-    <section class="categorias mt-5" id="categorias">
+    <section class="categorias mt-5" id="categorias" data-aos="zoom-in">
       <h2 class="text-center fw-comic-titles categorias-s">Categorías</h2>
       <p class="text-center text-categorias">
         Contamos con una gran cantidad de juguetes
@@ -422,74 +589,12 @@
       </div>
     </section>
 
-    <!-- Modal login-->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2
-              class="modal-title fs-5 fw-comic title-login"
-              id="staticBackdropLabel">
-              Iniciar Sesión
-            </h2>
-            <button
-              type="button"
-              class="btn shadow-none border-0"
-              data-bs-dismiss="modal"
-              aria-label="Close">
-              <i class="fa-solid fa-xmark cerrar"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="form-control" id="form-login">
-              <div class="py-2">
-                <label for="text-email" class="fw-comic text-email"
-                  >Correo Electrónico:</label
-                >
-                <input
-                  type="email"
-                  class="form-control input-email"
-                  id="text-email"
-                  placeholder="Correo Electrónico:" />
-              </div>
-              <div class="py-2">
-                <label for="text-password" class="fw-comic text-password"
-                  >Contraseña:</label
-                >
-                <input
-                  type="password"
-                  class="form-control input-password"
-                  id="text-password"
-                  placeholder="Contraseña:" />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-              onclick="iniciarSesion()">
-              Iniciar Sesion
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- testimonials -->
-    <section class="sct-testimonial mt-5">
+    <section class="sct-testimonial mt-5" data-aos="zoom-in">
       <h2 class="fw-comic-titles text-center title-testimoniales">
         Testimoniales
       </h2>
-      <p class="text-center text-testimoniales">
+      <p class="text-center text-testimoniales text-categorias">
         Comentarios de clientes satisfechos de sus compras en jugueteria de
         bigotes.
       </p>

@@ -12,6 +12,7 @@ const deportes = document.querySelector(".deportes");
 const nerf = document.querySelector(".nerf");
 const motorafina = document.querySelector(".motorafina");
 const verano = document.querySelector(".verano");
+const textHome = document.querySelector(".text-home");
 
 // titles
 const promociones = document.querySelector(".promociones");
@@ -173,6 +174,7 @@ links.forEach((r) => {
       comentario4.textContent = changeLanguage[attr].comentario4;
       comentario5.textContent = changeLanguage[attr].comentario5;
       comentario6.textContent = changeLanguage[attr].comentario6;
+      textHome.textContent = changeLanguage[attr].textHome;
     }
     // carrito
     titleLogin.textContent = changeLanguage[attr].titleLogin;
@@ -217,6 +219,7 @@ let changeLanguage = {
     nerf: "Armas Nerf",
     motorafina: "Motorafina",
     verano: "Verano",
+    textHome: "Promociones para este mes de Diciembre",
 
     // agregar titulos
     promociones: "Promociones",
@@ -318,6 +321,7 @@ let changeLanguage = {
     nerf: "Gun Nerf",
     motorafina: "Fine Motor Skills ",
     verano: "Summer",
+    textHome: "Promotions for this month of December",
 
     // agregar titulos
     promociones: "Promotions",

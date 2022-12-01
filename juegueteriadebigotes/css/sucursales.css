@@ -37,7 +37,11 @@
 
 .active {
   display: inline-block !important;
+    background-color: var(--color-secondary) !important;
+    color: #f2f2f2;
+    font-size: 1.2rem !important;
 }
+
 @keyframes zoom {
   from {
     opacity: 0;
@@ -64,3 +68,4 @@
   font-size: 1.5rem;
   border-radius: 8px;
 }
+

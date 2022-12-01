@@ -1,45 +1,47 @@
 const productsHome = [
   {
-    name: "X-Shot Lanzadardos Chaos 12 Dardos-Bola ",
-    SKU: "ZU36499",
-    sale: 0,
-    price: 20795.0,
-    imgUrl: "images/tienda/pistola-1.jpg",
-    cantidad: 1,
+    name: "Motocicleta Escala 1:12",
+    SKU: "MB34101",
+    sale: 9495.0,
+    price: 5495.0,
+    imgUrl: "images/tienda/MB34101-1.jpg",
+    imgUrl2: "images/tienda/MB34101-2.jpg",
   },
   {
-    name: "Perrito de Peluche con Aerógrafo ",
-    SKU: "CTOFG249",
-    sale: 0,
-    price: 24995.0,
-    imgUrl: "images/tienda/perrito-1.jpg",
-    imgUrl2: "images/tienda/perrito-2.jpg",
-    cantidad: 1,
+    name: "Vehículo Fortnite R/C Deluxe The Baller",
+    SKU: "JZFNT0381",
+    sale: 32995.0,
+    price: 26396.0,
+    imgUrl: "images/tienda/JZFNT0381-1.webp",
   },
   {
-    name: "Dinosaurio T-Rex de Peluche con Aerógrafo Style 4 Ever Con 100 Plantillas",
-    SKU: "CTOFG243",
-    sale: 0,
-    price: 24995.0,
-    imgUrl: "images/tienda/t-rex-1.jpg",
-    cantidad: 1,
+    name: "Vehículo Fortnite Todo Terreno R/C Deluxe",
+    SKU: "JZFNT05",
+    sale: 46995.0,
+    price: 30995.0,
+    imgUrl: "images/tienda/JZFNT05-1.jpg",
   },
   {
-    name: "Minis Princesas Disney Comics Sorpresa Serie2 ",
-    SKU: "HBE6279",
-    sale: 4795,
-    price: 6395,
-    imgUrl: "images/tienda/minisprincesas.jpg",
-    imgUrl2: "images/tienda/minisprincesas2.jpg",
-    cantidad: 1,
+    name: "Star Wars Sable de Luz Combate Interactivo",
+    SKU: "HBE3026",
+    sale: 56995.0,
+    price: 34996.0,
+    imgUrl: "images/tienda/HBE3026-1.jpg",
   },
   {
-    name: "X-Shot Lanzadardos Chaos 12 Dardos-Bola ",
-    SKU: "ZU36499",
-    sale: 0,
-    price: 20795.0,
-    imgUrl: "images/tienda/pistola-1.jpg",
-    cantidad: 1,
+    name: "Trepador Inflable C/Tobogán Agua Tiburon 4.5x3.2x2.4m 3-10a 4P",
+    SKU: "SC9417",
+    sale: 439995.0,
+    price: 329994.0,
+    imgUrl: "images/tienda/SC9417-1.jpg",
+    imgUrl2: "images/tienda/SC9417-2.jpg",
+  },
+  {
+    name: "Nano Nitro Elevacion",
+    SKU: "HV41545",
+    sale: 33995.0,
+    price: 19995.0,
+    imgUrl: "images/tienda/HV41545-1.jpg",
   },
 ];
 
@@ -267,7 +269,6 @@ const accesoriosBebes = [
     imgUrl: "images/categorias/bebes/DRWB91002-1.jpg",
   },
 ];
-
 //lanzadores tienda
 const tiendaLanzadores = [
   {
@@ -539,7 +540,6 @@ const tiendaLanzadoresXShot = [
     imgUrl: "images/categorias/lanzadores/ZU3621-1.jpg",
   },
 ];
-
 // motorafina tienda
 const tiendaMotorafina = [
   {
@@ -833,7 +833,6 @@ const tiendaCogo = [
     imgUrl: "images/categorias/motorafina/CO5801-1.jpg",
   },
 ];
-
 // tienda verano
 const tiendaVerano = [
   {
@@ -970,7 +969,6 @@ const tiendaVerano = [
     imgUrl: "images/categorias/verano/IP8728-1.jpg",
   },
 ];
-
 // tienda tiendas de acampar
 const tiendasAcampar = [
   {
@@ -1037,7 +1035,6 @@ const tiendasAcampar = [
     imgUrl: "images/categorias/verano/IP8165-1.jpg",
   },
 ];
-
 // tienda piscinas inflables
 const tiendaPicinas = [
   {
@@ -1107,7 +1104,6 @@ const tiendaPicinas = [
     imgUrl: "images/categorias/verano/BW57273-1.jpg",
   },
 ];
-
 // tienda juegos de mesa
 const tiendaJuegosMesaAll = [
   {
@@ -1316,7 +1312,6 @@ const tiendaJuegosMesa = [
     imgUrl: "images/categorias/verano/WWXJ801-1.jpg",
   },
 ];
-
 // tienda Monopoly
 const tiendaMonopoly = [
   {
@@ -1383,5 +1378,266 @@ const tiendaMonopoly = [
     sale: 0,
     price: 9995.0,
     imgUrl: "images/categorias/verano/HBE3037-1.jpg",
+  },
+];
+
+const tiendaDeportesAll = [
+  {
+    name: 'Bicicleta Aro 20" Swarm',
+    SKU: "HUY2362",
+    sale: 0,
+    price: 107996.0,
+    imgUrl: "images/categorias/deportes/HUY2362-1.jpg",
+  },
+  {
+    name: 'Bicicleta Aro 20" Spectre Negro/Verde',
+    SKU: "HUY23089",
+    sale: 0,
+    price: 89996.0,
+    imgUrl: "images/categorias/deportes/HUY23089-1.webp",
+  },
+  {
+    name: "Juego de Bolos Set de 10 Pinos ",
+    SKU: "KG1188",
+    sale: 0,
+    price: 12995.0,
+    imgUrl: "images/categorias/deportes/KG1188-1.jpg",
+  },
+  {
+    name: 'Bicicleta Aro 20" Jazzmin Blanca/Violeta',
+    SKU: "HUY23099",
+    sale: 0,
+    price: 89996.0,
+    imgUrl: "images/categorias/deportes/HUY23099-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 20" Pro Thunder Azul 5-9a 41kg Max',
+    SKU: "HUY23300Y",
+    sale: 0,
+    price: 74996.0,
+    imgUrl: "images/categorias/deportes/HUY23300Y-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 16" So Sweet Metaloide 4-6a 27kg Max',
+    SKU: "HUY21839",
+    sale: 0,
+    price: 86246.0,
+    imgUrl: "images/categorias/deportes/HUY21839-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 16" Pro Thunder 4-6a 27kg Max',
+    SKU: "HUY2110",
+    sale: 0,
+    price: 71246.0,
+    imgUrl: "images/categorias/deportes/HUY2110-1.webp",
+  },
+  {
+    name: "Cancha de Basketball 2en1 (Piso y Puerta) ",
+    SKU: "KG39881A",
+    sale: 0,
+    price: 14895.0,
+    imgUrl: "images/categorias/deportes/KG39881A-1.jpg",
+  },
+  {
+    name: "Juego Arqueria Arco con Luz y Tiro al Blanco  ",
+    SKU: "KG88124A",
+    sale: 0,
+    price: 11995.0,
+    imgUrl: "images/categorias/deportes/KG88124A-1.jpg",
+  },
+  {
+    name: 'Bicicleta Aro 16" So Sweet 4-6a 27kg Max',
+    SKU: "HUY2111",
+    sale: 0,
+    price: 74996.0,
+    imgUrl: "images/categorias/deportes/HUY2111-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 12" Pro Thunder 3-5a 27kg Max',
+    SKU: "HUY2224",
+    sale: 0,
+    price: 62246.0,
+    imgUrl: "images/categorias/deportes/HUY2224-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 12" So Sweet 3-5a 27kg Max',
+    SKU: "HUY22250Y",
+    sale: 0,
+    price: 63746.0,
+    imgUrl: "images/categorias/deportes/HUY22250Y-1.webp",
+  },
+  {
+    name: "Casco Rojo-Rosado-Celeste-Rojo (Surtido de 3 - Se venden por Separado)",
+    SKU: "YX0403",
+    sale: 0,
+    price: 7495.0,
+    imgUrl: "images/categorias/deportes/YX0403-1.jpg",
+  },
+  {
+    name: "Patineta de Maple 79x20x8,5cm (Surtido de 3 - Se venden por Separado) ",
+    SKU: "YXW6041",
+    sale: 0,
+    price: 11995.0,
+    imgUrl: "images/categorias/deportes/YXW6041-1.jpg",
+  },
+
+  {
+    name: "Juego de Bolas de Espuma Set/4 ",
+    SKU: "KGPU1914",
+    sale: 0,
+    price: 2995.0,
+    imgUrl: "images/categorias/deportes/KGPU1914-1.jpg",
+  },
+
+  {
+    name: "Patines 4 Ruedas Bota Talla 37 Morad/Bco No Limit   ",
+    SKU: "YX0145B3",
+    sale: 0,
+    price: 32995.0,
+    imgUrl: "images/categorias/deportes/YX0145B3-1.jpg",
+  },
+  {
+    name: "Balón Fútbol PVC Cosido C/Neum #3  ",
+    SKU: "WXSM4029",
+    sale: 0,
+    price: 3995.0,
+    imgUrl: "images/categorias/deportes/WXSM4029-1.webp",
+  },
+  {
+    name: "Balón Baloncesto PVC Suave #7 Naranja  ",
+    SKU: "WX20275",
+    sale: 0,
+    price: 9595.0,
+    imgUrl: "images/categorias/deportes/WX20275-1.png",
+  },
+];
+const tiendaDeportes = [
+  {
+    name: "Casco Rojo-Rosado-Celeste-Rojo (Surtido de 3 - Se venden por Separado)",
+    SKU: "YX0403",
+    sale: 0,
+    price: 7495.0,
+    imgUrl: "images/categorias/deportes/YX0403-1.jpg",
+  },
+  {
+    name: "Patineta de Maple 79x20x8,5cm (Surtido de 3 - Se venden por Separado) ",
+    SKU: "YXW6041",
+    sale: 0,
+    price: 11995.0,
+    imgUrl: "images/categorias/deportes/YXW6041-1.jpg",
+  },
+  {
+    name: "Juego de Bolos Set de 10 Pinos ",
+    SKU: "KG1188",
+    sale: 0,
+    price: 12995.0,
+    imgUrl: "images/categorias/deportes/KG1188-1.jpg",
+  },
+  {
+    name: "Juego de Bolas de Espuma Set/4 ",
+    SKU: "KGPU1914",
+    sale: 0,
+    price: 2995.0,
+    imgUrl: "images/categorias/deportes/KGPU1914-1.jpg",
+  },
+  {
+    name: "Cancha de Basketball 2en1 (Piso y Puerta) ",
+    SKU: "KG39881A",
+    sale: 0,
+    price: 14895.0,
+    imgUrl: "images/categorias/deportes/KG39881A-1.jpg",
+  },
+  {
+    name: "Juego Arqueria Arco con Luz y Tiro al Blanco  ",
+    SKU: "KG88124A",
+    sale: 0,
+    price: 11995.0,
+    imgUrl: "images/categorias/deportes/KG88124A-1.jpg",
+  },
+  {
+    name: "Patines 4 Ruedas Bota Talla 37 Morad/Bco No Limit   ",
+    SKU: "YX0145B3",
+    sale: 0,
+    price: 32995.0,
+    imgUrl: "images/categorias/deportes/YX0145B3-1.jpg",
+  },
+  {
+    name: "Balón Fútbol PVC Cosido C/Neum #3  ",
+    SKU: "WXSM4029",
+    sale: 0,
+    price: 3995.0,
+    imgUrl: "images/categorias/deportes/WXSM4029-1.webp",
+  },
+  {
+    name: "Balón Baloncesto PVC Suave #7 Naranja  ",
+    SKU: "WX20275",
+    sale: 0,
+    price: 9595.0,
+    imgUrl: "images/categorias/deportes/WX20275-1.png",
+  },
+];
+const tiendaBicicletas = [
+  {
+    name: 'Bicicleta Aro 20" Swarm',
+    SKU: "HUY2362",
+    sale: 0,
+    price: 107996.0,
+    imgUrl: "images/categorias/deportes/HUY2362-1.jpg",
+  },
+  {
+    name: 'Bicicleta Aro 20" Spectre Negro/Verde',
+    SKU: "HUY23089",
+    sale: 0,
+    price: 89996.0,
+    imgUrl: "images/categorias/deportes/HUY23089-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 20" Jazzmin Blanca/Violeta',
+    SKU: "HUY23099",
+    sale: 0,
+    price: 89996.0,
+    imgUrl: "images/categorias/deportes/HUY23099-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 20" Pro Thunder Azul 5-9a 41kg Max',
+    SKU: "HUY23300Y",
+    sale: 0,
+    price: 74996.0,
+    imgUrl: "images/categorias/deportes/HUY23300Y-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 16" So Sweet Metaloide 4-6a 27kg Max',
+    SKU: "HUY21839",
+    sale: 0,
+    price: 86246.0,
+    imgUrl: "images/categorias/deportes/HUY21839-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 16" Pro Thunder 4-6a 27kg Max',
+    SKU: "HUY2110",
+    sale: 0,
+    price: 71246.0,
+    imgUrl: "images/categorias/deportes/HUY2110-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 16" So Sweet 4-6a 27kg Max',
+    SKU: "HUY2111",
+    sale: 0,
+    price: 74996.0,
+    imgUrl: "images/categorias/deportes/HUY2111-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 12" Pro Thunder 3-5a 27kg Max',
+    SKU: "HUY2224",
+    sale: 0,
+    price: 62246.0,
+    imgUrl: "images/categorias/deportes/HUY2224-1.webp",
+  },
+  {
+    name: 'Bicicleta Aro 12" So Sweet 3-5a 27kg Max',
+    SKU: "HUY22250Y",
+    sale: 0,
+    price: 63746.0,
+    imgUrl: "images/categorias/deportes/HUY22250Y-1.webp",
   },
 ];

@@ -19,6 +19,7 @@
       integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/ligthbox.css" />
     <link rel="stylesheet" href="css/bebes.css" />
@@ -63,7 +64,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link promociones-h" href="#ofertas"
+                  <a class="nav-link promociones-h" href="home.html#ofertas"
                     >Promociones</a
                   >
                 </li>
@@ -81,7 +82,9 @@
                       <a class="dropdown-item bebes" href="bebes.html">bebes</a>
                     </li>
                     <li>
-                      <a class="dropdown-item juegos-mesa" href="juegosmesa.html"
+                      <a
+                        class="dropdown-item juegos-mesa"
+                        href="juegosmesa.html"
                         >juegos de mesa</a
                       >
                     </li>
@@ -196,6 +199,163 @@
       </div>
     </header>
 
+    <!-- Modal login-->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2
+              class="modal-title fs-5 title-login fw-comic m-auto p-0 m-0"
+              id="staticBackdropLabel">
+              Iniciar Sesión
+            </h2>
+            <button
+              type="button"
+              class="btn shadow-none border-0"
+              data-bs-dismiss="modal"
+              aria-label="Close">
+              <i class="fa-solid fa-xmark cerrar"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-control" id="form-login">
+              <div class="py-2">
+                <label for="text-email" class="fw-comic text-email"
+                  >Correo Electrónico:</label
+                >
+                <input
+                  type="email"
+                  class="form-control input-email"
+                  id="text-email"
+                  placeholder="Correo Electrónico:" />
+              </div>
+              <div class="py-2">
+                <label for="text-password" class="fw-comic text-password"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control input-password"
+                  id="text-password"
+                  placeholder="Contraseña:" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+                onclick="iniciarSesion()">
+                Iniciar Sesion
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary w-100"
+              data-bs-target="#modal-register"
+              data-bs-toggle="modal"
+              id="btn-register">
+              Registrarme
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- register -->
+    <div
+      class="modal fade"
+      id="modal-register"
+      aria-hidden="true"
+      aria-labelledby="modalregister"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2
+              class="modal-title fs-5 title-login fw-comic m-auto p-0 m-0"
+              id="modal-register-t">
+              Registrarse
+            </h2>
+            <button
+              type="button"
+              class="btn shadow-none border-0"
+              data-bs-dismiss="modal"
+              aria-label="Close">
+              <i class="fa-solid fa-xmark cerrar"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-control mb-3 pt-2 pb-3" id="form-register">
+              <div class="py-2">
+                <label for="text-name-register" class="fw-comic text-email"
+                  >Nombre Completo:</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-email"
+                  id="text-name-register"
+                  placeholder="Nombre completo:" />
+              </div>
+              <div class="py-2">
+                <label for="text-username-register" class="fw-comic text-email"
+                  >Nombre de Usuario:</label
+                >
+                <input
+                  type="text"
+                  class="form-control input-email"
+                  id="text-username-register"
+                  placeholder="Nombre de Usuario:" />
+              </div>
+              <div class="py-2">
+                <label for="text-email-register" class="fw-comic text-email"
+                  >Correo Electrónico:</label
+                >
+                <input
+                  type="email"
+                  class="form-control input-email"
+                  id="text-email-register"
+                  placeholder="Correo Electrónico:" />
+              </div>
+              <div class="py-2">
+                <label
+                  for="text-password-register"
+                  class="fw-comic text-password"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control input-password"
+                  id="text-password-register"
+                  placeholder="Contraseña:" />
+              </div>
+              <button
+                class="btn btn-success mt-2"
+                type="button"
+                onclick="register()">
+                Registrarme
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-primary w-100"
+              data-bs-target="#staticBackdrop"
+              data-bs-toggle="modal"
+              id="btn-login">
+              Iniciar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- alerta perfil -->
     <div
       role="alert"
@@ -269,68 +429,8 @@
       </div>
     </div>
 
-    <!-- Modal login-->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2
-              class="modal-title fs-5 fw-comic title-login"
-              id="staticBackdropLabel">
-              Iniciar Sesión
-            </h2>
-            <button
-              type="button"
-              class="btn shadow-none border-0"
-              data-bs-dismiss="modal"
-              aria-label="Close">
-              <i class="fa-solid fa-xmark cerrar"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="form-control" id="form-login">
-              <div class="py-2">
-                <label for="text-email" class="fw-comic text-email"
-                  >Correo Electrónico:</label
-                >
-                <input
-                  type="email"
-                  class="form-control input-email"
-                  id="text-email" />
-              </div>
-              <div class="py-2">
-                <label for="text-password" class="fw-comic text-password"
-                  >Contraseña:</label
-                >
-                <input
-                  type="password"
-                  class="form-control input-password"
-                  id="text-password"
-                  placeholder="Contraseña:" />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-              onclick="iniciarSesion()">
-              Iniciar Sesion
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- banner bebes -->
-    <section class="banner-categories">
+    <section class="banner-categories" data-aos="zoom-in">
       <div class="container">
         <img
           src="images/categorias/banner bebe.png"
@@ -668,10 +768,12 @@
         },
       });
     </script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- my js -->
     <script src="js/scroll-smooth.js"></script>
-    <script src="js/home.js"></script>
     <script src="js/searchbar.js"></script>
     <script src="js/lightbox.js"></script>
     <script src="js/idioma.js"></script>
@@ -679,5 +781,6 @@
     <script src="users/login.js"></script>
     <script src="productosJson/products.js"></script>
     <script src="productosJson/tienda.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>
