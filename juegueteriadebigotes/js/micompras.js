@@ -11,7 +11,7 @@ if (allProductsBuy == null) {
 }
 
 let date = () => {
-  fecha = `${mes.value}/${dia.value}/2022`;
+  fecha = `${dia.value}/${mes.value}/2022`;
   txtFecha.value = fecha;
 };
 
@@ -156,3 +156,9 @@ function limpiarHTMLd() {
     UserBuys.removeChild(UserBuys.firstChild);
   }
 }
+let dateN = new Date();
+let year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(dateN);
+let month = new Intl.DateTimeFormat("en", { month: "numeric" }).format(dateN);
+let day = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(dateN);
+
+$("#text-fecha").attr("placeholder", `${day}/${month}/${year}`);

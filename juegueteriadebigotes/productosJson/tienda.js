@@ -647,7 +647,10 @@ if (
   createStore();
 }
 
+let cart = document.querySelector(".cart-shopping");
+
 const pay = () => {
+  let LogUser = JSON.parse(localStorage.getItem("usuarioConectado"));
   if (carrito.length == 0) {
     Swal.fire({
       position: "center",
@@ -656,7 +659,7 @@ const pay = () => {
       showConfirmButton: false,
       timer: 1500,
     });
-  } else if (usuarioConectado == null) {
+  } else if (LogUser == null) {
     Swal.fire({
       position: "center",
       icon: "error",
@@ -670,11 +673,17 @@ const pay = () => {
   } else {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
+    let dateN = new Date();
+    let year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(dateN);
+    let month = new Intl.DateTimeFormat("en", { month: "numeric" }).format(
+      dateN
+    );
+    let day = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(dateN);
     buyAllUser = [
       ...buyAllUser,
       {
         productos: carrito,
-        date: new Date().toLocaleDateString().split("T")[0],
+        date: `${day}/${month}/${year}`,
       },
     ];
     let allProductsBuy = JSON.stringify(buyAllUser);

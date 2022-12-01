@@ -3,6 +3,7 @@ let password = document.getElementById("text-password");
 let nameUser = document.getElementById("nameUser");
 let loginText = document.getElementById("login");
 let formLogin = document.querySelectorAll("#form-login input");
+
 const login = () => {
   users.forEach((user) => {
     if (user.email == email.value && user.password == password.value) {
@@ -58,7 +59,7 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     }).then(() => {
       document.querySelector(".toast").classList.add("show");
     });
-    nameUser.innerHTML = userConected.name;
+    nameUser.innerHTML = userConected.username;
     nameUser.classList.remove("d-none");
     loginText.classList.add("d-none");
   }
@@ -67,7 +68,7 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
 let usuarioConectado = localStorage.getItem("usuarioConectado");
 let userConected = JSON.parse(usuarioConectado);
 if (userConected !== null) {
-  nameUser.innerHTML = userConected.name;
+  nameUser.innerHTML = userConected.username;
   nameUser.classList.remove("d-none");
   loginText.classList.add("d-none");
 }

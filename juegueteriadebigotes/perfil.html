@@ -251,30 +251,9 @@
           <div class="col-12 d-flex gap-2 justify-content-center">
             <h3 class="fw-comic-titles mis-compras">Mis compras</h3>
           </div>
+
           <hr />
-          <div
-            class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
-            <label for="dia" class="label-mes">Mes:</label>
-            <select
-              name=""
-              id="mes"
-              onchange="date()"
-              class="form-select m-auto">
-              <option value="" disabled selected class="option-mes">Mes</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-          </div>
+
           <div
             class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
             <label for="dia" class="label-dia">Dia:</label>
@@ -284,15 +263,15 @@
               onchange="date()"
               class="form-select m-auto">
               <option value="" disabled selected class="option-dia">Dia</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
               <option value="10">10</option>
               <option value="11">11</option>
               <option value="12">12</option>
@@ -317,6 +296,31 @@
               <option value="31">31</option>
             </select>
           </div>
+
+          <div
+            class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
+            <label for="dia" class="label-mes">Mes:</label>
+            <select
+              name=""
+              id="mes"
+              onchange="date()"
+              class="form-select m-auto">
+              <option value="" disabled selected class="option-mes">Mes</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+
           <div
             class="col-12 col-md-12 col-lg-4 d-flex gap-2 justify-content-center mt-2 mt-lg-0">
             <label for="dia" class="fecha">Fecha:</label>
@@ -324,7 +328,8 @@
               type="text"
               value=""
               id="text-fecha"
-              class="form-control w-50" />
+              class="form-control w-50"
+              placeholder="" />
             <button type="button" onclick="filtrar()" class="btn-filter">
               Filtrar
             </button>

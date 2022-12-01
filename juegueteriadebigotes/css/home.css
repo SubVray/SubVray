@@ -685,7 +685,7 @@ footer i:hover {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 10000;
+  z-index: 10000000;
 }
 
 .title-aviso {
