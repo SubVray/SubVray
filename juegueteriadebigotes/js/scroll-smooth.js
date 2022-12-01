@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("button").on("click", function (event) {
+  $("button #flechabtn").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
