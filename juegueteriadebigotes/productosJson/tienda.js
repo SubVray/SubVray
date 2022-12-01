@@ -63,7 +63,8 @@ function search() {
 if (
   window.location !=
     "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html" &&
-  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html"
+  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html" &&
+  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/galeria.html"
 ) {
   eventListeners();
 
@@ -642,7 +643,8 @@ const getValorTotalCarrito = () => {
 if (
   window.location !=
     "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html" &&
-  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html"
+  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html" &&
+  window.location != "http://127.0.0.1:5501/juegueteriadebigotes/galeria.html"
 ) {
   createStore();
 }
