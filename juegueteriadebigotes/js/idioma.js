@@ -162,12 +162,15 @@ links.forEach((r) => {
       imgNerf.src = changeLanguage[attr].imgNerf;
       imgMotoraFina.src = changeLanguage[attr].imgMotoraFina;
       imgVerano.src = changeLanguage[attr].imgVerano;
+
       // titles
       promociones.textContent = changeLanguage[attr].promociones;
       categorias.textContent = changeLanguage[attr].categorias;
       textCategoria.textContent = changeLanguage[attr].textCategoria;
       titleTestimoniales.textContent = changeLanguage[attr].titleTestimoniales;
       textTestimoniales.textContent = changeLanguage[attr].textTestimoniales;
+
+      // comentarios
       comentario1.textContent = changeLanguage[attr].comentario1;
       comentario2.textContent = changeLanguage[attr].comentario2;
       comentario3.textContent = changeLanguage[attr].comentario3;
