@@ -4,6 +4,9 @@
     padding-top: 150px !important;
     padding-bottom: 50px !important;
     height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .banner h1 {
     font-size: 4rem;
@@ -90,8 +93,24 @@
   }
 
   #carousel img {
-    height: 408px;
+    height: 480px;
   }
+  .carousel-control-next {
+    right: 10px;
+  }
+  .carousel-control-prev {
+    left: 10px;
+  }
+  .fa-chevron-left,
+  .fa-chevron-right {
+    margin-top: -50px;
+    background-color: #000;
+    border-radius: 50%;
+    color: var(--color-orange);
+    font-size: 1rem;
+    padding: 10px;
+  }
+
   .clases .container {
     padding-top: 40px;
   }
@@ -180,7 +199,7 @@
 
   /* productos */
   .productos-body main {
-    padding-top: 170px;
+    padding-top: 220px;
     padding-bottom: 50px;
   }
 }
