@@ -1,8 +1,7 @@
-
 function evaluacion() {
   error_radio = validar_radio();
 
-  if ( error_radio == true) {
+  if (error_radio == true) {
     Swal.fire({
       title: "Atención",
       width: 450,
@@ -14,7 +13,6 @@ function evaluacion() {
       html: "<br><br> Tiene campos vacios. <br><br> Contestar todas las preguntas.",
     });
   } else {
-
     preg1 = document.querySelector(
       "#pregunta1 input[type=radio]:checked"
     ).value;
@@ -30,7 +28,6 @@ function evaluacion() {
     preg5 = document.querySelector(
       "#pregunta5 input[type=radio]:checked"
     ).value;
-
 
     numres1 = parseInt(preg1);
     numres2 = parseInt(preg2);
@@ -48,14 +45,17 @@ function evaluacion() {
     console.log(porcFinal);
 
     Swal.fire({
-      icon:'success',
+      icon: "success",
       title: "Evaluación obtenida: " + porcFinal + "%",
       color: "#000",
-      confirmButtonColor: "#ffbb00",
+      confirmButtonColor: "#ffbe00",
+      confirmButtonText: "Cerrar",
+    }).then(() => {
+      document.getElementById("encuesta").reset();
+      document.getElementById("cerrar-encuesta").click();
     });
   }
 }
-
 
 let validar_radio = () => {
   let error = false;
@@ -83,7 +83,6 @@ let validar_radio = () => {
   }
   return error_radio;
 };
-
 
 function btnlimpiar() {
   document.getElementById("charla").value = "";
