@@ -1,0 +1,16 @@
+body {
+  background-image: url("../src/images/gym.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.699);
+  background-attachment: fixed;
+}
+main {
+  height: 100vh;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+footer {
+  background-color: #9c1515;
+  padding: 10px 0;
+}

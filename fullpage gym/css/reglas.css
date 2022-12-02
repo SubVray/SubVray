@@ -49,6 +49,26 @@
   .planes .card {
     height: 890px !important;
   }
+  .text-button {
+    font-size: 1.2rem !important ;
+  }
+  .cicle-number {
+    font-size: 1rem !important;
+    height: 30px;
+    width: 30px;
+  }
+
+  /* productos */
+  .productos-body main {
+    padding-top: 150px;
+  }
+  .productos-body h1 {
+    font-size: 3.5rem !important;
+  }
+  /* valores */
+  main {
+    height: auto;
+  }
 }
 @media (min-width: 576px) {
   .banner {
@@ -78,6 +98,11 @@
   .planes .card {
     height: 880px !important;
   }
+
+  /* productos */
+  .productos-body main {
+    padding-top: 150px;
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -106,6 +131,10 @@
 
   #carousel img {
     height: 75vh;
+  }
+  /* productos */
+  .productos-body main {
+    padding-top: 220px;
   }
 }
 
@@ -142,10 +171,16 @@
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-	  .banner h1 {
+  .banner h1 {
     font-size: 12rem;
   }
   .banner p {
     font-size: 1.5rem;
+  }
+
+  /* productos */
+  .productos-body main {
+    padding-top: 170px;
+    padding-bottom: 50px;
   }
 }
