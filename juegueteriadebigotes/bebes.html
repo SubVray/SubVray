@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <title>Jugueteria de Bigotes / Bebes</title>
+    <title>Jugueteria de Bigotes | Bebes</title>
   </head>
   <body id="home">
     <!-- header -->
@@ -445,12 +445,14 @@
           aria-label="breadcrumb"
           class="d-flex justify-content-between align-items-center w-100">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
+            <li class="breadcrumb-item">
+              <a href="home.html" class="inicio-nav">Inicio</a>
+            </li>
             <li class="breadcrumb-item active">
-              <a href="bebes.html">Bebes</a>
+              <a href="bebes.html" class="bebes-nav">Bebes</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="bebes.html" id="urlnav">General</a>
+              <a href="bebes.html" id="urlnav" class="general-nav">General</a>
             </li>
           </ol>
           <form class="">
@@ -459,9 +461,9 @@
               class="form-select w-85"
               id="sub-bebes"
               onchange="changeFilter()">
-              <option value="General" selected>General</option>
-              <option value="Juguetes">Juguetes</option>
-              <option value="Accesorios">
+              <option value="General" selected class="slt-general">General</option>
+              <option value="Juguetes" class="slt-juguetes">Juguetes</option>
+              <option value="Accesorios" class=" slt-accesorios">
                 Accesorios(Beberitos, Pañales, Mordedores, Frazadas)
               </option>
             </select>

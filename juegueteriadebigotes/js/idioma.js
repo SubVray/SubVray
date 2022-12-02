@@ -1,5 +1,5 @@
 const langEl = document.querySelector(".langWrap");
-const links = document.querySelectorAll("header button");
+const links = document.querySelectorAll("header .container-languages button");
 const h1 = document.querySelector("h1");
 const recorrido = document.querySelector(".recorridot");
 const inicio = document.querySelector(".inicio");
@@ -76,6 +76,19 @@ const comentario4 = document.querySelector(".comentario-cliente-4");
 const comentario5 = document.querySelector(".comentario-cliente-5");
 const comentario6 = document.querySelector(".comentario-cliente-6");
 
+// nav filtro
+const inicioNav = document.querySelector(".inicio-nav");
+const bebesNav = document.querySelector(".bebes-nav");
+const generalNav = document.querySelector(".general-nav");
+const sltGeneral = document.querySelector(".slt-general");
+const sltJuguetes = document.querySelector(".slt-juguetes");
+const sltAccesorios = document.querySelector(".slt-accesorios");
+
+// juegos mesa
+const juegosMesaNav = document.querySelector(".juegosmesa-nav");
+const sltJuegosMesa = document.querySelector(".slt-juegosmesa");
+const sltMonopoly = document.querySelector(".slt-monopoly");
+
 // footer
 const titleContactenos = document.querySelector(".title-contactenos");
 const titleAcerca = document.querySelector(".title-acerca");
@@ -104,6 +117,38 @@ links.forEach((r) => {
     motorafina.textContent = changeLanguage[attr].motorafina;
     verano.textContent = changeLanguage[attr].verano;
 
+    if (
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/bebes.html" ||
+      window.location == "http://127.0.0.1:5500/juegueteriadebigotes/bebes.html"
+    ) {
+      inicioNav.textContent = changeLanguage[attr].inicioNav;
+      generalNav.textContent = changeLanguage[attr].generalNav;
+      sltGeneral.textContent = changeLanguage[attr].sltGeneral;
+      bebesNav.textContent = changeLanguage[attr].bebesNav;
+      sltJuguetes.textContent = changeLanguage[attr].sltJuguetes;
+      sltAccesorios.textContent = changeLanguage[attr].sltAccesorios;
+
+      $(".slt-general").attr("value", changeLanguage[attr].sltGeneral);
+      $(".slt-juguetes").attr("value", changeLanguage[attr].sltJuguetes);
+      $(".slt-accesorios").attr("value", changeLanguage[attr].sltAccesorios);
+    }
+    if (
+      window.location !=
+        "http://127.0.0.1:5501/juegueteriadebigotes/juegosmesa.html" ||
+      window.location !=
+        "http://127.0.0.1:5500/juegueteriadebigotes/juegosmesa.html"
+    ) {
+      inicioNav.textContent = changeLanguage[attr].inicioNav;
+      generalNav.textContent = changeLanguage[attr].generalNav;
+      sltGeneral.textContent = changeLanguage[attr].sltGeneral;
+      juegosMesaNav.textContent = changeLanguage[attr].juegosMesaNav;
+      sltJuegosMesa.textContent = changeLanguage[attr].sltJuegosMesa;
+      sltMonopoly.textContent = changeLanguage[attr].sltMonopoly;
+      $(".slt-general").attr("value", changeLanguage[attr].sltGeneral);
+      $(".slt-juegosmesa").attr("value", changeLanguage[attr].sltJuegosMesa);
+      $(".slt-monopoly").attr("value", changeLanguage[attr].sltMonopoly);
+    }
     // perfil
     if (
       window.location ==
@@ -308,6 +353,18 @@ let changeLanguage = {
     sct3: "Categorias",
     sct4: "Nuestras Marcas",
     sct5: "Reclamos y Quejas",
+
+    // nav enlaces filter:
+    inicioNav: "Inicio",
+    bebesNav: "Bebes",
+    generalNav: "General",
+    sltGeneral: "General",
+    sltJuguetes: "Juguetes",
+    sltAccesorios: "Accesorios",
+    // juegos mesa
+    juegosMesaNav: "Juegos de Mesa",
+    sltJuegosMesa: "Juegos de Mesa",
+    sltMonopoly: "Monopoly",
   },
 
   // TODO: english
@@ -408,5 +465,18 @@ let changeLanguage = {
     sct3: "Categories",
     sct4: "Our Brands",
     sct5: "Claims and complaints",
+
+    // nav enlaces filter:
+    inicioNav: "Home",
+    bebesNav: "Babies",
+    generalNav: "General",
+    sltGeneral: "General",
+    sltJuguetes: "Toys",
+    sltAccesorios: "Accesories",
+
+    // juegos de mesa
+    juegosMesaNav: "Table Games",
+    sltJuegosMesa: "Table Games",
+    sltMonopoly: "Monopoly",
   },
 };

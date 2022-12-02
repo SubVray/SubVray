@@ -349,11 +349,17 @@ const changeFilter = () => {
   // tienda 2
   else if (
     subBebes.value == "Juguetes" ||
-    subBebes.value == "Juegosmesa" ||
+    subBebes.value == "Toys" ||
+    subBebes.value == "Juegos de Mesa" ||
+    subBebes.value == "Table Games" ||
     subBebes.value == "Deportes" ||
+    subBebes.value == "Sports" ||
     subBebes.value == "Nerf" ||
+    subBebes.value == "Gun Nerf " ||
     subBebes.value == "Bloques" ||
-    subBebes.value == "Piscinas"
+    subBebes.value == "Blocks" ||
+    subBebes.value == "Piscinas" ||
+    subBebes.value == "pool"
   ) {
     tienda1.style.display = "none";
     tienda2.style.display = "flex";
@@ -361,10 +367,16 @@ const changeFilter = () => {
 
     if (subBebes.value == "Juguetes") {
       navUrl.innerHTML = "Juguetes";
-    } else if (subBebes.value == "Juegosmesa") {
+    } else if (subBebes.value == "Toys") {
+      navUrl.innerHTML = "Toys";
+    } else if (subBebes.value == "Juegos de Mesa") {
       navUrl.innerHTML = "Juegos de Mesa";
+    } else if (subBebes.value == "Table Games") {
+      navUrl.innerHTML = "Table Games";
     } else if (subBebes.value == "Deportes") {
       navUrl.innerHTML = "Deportes";
+    } else if (subBebes.value == "Sports") {
+      navUrl.innerHTML = "Sports";
     } else if (subBebes.value == "Nerf") {
       navUrl.innerHTML = "Armas Nerf ";
     } else if (subBebes.value == "Bloques") {
@@ -387,6 +399,35 @@ const changeFilter = () => {
     tienda3.style.display = "flex";
     if (subBebes.value == "Accesorios") {
       navUrl.innerHTML = "Accesorios";
+    } else if (subBebes.value == "Accesories") {
+      navUrl.innerHTML = "Accesories";
+    } else if (subBebes.value == "Monopoly") {
+      navUrl.innerHTML = "Monopoly";
+    } else if (subBebes.value == "Bicicletas") {
+      navUrl.innerHTML = "Bicicletas";
+    } else if (subBebes.value == "X-Shot") {
+      navUrl.innerHTML = "Armas X-Shot";
+    } else if (subBebes.value == "Cogo") {
+      navUrl.innerHTML = "Cogo";
+    } else if (subBebes.value == "Tiendas") {
+      navUrl.innerHTML = "Tiendas de Campaña";
+    }
+  } else if (
+    subBebes.value == "Accesorios" ||
+    subBebes.value == "Accesories" ||
+    subBebes.value == "Monopoly" ||
+    subBebes.value == "Bicicletas" ||
+    subBebes.value == "X-Shot" ||
+    subBebes.value == "Cogo" ||
+    subBebes.value == "Tiendas"
+  ) {
+    tienda1.style.display = "none";
+    tienda2.style.display = "none";
+    tienda3.style.display = "flex";
+    if (subBebes.value == "Accesorios") {
+      navUrl.innerHTML = "Accesorios";
+    } else if (subBebes.value == "Accesories") {
+      navUrl.innerHTML = "Accesories";
     } else if (subBebes.value == "Monopoly") {
       navUrl.innerHTML = "Monopoly";
     } else if (subBebes.value == "Bicicletas") {

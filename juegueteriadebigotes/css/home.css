@@ -499,10 +499,6 @@ body {
   height: 400px;
 }
 
-.offcanvas {
-  width: 400px !important;
-}
-
 .card-product {
   width: 100% !important;
 }
@@ -562,8 +558,8 @@ body {
   width: 100%;
   background-color: var(--color-primary);
 }
-.title-carrito{
-  font-weight: bolder;;
+.title-carrito {
+  font-weight: bolder;
 }
 .offcanvas-body {
   margin-bottom: 100px;
@@ -669,9 +665,9 @@ input {
 }
 
 .offcanvas {
-  z-index: 1000000;
+  z-index: 1100;
+  width: 400px !important;
 }
-
 /* footer */
 
 footer {

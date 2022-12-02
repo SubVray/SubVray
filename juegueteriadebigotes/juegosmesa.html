@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <title>Jugueteria de Bigotes / Juegos de Mesa</title>
+    <title>Jugueteria de Bigotes | Juegos de Mesa</title>
   </head>
   <body id="home">
     <!-- header -->
@@ -446,12 +446,16 @@
           aria-label="breadcrumb"
           class="d-flex justify-content-between align-items-center w-100">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
+            <li class="breadcrumb-item">
+              <a href="home.html" class="inicio-nav">Inicio</a>
+            </li>
             <li class="breadcrumb-item active">
-              <a href="juegosmesa.html">Juegos de Mesa</a>
+              <a href="juegosmesa.html" class="juegosmesa-nav"
+                >Juegos de Mesa</a
+              >
             </li>
             <li class="breadcrumb-item">
-              <a href="juegosmesa.html" id="urlnav">General</a>
+              <a href="juegosmesa.html" id="urlnav" class="general-nav"></a>
             </li>
           </ol>
           <form class="">
@@ -460,9 +464,13 @@
               class="form-select w-85"
               id="sub-bebes"
               onchange="changeFilter()">
-              <option value="General" selected>General</option>
-              <option value="Juegosmesa">Juegos de Mesa</option>
-              <option value="Monopoly">Monopoly</option>
+              <option value="General" selected class="slt-general">
+                General
+              </option>
+              <option value="Juegos de Mesa" class="slt-juegosmesa">
+                Juegos de Mesa
+              </option>
+              <option value="Monopoly" class="slt-monopoly">Monopoly</option>
             </select>
           </form>
         </nav>
