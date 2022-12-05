@@ -444,7 +444,7 @@
       <div class="container my-4 list-menu-r">
         <nav
           aria-label="breadcrumb"
-          class="d-flex justify-content-center justify-content-md-between justify-content-lg-between  align-items-center w-100 flex-wrap">
+          class="d-flex justify-content-center justify-content-md-between justify-content-lg-between align-items-center w-100 flex-wrap">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
               <a href="home.html" class="inicio-nav">Inicio</a>
@@ -462,9 +462,11 @@
               class="form-select w-85"
               id="sub-bebes"
               onchange="changeFilter()">
-              <option value="General" selected class="slt-general">General</option>
+              <option value="General" selected class="slt-general">
+                General
+              </option>
               <option value="Juguetes" class="slt-juguetes">Juguetes</option>
-              <option value="Accesorios" class=" slt-accesorios">
+              <option value="Accesorios" class="slt-accesorios">
                 Accesorios(Beberitos, Pañales, Mordedores, Frazadas)
               </option>
             </select>
@@ -473,73 +475,69 @@
       </div>
 
       <div class="container">
-        <div class="row w-100">
-          <div class="col-12">
-            <!-- card tienda producto  -->
-            <div class="container m-auto" id="mostrador" data-aos="zoom-in">
-              <div class="row m-auto" id="tienda-1"></div>
-              <div class="row m-auto" id="tienda-2"></div>
-              <div class="row m-auto" id="tienda-3"></div>
-            </div>
+        <!-- card tienda producto  -->
+        <div class="container m-auto" id="mostrador" data-aos="zoom-in">
+          <div class="row m-auto" id="tienda-1"></div>
+          <div class="row m-auto" id="tienda-2"></div>
+          <div class="row m-auto" id="tienda-3"></div>
+        </div>
 
-            <div class="modal-container">
-              <div class="seleccion" id="seleccion">
-                <a class="btn border-0 shadow-none" onclick="cerrar()"
-                  ><i class="fa-solid fa-xmark cerrar"></i
-                ></a>
-                <div class="info row">
-                  <div
-                    class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
-                    <div class="carousel-container text-center">
-                      <div class="img-carousel-container">
-                        <a id="img-product-modal" data-lightbox="roadtrip ">
-                          <img
-                            alt="producto"
-                            id="img"
-                            class="img-fluid"
-                            name="thumb" />
-                        </a>
-                      </div>
-                      <div
-                        class="text-center d-flex justify-content-between"
-                        id="next-prev">
-                        <button
-                          class="btn-mini-carousel prev"
-                          type="button"
-                          onclick="cambiar(-1)">
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button
-                          class="btn-mini-carousel next"
-                          type="button"
-                          onclick="cambiar(1)">
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </button>
-                      </div>
-                    </div>
+        <div class="modal-container">
+          <div class="seleccion" id="seleccion">
+            <a class="btn border-0 shadow-none" onclick="cerrar()"
+              ><i class="fa-solid fa-xmark cerrar"></i
+            ></a>
+            <div class="info row">
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+                <div class="carousel-container text-center">
+                  <div class="img-carousel-container">
+                    <a id="img-product-modal" data-lightbox="roadtrip ">
+                      <img
+                        alt="producto"
+                        id="img"
+                        class="img-fluid"
+                        name="thumb" />
+                    </a>
                   </div>
                   <div
-                    class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
-                    <img id="img-carrito" alt="hola" />
-                    <p id="descripcion"></p>
-                    <div class="d-flex">
-                      <span class="precio" id="icon-Moneda">₡</span>
-                      <span class="precio" id="precioMostrar"></span>
-                      <span
-                        class="precio opacity-0 position-absolute"
-                        id="precio"></span>
-                    </div>
-                    <span class="sku" id="SKU"></span>
-
-                    <div class="fila" id="fila">
-                      <button
-                        type="button"
-                        class="agregar-carrito rounded"
-                        id="add-carrito">
-                        AGREGAR AL CARRITO
-                      </button>
-                    </div>
+                    class="text-center d-flex justify-content-between"
+                    id="next-prev">
+                    <button
+                      class="btn-mini-carousel prev"
+                      type="button"
+                      onclick="cambiar(-1)">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button
+                      class="btn-mini-carousel next"
+                      type="button"
+                      onclick="cambiar(1)">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                   </div>
+                </div>
+              </div>
+              <div
+                class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
+                <img id="img-carrito" alt="hola" />
+                <p id="descripcion"></p>
+                <div class="d-flex">
+                  <span class="precio" id="icon-Moneda">₡</span>
+                  <span class="precio" id="precioMostrar"></span>
+                  <span
+                    class="precio opacity-0 position-absolute"
+                    id="precio"></span>
+                </div>
+                <span class="sku" id="SKU"></span>
+
+                <div class="fila" id="fila">
+                  <button
+                    type="button"
+                    class="agregar-carrito rounded"
+                    id="add-carrito">
+                    AGREGAR AL CARRITO
+                  </button>
                 </div>
               </div>
             </div>

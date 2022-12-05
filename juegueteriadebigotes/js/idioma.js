@@ -18,6 +18,7 @@ const textHome = document.querySelector(".text-home");
 const promociones = document.querySelector(".promociones");
 const categorias = document.querySelector(".categorias-s");
 const textCategoria = document.querySelector(".text-categorias");
+const textPromociones = document.querySelector(".text-promociones");
 const titleTestimoniales = document.querySelector(".title-testimoniales");
 const textTestimoniales = document.querySelector(".text-testimoniales");
 
@@ -264,6 +265,7 @@ links.forEach((r) => {
       promociones.textContent = changeLanguage[attr].promociones;
       categorias.textContent = changeLanguage[attr].categorias;
       textCategoria.textContent = changeLanguage[attr].textCategoria;
+      textPromociones.textContent = changeLanguage[attr].textPromociones;
       titleTestimoniales.textContent = changeLanguage[attr].titleTestimoniales;
       textTestimoniales.textContent = changeLanguage[attr].textTestimoniales;
 
@@ -288,8 +290,8 @@ links.forEach((r) => {
       "placeholder",
       changeLanguage[attr].inputPassword
     );
+    
     textPassword.textContent = changeLanguage[attr].textPassword;
-
     // footer
     titleContactenos.textContent = changeLanguage[attr].titleContactenos;
     titleAcerca.textContent = changeLanguage[attr].titleAcerca;

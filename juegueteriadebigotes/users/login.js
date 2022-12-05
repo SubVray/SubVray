@@ -52,7 +52,7 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     Swal.fire({
       // icon: "warning",
       confirmButtonText: "Entendido",
-      html: '<iframe src="https://embed.lottiefiles.com/animation/76705"></iframe> <p class="fw-bold">No se ha podido iniciar sesión</p> <p class="fw-bold">El correo del usuario o la contraseña son incorrectos</p>',
+      html: '<iframe src="https://embed.lottiefiles.com/animation/76705"></iframe> <p class="fw-bold">No se ha podido iniciar sesión</p> <p class="fw-bold">El correo del usuario o la contraseña son incorrectos o hay campos vacíos</p>',
       confirmButtonColor: "#ffae00",
     }).then(() => {
       document.getElementById("login").click();
@@ -63,7 +63,7 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     let userConected = JSON.parse(usuarioConectado);
     Swal.fire({
       icon: "success",
-      title: "Inicio de sesión correcto",
+      title: "Inicio de sesión Exitosamente",
       html: `Hola! ${userConected.name}`,
       confirmButtonText: "Entendido",
       confirmButtonColor: "#ffae00",
@@ -73,7 +73,6 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     });
   }
 };
-
 let usuarioConectado = localStorage.getItem("usuarioConectado");
 let userConected = JSON.parse(usuarioConectado);
 if (userConected !== null) {

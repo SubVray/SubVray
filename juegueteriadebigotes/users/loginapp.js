@@ -71,8 +71,8 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     let userConected = JSON.parse(usuarioConectado);
     Swal.fire({
       icon: "success",
-      title: "Inicio de sesión correcto",
-      html: `Bienvenid@ ${userConected.name}`,
+      title: "Inicio de sesión Exitosamente",
+      html: `Hola! ${userConected.name}`,
       confirmButtonText: "Entendido",
       confirmButtonColor: "#ffae00",
     }).then(() => {

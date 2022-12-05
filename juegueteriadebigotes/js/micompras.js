@@ -4,6 +4,9 @@ let mes = document.getElementById("mes");
 let dia = document.getElementById("dia");
 let UserBuys = document.getElementById("UserBuys");
 let hayText = document.getElementById("hay-text");
+let btnAcordeon = document.getElementById("btn-acordeon-filter");
+let sctCompras = document.querySelector(".sct-compras");
+
 if (allProductsBuy == null) {
   btnEncuesta.classList.add("d-none");
 } else {
@@ -52,6 +55,7 @@ let filtrar = () => {
       {
         setTimeout(() => {
           limpiarHTMLd();
+          btnAcordeon.click();
           busca.forEach((producte) => {
             producte.productos.forEach((product) => {
               let cardsProduct = document.createElement("div");
@@ -91,18 +95,23 @@ let filtrar = () => {
               //  row2
               row2.classList.add("row", "px-2");
               col4.classList.add(
-                "col-6",
+                "text-center",
+                "col-12",
+                "col-md-6",
                 "d-flex",
                 "justify-content-center",
                 "align-items-center"
               );
               imgP.classList.add("img-fluid", "w-50");
               col5.classList.add(
-                "col-6",
+                "text-center",
+                "col-12",
+                "col-md-6",
                 "d-flex",
                 "flex-column",
                 "justify-content-center",
-                "align-items-start"
+                "align-items-md-start",
+                "align-items-center"
               );
               skuP.classList.add("fw-semibold", "skup");
               cantidadP.classList.add("fw-semibold", "cantidadp");
@@ -162,3 +171,7 @@ let month = new Intl.DateTimeFormat("en", { month: "numeric" }).format(dateN);
 let day = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(dateN);
 
 $("#text-fecha").attr("placeholder", `${day}/${month}/${year}`);
+
+btnAcordeon.addEventListener("click", () => {
+  sctCompras.classList.toggle("active_filter");
+});

@@ -403,7 +403,8 @@
           type="button"
           class="btn shadow-none border-0"
           data-bs-dismiss="offcanvas"
-          aria-label="Close">
+          aria-label="Close"
+          id="close-cart">
           <i class="fa-solid fa-xmark cerrar"></i>
         </button>
       </div>
@@ -459,7 +460,7 @@
         data-aos="zoom-in">
         Promociones
       </h2>
-      <p class="text-center text-home text-categorias" data-aos="zoom-in">
+      <p class="text-center text-home text-promociones" data-aos="zoom-in">
         Promociones para este mes de Diciembre
       </p>
       <div class="container m-auto" id="mostrador" data-aos="zoom-in">
@@ -467,13 +468,13 @@
       </div>
       <div class="modal-container">
         <div class="seleccion" id="seleccion">
-          <a class="btn border-0 shadow-none" onclick="cerrar()"
+          <a class="btn border-0 shadow-none " onclick="cerrar()"
             ><i class="fa-solid fa-xmark cerrar"></i
           ></a>
           <div class="info row">
             <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
-              <div class="carousel-container text-center">
+              class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
+              <div class="carousel-container text-center m-auto">
                 <div class="img-carousel-container">
                   <a id="img-product-modal" data-lightbox="roadtrip">
                     <img
@@ -502,8 +503,8 @@
               </div>
             </div>
             <div
-              class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
-              <img id="img-carrito" alt="imagen producto " />
+              class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center flex-column modal-info-product">
+              <img id="img-carrito" class="m-auto" alt="imagen producto " />
               <p id="descripcion"></p>
               <div class="d-flex">
                 <span class="precio" id="icon-Moneda">₡</span>

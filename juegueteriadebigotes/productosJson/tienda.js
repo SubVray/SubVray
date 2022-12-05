@@ -235,7 +235,6 @@ const showCarrito = () => {
 const crearHTML = () => {
   limpiarHTML();
   getValorTotalCarrito();
-  productCounter.innerHTML = carrito.length;
   carrito.forEach((product) => {
     let btnBorrar = document.createElement("button");
     let cardsProduct = document.createElement("div");
@@ -502,6 +501,12 @@ const createItemsProducts = (allTienda) => {
     price.classList.add("precio");
     salePrice.classList.add("precio2");
     sku.classList.add("sku");
+    if (screen.width < 768 && product.sale == 0) {
+      item.style.height = "430px";
+    }
+    if (screen.width < 768 && product.sale > 0) {
+      item.style.height = "480px";
+    }
 
     // mostrar info en pantalla
     tienda1.appendChild(cols);
@@ -584,6 +589,12 @@ const createItemsSubCategories = (allItemsCategories) => {
     price.classList.add("precio");
     salePrice.classList.add("precio");
     sku.classList.add("sku");
+    if (screen.width < 768 && product.sale == 0) {
+      item.style.height = "380px";
+    }
+    if (screen.width < 768 && product.sale > 0) {
+      item.style.height = "430px";
+    }
 
     // mostrar info en pantalla
     tienda2.appendChild(cols);
@@ -658,6 +669,12 @@ const createItemsSubCategories2 = (allItemsCategories) => {
     price.classList.add("precio");
     salePrice.classList.add("precio");
     sku.classList.add("sku");
+    if (screen.width < 768 && product.sale == 0) {
+      item.style.height = "380px";
+    }
+    if (screen.width < 768 && product.sale > 0) {
+      item.style.height = "430px";
+    }
 
     // mostrar info en pantalla
     tienda3.appendChild(cols);
@@ -716,6 +733,7 @@ const getValorTotalCarrito = () => {
   });
   totalPrice.innerHTML = `₡${priceMasCantidad.toLocaleString("en-US")}`;
   totalItems.innerHTML = cantidadP;
+  productCounter.innerHTML = cantidadP;
 };
 
 if (

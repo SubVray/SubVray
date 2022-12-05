@@ -85,7 +85,6 @@ let validar_radio = () => {
 };
 
 function btnlimpiar() {
-  document.getElementById("charla").value = "";
 
   document.getElementById("a").checked = false;
   document.getElementById("b").checked = false;

@@ -114,9 +114,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link sucursales" href="galeria.html"
-                    >Galería</a
-                  >
+                  <a class="nav-link sucursales" href="galeria.html">Galería</a>
                 </li>
                 <li class="nav-item">
                   <button
@@ -248,99 +246,124 @@
     </button>
 
     <div class="container sct-form">
-      <form
-        action=""
-        id="form-compras"
-        class="form-control d-flex gap-3 justify-content-center align-items-center pb-4">
-        <div class="row">
-          <div class="col-12 d-flex gap-2 justify-content-center">
-            <h3 class="fw-comic-titles mis-compras">Mis compras</h3>
-          </div>
-
-          <hr />
-
-          <div
-            class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
-            <label for="dia" class="label-dia">Dia:</label>
-            <select
-              name="dia"
-              id="dia"
-              onchange="date()"
-              class="form-select m-auto">
-              <option value="" disabled selected class="option-dia">Dia</option>
-              <option value="01">1</option>
-              <option value="02">2</option>
-              <option value="03">3</option>
-              <option value="04">4</option>
-              <option value="05">5</option>
-              <option value="06">6</option>
-              <option value="07">7</option>
-              <option value="08">8</option>
-              <option value="09">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-            </select>
-          </div>
-
-          <div
-            class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
-            <label for="dia" class="label-mes">Mes:</label>
-            <select
-              name=""
-              id="mes"
-              onchange="date()"
-              class="form-select m-auto">
-              <option value="" disabled selected class="option-mes">Mes</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>
-          </div>
-
-          <div
-            class="col-12 col-md-12 col-lg-4 d-flex gap-2 justify-content-center mt-2 mt-lg-0">
-            <label for="dia" class="fecha">Fecha:</label>
-            <input
-              type="text"
-              value=""
-              id="text-fecha"
-              class="form-control w-50"
-              placeholder="" />
-            <button type="button" onclick="filtrar()" class="btn-filter">
-              Filtrar
+      <div class="accordion accordion-flush" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header w-100" id="headingOne">
+            <button
+              class="accordion-button text-center w-100 shadow-none p-0 px-5 collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+              id="btn-acordeon-filter">
+              <h3 class="fw-comic-titles mis-compras w-100">Mis compras</h3>
             </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <form
+                action=""
+                id="form-compras"
+                class="form-control d-flex gap-3 justify-content-center align-items-center py-3">
+                <div class="row">
+                  <div
+                    class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
+                    <label for="dia" class="label-dia">Dia:</label>
+                    <select
+                      name="dia"
+                      id="dia"
+                      onchange="date()"
+                      class="form-select m-auto">
+                      <option value="" disabled selected class="option-dia">
+                        Dia
+                      </option>
+                      <option value="01">1</option>
+                      <option value="02">2</option>
+                      <option value="03">3</option>
+                      <option value="04">4</option>
+                      <option value="05">5</option>
+                      <option value="06">6</option>
+                      <option value="07">7</option>
+                      <option value="08">8</option>
+                      <option value="09">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                  </div>
+
+                  <div
+                    class="col-12 col-md-6 col-lg-4 d-flex flex-column flex-md-row gap-0 gap-md-2 justify-content-center">
+                    <label for="dia" class="label-mes">Mes:</label>
+                    <select
+                      name=""
+                      id="mes"
+                      onchange="date()"
+                      class="form-select m-auto">
+                      <option value="" disabled selected class="option-mes">
+                        Mes
+                      </option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+
+                  <div
+                    class="col-12 col-md-12 col-lg-4 d-flex gap-2 justify-content-center mt-2 mt-lg-0">
+                    <label for="dia" class="fecha">Fecha:</label>
+                    <input
+                      type="text"
+                      value=""
+                      id="text-fecha"
+                      class="form-control w-50"
+                      placeholder="" />
+                    <button
+                      type="button"
+                      onclick="filtrar()"
+                      class="btn-filter">
+                      Filtrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
 
     <section class="sct-compras">
