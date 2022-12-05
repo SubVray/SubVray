@@ -30,6 +30,7 @@ let productCounter = document.getElementById("product-counter");
 let montoTotal = 0;
 let totalItems = document.querySelector("#totalItems");
 let totalPrice = document.querySelector("#total-price");
+let closeCart = document.getElementById("close-cart");
 
 // bebes
 let tienda1 = document.querySelector("#tienda-1");
@@ -367,22 +368,31 @@ const changeFilter = () => {
 
     if (subBebes.value == "Juguetes") {
       navUrl.innerHTML = "Juguetes";
+      subBebes.value == "Juguetes";
     } else if (subBebes.value == "Toys") {
       navUrl.innerHTML = "Toys";
+      subBebes.value == "Toys";
     } else if (subBebes.value == "Juegos de Mesa") {
       navUrl.innerHTML = "Juegos de Mesa";
+      subBebes.value == "Juegos de Mesa";
     } else if (subBebes.value == "Table Games") {
       navUrl.innerHTML = "Table Games";
+      subBebes.value == "Table Games";
     } else if (subBebes.value == "Deportes") {
       navUrl.innerHTML = "Deportes";
+      subBebes.value == "Deportes";
     } else if (subBebes.value == "Sports") {
       navUrl.innerHTML = "Sports";
+      subBebes.value == "Sports";
     } else if (subBebes.value == "Nerf") {
       navUrl.innerHTML = "Armas Nerf ";
+      subBebes.value == "Nerf";
     } else if (subBebes.value == "Bloques") {
       navUrl.innerHTML = "Bloques de Armar ";
+      subBebes.value == "Bloques";
     } else if (subBebes.value == "Piscinas") {
       navUrl.innerHTML = "Piscinas,Inflables ";
+      subBebes.value == "Piscinas";
     }
   }
   // tienda3
@@ -390,6 +400,7 @@ const changeFilter = () => {
     subBebes.value == "Accesorios" ||
     subBebes.value == "Monopoly" ||
     subBebes.value == "Bicicletas" ||
+    subBebes.value == "Bicycles" ||
     subBebes.value == "X-Shot" ||
     subBebes.value == "Cogo" ||
     subBebes.value == "Tiendas"
@@ -399,24 +410,35 @@ const changeFilter = () => {
     tienda3.style.display = "flex";
     if (subBebes.value == "Accesorios") {
       navUrl.innerHTML = "Accesorios";
+      subBebes.value == "Accesorios";
     } else if (subBebes.value == "Accesories") {
       navUrl.innerHTML = "Accesories";
+      subBebes.value == "Accesories";
     } else if (subBebes.value == "Monopoly") {
       navUrl.innerHTML = "Monopoly";
+      subBebes.value == "Monopoly";
     } else if (subBebes.value == "Bicicletas") {
       navUrl.innerHTML = "Bicicletas";
+      subBebes.value == "Bicicletas";
+    } else if (subBebes.value == "Bicycles") {
+      navUrl.innerHTML = "Bicycles";
+      subBebes.value == "Bicycles";
     } else if (subBebes.value == "X-Shot") {
       navUrl.innerHTML = "Armas X-Shot";
+      subBebes.value == "X-Shot";
     } else if (subBebes.value == "Cogo") {
       navUrl.innerHTML = "Cogo";
+      subBebes.value == "Cogo";
     } else if (subBebes.value == "Tiendas") {
-      navUrl.innerHTML = "Tiendas de Campaña";
+      navUrl.innerHTML = "Tienda de Campaña";
+      subBebes.value == "Tiendas";
     }
   } else if (
     subBebes.value == "Accesorios" ||
     subBebes.value == "Accesories" ||
     subBebes.value == "Monopoly" ||
     subBebes.value == "Bicicletas" ||
+    subBebes.value == "Bicycles" ||
     subBebes.value == "X-Shot" ||
     subBebes.value == "Cogo" ||
     subBebes.value == "Tiendas"
@@ -426,18 +448,28 @@ const changeFilter = () => {
     tienda3.style.display = "flex";
     if (subBebes.value == "Accesorios") {
       navUrl.innerHTML = "Accesorios";
+      subBebes.value == "Accesorios";
     } else if (subBebes.value == "Accesories") {
       navUrl.innerHTML = "Accesories";
+      subBebes.value == "Accesories";
     } else if (subBebes.value == "Monopoly") {
       navUrl.innerHTML = "Monopoly";
+      subBebes.value == "Monopoly";
     } else if (subBebes.value == "Bicicletas") {
       navUrl.innerHTML = "Bicicletas";
+      subBebes.value == "Bicicletas";
+    } else if (subBebes.value == "Bicycles") {
+      navUrl.innerHTML = "Bicycles";
+      subBebes.value == "Bicycles";
     } else if (subBebes.value == "X-Shot") {
       navUrl.innerHTML = "Armas X-Shot";
+      subBebes.value == "X-Shot";
     } else if (subBebes.value == "Cogo") {
       navUrl.innerHTML = "Cogo";
+      subBebes.value == "Cogo";
     } else if (subBebes.value == "Tiendas") {
       navUrl.innerHTML = "Tiendas de Campaña";
+      subBebes.value == "Tiendas";
     }
   }
 };
@@ -689,6 +721,7 @@ const getValorTotalCarrito = () => {
 if (
   window.location !=
     "http://127.0.0.1:5501/juegueteriadebigotes/sucursales.html" &&
+  "http://127.0.0.1:5500/juegueteriadebigotes/sucursales.html" &&
   window.location != "http://127.0.0.1:5501/juegueteriadebigotes/perfil.html" &&
   window.location != "http://127.0.0.1:5501/juegueteriadebigotes/galeria.html"
 ) {
@@ -698,6 +731,9 @@ if (
 let cart = document.querySelector(".cart-shopping");
 
 const pay = () => {
+  if (screen.width < 1200) {
+    closeCart.click();
+  }
   let LogUser = JSON.parse(localStorage.getItem("usuarioConectado"));
   if (carrito.length == 0) {
     Swal.fire({

@@ -30,7 +30,6 @@
   </head>
   <body id="home">
     <!-- header -->
-    <!-- header -->
     <header class="fixed-top bg-light container-fluid">
       <nav class="navbar navbar-expand-lg navbar-home">
         <div class="container">
@@ -405,7 +404,8 @@
           type="button"
           class="btn shadow-none border-0"
           data-bs-dismiss="offcanvas"
-          aria-label="Close">
+          aria-label="Close"
+          id="close-cart">
           <i class="fa-solid fa-xmark cerrar"></i>
         </button>
       </div>
@@ -443,14 +443,16 @@
       <div class="container my-4 list-menu-r">
         <nav
           aria-label="breadcrumb"
-          class="d-flex justify-content-between align-items-center w-100">
+          class="d-flex justify-content-center justify-content-md-between justify-content-lg-between align-items-center w-100 flex-wrap">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="home.html">Inicio</a></li>
+            <li class="breadcrumb-item">
+              <a href="home.html" class="inicio-nav">Inicio</a>
+            </li>
             <li class="breadcrumb-item active">
-              <a href="bebes.html">Bebes</a>
+              <a href="deportes.html" class="deportes-nav">Deportes</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="bebes.html" id="urlnav">General</a>
+              <a href="deportes.html" id="urlnav" class="general-nav"></a>
             </li>
           </ol>
           <form class="">
@@ -459,9 +461,13 @@
               class="form-select w-85"
               id="sub-bebes"
               onchange="changeFilter()">
-              <option value="General" selected>General</option>
-              <option value="Deportes">Deportes</option>
-              <option value="Bicicletas">Bicicletas</option>
+              <option value="General" selected class="slt-general">
+                General
+              </option>
+              <option value="Deportes" class="slt-deportes">Deportes</option>
+              <option value="Bicicletas" class="slt-bicicletas">
+                Bicicletas
+              </option>
             </select>
           </form>
         </nav>

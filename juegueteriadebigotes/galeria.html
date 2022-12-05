@@ -34,8 +34,8 @@
     <header class="fixed-top bg-light container-fluid">
       <nav class="navbar navbar-expand-lg navbar-home">
         <div class="container">
-          <a class="navbar-brand txt-logo" href="index.html">
-            <span>Jugueteria</span><br />
+          <a class="navbar-brand txt-logo" href="index.html"
+            ><span>Jugueteria</span><br />
             <span>de</span> <br />
             <span>Bigotes</span></a
           >
@@ -117,9 +117,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link sucursales" href="sucursales.html"
-                    >Galería</a
-                  >
+                  <a class="nav-link sucursales" href="galeria.html">Galería</a>
                 </li>
                 <li class="nav-item">
                   <button
@@ -134,7 +132,6 @@
             <div class="text-center cart-login-container">
               <div class="c1">
                 <a
-                  href="#"
                   class="login"
                   id="login"
                   data-bs-toggle="modal"
@@ -250,7 +247,8 @@
           type="button"
           class="btn shadow-none border-0"
           data-bs-dismiss="offcanvas"
-          aria-label="Close">
+          aria-label="Close"
+          id="close-cart">
           <i class="fa-solid fa-xmark cerrar"></i>
         </button>
       </div>
@@ -312,7 +310,8 @@
                 <input
                   type="email"
                   class="form-control input-email"
-                  id="text-email" />
+                  id="text-email"
+                  placeholder="Correo Electrónico:" />
               </div>
               <div class="py-2">
                 <label for="text-password" class="fw-comic text-password"
@@ -724,6 +723,8 @@
     <!-- my js -->
     <script src="js/menu.js"></script>
     <script src="js/scroll-smooth.js"></script>
+    <script src="productosJson/products.js"></script>
+    <script src="productosJson/tienda.js"></script>
     <script src="js/searchbar.js"></script>
     <script src="js/idioma.js"></script>
     <script src="users/users.js"></script>

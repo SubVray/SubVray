@@ -750,3 +750,59 @@ footer i:hover {
   font-weight: bolder;
   height: 100%;
 }
+
+@media (max-width: 425px) {
+  .breadcrumb li a {
+    font-size: 1rem !important;
+  }
+  .form-categoria-z {
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 3.2rem !important;
+  }
+}
+@media (max-width: 375px) {
+  .breadcrumb li a {
+    font-size: 1rem !important;
+  }
+  .form-categoria-z {
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .down {
+    margin-left: -20px !important;
+  }
+}
+@media (min-width: 425px) {
+  .down {
+    margin-left: -15px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-collapse {
+    margin-left: -200px !important;
+  }
+  .cart-login-container {
+    margin-left: -135px !important;
+  }
+  .down {
+    margin-left: -10px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-collapse {
+    margin-left: -100px !important;
+  }
+  .cart-login-container {
+    margin-left: -100px !important;
+  }
+  .down {
+    margin-left: 0px;
+  }
+}

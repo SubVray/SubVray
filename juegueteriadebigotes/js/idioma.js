@@ -89,6 +89,11 @@ const juegosMesaNav = document.querySelector(".juegosmesa-nav");
 const sltJuegosMesa = document.querySelector(".slt-juegosmesa");
 const sltMonopoly = document.querySelector(".slt-monopoly");
 
+// deportes
+const deportesNav = document.querySelector(".deportes-nav");
+const sltDeportes = document.querySelector(".slt-deportes");
+const sltBicicletas = document.querySelector(".slt-bicicletas");
+
 // footer
 const titleContactenos = document.querySelector(".title-contactenos");
 const titleAcerca = document.querySelector(".title-acerca");
@@ -105,7 +110,37 @@ const sct5 = document.querySelector(".sct-5");
 links.forEach((r) => {
   r.addEventListener("click", () => {
     const attr = r.getAttribute("language");
-
+    if (
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/bebes.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/bebes.html" ||
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/juegosmesa.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/juegosmesa.html" ||
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/deportes.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/deportes.html" ||
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/armasnerf.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/armasnerf.html" ||
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/motorafina.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/motorafina.html" ||
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/verano.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/verano.html"
+    ) {
+      document.querySelector("#sub-bebes").value = "General";
+      tienda1.style.display = "flex";
+      tienda2.style.display = "none";
+      tienda3.style.display = "none";
+    }
     inicio.textContent = changeLanguage[attr].inicio;
     promocionesHeader.textContent = changeLanguage[attr].promocionesHeader;
     sucursales.textContent = changeLanguage[attr].sucursales;
@@ -134,9 +169,9 @@ links.forEach((r) => {
       $(".slt-accesorios").attr("value", changeLanguage[attr].sltAccesorios);
     }
     if (
-      window.location !=
+      window.location ==
         "http://127.0.0.1:5501/juegueteriadebigotes/juegosmesa.html" ||
-      window.location !=
+      window.location ==
         "http://127.0.0.1:5500/juegueteriadebigotes/juegosmesa.html"
     ) {
       inicioNav.textContent = changeLanguage[attr].inicioNav;
@@ -149,6 +184,23 @@ links.forEach((r) => {
       $(".slt-juegosmesa").attr("value", changeLanguage[attr].sltJuegosMesa);
       $(".slt-monopoly").attr("value", changeLanguage[attr].sltMonopoly);
     }
+    if (
+      window.location ==
+        "http://127.0.0.1:5501/juegueteriadebigotes/deportes.html" ||
+      window.location ==
+        "http://127.0.0.1:5500/juegueteriadebigotes/deportes.html"
+    ) {
+      inicioNav.textContent = changeLanguage[attr].inicioNav;
+      generalNav.textContent = changeLanguage[attr].generalNav;
+      sltGeneral.textContent = changeLanguage[attr].sltGeneral;
+      deportesNav.textContent = changeLanguage[attr].deportesNav;
+      sltDeportes.textContent = changeLanguage[attr].sltDeportes;
+      sltBicicletas.textContent = changeLanguage[attr].sltBicicletas;
+      $(".slt-general").attr("value", changeLanguage[attr].sltGeneral);
+      $(".slt-deportes").attr("value", changeLanguage[attr].sltDeportes);
+      $(".slt-bicicletas").attr("value", changeLanguage[attr].sltBicicletas);
+    }
+
     // perfil
     if (
       window.location ==
@@ -365,6 +417,16 @@ let changeLanguage = {
     juegosMesaNav: "Juegos de Mesa",
     sltJuegosMesa: "Juegos de Mesa",
     sltMonopoly: "Monopoly",
+
+    // juegos mesa
+    juegosMesaNav: "Juegos de Mesa",
+    sltJuegosMesa: "Juegos de Mesa",
+    sltMonopoly: "Monopoly",
+
+    // deportes
+    deportesNav: "Deportes",
+    sltDeportes: "Deportes",
+    sltBicicletas: "Bicicletas",
   },
 
   // TODO: english
@@ -478,5 +540,10 @@ let changeLanguage = {
     juegosMesaNav: "Table Games",
     sltJuegosMesa: "Table Games",
     sltMonopoly: "Monopoly",
+
+    // deportes
+    deportesNav: "Sports",
+    sltDeportes: "Sports",
+    sltBicicletas: "Bicycles",
   },
 };

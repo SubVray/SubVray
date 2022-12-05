@@ -55,6 +55,7 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
       html: '<iframe src="https://embed.lottiefiles.com/animation/76705"></iframe> <p class="fw-bold">No se ha podido iniciar sesión</p> <p class="fw-bold">El correo del usuario o la contraseña son incorrectos</p>',
       confirmButtonColor: "#ffae00",
     }).then(() => {
+      document.getElementById("login").click();
       loginText.href = "#modal-login";
     });
   } else {
@@ -63,7 +64,7 @@ const validarCredenciales = (emailLogin, passwordLogin) => {
     Swal.fire({
       icon: "success",
       title: "Inicio de sesión correcto",
-      html: `Bienvenid@ ${userConected.name}`,
+      html: `Hola! ${userConected.name}`,
       confirmButtonText: "Entendido",
       confirmButtonColor: "#ffae00",
     }).then(() => {
