@@ -29,7 +29,7 @@ const productsHome = [
     imgUrl: "images/tienda/HBE3026-1.jpg",
   },
   {
-    name: "Trepador Inflable C/Tobogán Agua Tiburon 4.5x3.2x2.4m 3-10a 4P",
+    name: "Trepador Inflable C/Tobogán Agua Tiburon 4.5x3.2x2.4m ",
     SKU: "SC9417",
     sale: 439995.0,
     price: 329994.0,

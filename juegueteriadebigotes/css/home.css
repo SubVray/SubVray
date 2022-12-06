@@ -45,12 +45,25 @@ h1 {
   width: 200px !important;
 }
 .down {
+  animation: pulse 1s alternate infinite;
   bottom: 50px;
   color: var(--color-primary) !important;
   font-size: 3rem;
-  left: 49%;
+  left: 48%;
   position: absolute;
   transform: translate(-50%);
+  transition-duration: 0.5s;
+}
+.down:hover {
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.336));
+}
+@keyframes pulse {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.1;
+  }
 }
 
 .navbar-home ul a:is(:hover, :active, :focus) {
@@ -511,9 +524,15 @@ body {
 .agregar-carrito:hover {
   color: rgb(207, 207, 207);
 }
+
 .categorias img {
   border-radius: 10px;
   width: 100%;
+  transition-duration: 0.5s;
+}
+
+.categorias img:hover {
+  transform: scaleX(1.05) scaleY(1.02);
 }
 
 /* categorias */
@@ -757,21 +776,9 @@ footer i:hover {
   z-index: 600;
 }
 
-@media (max-width: 375px) {
-  .breadcrumb li a {
-    font-size: 1rem !important;
-  }
-  .form-categoria-z {
-    margin-top: 10px;
-  }
-  h1 {
-    font-size: 3rem !important;
-  }
-}
-
-@media (max-width: 425px) {
+@media (max-width: 575.98px) {
   .down {
-    margin-left: -20px !important;
+    left: 42%;
   }
   .item-product img {
     aspect-ratio: 2/2;
@@ -797,9 +804,9 @@ footer i:hover {
   }
 }
 
-@media (min-width: 425px) {
+@media (min-width: 768px) {
   .down {
-    margin-left: -15px;
+    left: 45%;
   }
 }
 @media (min-width: 992px) {
@@ -810,7 +817,7 @@ footer i:hover {
     margin-left: -135px !important;
   }
   .down {
-    margin-left: -10px;
+    left: 48%;
   }
 }
 @media (min-width: 1200px) {
@@ -821,12 +828,32 @@ footer i:hover {
     margin-left: -100px !important;
   }
   .down {
-    margin-left: 0px;
+    left: 47%;
+  }
+}
+@media (min-width: 1400px) {
+  .down {
+    left: 48%;
   }
 }
 
 @media (max-width: 769px) {
   .modal-info-product {
     height: 300px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  .breadcrumb li a {
+    font-size: 1rem !important;
+  }
+  .form-categoria-z {
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 3rem !important;
+  }
+  .down {
+    left: 40%;
   }
 }
