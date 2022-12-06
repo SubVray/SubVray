@@ -44,7 +44,7 @@ foto = 0;
 carousel = {};
 total = 0;
 
-// search fuction
+// search function
 function search() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("myInput");
@@ -473,7 +473,7 @@ const changeFilter = () => {
   }
 };
 
-// creacion de productos
+// creación de productos
 const createItemsProducts = (allTienda) => {
   allTienda.forEach((product) => {
     let cols = document.createElement("div");
@@ -502,7 +502,7 @@ const createItemsProducts = (allTienda) => {
     salePrice.classList.add("precio2");
     sku.classList.add("sku");
     if (screen.width < 768 && product.sale == 0) {
-      item.style.height = "430px";
+      item.style.height = "450px";
     }
     if (screen.width < 768 && product.sale > 0) {
       item.style.height = "480px";

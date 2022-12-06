@@ -753,6 +753,9 @@ footer i:hover {
   font-weight: bolder;
   height: 100%;
 }
+#descripcion {
+  z-index: 600;
+}
 
 @media (max-width: 375px) {
   .breadcrumb li a {
@@ -824,6 +827,6 @@ footer i:hover {
 
 @media (max-width: 769px) {
   .modal-info-product {
-    height: 250px !important;
+    height: 300px !important;
   }
 }
