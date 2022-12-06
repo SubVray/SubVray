@@ -86,7 +86,11 @@ const createStore = () => {
     window.location ==
       "http://127.0.0.1:5501/juegueteriadebigotes/home.html#ofertas" ||
     window.location ==
-      "http://127.0.0.1:5500/juegueteriadebigotes/home.html#ofertas"
+      "http://127.0.0.1:5500/juegueteriadebigotes/home.html#ofertas" ||
+    window.location ==
+      "http://127.0.0.1:5501/juegueteriadebigotes/home.html#categorias" ||
+    window.location ==
+      "http://127.0.0.1:5500/juegueteriadebigotes/home.html#categorias"
   ) {
     allTienda = productsHome;
     subTienda1 = [];
