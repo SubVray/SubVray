@@ -46,7 +46,7 @@
     max-width: 500px;
     min-width: 100px;
     position: absolute;
-    top: 60%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(-12deg);
     width: 230px;
     z-index: 1;
@@ -97,7 +97,7 @@
   .conjunto-1 {
     height: 200px;
     left: 56%;
-    top: 59%;
+    top: 65%;
     width: 300px;
   }
 }
