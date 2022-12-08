@@ -8,9 +8,9 @@ function evaluacion() {
       height: 200,
       iconColor: "#FFF",
       position: "center",
-      confirmButtonColor: "#ffbb00",
+      confirmButtonColor: "#ffbe00",
       color: "#000",
-      html: "<br><br> Tiene campos vacios. <br><br> Contestar todas las preguntas.",
+      html: "<iframe src='https://embed.lottiefiles.com/animation/38147'></iframe><br><p class='fw-bold'>Tiene campos vacíos.</p>  <p class='fw-bold'>Conteste todas las preguntas.</p>",
     });
   } else {
     preg1 = document.querySelector(
@@ -29,13 +29,13 @@ function evaluacion() {
       "#pregunta5 input[type=radio]:checked"
     ).value;
 
-    numres1 = parseInt(preg1);
-    numres2 = parseInt(preg2);
-    numres3 = parseInt(preg3);
-    numres4 = parseInt(preg4);
-    numres5 = parseInt(preg5);
+    numero1 = parseInt(preg1);
+    numero2 = parseInt(preg2);
+    numero3 = parseInt(preg3);
+    numero4 = parseInt(preg4);
+    numero5 = parseInt(preg5);
 
-    ptnSubTotal = numres1 + numres2 + numres3 + numres4 + numres5;
+    ptnSubTotal = numero1 + numero2 + numero3 + numero4 + numero5;
     console.log(ptnSubTotal);
 
     ptnTotal = ptnSubTotal / 25;
@@ -45,8 +45,7 @@ function evaluacion() {
     console.log(porcFinal);
 
     Swal.fire({
-      icon: "success",
-      title: "Evaluación obtenida: " + porcFinal + "%",
+      html: `<iframe src="https://embed.lottiefiles.com/animation/98621"></iframe> <br> <p class='fw-bold'>Evaluación obtenida: ${porcFinal}</p>`,
       color: "#000",
       confirmButtonColor: "#ffbe00",
       confirmButtonText: "Cerrar",
@@ -85,7 +84,6 @@ let validar_radio = () => {
 };
 
 function btnlimpiar() {
-
   document.getElementById("a").checked = false;
   document.getElementById("b").checked = false;
   document.getElementById("c").checked = false;

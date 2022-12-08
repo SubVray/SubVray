@@ -21,6 +21,7 @@ const textCategoria = document.querySelector(".text-categorias");
 const textPromociones = document.querySelector(".text-promociones");
 const titleTestimoniales = document.querySelector(".title-testimoniales");
 const textTestimoniales = document.querySelector(".text-testimoniales");
+const galeria = document.querySelector(".galeria");
 
 // login
 const titleLogin = document.querySelector(".title-login");
@@ -51,6 +52,7 @@ const titleE2 = document.querySelector(".title-e-2");
 const titleE3 = document.querySelector(".title-e-3");
 const titleE4 = document.querySelector(".title-e-4");
 const titleE5 = document.querySelector(".title-e-5");
+const encuestaP = document.querySelector(".encuesta-p");
 // radios encuesta
 const malo = document.querySelectorAll(".malo");
 const regular = document.querySelectorAll(".regular");
@@ -225,6 +227,7 @@ links.forEach((r) => {
       titleE5.textContent = changeLanguage[attr].titleE5;
       btnEnviar.textContent = changeLanguage[attr].btnEnviar;
       btnReset.textContent = changeLanguage[attr].btnReset;
+      encuestaP.textContent = changeLanguage[attr].encuestaP;
       malo.forEach((malo) => {
         malo.textContent = changeLanguage[attr].malo;
       });
@@ -290,7 +293,7 @@ links.forEach((r) => {
       "placeholder",
       changeLanguage[attr].inputPassword
     );
-    
+
     textPassword.textContent = changeLanguage[attr].textPassword;
     // footer
     titleContactenos.textContent = changeLanguage[attr].titleContactenos;
@@ -304,6 +307,7 @@ links.forEach((r) => {
     sct3.textContent = changeLanguage[attr].sct3;
     sct4.textContent = changeLanguage[attr].sct4;
     sct5.textContent = changeLanguage[attr].sct5;
+    galeria.textContent = changeLanguage[attr].galeria
   });
 });
 
@@ -322,6 +326,7 @@ let changeLanguage = {
     motorafina: "Motorafina",
     verano: "Verano",
     textHome: "Promociones para este mes de Diciembre",
+    galeria: "Galería",
 
     // agregar titulos
     promociones: "Promociones",
@@ -360,6 +365,7 @@ let changeLanguage = {
     titleE4: "Calidad de Producto:",
     titleE5:
       "Servicio posterior a la compra (garantía, atención al cliente, etc.):",
+    encuestaP: "Sobre el servicio y calidad de Jugueteria de Bigotes",
 
     // radios
     malo: "Malo",
@@ -446,6 +452,7 @@ let changeLanguage = {
     motorafina: "Fine Motor Skills ",
     verano: "Summer",
     textHome: "Promotions for this month of December",
+    galeria: "Gallery",
 
     // agregar titulos
     promociones: "Promotions",
@@ -483,6 +490,7 @@ let changeLanguage = {
     titleE3: "First use experience:",
     titleE4: "Product Quality:",
     titleE5: "Post-purchase service ( warranty, attention to client, etc. ):",
+    encuestaP: "About the service and quality of Jugueteria de Bigotes",
 
     // radios
     malo: "Bad",
