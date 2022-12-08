@@ -779,7 +779,8 @@ const pay = () => {
   } else {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
-    let dateN = new Date();
+    // fecha para otro ejemplo 2022,5,20 el mes 6 junio
+    let dateN = new Date(2022,5,20);
     let year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(dateN);
     let month = new Intl.DateTimeFormat("en", { month: "numeric" }).format(
       dateN

@@ -45,7 +45,7 @@ function evaluacion() {
     console.log(porcFinal);
 
     Swal.fire({
-      html: `<iframe src="https://embed.lottiefiles.com/animation/98621"></iframe> <br> <p class='fw-bold'>Evaluación obtenida: ${porcFinal}</p>`,
+      html: `<iframe src="https://embed.lottiefiles.com/animation/98621"></iframe> <br> <p class='fw-bold'>Evaluación: ${porcFinal}</p>`,
       color: "#000",
       confirmButtonColor: "#ffbe00",
       confirmButtonText: "Cerrar",
