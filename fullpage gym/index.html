@@ -109,20 +109,22 @@
     <main>
       <!-- TODO: banner -->
       <section
-        class="banner d-flex justify-content-center align-items-center position-relative">
-        <div class="row w-100">
+        class="banner d-flex justify-content-center align-items-center position-relative w-100 overflow-hidden">
+        <div class="row w-100 ">
           <div
             class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center justify-content-md-start">
             <img
               src="src/images/logo-gym2.png"
               alt=""
-              class="logo img-fluid m-auto" />
+              class="logo img-fluid m-auto wow animate__animated animate__bounceInLeft" />
           </div>
           <div
             class="col-sm-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center">
-            <h1>Juntos</h1>
-            <p>En tu salud y tu vida. Unite a la Familia Fitness Club.</p>
-            <p>
+            <h1 class="wow animate__animated animate__bounceInRight">Juntos</h1>
+            <p class="wow animate__animated animate__bounceInRight">
+              En tu salud y tu vida. Unite a la Familia Fitness Club.
+            </p>
+            <p class="wow animate__animated animate__bounceInRight">
               Nuestros <a href="valores.html" class="btn-valores">valores</a>
             </p>
           </div>
@@ -135,8 +137,8 @@
       </section>
 
       <!-- TODO: carousel -->
-      <section id="carousel">
-        <section id="carrousel"></section>
+      <section id="carousel" class="wow animate__animated animate__zoomIn">
+        <section id="carrousel" class="wow animate__animated animate__zoomIn animete__slow"></section>
         <h2 class="text-center bg-orange title-carousel">
           Salas <span class="salas-equipos">Y</span> Equipos
         </h2>
@@ -213,8 +215,8 @@
         </div>
       </section>
 
-      <!-- TODO:planes -->
-      <section class="clases pb-5" id="clases">
+      <!-- TODO:clases -->
+      <section class="clases pb-5 " id="clases">
         <h2 class="text-center title-plan bg-bk">
           Nuestras<span class="tu-plan"> Clases</span>
         </h2>
@@ -905,7 +907,7 @@
     <script src="js/menu.js"></script>
     <script src="js/scroll-smooth.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="js/wow.js"></script>
+    <script src="js/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
