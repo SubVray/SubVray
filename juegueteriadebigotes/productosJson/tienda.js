@@ -770,7 +770,7 @@ const pay = () => {
       position: "center",
       icon: "error",
       title: "No puede realizar el pago  ",
-      text: "primero debe iniciar sesion",
+      text: "primero debe iniciar sesión",
       showConfirmButton: false,
       timer: 1500,
     }).then(() => {
@@ -780,7 +780,7 @@ const pay = () => {
     carrito = JSON.parse(localStorage.getItem("carrito"));
     let buyAllUser = JSON.parse(localStorage.getItem("allProductsBuy")) || [];
     // fecha para otro ejemplo 2022,5,20 el mes 6 junio
-    let dateN = new Date(2022,5,20);
+    let dateN = new Date(2022, 5, 20);
     let year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(dateN);
     let month = new Intl.DateTimeFormat("en", { month: "numeric" }).format(
       dateN
