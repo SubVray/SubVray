@@ -110,7 +110,7 @@
       <!-- TODO: banner -->
       <section
         class="banner d-flex justify-content-center align-items-center position-relative w-100 overflow-hidden">
-        <div class="row w-100 ">
+        <div class="row w-100">
           <div
             class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center justify-content-md-start">
             <img
@@ -137,8 +137,8 @@
       </section>
 
       <!-- TODO: carousel -->
-      <section id="carousel" class="wow animate__animated animate__zoomIn">
-        <section id="carrousel" class="wow animate__animated animate__zoomIn animete__slow"></section>
+      <section id="carousel">
+        <section id="carrousel"></section>
         <h2 class="text-center bg-orange title-carousel">
           Salas <span class="salas-equipos">Y</span> Equipos
         </h2>
@@ -216,7 +216,7 @@
       </section>
 
       <!-- TODO:clases -->
-      <section class="clases pb-5 " id="clases">
+      <section class="clases pb-5" id="clases">
         <h2 class="text-center title-plan bg-bk">
           Nuestras<span class="tu-plan"> Clases</span>
         </h2>
@@ -494,29 +494,6 @@
         </div>
       </div>
 
-      <!-- Modal sala G.A.P -->
-      <div
-        class="modal fade"
-        id="salaGAP"
-        tabindex="-1"
-        aria-labelledby="titlesalaGAP"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title fs-5" id="titlesalaGAP">Sala de G.A.P</h3>
-              <button
-                type="button"
-                class="btn shadow-none border-0"
-                data-bs-dismiss="modal"
-                aria-label="Close">
-                <i class="fa-solid fa-xmark cerrar"></i>
-              </button>
-            </div>
-            <div class="modal-body">...</div>
-          </div>
-        </div>
-      </div>
       <!-- Modal sala cardio combat -->
       <div
         class="modal fade"
@@ -538,7 +515,62 @@
                 <i class="fa-solid fa-xmark cerrar"></i>
               </button>
             </div>
-            <div class="modal-body">...</div>
+            <div class="modal-body">
+              <img
+                src="src/images/cardiocombat.webp"
+                alt=""
+                class="img-fluid" />
+              <hr />
+              <p>
+                El Body Combat es una actividad física muy completa en la que se
+                trabajan multitud de aptitudes que ayudan a mejorar la salud y
+                el bienestar tanto del cuerpo como de la mente. Un entrenamiento
+                de gran intensidad que no requiere de mucho tiempo de
+                recuperación, lo que lo convierte en el deporte ideal para
+                mejorar la resistencia cardiovascular.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal sala G.A.P -->
+      <div
+        class="modal fade"
+        id="salaGAP"
+        tabindex="-1"
+        aria-labelledby="titlesalaGAP"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title fs-5" id="titlesalaGAP">Sala de G.A.P</h3>
+              <button
+                type="button"
+                class="btn shadow-none border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+                <i class="fa-solid fa-xmark cerrar"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="src/images/GAPmodal.jpg" alt="" class="img-fluid" />
+              <hr />
+              <p>
+                GAP son las iniciales de «Glúteos, Abdomen y Piernas». Se trata
+                de una rutina de tonificación en la que se trabajan estas áreas
+                en las que están implicados algunos de los músculos más grandes
+                del cuerpo y aquellos que sostienen la espalda y la postura. De
+                ahí su importancia. Normalmente se realiza en clases colectivas
+                pero también puede practicarse individualmente. Se trata de una
+                fórmula deportiva que puede adaptarse a todos los niveles y que
+                puede ayudar a muchas personas a abandonar el sedentarismo. De
+                hecho comienza con el peso del propio cuerpo y se incrementa la
+                intensidad utilizando barras de peso, mancuernas o bandas
+                elásticas y aumentando el número de repeticiones. El peso y la
+                intensidad marcarán el nivel de la sesión.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -558,7 +590,7 @@
           <div class="row">
             <!-- card-1 -->
             <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center wow animate__animated animate__zoomInUp">
               <div class="card">
                 <div class="card-header bg-dark">
                   <h5 class="card-title text-center text-white">
@@ -575,39 +607,37 @@
                   <p class="text-center beneficios">Beneficios</p>
                   <hr />
                   <ul class="ul-check">
-                    <li class="">
-                      <i class="fa-solid fa-check"></i> Área de cardio
-                    </li>
-                    <li class="">
+                    <li><i class="fa-solid fa-check"></i> Área de cardio</li>
+                    <li>
                       <i class="fa-solid fa-check"></i> Área de peso libre e
                       integrado
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Acceso a salón de clases dirigidas ilimitado
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Lockers y duchas
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Medición de composición corporal - Fitness Vital
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Fitness App
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Acceso ilimitado a la zona Fitness Spa
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Invita hasta 5 amigos por mes gratis
                     </li>
                   </ul>
-                  <form class="">
+                  <form>
                     <select name="type" id="slt-premium" class="form-select">
                       <option value="535">1 Persona</option>
                       <option value="450">Ciudadano de oro</option>
@@ -631,7 +661,7 @@
             </div>
             <!-- card-2 -->
             <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center wow animate__animated animate__zoomInUp">
               <div class="card">
                 <div class="card-header bg-dark">
                   <h5 class="card-title text-center text-white">
@@ -648,31 +678,29 @@
                   <p class="text-center beneficios">Beneficios</p>
                   <hr />
                   <ul class="ul-check">
-                    <li class="">
-                      <i class="fa-solid fa-check"></i> Área de cardio
-                    </li>
-                    <li class="">
+                    <li><i class="fa-solid fa-check"></i> Área de cardio</li>
+                    <li>
                       <i class="fa-solid fa-check"></i> Área de peso libre e
                       integrado
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Acceso a salón de clases dirigidas ilimitado
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Lockers y duchas
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Medición de composición corporal - Fitness Vital
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Fitness App
                     </li>
                   </ul>
-                  <form class="">
+                  <form>
                     <select name="type" id="slt-smart" class="form-select">
                       <option value="535">1 Persona</option>
                       <option value="450">Ciudadano de oro</option>
@@ -696,7 +724,7 @@
             </div>
             <!-- card-3 -->
             <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center wow animate__animated animate__zoomInUp">
               <div class="card">
                 <div class="card-header bg-dark">
                   <h5 class="card-title text-center text-white">
@@ -713,31 +741,29 @@
                   <p class="text-center beneficios">Beneficios</p>
                   <hr />
                   <ul class="ul-check">
-                    <li class="">
-                      <i class="fa-solid fa-check"></i> Área de cardio
-                    </li>
-                    <li class="">
+                    <li><i class="fa-solid fa-check"></i> Área de cardio</li>
+                    <li>
                       <i class="fa-solid fa-check"></i> Área de peso libre e
                       integrado
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Acceso a salón de clases dirigidas ilimitado
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Lockers y duchas
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Fitness App
                     </li>
-                    <li class="">
+                    <li>
                       <i class="fa-solid fa-check"></i>
                       Invita hasta 5 amigos por mes gratis
                     </li>
                   </ul>
-                  <form class="">
+                  <form>
                     <select name="type" id="slt-estudiante" class="form-select">
                       <option value="535">1 Persona</option>
                       <option value="450">5 Amigos</option>
@@ -770,11 +796,15 @@
           src="https://www.google.com/maps/d/embed?mid=1CAVwuuFmL3aEaG6sH-ackhS_Ff7Bje4&hl=en&ehbc=2E312F"
           width="100%"
           height="500"></iframe>
+          <section id="contacto"></section>
       </section>
 
-      <section class="contacto container w-100 pt-5" id="contacto">
+      <section
+        class="contacto container w-100 pt-5 overflow-hidden"
+        id="contacto1">
         <div class="row contact">
-          <div class="col-12 col-md-6 col-lg-6 d-flex flex-column gap-3">
+          <div
+            class="col-12 col-md-6 col-lg-6 d-flex flex-column gap-3 wow animate__animated animate__bounceInLeft">
             <h3>CONTÁCTENOS</h3>
             <p class="contact-text">
               Llena nuestro formulario para contactarte
@@ -789,7 +819,7 @@
                 ><i class="fa-brands fa-whatsapp"></i> +506 7923-8983</a
               >
             </div>
-            <div class="">
+            <div>
               <a href=""
                 ><i class="fa-solid fa-envelope"></i> info@fitnessclubcr.com</a
               >
@@ -811,8 +841,10 @@
               <span>Fitness Club</span>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6">
-            <form action="" class="form-control shadow p-3 d-flex flex-column">
+          <div class="col-12 col-md-6 col-lg-6 wow animate__animated animate__bounceInRight">
+            <form
+              action=""
+              class="form-control shadow p-3 d-flex flex-column ">
               <div class="my-2">
                 <label for="nombre" class="form-label">Nombre:</label>
                 <input
@@ -826,7 +858,7 @@
                 <input
                   type="email"
                   name="nombre"
-                  id="nombre"
+                  id="correo"
                   class="form-control" />
               </div>
               <div class="my-2">
