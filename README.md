@@ -2,8 +2,6 @@
 
 ## I'm a Web Developer!
 
-- 👀 I’m interested in software development.
-- 🌱 I’m Constantly learning about everything.
 
 ### Languages and Tools:
 <img align="left" alt="HTML5" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"  />
