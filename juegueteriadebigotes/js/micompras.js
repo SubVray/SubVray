@@ -14,7 +14,7 @@ if (allProductsBuy == null) {
 }
 
 let date = () => {
-  fecha = `${dia.value}/${mes.value}/2022`;
+  fecha = `${dia.value}/${mes.value}/2023`;
   txtFecha.value = fecha;
 };
 
