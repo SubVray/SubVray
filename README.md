@@ -1,6 +1,8 @@
-### Hi there, I’m Jim BZ 👋
+## Hi there, I’m Jim BZ 👋
 
-## I'm a Web Developer!
+### I'm a Web Developer!
+### Portafolio
+https://subvray.vercel.app/
 
 
 ### Languages and Tools:
