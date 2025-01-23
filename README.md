@@ -1,19 +1,20 @@
-<h2 align="center">Hi 👋! My name is Jim <br>& <br>I'm a Web Developer!</h2>
+<br clear="both">
+
+<h1 align="center">Hi 👋! My name is Jim <br>& <br>I'm a Web Developer!</h1>
 
 ###
 
+<br clear="both">
+
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SubVray&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=github_dark&locale=en&hide_border=true" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SubVray&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=github_dark&hide_border=true" height="150" alt="languages graph"  />
+  <img height="200" src="https://avatars.githubusercontent.com/u/66286368?v=4"  />
 </div>
 
 ###
 
-<img align="right" height="200" src="https://avatars.githubusercontent.com/u/66286368?v=4"  />
+<br clear="both">
 
-###
-
-<div align="left">
+<div align="center">
   <img src="https://skillicons.dev/icons?i=html" height="30" alt="html5 logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=css" height="30" alt="css3 logo"  />
@@ -36,6 +37,17 @@
 </div>
 
 ###
+
+<br clear="both">
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SubVray&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=github_dark&locale=en&hide_border=true" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SubVray&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=github_dark&hide_border=true" height="150" alt="languages graph"  />
+</div>
+
+###
+
+<br clear="both">
 
 <img src="https://raw.githubusercontent.com/SubVray/SubVray/output/snake.svg" alt="Snake animation" />
 
