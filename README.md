@@ -37,11 +37,6 @@
 
 ###
 
-<div align="left">
-</div>
-
-###
-
 <img src="https://raw.githubusercontent.com/SubVray/SubVray/output/snake.svg" alt="Snake animation" />
 
 ###
